@@ -1,25 +1,26 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
-    sourceType: 'module',
-  },
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
+
   root: true,
-  env: {
-    node: true,
-    jest: true,
+
+  extends: [ 'proedis/base' ],
+
+  parserOptions: {
+    ecmaVersion: 7,
+    project    : [ './tsconfig.eslint.json' ]
   },
-  ignorePatterns: ['.eslintrc.js'],
+
   rules: {
-    '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-  },
+    // Add here your custom rules
+    // ...
+
+    /**
+     * By defaults the eslint-config-proedis plugin won't allow importing
+     * an object used only as a type without the 'type' identifier.
+     * NestJS will use the type declaration to dynamically inject dependencies
+     * on controllers/services/modules: if a type has been imported with the 'type' it could not do it
+     */
+    '@typescript-eslint/consistent-type-imports': [ 'off' ]
+
+  }
+
 };
