@@ -3,11 +3,7 @@ import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from
 import { Request } from 'express';
 import { Observable } from 'rxjs';
 
-import {
-  ADMIN_KEY,
-  ADMIN_KEY_HEADER_NAME,
-  ADMIN_KEY_QUERY_PARAM
-} from '../constants';
+import { hasValidAdminKey } from '../utils/hasValidAdminKey';
 
 
 /**
@@ -22,11 +18,8 @@ export class AdminGuard implements CanActivate {
     /** Get current request from execution context */
     const request = context.switchToHttp().getRequest<Request>();
 
-    /** Get header value, and if is not present, fallback to query string */
-    const key = request.header(ADMIN_KEY_HEADER_NAME) || request.query[ADMIN_KEY_QUERY_PARAM]?.toString();
-
     /** Assert key exists, and it is strictly equals to internal one */
-    if (key !== ADMIN_KEY) {
+    if (!hasValidAdminKey(request)) {
       throw new UnauthorizedException();
     }
 
