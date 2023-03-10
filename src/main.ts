@@ -2,6 +2,7 @@ import 'dotenv/config';
 
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import helmet from 'helmet';
 import compression from 'compression';
@@ -22,6 +23,17 @@ async function bootstrap() {
   /** Create the App */
   mainLogger.verbose('Creating the App');
   const app = await NestFactory.create(AppModule);
+
+  /** Setup Swagger to automatically generate ApiDocumentation */
+  const swaggerConfig = new DocumentBuilder()
+    .setTitle('Sandeza Hub')
+    .setDescription('API to communicate with internal DataHub')
+    .setVersion('1.0')
+    .build();
+
+  /** Create the Swagger Document and append to Application */
+  const document = SwaggerModule.createDocument(app, swaggerConfig);
+  SwaggerModule.setup('help', app, document);
 
   /** Enable ValidationPipe and Variable auto Transform */
   mainLogger.verbose('Attaching Global Pipe');
