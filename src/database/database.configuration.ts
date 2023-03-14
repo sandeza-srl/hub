@@ -45,6 +45,8 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
       db = (this.request.query[MONGOOSE_DATABASE_QUERY_PARAM_SELECTOR]?.toString()) ?? null;
     }
 
+    /** TODO: If database connection is null, extract from AuthToken */
+
     /** Assert the right db has been selected */
     if (db == null) {
       throw new BadRequestException(
