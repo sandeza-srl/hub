@@ -21,6 +21,7 @@ mongoose.set('toJSON', MONGOOSE_TO_OBJECT_DEFAULTS);
 mongoose.set('toObject', MONGOOSE_TO_OBJECT_DEFAULTS);
 mongoose.set('id', false);
 mongoose.set('strict', true);
+mongoose.pluralize(null);
 
 
 /* --------

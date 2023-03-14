@@ -1,12 +1,13 @@
 import * as mongoose from 'mongoose';
 
-import { Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { InjectConnection } from '@nestjs/mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 
 import { AdminGuard } from '../auth/guards/AdminGuard';
 
 import { DatabaseService } from '../../database/database.service';
+import { SystemService } from './system.service';
 
 
 @ApiTags('System')
@@ -14,9 +15,10 @@ import { DatabaseService } from '../../database/database.service';
 export class SystemController {
 
   constructor(
-    @InjectConnection()
-    private readonly model: mongoose.Connection,
-    private readonly databaseService: DatabaseService
+    @InjectModel('RouteModel')
+    private readonly routeModel: mongoose.Model<any>,
+    private readonly databaseService: DatabaseService,
+    private systemService: SystemService
   ) {
   }
 
@@ -31,13 +33,15 @@ export class SystemController {
   @UseGuards(AdminGuard)
   @Post('insert/:collection/:id')
   @ApiCreatedResponse()
-  public insert(
-    @Param('collection') collection: string
+  public async insert(
+    @Param('collection') collection: string,
+    @Param('id') id: string,
+    @Body() source: any
   ) {
-    /** Mongoose Model usable to add/find/update documents */
-    const Model = this.databaseService.getModelForCollection(collection);
 
     /** Write something wonderful down here */
+    return this.systemService.upsertDocumentInCollection(this.routeModel, id, source);
+
   }
 
 }
