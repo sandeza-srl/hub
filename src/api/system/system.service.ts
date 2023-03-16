@@ -1,17 +1,10 @@
 import * as mongoose from 'mongoose';
 
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { DatabaseService } from '../../database/database.service';
 
 
 @Injectable()
 export class SystemService {
-
-  constructor(
-    private readonly databaseService: DatabaseService
-  ) {
-  }
-
 
   public async upsertDocumentInCollection(Model: mongoose.Model<any>, id: string, source: any) {
 
@@ -28,8 +21,7 @@ export class SystemService {
       else {
 
         // Update the record
-        console.log('update record');
-        /*await Model.updateOne(source);*/
+        await Model.replaceOne({ _id: id }, source);
       }
     }).catch(() => {
       throw new BadRequestException(
