@@ -33,4 +33,20 @@ export class SystemService {
 
   }
 
+
+  public async deleteDocumentInCollection(Model: mongoose.Model<any>, id: string) {
+
+    /** Check required variables */
+    if (id === undefined) {
+      throw new BadRequestException(
+        'Required variables missing',
+        'Params missing: id'
+      );
+    }
+
+    /** Call mongoose method to delete document */
+    await Model.findByIdAndDelete(id);
+
+  }
+
 }

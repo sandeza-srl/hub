@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { InjectModel } from '@nestjs/mongoose';
 
@@ -41,6 +41,19 @@ export class SystemController {
 
     /** Write something wonderful down here */
     return this.systemService.upsertDocumentInCollection(this.routeModel, id, source);
+
+  }
+
+
+  @UseGuards(AdminGuard)
+  @Delete('delete/:collection/:id')
+  @ApiCreatedResponse()
+  public async delete(
+    @Param('collection') collection: string,
+    @Param('id') id: string
+  ) {
+
+    return this.systemService.deleteDocumentInCollection(this.routeModel, id);
 
   }
 
