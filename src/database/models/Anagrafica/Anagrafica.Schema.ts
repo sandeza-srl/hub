@@ -334,7 +334,7 @@ const AnagraficaSchema = new mongoose.Schema<IAnagraficaPrivate>({
     type : Date,
     alias: 'DataOraUltimaModifica',
     set  : (value: any) => {
-      return DateConverter.convertDate(value);
+      return DateConverter.convertDateHour(value);
     }
   },
   __Dati_Numero033     : {
