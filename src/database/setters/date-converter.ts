@@ -9,6 +9,10 @@ export default class DateConverter {
 
   public static convertDate(value: any) {
 
+    if (value === '') {
+      return value;
+    }
+
     if (typeof value === 'string') {
       return dayjs(value, 'DD-MM-YYYY').toDate();
     }
@@ -19,6 +23,10 @@ export default class DateConverter {
 
 
   public static convertDateHour(value: any) {
+
+    if (value === '') {
+      return value;
+    }
 
     if (typeof value === 'string') {
       return dayjs(value, 'DD-MM-YYYY HH:mm:ss').toDate();

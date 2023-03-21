@@ -1,13 +1,8 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
-import dayjs from 'dayjs';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
 
 import type { IItemsPrivate } from './Items.Types.Private';
 import DateConverter from '../../setters/date-converter';
-
-
-dayjs.extend(customParseFormat);
 
 
 /* --------
