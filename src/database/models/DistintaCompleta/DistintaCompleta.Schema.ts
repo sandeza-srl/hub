@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IDistintaCompletaPrivate } from './DistintaCompleta.Types.Private';
 
@@ -15,143 +16,184 @@ const DistintaCompletaSchema = new mongoose.Schema<IDistintaCompletaPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdItemPadre'
+    alias: 'IdItemPadre',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Quantita'
+    alias: 'Quantita',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'UnitaMisura'
+    alias: 'UnitaMisura',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Livello'
+    alias: 'Livello',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdItemIniziale'
+    alias: 'IdItemIniziale',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'LivelloConvertito'
+    alias: 'LivelloConvertito',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtFamigliaItem'
+    alias: 'TxtFamigliaItem',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtSottoFamigliaItem'
+    alias: 'TxtSottoFamigliaItem',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraElaborazioneDistinta'
+    alias: 'DataOraElaborazioneDistinta',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagContribuiscePrezzo'
+    alias: 'FlagContribuiscePrezzo',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagContribuisceCosto'
+    alias: 'FlagContribuisceCosto',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagIncluso'
+    alias: 'FlagIncluso',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'FlagInclusoOpzionaleVedi'
+    alias: 'FlagInclusoOpzionaleVedi',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagDistinta'
+    alias: 'FlagDistinta',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdVoceDistinta'
+    alias: 'IdVoceDistinta',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdVocePadre'
+    alias: 'IdVocePadre',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'CodiceItem'
+    alias: 'CodiceItem',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagVisibile'
+    alias: 'FlagVisibile',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdVociDipendenti'
+    alias: 'IdVociDipendenti',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdVoceUnivoco'
+    alias: 'IdVoceUnivoco',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'VAcquistoTotaleStandard'
+    alias: 'VAcquistoTotaleStandard',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'VVenditaTotaleStandard'
+    alias: 'VVenditaTotaleStandard',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'CodiceTxtItemAutomatico'
+    alias: 'CodiceTxtItemAutomatico',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'LivelloConvertitoNoQtaUM'
+    alias: 'LivelloConvertitoNoQtaUM',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaItems'
+    alias: 'FlagAggiornaContenutiDaItems',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdDistintaCompleta'
+    alias: 'IdDistintaCompleta',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   }
 }, {
   timestamps: true

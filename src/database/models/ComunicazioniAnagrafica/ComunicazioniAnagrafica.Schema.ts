@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IComunicazioniAnagraficaPrivate } from './ComunicazioniAnagrafica.Types.Private';
 
@@ -15,115 +16,149 @@ const ComunicazioniAnagraficaSchema = new mongoose.Schema<IComunicazioniAnagrafi
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'Oggetto'
+    alias: 'Oggetto',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'Testo'
+    alias: 'Testo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdComunicazioneAnagrafica'
+    alias: 'IdComunicazioneAnagrafica',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataEsecuzione'
+    alias: 'DataEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'OraEsecuzione'
+    alias: 'OraEsecuzione',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraEsecuzione'
+    alias: 'DataOraEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagMail'
+    alias: 'FlagMail',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagFax'
+    alias: 'FlagFax',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagPosta'
+    alias: 'FlagPosta',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagChiamata'
+    alias: 'FlagChiamata',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdComunicazioneAnagraficaOriginale'
+    alias: 'IdComunicazioneAnagraficaOriginale',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagBloccato'
+    alias: 'FlagBloccato',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagIn'
+    alias: 'FlagIn',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagOut'
+    alias: 'FlagOut',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtTipoComunicazione'
+    alias: 'TxtTipoComunicazione',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdDocOperativo'
+    alias: 'IdDocOperativo',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdDocContabile'
+    alias: 'IdDocContabile',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdIntervento'
+    alias: 'IdIntervento',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdOfferta'
+    alias: 'IdOfferta',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdProgetto'
+    alias: 'IdProgetto',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdRigaOrdine'
+    alias: 'IdRigaOrdine',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

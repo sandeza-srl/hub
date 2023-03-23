@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ISchedeAttivitaControlloPrivate } from './SchedeAttivitaControllo.Types.Private';
 
@@ -15,491 +16,639 @@ const SchedeAttivitaControlloSchema = new mongoose.Schema<ISchedeAttivitaControl
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdSchedaAttivitaControllo'
+    alias: 'IdSchedaAttivitaControllo',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraInizioPianificata'
+    alias: 'DataOraInizioPianificata',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagAttiva'
+    alias: 'FlagAttiva',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagBloccaProduzione'
+    alias: 'FlagBloccaProduzione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagDerogabile'
+    alias: 'FlagDerogabile',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAreaRisorsa'
+    alias: 'IdAreaRisorsa',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdAttivitaControllo'
+    alias: 'IdAttivitaControllo',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdImpianto'
+    alias: 'IdImpianto',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdRisorsa'
+    alias: 'IdRisorsa',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdStrumento'
+    alias: 'IdStrumento',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdTipoAttivitaControllo'
+    alias: 'IdTipoAttivitaControllo',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdUtensile'
+    alias: 'IdUtensile',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'NumeroAddetti'
+    alias: 'NumeroAddetti',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'TempoCheckPrevisto'
+    alias: 'TempoCheckPrevisto',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'TxtAreaRisorsa'
+    alias: 'TxtAreaRisorsa',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'TxtAttivitaControllo'
+    alias: 'TxtAttivitaControllo',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'TxtOggettoAttivitaAutomatico'
+    alias: 'TxtOggettoAttivitaAutomatico',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'TxtRisorsa'
+    alias: 'TxtRisorsa',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'TxtStrumento'
+    alias: 'TxtStrumento',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtTipoAttivitaControllo'
+    alias: 'TxtTipoAttivitaControllo',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'TxtImpianto'
+    alias: 'TxtImpianto',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtUtensile'
+    alias: 'TxtUtensile',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TxtUtenteCreazione'
+    alias: 'TxtUtenteCreazione',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'TxtUtenteUltimaModifica'
+    alias: 'TxtUtenteUltimaModifica',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_DataOra004: {
     type: Date,
-    alias: 'DataOraFinePianificata'
+    alias: 'DataOraFinePianificata',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataInizioPianificata'
+    alias: 'DataInizioPianificata',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataFinePianificata'
+    alias: 'DataFinePianificata',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Ora002: {
     type: String,
-    alias: 'OraFinePianificata'
+    alias: 'OraFinePianificata',
+
   },
   __Dati_Ora003: {
     type: String,
-    alias: 'OraInizioPianificata'
+    alias: 'OraInizioPianificata',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagEseguito'
+    alias: 'FlagEseguito',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'IdAccountOperatore'
+    alias: 'IdAccountOperatore',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'TxtAccountOperatore'
+    alias: 'TxtAccountOperatore',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'IdDocumentoPrincipale'
+    alias: 'IdDocumentoPrincipale',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataFineEsecuzione'
+    alias: 'DataFineEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataInizioEsecuzione'
+    alias: 'DataInizioEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra005: {
     type: Date,
-    alias: 'DataOraInizioEsecuzione'
+    alias: 'DataOraInizioEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra006: {
     type: Date,
-    alias: 'DataOraFineEsecuzione'
+    alias: 'DataOraFineEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Ora004: {
     type: String,
-    alias: 'OraFineEsecuzione'
+    alias: 'OraFineEsecuzione',
+
   },
   __Dati_Ora005: {
     type: String,
-    alias: 'OraInizioEsecuzione'
+    alias: 'OraInizioEsecuzione',
+
   },
   __Dati_Ora006: {
     type: String,
-    alias: 'TempoPianificato'
+    alias: 'TempoPianificato',
+
   },
   __Dati_Ora007: {
     type: String,
-    alias: 'TempoEsecuzione'
+    alias: 'TempoEsecuzione',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'IdRubricaDestinatariReport'
+    alias: 'IdRubricaDestinatariReport',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdRubricaReferente'
+    alias: 'IdRubricaReferente',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdSede'
+    alias: 'IdSede',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'IdTipoImpianto'
+    alias: 'IdTipoImpianto',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'IdTipologiaAccount'
+    alias: 'IdTipologiaAccount',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdTipoStrumento'
+    alias: 'IdTipoStrumento',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'IdTipoUtensile'
+    alias: 'IdTipoUtensile',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'TxtAccount'
+    alias: 'TxtAccount',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'TxtRegolaRipetizione'
+    alias: 'TxtRegolaRipetizione',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'TxtRubricaReferente'
+    alias: 'TxtRubricaReferente',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'TxtSede'
+    alias: 'TxtSede',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'TxtTipoOggettoAttivitaAutomatico'
+    alias: 'TxtTipoOggettoAttivitaAutomatico',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'NoteLavoro'
+    alias: 'NoteLavoro',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'NumeroControlliTotali'
+    alias: 'NumeroControlliTotali',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'NumeroControlliEseguiti'
+    alias: 'NumeroControlliEseguiti',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'NumeroControlliDaEseguire'
+    alias: 'NumeroControlliDaEseguire',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagAggiornaValori'
+    alias: 'FlagAggiornaValori',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagScaduta'
+    alias: 'FlagScaduta',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'TxtStatoScheda'
+    alias: 'TxtStatoScheda',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'AnnoMesePianificata'
+    alias: 'AnnoMesePianificata',
+
   },
   __Dati_Data005: {
     type: Date,
-    alias: 'DataCorrente'
+    alias: 'DataCorrente',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'OrdineEsecuzione'
+    alias: 'OrdineEsecuzione',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'IdIntervento'
+    alias: 'IdIntervento',
+
   },
   __Dati_DataOra007: {
     type: Date,
-    alias: 'DataOraFirma'
+    alias: 'DataOraFirma',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'Firma'
+    alias: 'Firma',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'FirmaTxt'
+    alias: 'FirmaTxt',
+
   },
   __Dati_Testo040: {
     type: String,
-    alias: 'GeolocalizzazioneFirma'
+    alias: 'GeolocalizzazioneFirma',
+
   },
   __Dati_Testo041: {
     type: String,
-    alias: 'IdArticolo'
+    alias: 'IdArticolo',
+
   },
   __Dati_Testo042: {
     type: String,
-    alias: 'TxtArticolo'
+    alias: 'TxtArticolo',
+
   },
   __Dati_Ora008: {
     type: String,
-    alias: 'TempoGestionePrevisto'
+    alias: 'TempoGestionePrevisto',
+
   },
   __Dati_Ora009: {
     type: String,
-    alias: 'TempoTotalePrevisto'
+    alias: 'TempoTotalePrevisto',
+
   },
   __Dati_Testo043: {
     type: String,
-    alias: 'NoteConsiderazioni'
+    alias: 'NoteConsiderazioni',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagEseguitaConFirma'
+    alias: 'FlagEseguitaConFirma',
+
   },
   __Dati_Testo044: {
     type: String,
-    alias: 'IdProcesso'
+    alias: 'IdProcesso',
+
   },
   __Dati_Testo045: {
     type: String,
-    alias: 'IdStepProcesso'
+    alias: 'IdStepProcesso',
+
   },
   __Dati_Testo046: {
     type: String,
-    alias: 'IdVoceDocOperativo'
+    alias: 'IdVoceDocOperativo',
+
   },
   __Dati_Testo047: {
     type: String,
-    alias: 'IdTracciabilitaItem'
+    alias: 'IdTracciabilitaItem',
+
   },
   __Dati_Testo048: {
     type: String,
-    alias: 'IdMovimentoTracciabilitaItem'
+    alias: 'IdMovimentoTracciabilitaItem',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagPianoCampionamento'
+    alias: 'FlagPianoCampionamento',
+
   },
   __Dati_Testo049: {
     type: String,
-    alias: 'CodiceOggettoAttivitaAutomatico'
+    alias: 'CodiceOggettoAttivitaAutomatico',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagModificato'
+    alias: 'FlagModificato',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'FlagDerogato'
+    alias: 'FlagDerogato',
+
   },
   __Dati_Testo050: {
     type: String,
-    alias: 'IdTipoPianoCampionamento'
+    alias: 'IdTipoPianoCampionamento',
+
   },
   __Dati_Testo051: {
     type: String,
-    alias: 'CodiceTxtTipoPianoCampionamento'
+    alias: 'CodiceTxtTipoPianoCampionamento',
+
   },
   __Dati_Testo052: {
     type: String,
-    alias: 'CodiceTxtOggettoSchedaAttivitaAutomatico'
+    alias: 'CodiceTxtOggettoSchedaAttivitaAutomatico',
+
   },
   __Dati_Testo053: {
     type: String,
-    alias: 'IdRigaDistintaImpianto'
+    alias: 'IdRigaDistintaImpianto',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'Anno'
+    alias: 'Anno',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'SettimanaPianificata'
+    alias: 'SettimanaPianificata',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagFirmaTipoAttivita'
+    alias: 'FlagFirmaTipoAttivita',
+
   },
   __Dati_Data006: {
     type: Date,
-    alias: 'DataScadenza'
+    alias: 'DataScadenza',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'FlagScadenzaVincolante'
+    alias: 'FlagScadenzaVincolante',
+
   },
   __Dati_Ora010: {
     type: String,
-    alias: 'TempoGestioneReale'
+    alias: 'TempoGestioneReale',
+
   },
   __Dati_Ora011: {
     type: String,
-    alias: 'TempoCheckReale'
+    alias: 'TempoCheckReale',
+
   },
   __Dati_Ora012: {
     type: String,
-    alias: 'TempoEsecuzioneReale'
+    alias: 'TempoEsecuzioneReale',
+
   },
   __Dati_Testo054: {
     type: String,
-    alias: 'IdDocOperativo'
+    alias: 'IdDocOperativo',
+
   },
   __Dati_Testo055: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Testo056: {
     type: String,
-    alias: 'IdTipoArticolo'
+    alias: 'IdTipoArticolo',
+
   },
   __Dati_Testo057: {
     type: String,
-    alias: 'IdTipoDocOperativo'
+    alias: 'IdTipoDocOperativo',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'NumeroControlliEsitoPositivo'
+    alias: 'NumeroControlliEsitoPositivo',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'NumeroControlliEsitoNegativo'
+    alias: 'NumeroControlliEsitoNegativo',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'NumeroControlliObbligatoriEsitoNegativo'
+    alias: 'NumeroControlliObbligatoriEsitoNegativo',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'NumeroControlliObbligatoriEsitoPositivo'
+    alias: 'NumeroControlliObbligatoriEsitoPositivo',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'NumeroControlliObbligatori'
+    alias: 'NumeroControlliObbligatori',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'PercControlliEsitoPositivo'
+    alias: 'PercControlliEsitoPositivo',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'PercControlliObbligatoriEsitoPositivo'
+    alias: 'PercControlliObbligatoriEsitoPositivo',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'FlagEsitoPositivoScheda'
+    alias: 'FlagEsitoPositivoScheda',
+
   },
   __Dati_Testo058: {
     type: String,
-    alias: 'TxtContenitore'
+    alias: 'TxtContenitore',
+
   },
   __Dati_Testo059: {
     type: String,
-    alias: 'IdContenitore'
+    alias: 'IdContenitore',
+
   },
   __Dati_Testo060: {
     type: String,
-    alias: 'CodiceOggettoTipoAttivitaAutomatico'
+    alias: 'CodiceOggettoTipoAttivitaAutomatico',
+
   },
   __Dati_Testo061: {
     type: String,
-    alias: 'CodiceTxtOggettoTipoAttivitaAutomatico'
+    alias: 'CodiceTxtOggettoTipoAttivitaAutomatico',
+
   },
   __Dati_Testo062: {
     type: String,
-    alias: 'CodiceTxtOggettoAttivitaAutomatico'
+    alias: 'CodiceTxtOggettoAttivitaAutomatico',
+
   },
   __Dati_Testo063: {
     type: String,
-    alias: 'TxtOggettoTipoAttivitaAutomatico'
+    alias: 'TxtOggettoTipoAttivitaAutomatico',
+
   },
   __Dati_Testo064: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo065: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Testo066: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

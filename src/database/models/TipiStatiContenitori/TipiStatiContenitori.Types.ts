@@ -27,5 +27,7 @@ export interface ITipiStatiContenitori {
   /** Reflected: __Dati_Testo004*/ 
   TxtTipoStatoContenitoreAutomatico: string;
   /** Reflected: __Dati_Testo005*/ 
-  IdInstallazione: string
+  IdInstallazione: string;
+  /** Reflected: __Dati_Numero008*/ 
+  FlagInVerifica: number
 }

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IInstallazionePrivate } from './Installazione.Types.Private';
 

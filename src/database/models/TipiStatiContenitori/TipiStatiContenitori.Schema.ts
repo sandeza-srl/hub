@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiStatiContenitoriPrivate } from './TipiStatiContenitori.Types.Private';
 
@@ -15,59 +16,82 @@ const TipiStatiContenitoriSchema = new mongoose.Schema<ITipiStatiContenitoriPriv
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdTipoStatoContenitore'
+    alias: 'IdTipoStatoContenitore',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtTipoStatoContenitore'
+    alias: 'TxtTipoStatoContenitore',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagDisponibile'
+    alias: 'FlagDisponibile',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagRiparazione'
+    alias: 'FlagRiparazione',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagRottamato'
+    alias: 'FlagRottamato',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtTipoStatoContenitoreAutomatico'
+    alias: 'TxtTipoStatoContenitoreAutomatico',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
+  },
+  __Dati_Numero008: {
+    type: Number,
+    alias: 'FlagInVerifica',
+
   }
 }, {
   timestamps: true

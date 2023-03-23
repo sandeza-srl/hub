@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ISelezioniItemsPrivate } from './SelezioniItems.Types.Private';
 
@@ -15,307 +16,395 @@ const SelezioniItemsSchema = new mongoose.Schema<ISelezioniItemsPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'CodiceTxtItemAutomatico'
+    alias: 'CodiceTxtItemAutomatico',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdSelezioneItem'
+    alias: 'IdSelezioneItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtFornituraItem'
+    alias: 'TxtFornituraItem',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdFornituraItem'
+    alias: 'IdFornituraItem',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'QuantitaSelezione'
+    alias: 'QuantitaSelezione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdCiclo'
+    alias: 'IdCiclo',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdListinoItem'
+    alias: 'IdListinoItem',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagTipoApprovigionamento'
+    alias: 'FlagTipoApprovigionamento',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataSelezione'
+    alias: 'DataSelezione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdAccountFornitore'
+    alias: 'IdAccountFornitore',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagConfermaSelezione'
+    alias: 'FlagConfermaSelezione',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdUtenteCreazione'
+    alias: 'IdUtenteCreazione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'PostazioneCreazione'
+    alias: 'PostazioneCreazione',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'TxtUtenteCreazione'
+    alias: 'TxtUtenteCreazione',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'AnnoSettimanaSelezione'
+    alias: 'AnnoSettimanaSelezione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdDocOperativo'
+    alias: 'IdDocOperativo',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdRigaOrdine'
+    alias: 'IdRigaOrdine',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagTipoPreparazioneSpedizione'
+    alias: 'FlagTipoPreparazioneSpedizione',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagTipoRichiestaMovimentazione'
+    alias: 'FlagTipoRichiestaMovimentazione',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagTipoCompilazioneVociDocOperativo'
+    alias: 'FlagTipoCompilazioneVociDocOperativo',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagTipoCompilazioneVociOfferta'
+    alias: 'FlagTipoCompilazioneVociOfferta',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagAcquisto'
+    alias: 'FlagAcquisto',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagProduzione'
+    alias: 'FlagProduzione',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdTipoDocOperativo'
+    alias: 'IdTipoDocOperativo',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'VUnitario'
+    alias: 'VUnitario',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'VImponibile'
+    alias: 'VImponibile',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagSelezioneElaborata'
+    alias: 'FlagSelezioneElaborata',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagSelezioneSelezionata'
+    alias: 'FlagSelezioneSelezionata',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdGruppo'
+    alias: 'IdGruppo',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdSessioneSelezione'
+    alias: 'IdSessioneSelezione',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraSessioneSelezione'
+    alias: 'DataOraSessioneSelezione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdVoceDocOperativo'
+    alias: 'IdVoceDocOperativo',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'CodiceDocOperativo'
+    alias: 'CodiceDocOperativo',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'QuantitaFornitura'
+    alias: 'QuantitaFornitura',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'IdAccountRaggruppamento'
+    alias: 'IdAccountRaggruppamento',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdAccountDocOperativo'
+    alias: 'IdAccountDocOperativo',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'IdAccountClienteFinale'
+    alias: 'IdAccountClienteFinale',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'TxtClienteFinaleItem'
+    alias: 'TxtClienteFinaleItem',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'TxtFornitore'
+    alias: 'TxtFornitore',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdVoceDocOperativoOrigine'
+    alias: 'IdVoceDocOperativoOrigine',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdLottoProduzione'
+    alias: 'IdLottoProduzione',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'IdFaseProduzione'
+    alias: 'IdFaseProduzione',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'VUnitarioDefinitivo'
+    alias: 'VUnitarioDefinitivo',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'IdDocOperativoOrigine'
+    alias: 'IdDocOperativoOrigine',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdTipoDocOperativoOrigine'
+    alias: 'IdTipoDocOperativoOrigine',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'IdDocOperativoOrigineTutti'
+    alias: 'IdDocOperativoOrigineTutti',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'IdTipoDocOperativoOrigineTutti'
+    alias: 'IdTipoDocOperativoOrigineTutti',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataConsegnaRichiesta'
+    alias: 'DataConsegnaRichiesta',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataConsegnaPrevista'
+    alias: 'DataConsegnaPrevista',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'IdTipoListino'
+    alias: 'IdTipoListino',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'IdMagazzinoGestitoOrigine'
+    alias: 'IdMagazzinoGestitoOrigine',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'IdMagazzinoGestitoDestinazione'
+    alias: 'IdMagazzinoGestitoDestinazione',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'IdPosizioneMagazzinoDestinazione'
+    alias: 'IdPosizioneMagazzinoDestinazione',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'IdPosizioneMagazzinoOrigine'
+    alias: 'IdPosizioneMagazzinoOrigine',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'IdTracciabilitaItem'
+    alias: 'IdTracciabilitaItem',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'IdPacco'
+    alias: 'IdPacco',
+
   },
   __Dati_Testo040: {
     type: String,
-    alias: 'IdStatoPosizioneMagazzinoOrigine'
+    alias: 'IdStatoPosizioneMagazzinoOrigine',
+
   },
   __Dati_Testo041: {
     type: String,
-    alias: 'IdStatoPosizioneMagazzinoDestinazione'
+    alias: 'IdStatoPosizioneMagazzinoDestinazione',
+
   },
   __Dati_Testo042: {
     type: String,
-    alias: 'CodicePosizioneMagazzinoDestinazione'
+    alias: 'CodicePosizioneMagazzinoDestinazione',
+
   },
   __Dati_Testo043: {
     type: String,
-    alias: 'CodicePosizioneMagazzinoOrigine'
+    alias: 'CodicePosizioneMagazzinoOrigine',
+
   },
   __Dati_Testo044: {
     type: String,
-    alias: 'CodicePacco'
+    alias: 'CodicePacco',
+
   },
   __Dati_Testo045: {
     type: String,
-    alias: 'TxtMagazzinoGestitoDestinazione'
+    alias: 'TxtMagazzinoGestitoDestinazione',
+
   },
   __Dati_Testo046: {
     type: String,
-    alias: 'TxtMagazzinoGestitoOrigine'
+    alias: 'TxtMagazzinoGestitoOrigine',
+
   },
   __Dati_Testo047: {
     type: String,
-    alias: 'IdMagazzinoFisicoDestinazione'
+    alias: 'IdMagazzinoFisicoDestinazione',
+
   },
   __Dati_Testo048: {
     type: String,
-    alias: 'IdMagazzinoFisicoOrigine'
+    alias: 'IdMagazzinoFisicoOrigine',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagPosizioniGestiteMagazzinoFisicoDestinazione'
+    alias: 'FlagPosizioniGestiteMagazzinoFisicoDestinazione',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'FlagPosizioniGestiteMagazzinoFisicoOrigine'
+    alias: 'FlagPosizioniGestiteMagazzinoFisicoOrigine',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagControlloMultimagazzino'
+    alias: 'FlagControlloMultimagazzino',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'Multimagazzino_QuantitaPacco'
+    alias: 'Multimagazzino_QuantitaPacco',
+
   }
 }, {
   timestamps: true

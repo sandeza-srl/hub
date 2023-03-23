@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IRegistrazioniOreStepProcessoPrivate } from './RegistrazioniOreStepProcesso.Types.Private';
 
@@ -15,87 +16,116 @@ const RegistrazioniOreStepProcessoSchema = new mongoose.Schema<IRegistrazioniOre
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraRegistrazione'
+    alias: 'DataOraRegistrazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdProcesso'
+    alias: 'IdProcesso',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdRegistrazioneOreStepProcesso'
+    alias: 'IdRegistrazioneOreStepProcesso',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdStepProcesso'
+    alias: 'IdStepProcesso',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'NotaRegistrazione'
+    alias: 'NotaRegistrazione',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdAccountOperatore'
+    alias: 'IdAccountOperatore',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtAccountOperatore'
+    alias: 'TxtAccountOperatore',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataRegistrazione'
+    alias: 'DataRegistrazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'OreEseguite'
+    alias: 'OreEseguite',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdTipoStepProcesso'
+    alias: 'IdTipoStepProcesso',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdTipoProcesso'
+    alias: 'IdTipoProcesso',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'VCostoUnitarioOraOperatore'
+    alias: 'VCostoUnitarioOraOperatore',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'VCostoTotale'
+    alias: 'VCostoTotale',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

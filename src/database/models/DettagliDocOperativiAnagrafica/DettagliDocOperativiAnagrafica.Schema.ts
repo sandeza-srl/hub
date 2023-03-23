@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IDettagliDocOperativiAnagraficaPrivate } from './DettagliDocOperativiAnagrafica.Types.Private';
 
@@ -15,131 +16,167 @@ const DettagliDocOperativiAnagraficaSchema = new mongoose.Schema<IDettagliDocOpe
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraModifica'
+    alias: 'DataOraModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdDettagliDocOperativiAnagrafica'
+    alias: 'IdDettagliDocOperativiAnagrafica',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdTipoDocOperativo'
+    alias: 'IdTipoDocOperativo',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiorna'
+    alias: 'FlagAggiorna',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtAccount'
+    alias: 'TxtAccount',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtTipoDocOperativo'
+    alias: 'TxtTipoDocOperativo',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'CodiceTipoDocOperativo'
+    alias: 'CodiceTipoDocOperativo',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceAccount'
+    alias: 'CodiceAccount',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Banca_FlagProponi'
+    alias: 'Banca_FlagProponi',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Economici_FlagProponi'
+    alias: 'Economici_FlagProponi',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Resa_FlagProponi'
+    alias: 'Resa_FlagProponi',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Pagamento_FlagProponi'
+    alias: 'Pagamento_FlagProponi',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'Vettore_FlagProponi'
+    alias: 'Vettore_FlagProponi',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'Banca_IdCassaBancaAppoggio'
+    alias: 'Banca_IdCassaBancaAppoggio',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'Banca_IdCassaBancaRiferimento'
+    alias: 'Banca_IdCassaBancaRiferimento',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'Economici_IdAccountIntermediario'
+    alias: 'Economici_IdAccountIntermediario',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'Pagamento_IdMetodoPagamento'
+    alias: 'Pagamento_IdMetodoPagamento',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'Pagamento_IdRegolaScadenza'
+    alias: 'Pagamento_IdRegolaScadenza',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'Pagamento_NoteCondizioni'
+    alias: 'Pagamento_NoteCondizioni',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'Pagamento_NotePagamento'
+    alias: 'Pagamento_NotePagamento',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'Resa_AspettoEsteriore'
+    alias: 'Resa_AspettoEsteriore',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'Resa_CausaleTrasporto'
+    alias: 'Resa_CausaleTrasporto',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'Resa_Porto'
+    alias: 'Resa_Porto',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'Resa_IdIncoterm'
+    alias: 'Resa_IdIncoterm',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'Vettore_IdAccountVettore'
+    alias: 'Vettore_IdAccountVettore',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'Vettore_IdAccountSecondoVettore'
+    alias: 'Vettore_IdAccountSecondoVettore',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'Vettore_TipoVettore'
+    alias: 'Vettore_TipoVettore',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'Pagamento_TerminiDiPagamento'
+    alias: 'Pagamento_TerminiDiPagamento',
+
   }
 }, {
   timestamps: true

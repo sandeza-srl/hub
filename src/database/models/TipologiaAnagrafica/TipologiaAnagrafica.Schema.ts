@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipologiaAnagraficaPrivate } from './TipologiaAnagrafica.Types.Private';
 
@@ -15,83 +16,103 @@ const TipologiaAnagraficaSchema = new mongoose.Schema<ITipologiaAnagraficaPrivat
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipologiaAccount'
+    alias: 'IdTipologiaAccount',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtTipologiaAccount'
+    alias: 'TxtTipologiaAccount',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagFornitore'
+    alias: 'FlagFornitore',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagClientePrimario'
+    alias: 'FlagClientePrimario',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagDistributore'
+    alias: 'FlagDistributore',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagClienteFinale'
+    alias: 'FlagClienteFinale',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagCompagnia'
+    alias: 'FlagCompagnia',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagOperatore'
+    alias: 'FlagOperatore',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'CodiceTipologiaAccount'
+    alias: 'CodiceTipologiaAccount',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagCreatoMobile'
+    alias: 'FlagCreatoMobile',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdTipiRuoliNoVisualizzazione'
+    alias: 'IdTipiRuoliNoVisualizzazione',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdUtentiNoVisualizzazione'
+    alias: 'IdUtentiNoVisualizzazione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagPersonaFisica'
+    alias: 'FlagPersonaFisica',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagPersonaGiuridica'
+    alias: 'FlagPersonaGiuridica',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagPubblicaAmministrazione'
+    alias: 'FlagPubblicaAmministrazione',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IAliquotePrivate } from './Aliquote.Types.Private';
 
@@ -15,103 +16,132 @@ const AliquoteSchema = new mongoose.Schema<IAliquotePrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'PercentualeIva'
+    alias: 'PercentualeIva',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'TxtAliquota'
+    alias: 'TxtAliquota',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAliquota'
+    alias: 'IdAliquota',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagImponibile'
+    alias: 'FlagImponibile',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'FlagImponibileVedi'
+    alias: 'FlagImponibileVedi',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'CodiceAliquota'
+    alias: 'CodiceAliquota',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'PercentualeIVADetraibile'
+    alias: 'PercentualeIVADetraibile',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagAliquotaPrincipale_DASOSTITUIRE'
+    alias: 'FlagAliquotaPrincipale_DASOSTITUIRE',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagAliquotaPrincipale'
+    alias: 'FlagAliquotaPrincipale',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdCodificaNaturaEsenzione'
+    alias: 'IdCodificaNaturaEsenzione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceCodifica'
+    alias: 'CodiceCodifica',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdAliquotaOrigine'
+    alias: 'IdAliquotaOrigine',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'CodiceRegistroIVA'
+    alias: 'CodiceRegistroIVA',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagReverseCharge'
+    alias: 'FlagReverseCharge',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagMarcaBolloRichiesta'
+    alias: 'FlagMarcaBolloRichiesta',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'ValoreMarcaBollo'
+    alias: 'ValoreMarcaBollo',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdItemBolloIN'
+    alias: 'IdItemBolloIN',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdItemBolloOUT'
+    alias: 'IdItemBolloOUT',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagDichiarazioneIntento'
+    alias: 'FlagDichiarazioneIntento',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

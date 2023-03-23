@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IInterventiPrivate } from './Interventi.Types.Private';
 
@@ -15,763 +16,987 @@ const InterventiSchema = new mongoose.Schema<IInterventiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdIntervento'
+    alias: 'IdIntervento',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdProgetto'
+    alias: 'IdProgetto',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdFaseProgetto'
+    alias: 'IdFaseProgetto',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdTipoIntervento'
+    alias: 'IdTipoIntervento',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdOperatoreResponsabile'
+    alias: 'IdOperatoreResponsabile',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataInserimento'
+    alias: 'DataInserimento',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'CodiceRichiesta'
+    alias: 'CodiceRichiesta',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceIntervento'
+    alias: 'CodiceIntervento',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'ProgressivoProgramma'
+    alias: 'ProgressivoProgramma',
+
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataEsecuzioneProgrammata'
+    alias: 'DataEsecuzioneProgrammata',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'AnnoInserimento'
+    alias: 'AnnoInserimento',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataEsecuzioneReale'
+    alias: 'DataEsecuzioneReale',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataRichiesta'
+    alias: 'DataRichiesta',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data005: {
     type: Date,
-    alias: 'DataScadenzaRichiesta'
+    alias: 'DataScadenzaRichiesta',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'OraScadenzaRichiesta'
+    alias: 'OraScadenzaRichiesta',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraScadenzaRichiesta'
+    alias: 'DataOraScadenzaRichiesta',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'AnnoRichiesta'
+    alias: 'AnnoRichiesta',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'AnnoScadenzaRichiesta'
+    alias: 'AnnoScadenzaRichiesta',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'AnnoEsecuzioneProgrammata'
+    alias: 'AnnoEsecuzioneProgrammata',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TipoRichiesta'
+    alias: 'TipoRichiesta',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'PrioritaRichiesta'
+    alias: 'PrioritaRichiesta',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'NotePreProgramma'
+    alias: 'NotePreProgramma',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdAccountDestinatario'
+    alias: 'IdAccountDestinatario',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdSedeDestinatario'
+    alias: 'IdSedeDestinatario',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagStatoProgrammato'
+    alias: 'FlagStatoProgrammato',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagRichiesta'
+    alias: 'FlagRichiesta',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagStatoAssegnato'
+    alias: 'FlagStatoAssegnato',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagDdtCreabile'
+    alias: 'FlagDdtCreabile',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagRitardo'
+    alias: 'FlagRitardo',
+
   },
   __Dati_Ora002: {
     type: String,
-    alias: 'OraFineEsecuzione'
+    alias: 'OraFineEsecuzione',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraFineEsecuzione'
+    alias: 'DataOraFineEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdDocOperativo'
+    alias: 'IdDocOperativo',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CodiceDocOperativo'
+    alias: 'CodiceDocOperativo',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagBloccato'
+    alias: 'FlagBloccato',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtTipoIntervento'
+    alias: 'TxtTipoIntervento',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'TxtAccountDestinatario'
+    alias: 'TxtAccountDestinatario',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdRubricaDestinatario'
+    alias: 'IdRubricaDestinatario',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TxtSedeDestinatario'
+    alias: 'TxtSedeDestinatario',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'NomeRubricaDestinatario'
+    alias: 'NomeRubricaDestinatario',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'MailDestinatario'
+    alias: 'MailDestinatario',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'MailCompagnia'
+    alias: 'MailCompagnia',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'Citta'
+    alias: 'Citta',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'NotePreRichiesta'
+    alias: 'NotePreRichiesta',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'NotePostLavoroVisibili'
+    alias: 'NotePostLavoroVisibili',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagStatoConfermato'
+    alias: 'FlagStatoConfermato',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'TxtStato'
+    alias: 'TxtStato',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'TxtProgetto'
+    alias: 'TxtProgetto',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'TxtFaseProgetto'
+    alias: 'TxtFaseProgetto',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'IdTipoDocOperativoDdt'
+    alias: 'IdTipoDocOperativoDdt',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdTipoDocOperativo'
+    alias: 'IdTipoDocOperativo',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'TxtOperatoreResponsabile'
+    alias: 'TxtOperatoreResponsabile',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagDocOperativoChiuso'
+    alias: 'FlagDocOperativoChiuso',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagStatoEseguito'
+    alias: 'FlagStatoEseguito',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'OggettoMail'
+    alias: 'OggettoMail',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'ContenutoMail'
+    alias: 'ContenutoMail',
+
   },
   __Dati_Ora003: {
     type: String,
-    alias: 'OraEsecuzioneProgrammata'
+    alias: 'OraEsecuzioneProgrammata',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagLavoroCompletato'
+    alias: 'FlagLavoroCompletato',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'OrdineStato'
+    alias: 'OrdineStato',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'NotePostLavoroInterne'
+    alias: 'NotePostLavoroInterne',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'NotePostLavoroTutte'
+    alias: 'NotePostLavoroTutte',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'NotePreTutte'
+    alias: 'NotePreTutte',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'TipoDocumento'
+    alias: 'TipoDocumento',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'SottoTipoDocumento'
+    alias: 'SottoTipoDocumento',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagDocOperativoUnico'
+    alias: 'FlagDocOperativoUnico',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraFirma'
+    alias: 'DataOraFirma',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'FirmaCliente'
+    alias: 'FirmaCliente',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'FlagInviato'
+    alias: 'FlagInviato',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'UrlRichiesta'
+    alias: 'UrlRichiesta',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'GeolocalizzazioneFirma'
+    alias: 'GeolocalizzazioneFirma',
+
   },
   __Dati_Ora004: {
     type: String,
-    alias: 'OraInizioEsecuzione'
+    alias: 'OraInizioEsecuzione',
+
   },
   __Dati_DataOra004: {
     type: Date,
-    alias: 'DataOraInizioEsecuzione'
+    alias: 'DataOraInizioEsecuzione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo040: {
     type: String,
-    alias: 'TxtOperatoriTutti'
+    alias: 'TxtOperatoriTutti',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagStatoControllato'
+    alias: 'FlagStatoControllato',
+
   },
   __Dati_Testo041: {
     type: String,
-    alias: 'FirmaClienteEstesa'
+    alias: 'FirmaClienteEstesa',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'FlagPagamentoAbilitato'
+    alias: 'FlagPagamentoAbilitato',
+
   },
   __Dati_Testo042: {
     type: String,
-    alias: 'CondizioniGenerali'
+    alias: 'CondizioniGenerali',
+
   },
   __Dati_Testo043: {
     type: String,
-    alias: 'IndirizziMailA'
+    alias: 'IndirizziMailA',
+
   },
   __Dati_Testo044: {
     type: String,
-    alias: 'IndirizziMailCC'
+    alias: 'IndirizziMailCC',
+
   },
   __Dati_Testo045: {
     type: String,
-    alias: 'IndirizziMailCCN'
+    alias: 'IndirizziMailCCN',
+
   },
   __Dati_Testo046: {
     type: String,
-    alias: 'DestinatarioA_Tipo'
+    alias: 'DestinatarioA_Tipo',
+
   },
   __Dati_Testo047: {
     type: String,
-    alias: 'DestinatarioCC_Tipo'
+    alias: 'DestinatarioCC_Tipo',
+
   },
   __Dati_Testo048: {
     type: String,
-    alias: 'DestinatarioCCN_Tipo'
+    alias: 'DestinatarioCCN_Tipo',
+
   },
   __Dati_Testo049: {
     type: String,
-    alias: 'NomeFormatoStampa'
+    alias: 'NomeFormatoStampa',
+
   },
   __Dati_Ora005: {
     type: String,
-    alias: 'Durata'
+    alias: 'Durata',
+
   },
   __Dati_Ora006: {
     type: String,
-    alias: 'OraFineProgrammata'
+    alias: 'OraFineProgrammata',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'FlagCalendarioInviato'
+    alias: 'FlagCalendarioInviato',
+
   },
   __Dati_Testo050: {
     type: String,
-    alias: 'IdDocumentoCollegato'
+    alias: 'IdDocumentoCollegato',
+
   },
   __Dati_Testo051: {
     type: String,
-    alias: 'TxtIntervento'
+    alias: 'TxtIntervento',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'VImponibile_03'
+    alias: 'VImponibile_03',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'VIva_03'
+    alias: 'VIva_03',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'VTotale_04'
+    alias: 'VTotale_04',
+
   },
   __Dati_Testo052: {
     type: String,
-    alias: 'IdAbbinamento'
+    alias: 'IdAbbinamento',
+
   },
   __Dati_Testo053: {
     type: String,
-    alias: 'IdSottoTipoDocumento'
+    alias: 'IdSottoTipoDocumento',
+
   },
   __Dati_Testo054: {
     type: String,
-    alias: 'IdTipoDocumento'
+    alias: 'IdTipoDocumento',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'FlagStatoAttivo'
+    alias: 'FlagStatoAttivo',
+
   },
   __Dati_Testo055: {
     type: String,
-    alias: 'UrlEsecuzione'
+    alias: 'UrlEsecuzione',
+
   },
   __Dati_Testo056: {
     type: String,
-    alias: 'FlagSelezionatoTxt'
+    alias: 'FlagSelezionatoTxt',
+
   },
   __Dati_Testo057: {
     type: String,
-    alias: 'IdZona'
+    alias: 'IdZona',
+
   },
   __Dati_Testo058: {
     type: String,
-    alias: 'TxtZona'
+    alias: 'TxtZona',
+
   },
   __Dati_Data006: {
     type: Date,
-    alias: 'DataUltimaModifica'
+    alias: 'DataUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'FlagIncassoImmediato'
+    alias: 'FlagIncassoImmediato',
+
   },
   __Dati_Testo059: {
     type: String,
-    alias: 'IdDocOperativoDdt'
+    alias: 'IdDocOperativoDdt',
+
   },
   __Dati_Testo060: {
     type: String,
-    alias: 'IdRegolaRipetizione'
+    alias: 'IdRegolaRipetizione',
+
   },
   __Dati_DataOra005: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra006: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo061: {
     type: String,
-    alias: 'IdImpianto'
+    alias: 'IdImpianto',
+
   },
   __Dati_Testo062: {
     type: String,
-    alias: 'IdTipoImpianto'
+    alias: 'IdTipoImpianto',
+
   },
   __Dati_Testo063: {
     type: String,
-    alias: 'IdSchedaAttivitaControllo'
+    alias: 'IdSchedaAttivitaControllo',
+
   },
   __Dati_Testo064: {
     type: String,
-    alias: 'IdAttivitaControllo'
+    alias: 'IdAttivitaControllo',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'AnnoMeseEsecuzioneProgrammata'
+    alias: 'AnnoMeseEsecuzioneProgrammata',
+
   },
   __Dati_Numero031: {
     type: Number,
-    alias: 'AnnoSettimanaEsecuzioneProgrammata'
+    alias: 'AnnoSettimanaEsecuzioneProgrammata',
+
   },
   __Dati_Numero032: {
     type: Number,
-    alias: 'AnnoMeseRichiesta'
+    alias: 'AnnoMeseRichiesta',
+
   },
   __Dati_Numero033: {
     type: Number,
-    alias: 'AnnoSettimanaRichiesta'
+    alias: 'AnnoSettimanaRichiesta',
+
   },
   __Dati_Numero034: {
     type: Number,
-    alias: 'AnnoMeseScadenzaRichiesta'
+    alias: 'AnnoMeseScadenzaRichiesta',
+
   },
   __Dati_Numero035: {
     type: Number,
-    alias: 'AnnoSettimanaScadenzaRichiesta'
+    alias: 'AnnoSettimanaScadenzaRichiesta',
+
   },
   __Dati_Numero036: {
     type: Number,
-    alias: 'AnnoEsecuzioneReale'
+    alias: 'AnnoEsecuzioneReale',
+
   },
   __Dati_Numero037: {
     type: Number,
-    alias: 'AnnoMeseEsecuzioneReale'
+    alias: 'AnnoMeseEsecuzioneReale',
+
   },
   __Dati_Numero038: {
     type: Number,
-    alias: 'AnnoSettimanaEsecuzioneReale'
+    alias: 'AnnoSettimanaEsecuzioneReale',
+
   },
   __Dati_Numero039: {
     type: Number,
-    alias: 'AnnoMeseInserimento'
+    alias: 'AnnoMeseInserimento',
+
   },
   __Dati_Numero040: {
     type: Number,
-    alias: 'AnnoSettimanaInserimento'
+    alias: 'AnnoSettimanaInserimento',
+
   },
   __Dati_Numero041: {
     type: Number,
-    alias: 'FlagAggiornaDatiDocOperativo'
+    alias: 'FlagAggiornaDatiDocOperativo',
+
   },
   __Dati_Numero042: {
     type: Number,
-    alias: 'ConversioneValutaAPrincipale'
+    alias: 'ConversioneValutaAPrincipale',
+
   },
   __Dati_Numero043: {
     type: Number,
-    alias: 'ConversioneValutaSuPrincipale'
+    alias: 'ConversioneValutaSuPrincipale',
+
   },
   __Dati_Data007: {
     type: Date,
-    alias: 'DataValoreValuta'
+    alias: 'DataValoreValuta',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo065: {
     type: String,
-    alias: 'IdValuta'
+    alias: 'IdValuta',
+
   },
   __Dati_Testo066: {
     type: String,
-    alias: 'SimboloRidottoValuta'
+    alias: 'SimboloRidottoValuta',
+
   },
   __Dati_Testo067: {
     type: String,
-    alias: 'SimboloValuta'
+    alias: 'SimboloValuta',
+
   },
   __Dati_Testo068: {
     type: String,
-    alias: 'TxtValuta'
+    alias: 'TxtValuta',
+
   },
   __Dati_Testo069: {
     type: String,
-    alias: 'LinguaPrincipale'
+    alias: 'LinguaPrincipale',
+
   },
   __Dati_Testo070: {
     type: String,
-    alias: 'LinguaDocumento'
+    alias: 'LinguaDocumento',
+
   },
   __Dati_Testo071: {
     type: String,
-    alias: 'IdAccountPagatore'
+    alias: 'IdAccountPagatore',
+
   },
   __Dati_Testo072: {
     type: String,
-    alias: 'IdAccountIntermediario'
+    alias: 'IdAccountIntermediario',
+
   },
   __Dati_Testo073: {
     type: String,
-    alias: 'IdRubricaPagatore'
+    alias: 'IdRubricaPagatore',
+
   },
   __Dati_Testo074: {
     type: String,
-    alias: 'IdSedePagatore'
+    alias: 'IdSedePagatore',
+
   },
   __Dati_Testo075: {
     type: String,
-    alias: 'IdRubricaCompagnia'
+    alias: 'IdRubricaCompagnia',
+
   },
   __Dati_Testo076: {
     type: String,
-    alias: 'IdSedeCompagnia'
+    alias: 'IdSedeCompagnia',
+
   },
   __Dati_Testo077: {
     type: String,
-    alias: 'IdRubricaIntermediario'
+    alias: 'IdRubricaIntermediario',
+
   },
   __Dati_Numero044: {
     type: Number,
-    alias: 'FlagAggiornaImpostazioni'
+    alias: 'FlagAggiornaImpostazioni',
+
   },
   __Dati_Numero045: {
     type: Number,
-    alias: 'FlagAggiornaIntervento'
+    alias: 'FlagAggiornaIntervento',
+
   },
   __Dati_Numero046: {
     type: Number,
-    alias: 'FlagDocOperativoCreato'
+    alias: 'FlagDocOperativoCreato',
+
   },
   __Dati_Testo078: {
     type: String,
-    alias: 'TxtImpianto'
+    alias: 'TxtImpianto',
+
   },
   __Dati_DataOra007: {
     type: Date,
-    alias: 'DataOraFlagInviato'
+    alias: 'DataOraFlagInviato',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo079: {
     type: String,
-    alias: 'TxtUtenteFlagInviato'
+    alias: 'TxtUtenteFlagInviato',
+
   },
   __Dati_DataOra008: {
     type: Date,
-    alias: 'DataOraFlagStatoConfermato'
+    alias: 'DataOraFlagStatoConfermato',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra009: {
     type: Date,
-    alias: 'DataOraFlagStatoControllato'
+    alias: 'DataOraFlagStatoControllato',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo080: {
     type: String,
-    alias: 'TxtUtenteFlagStatoConfermato'
+    alias: 'TxtUtenteFlagStatoConfermato',
+
   },
   __Dati_Testo081: {
     type: String,
-    alias: 'TxtUtenteFlagStatoControllato'
+    alias: 'TxtUtenteFlagStatoControllato',
+
   },
   __Dati_Testo082: {
     type: String,
-    alias: 'IdDocOperativoOrigineDiretti_Tutti'
+    alias: 'IdDocOperativoOrigineDiretti_Tutti',
+
   },
   __Dati_Testo083: {
     type: String,
-    alias: 'IdTipoDocOperativo_OrigineDati'
+    alias: 'IdTipoDocOperativo_OrigineDati',
+
   },
   __Dati_Testo084: {
     type: String,
-    alias: 'IdAccountIntervento'
+    alias: 'IdAccountIntervento',
+
   },
   __Dati_Numero047: {
     type: Number,
-    alias: 'FlagAggiorna01_ValoriImpostazione'
+    alias: 'FlagAggiorna01_ValoriImpostazione',
+
   },
   __Dati_Numero048: {
     type: Number,
-    alias: 'FlagAggiorna03_ValoriDaVoci'
+    alias: 'FlagAggiorna03_ValoriDaVoci',
+
   },
   __Dati_Numero049: {
     type: Number,
-    alias: 'FlagAggiorna04_Totali'
+    alias: 'FlagAggiorna04_Totali',
+
   },
   __Dati_Numero050: {
     type: Number,
-    alias: 'VDaPagare_06'
+    alias: 'VDaPagare_06',
+
   },
   __Dati_Numero051: {
     type: Number,
-    alias: 'VDaPagareValuta_06'
+    alias: 'VDaPagareValuta_06',
+
   },
   __Dati_Numero052: {
     type: Number,
-    alias: 'VImponibileValuta_03'
+    alias: 'VImponibileValuta_03',
+
   },
   __Dati_Numero053: {
     type: Number,
-    alias: 'VIvaValuta_03'
+    alias: 'VIvaValuta_03',
+
   },
   __Dati_Numero054: {
     type: Number,
-    alias: 'VPagato_03'
+    alias: 'VPagato_03',
+
   },
   __Dati_Numero055: {
     type: Number,
-    alias: 'VPagatoValuta_03'
+    alias: 'VPagatoValuta_03',
+
   },
   __Dati_Numero056: {
     type: Number,
-    alias: 'VTotaleValuta_04'
+    alias: 'VTotaleValuta_04',
+
   },
   __Dati_Numero057: {
     type: Number,
-    alias: 'FlagAggiorna06_Totali2'
+    alias: 'FlagAggiorna06_Totali2',
+
   },
   __Dati_Numero058: {
     type: Number,
-    alias: 'FlagPagatoTutto'
+    alias: 'FlagPagatoTutto',
+
   },
   __Dati_Data008: {
     type: Date,
-    alias: 'DataFinePeriodo'
+    alias: 'DataFinePeriodo',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo085: {
     type: String,
-    alias: 'IdVoceOriginePrincipale'
+    alias: 'IdVoceOriginePrincipale',
+
   },
   __Dati_Testo086: {
     type: String,
-    alias: 'VariazioneOriginePrincipale'
+    alias: 'VariazioneOriginePrincipale',
+
   },
   __Dati_Numero059: {
     type: Number,
-    alias: 'FlagEreditaScontoOrigine'
+    alias: 'FlagEreditaScontoOrigine',
+
   },
   __Dati_Numero060: {
     type: Number,
-    alias: 'FlagTrasmesso'
+    alias: 'FlagTrasmesso',
+
   },
   __Dati_Numero061: {
     type: Number,
-    alias: 'OrePausa'
+    alias: 'OrePausa',
+
   },
   __Dati_Numero062: {
     type: Number,
-    alias: 'FlagFeedbackRichiesto'
+    alias: 'FlagFeedbackRichiesto',
+
   },
   __Dati_Numero063: {
     type: Number,
-    alias: 'FlagFeedbackInviato'
+    alias: 'FlagFeedbackInviato',
+
   },
   __Dati_Testo087: {
     type: String,
-    alias: 'IdTipoDocOperativoOrigineAutomatica'
+    alias: 'IdTipoDocOperativoOrigineAutomatica',
+
   },
   __Dati_Testo088: {
     type: String,
-    alias: 'IdDocOperativoOrigineAutomatica'
+    alias: 'IdDocOperativoOrigineAutomatica',
+
   },
   __Dati_Ora007: {
     type: String,
-    alias: 'DurataEffettiva'
+    alias: 'DurataEffettiva',
+
   },
   __Dati_Numero064: {
     type: Number,
-    alias: 'TotaleVoci_QuantitaItem_03'
+    alias: 'TotaleVoci_QuantitaItem_03',
+
   },
   __Dati_Testo089: {
     type: String,
-    alias: 'IdSottoFamiglieAbilitate'
+    alias: 'IdSottoFamiglieAbilitate',
+
   },
   __Dati_Testo090: {
     type: String,
-    alias: 'IdFamiglieAbilitate'
+    alias: 'IdFamiglieAbilitate',
+
   },
   __Dati_Numero065: {
     type: Number,
-    alias: 'FlagTrasfertaConNotte'
+    alias: 'FlagTrasfertaConNotte',
+
   },
   __Dati_Testo091: {
     type: String,
-    alias: 'IdIntermediario'
+    alias: 'IdIntermediario',
+
   },
   __Dati_Testo092: {
     type: String,
-    alias: 'TxtAccountIntermediario'
+    alias: 'TxtAccountIntermediario',
+
   },
   __Dati_Numero066: {
     type: Number,
-    alias: 'FlagChiusuraAutomatica'
+    alias: 'FlagChiusuraAutomatica',
+
   },
   __Dati_Testo093: {
     type: String,
-    alias: 'IdMetodoPagamento'
+    alias: 'IdMetodoPagamento',
+
   },
   __Dati_Testo094: {
     type: String,
-    alias: 'TxtMetodoPagamento'
+    alias: 'TxtMetodoPagamento',
+
   },
   __Dati_Testo095: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero067: {
     type: Number,
-    alias: 'TotaleVoci_QuantitaOre_03'
+    alias: 'TotaleVoci_QuantitaOre_03',
+
   },
   __Dati_Numero068: {
     type: Number,
-    alias: 'TotaleQta_03'
+    alias: 'TotaleQta_03',
+
   },
   __Dati_Testo096: {
     type: String,
-    alias: 'IdClasseIntervento'
+    alias: 'IdClasseIntervento',
+
   },
   __Dati_Testo097: {
     type: String,
-    alias: 'TxtClasseIntervento'
+    alias: 'TxtClasseIntervento',
+
   }
 }, {
   timestamps: true

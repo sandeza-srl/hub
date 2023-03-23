@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiStepProcessiPrivate } from './TipiStepProcessi.Types.Private';
 
@@ -15,171 +16,217 @@ const TipiStepProcessiSchema = new mongoose.Schema<ITipiStepProcessiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoProcesso'
+    alias: 'IdTipoProcesso',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'NoteGenerali'
+    alias: 'NoteGenerali',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtTipoStepProcessi'
+    alias: 'TxtTipoStepProcessi',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdTipoStepProcessi'
+    alias: 'IdTipoStepProcessi',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'GiorniDaPropedeutico'
+    alias: 'GiorniDaPropedeutico',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdTipoStepProcessiPropedeutico'
+    alias: 'IdTipoStepProcessiPropedeutico',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtTipoRuoloRespEsecuzione'
+    alias: 'TxtTipoRuoloRespEsecuzione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagGeneraNotificaEsterna'
+    alias: 'FlagGeneraNotificaEsterna',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdTipoRuoloFirma'
+    alias: 'IdTipoRuoloFirma',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagDocumentiPresenti'
+    alias: 'FlagDocumentiPresenti',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdTipoRuoloRespEsecuzione'
+    alias: 'IdTipoRuoloRespEsecuzione',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdTipoRuoloInvitatiEsecuzione'
+    alias: 'IdTipoRuoloInvitatiEsecuzione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdTipoRuoloNotifica'
+    alias: 'IdTipoRuoloNotifica',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'NoteInput'
+    alias: 'NoteInput',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'NoteOutput'
+    alias: 'NoteOutput',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'Durata'
+    alias: 'Durata',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdTipiProcessoOutput'
+    alias: 'IdTipiProcessoOutput',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagGeneraEventoCalendario'
+    alias: 'FlagGeneraEventoCalendario',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtTipoRuoliEsecuzioneTutti'
+    alias: 'TxtTipoRuoliEsecuzioneTutti',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'TxtOrdineTipoStepProcessoAutomatico'
+    alias: 'TxtOrdineTipoStepProcessoAutomatico',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'NomeFormato'
+    alias: 'NomeFormato',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdTipiRuolo_TuttiCoinvolti'
+    alias: 'IdTipiRuolo_TuttiCoinvolti',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagAggiorna'
+    alias: 'FlagAggiorna',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagObbligatorio'
+    alias: 'FlagObbligatorio',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'NomeScriptStampa'
+    alias: 'NomeScriptStampa',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'NomeScriptNotificaEsterna'
+    alias: 'NomeScriptNotificaEsterna',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagFirmaRichiesta'
+    alias: 'FlagFirmaRichiesta',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagRegistrazioneOreRichiesta'
+    alias: 'FlagRegistrazioneOreRichiesta',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagEsecuzioneEsterna'
+    alias: 'FlagEsecuzioneEsterna',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'GiorniDaInizio_Progressivo'
+    alias: 'GiorniDaInizio_Progressivo',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'NomeScriptEventoCalendario'
+    alias: 'NomeScriptEventoCalendario',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagCollegamentoTipoProcessoPresente'
+    alias: 'FlagCollegamentoTipoProcessoPresente',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagCollegamentoAltroCreazione'
+    alias: 'FlagCollegamentoAltroCreazione',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagCollegamentoAltroCollegamento'
+    alias: 'FlagCollegamentoAltroCollegamento',
+
   }
 }, {
   timestamps: true

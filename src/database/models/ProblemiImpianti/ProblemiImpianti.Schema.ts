@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IProblemiImpiantiPrivate } from './ProblemiImpianti.Types.Private';
 
@@ -15,111 +16,146 @@ const ProblemiImpiantiSchema = new mongoose.Schema<IProblemiImpiantiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoProblema'
+    alias: 'IdTipoProblema',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtTipoProblema'
+    alias: 'TxtTipoProblema',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdImpianto'
+    alias: 'IdImpianto',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtImpianto'
+    alias: 'TxtImpianto',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'ComplessitaNumero'
+    alias: 'ComplessitaNumero',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'ComplessitaTesto'
+    alias: 'ComplessitaTesto',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdProblemaImpianto'
+    alias: 'IdProblemaImpianto',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagRisolto'
+    alias: 'FlagRisolto',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtRisolto'
+    alias: 'TxtRisolto',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'FlagRisoltoVedi'
+    alias: 'FlagRisoltoVedi',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagAzioneCreata'
+    alias: 'FlagAzioneCreata',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'FlagAzioneCreataVedi'
+    alias: 'FlagAzioneCreataVedi',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdTipoImpianto'
+    alias: 'IdTipoImpianto',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'CodiceImpianto'
+    alias: 'CodiceImpianto',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataRilevazione'
+    alias: 'DataRilevazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataRisoluzione'
+    alias: 'DataRisoluzione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdTipoSoluzione'
+    alias: 'IdTipoSoluzione',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiInfoSchedeValutazionePrivate } from './TipiInfoSchedeValutazione.Types.Private';
 
@@ -15,51 +16,63 @@ const TipiInfoSchedeValutazioneSchema = new mongoose.Schema<ITipiInfoSchedeValut
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoSchedaValutazione'
+    alias: 'IdTipoSchedaValutazione',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdTipoInfoSchedaValutazione'
+    alias: 'IdTipoInfoSchedaValutazione',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'Etichetta'
+    alias: 'Etichetta',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagValoreCalcolato'
+    alias: 'FlagValoreCalcolato',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'ValoreRiferimentoTestuale'
+    alias: 'ValoreRiferimentoTestuale',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'ValoreRiferimentoNumerico'
+    alias: 'ValoreRiferimentoNumerico',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'ValoreLimiteInferioreNumerico'
+    alias: 'ValoreLimiteInferioreNumerico',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'ValoreLimiteSuperioreNumerico'
+    alias: 'ValoreLimiteSuperioreNumerico',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'Nota'
+    alias: 'Nota',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

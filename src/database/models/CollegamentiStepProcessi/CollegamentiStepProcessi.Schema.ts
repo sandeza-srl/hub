@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICollegamentiStepProcessiPrivate } from './CollegamentiStepProcessi.Types.Private';
 
@@ -15,171 +16,217 @@ const CollegamentiStepProcessiSchema = new mongoose.Schema<ICollegamentiStepProc
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagArticolo'
+    alias: 'FlagArticolo',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagAttivitaControllo'
+    alias: 'FlagAttivitaControllo',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagCreazione'
+    alias: 'FlagCreazione',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagItem'
+    alias: 'FlagItem',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagLottoProduzione'
+    alias: 'FlagLottoProduzione',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagMantieniCollegamentiProcesso'
+    alias: 'FlagMantieniCollegamentiProcesso',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagOfferta'
+    alias: 'FlagOfferta',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagRigaOrdine'
+    alias: 'FlagRigaOrdine',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagSchedaAttivitaControllo'
+    alias: 'FlagSchedaAttivitaControllo',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagTipoAttivitaControllo'
+    alias: 'FlagTipoAttivitaControllo',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagTipoDocumentoOperativo'
+    alias: 'FlagTipoDocumentoOperativo',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagProcesso'
+    alias: 'FlagProcesso',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagTracciabilita'
+    alias: 'FlagTracciabilita',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCollegamentoStepProcesso'
+    alias: 'IdCollegamentoStepProcesso',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdOggettoCollegato'
+    alias: 'IdOggettoCollegato',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdTipiRuoloCollegamento'
+    alias: 'IdTipiRuoloCollegamento',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdTipiRuoloCreazione'
+    alias: 'IdTipiRuoloCreazione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdTipoProcesso'
+    alias: 'IdTipoProcesso',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdStepProcessoCollegato'
+    alias: 'IdStepProcessoCollegato',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IstruzioniCollegamento'
+    alias: 'IstruzioniCollegamento',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'TxtTipoOggettoCollegato'
+    alias: 'TxtTipoOggettoCollegato',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdProcessoCollegato'
+    alias: 'IdProcessoCollegato',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagSottofamigliaItems'
+    alias: 'FlagSottofamigliaItems',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagDocumentoOperativo'
+    alias: 'FlagDocumentoOperativo',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdCollegamentoTipoStepProcessi'
+    alias: 'IdCollegamentoTipoStepProcessi',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'TxtOggettoCollegato'
+    alias: 'TxtOggettoCollegato',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'Pid'
+    alias: 'Pid',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'Id'
+    alias: 'Id',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'FlagAggiorna'
+    alias: 'FlagAggiorna',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagCollegamentoProcesso'
+    alias: 'FlagCollegamentoProcesso',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdProcessoStepCollegato'
+    alias: 'IdProcessoStepCollegato',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdStepProcessoOrigineCollegamento'
+    alias: 'IdStepProcessoOrigineCollegamento',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TxtProcessoOrigineCollegamento'
+    alias: 'TxtProcessoOrigineCollegamento',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'TxtStepProcessoOrigineCollegamento'
+    alias: 'TxtStepProcessoOrigineCollegamento',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'FlagComunicazione'
+    alias: 'FlagComunicazione',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagScarto'
+    alias: 'FlagScarto',
+
   }
 }, {
   timestamps: true

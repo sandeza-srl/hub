@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICasseBanchePrivate } from './CasseBanche.Types.Private';
 
@@ -15,119 +16,150 @@ const CasseBancheSchema = new mongoose.Schema<ICasseBanchePrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCassaBanca'
+    alias: 'IdCassaBanca',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtAccount'
+    alias: 'TxtAccount',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtCassaBanca'
+    alias: 'TxtCassaBanca',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'Filiale'
+    alias: 'Filiale',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'Iban'
+    alias: 'Iban',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'DescrizioneStampabile'
+    alias: 'DescrizioneStampabile',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'SwiftCode'
+    alias: 'SwiftCode',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'ProgCassaBanca'
+    alias: 'ProgCassaBanca',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'Tipologia'
+    alias: 'Tipologia',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'ValoreIniziale'
+    alias: 'ValoreIniziale',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'ValoreIn'
+    alias: 'ValoreIn',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'ValoreOut'
+    alias: 'ValoreOut',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'ValoreAttuale'
+    alias: 'ValoreAttuale',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdTipoCassaBanca'
+    alias: 'IdTipoCassaBanca',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'TxtTipoCassaBanca'
+    alias: 'TxtTipoCassaBanca',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagAttiva'
+    alias: 'FlagAttiva',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdCassaBancaCollegata'
+    alias: 'IdCassaBancaCollegata',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagCassaBancaCollegata'
+    alias: 'FlagCassaBancaCollegata',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CodiceContabile'
+    alias: 'CodiceContabile',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'ABI'
+    alias: 'ABI',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'CAB'
+    alias: 'CAB',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'CodiceCodifica'
+    alias: 'CodiceCodifica',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

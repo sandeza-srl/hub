@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IImpiantiPrivate } from './Impianti.Types.Private';
 
@@ -15,375 +16,488 @@ const ImpiantiSchema = new mongoose.Schema<IImpiantiPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountProduttore'
+    alias: 'IdAccountProduttore',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtAccountProduttore'
+    alias: 'TxtAccountProduttore',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtFamigliaItem'
+    alias: 'TxtFamigliaItem',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdRubricaProduttoreTecnico'
+    alias: 'IdRubricaProduttoreTecnico',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'NomeRubricaProduttoreTecnico'
+    alias: 'NomeRubricaProduttoreTecnico',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtItemEsteso'
+    alias: 'TxtItemEsteso',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'CodiceRiferimentoFornitore'
+    alias: 'CodiceRiferimentoFornitore',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'TxtOperatoreTecnico'
+    alias: 'TxtOperatoreTecnico',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdImpianto'
+    alias: 'IdImpianto',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'NumeroSerie'
+    alias: 'NumeroSerie',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataInstallazione'
+    alias: 'DataInstallazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'AnnoInstallazione'
+    alias: 'AnnoInstallazione',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'AnnoMeseInstallazione'
+    alias: 'AnnoMeseInstallazione',
+
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdSedeDestinatario'
+    alias: 'IdSedeDestinatario',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'TxtOperatoreInstallatore'
+    alias: 'TxtOperatoreInstallatore',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdAccountClienteFinale'
+    alias: 'IdAccountClienteFinale',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TxtAccountClienteFinale'
+    alias: 'TxtAccountClienteFinale',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'NomeRubricaClienteFinaleTecnico'
+    alias: 'NomeRubricaClienteFinaleTecnico',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'IdRubricaClienteFinaleTecnico'
+    alias: 'IdRubricaClienteFinaleTecnico',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'IdAccountDistributore'
+    alias: 'IdAccountDistributore',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'TxtAccountDistributore'
+    alias: 'TxtAccountDistributore',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'IdRubricaDistributore'
+    alias: 'IdRubricaDistributore',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'NomeRubricaDistributore'
+    alias: 'NomeRubricaDistributore',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdAccountAbilitatiTutti'
+    alias: 'IdAccountAbilitatiTutti',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'AnnoStartUp'
+    alias: 'AnnoStartUp',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataStartUp'
+    alias: 'DataStartUp',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'AnnoMeseStartUp'
+    alias: 'AnnoMeseStartUp',
+
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataCorrente'
+    alias: 'DataCorrente',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'GgEsercizio'
+    alias: 'GgEsercizio',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'IdAccountTutti'
+    alias: 'IdAccountTutti',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagGestito'
+    alias: 'FlagGestito',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'FlagGestitoVedi'
+    alias: 'FlagGestitoVedi',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'FlagGestitoTxt'
+    alias: 'FlagGestitoTxt',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'IdRubricaProduttoreCommerciale'
+    alias: 'IdRubricaProduttoreCommerciale',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'IdRubricaClienteFinaleCommerciale'
+    alias: 'IdRubricaClienteFinaleCommerciale',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'NomeRubricaClienteFinaleCommerciale'
+    alias: 'NomeRubricaClienteFinaleCommerciale',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'NomeRubricaProduttoreCommerciale'
+    alias: 'NomeRubricaProduttoreCommerciale',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'TxtOperatoreCommerciale'
+    alias: 'TxtOperatoreCommerciale',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'IdAccountFornitore'
+    alias: 'IdAccountFornitore',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'TxtAccountFornitore'
+    alias: 'TxtAccountFornitore',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'TxtSottoFamigliaItem'
+    alias: 'TxtSottoFamigliaItem',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Data005: {
     type: Date,
-    alias: 'DataAcquisto'
+    alias: 'DataAcquisto',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data006: {
     type: Date,
-    alias: 'DataVendita'
+    alias: 'DataVendita',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo040: {
     type: String,
-    alias: 'UnitaMisura'
+    alias: 'UnitaMisura',
+
   },
   __Dati_Data007: {
     type: Date,
-    alias: 'DataScadenzaSottoscrizione'
+    alias: 'DataScadenzaSottoscrizione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data008: {
     type: Date,
-    alias: 'DataScadenzaGaranzia'
+    alias: 'DataScadenzaGaranzia',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'DurataGaranzia'
+    alias: 'DurataGaranzia',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'DurataSottoscrizione'
+    alias: 'DurataSottoscrizione',
+
   },
   __Dati_Testo041: {
     type: String,
-    alias: 'IdRubricaFornitore'
+    alias: 'IdRubricaFornitore',
+
   },
   __Dati_Testo042: {
     type: String,
-    alias: 'NomeRubricaFornitore'
+    alias: 'NomeRubricaFornitore',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'AnnoVendita'
+    alias: 'AnnoVendita',
+
   },
   __Dati_Testo043: {
     type: String,
-    alias: 'IdVoceProgetto'
+    alias: 'IdVoceProgetto',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo044: {
     type: String,
-    alias: 'IdAccountDestinatario'
+    alias: 'IdAccountDestinatario',
+
   },
   __Dati_Testo045: {
     type: String,
-    alias: 'TxtAccountDestinatario'
+    alias: 'TxtAccountDestinatario',
+
   },
   __Dati_Testo046: {
     type: String,
-    alias: 'TxtTipoImpianto'
+    alias: 'TxtTipoImpianto',
+
   },
   __Dati_Testo047: {
     type: String,
-    alias: 'IdTipoImpianto'
+    alias: 'IdTipoImpianto',
+
   },
   __Dati_Testo048: {
     type: String,
-    alias: 'TxtImpianto'
+    alias: 'TxtImpianto',
+
   },
   __Dati_Testo049: {
     type: String,
-    alias: 'CodiceImpianto'
+    alias: 'CodiceImpianto',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'Progressivo'
+    alias: 'Progressivo',
+
   },
   __Dati_Testo050: {
     type: String,
-    alias: 'IdFornituraItem'
+    alias: 'IdFornituraItem',
+
   },
   __Dati_Testo051: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo052: {
     type: String,
-    alias: 'IdOperatoreCommerciale'
+    alias: 'IdOperatoreCommerciale',
+
   },
   __Dati_Testo053: {
     type: String,
-    alias: 'IdOperatoreTecnico'
+    alias: 'IdOperatoreTecnico',
+
   },
   __Dati_Testo054: {
     type: String,
-    alias: 'IdOperatoreInstallatore'
+    alias: 'IdOperatoreInstallatore',
+
   },
   __Dati_Testo055: {
     type: String,
-    alias: 'IdTipoStatoImpianto'
+    alias: 'IdTipoStatoImpianto',
+
   },
   __Dati_Testo056: {
     type: String,
-    alias: 'TxtTipoStatoImpianto'
+    alias: 'TxtTipoStatoImpianto',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagDisponibile'
+    alias: 'FlagDisponibile',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagRiparazione'
+    alias: 'FlagRiparazione',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagRottamato'
+    alias: 'FlagRottamato',
+
   },
   __Dati_Testo057: {
     type: String,
-    alias: 'TxtTipoStatoImpiantoAutomatico'
+    alias: 'TxtTipoStatoImpiantoAutomatico',
+
   },
   __Dati_Testo058: {
     type: String,
-    alias: 'TxtSedeDestinatario'
+    alias: 'TxtSedeDestinatario',
+
   },
   __Dati_Testo059: {
     type: String,
-    alias: 'IdRubricaDestinatarioCommerciale'
+    alias: 'IdRubricaDestinatarioCommerciale',
+
   },
   __Dati_Testo060: {
     type: String,
-    alias: 'IdRubricaDestinatarioTecnico'
+    alias: 'IdRubricaDestinatarioTecnico',
+
   },
   __Dati_Testo061: {
     type: String,
-    alias: 'NomeRubricaDestinatarioCommerciale'
+    alias: 'NomeRubricaDestinatarioCommerciale',
+
   },
   __Dati_Testo062: {
     type: String,
-    alias: 'NomeRubricaDestinatarioTecnico'
+    alias: 'NomeRubricaDestinatarioTecnico',
+
   },
   __Dati_Testo063: {
     type: String,
-    alias: 'IdOperatoreLogistica'
+    alias: 'IdOperatoreLogistica',
+
   },
   __Dati_Testo064: {
     type: String,
-    alias: 'TxtOperatoreLogistica'
+    alias: 'TxtOperatoreLogistica',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagAggiornaValori'
+    alias: 'FlagAggiornaValori',
+
   },
   __Dati_Testo065: {
     type: String,
-    alias: 'iBeacon_Id'
+    alias: 'iBeacon_Id',
+
   },
   __Dati_Testo066: {
     type: String,
-    alias: 'iBeacon_Major'
+    alias: 'iBeacon_Major',
+
   },
   __Dati_Testo067: {
     type: String,
-    alias: 'iBeacon_Minor'
+    alias: 'iBeacon_Minor',
+
   },
   __Dati_Testo068: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

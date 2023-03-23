@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICapPrivate } from './Cap.Types.Private';
 
@@ -15,43 +16,53 @@ const CapSchema = new mongoose.Schema<ICapPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'Citta'
+    alias: 'Citta',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'Cap'
+    alias: 'Cap',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdNazione'
+    alias: 'IdNazione',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'Comune'
+    alias: 'Comune',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtLiberoIndirizzo'
+    alias: 'TxtLiberoIndirizzo',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagMultiCap'
+    alias: 'FlagMultiCap',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdCap'
+    alias: 'IdCap',
+
   }
 }, {
   timestamps: true

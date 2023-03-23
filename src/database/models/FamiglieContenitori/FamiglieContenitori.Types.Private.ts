@@ -4,7 +4,7 @@ export interface IFamiglieContenitoriPrivate {
   __Dati_Testo001: string;
   /** Reflected: IdFamigliaItem*/ 
   __Dati_Testo002: string;
-  /** Reflected: IdSottoFamigliaContenitore*/ 
+  /** Reflected: IdSottoFamigliaItem*/ 
   __Dati_Testo003: string;
   /** Reflected: IdFamigliaContenitore*/ 
   __Dati_Testo004: string;
@@ -29,5 +29,7 @@ export interface IFamiglieContenitoriPrivate {
   /** Reflected: FlagControlloImpostazione*/ 
   __Dati_Numero005: number;
   /** Reflected: IdInstallazione*/ 
-  __Dati_Testo008: string
+  __Dati_Testo008: string;
+  /** Reflected: FlagUsaCodificaUnicaItem*/ 
+  __Dati_Numero006: number
 }

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ILogDerogheSchedeAttivitaPrivate } from './LogDerogheSchedeAttivita.Types.Private';
 
@@ -15,63 +16,86 @@ const LogDerogheSchedeAttivitaSchema = new mongoose.Schema<ILogDerogheSchedeAtti
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdSchedaAttivita'
+    alias: 'IdSchedaAttivita',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdLog'
+    alias: 'IdLog',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataInizioPreDeroga'
+    alias: 'DataInizioPreDeroga',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'GiorniDeroga'
+    alias: 'GiorniDeroga',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'OraCreazione'
+    alias: 'OraCreazione',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataInizioPostDeroga'
+    alias: 'DataInizioPostDeroga',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

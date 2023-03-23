@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IIndirizziRubricaPrivate } from './IndirizziRubrica.Types.Private';
 
@@ -15,147 +16,185 @@ const IndirizziRubricaSchema = new mongoose.Schema<IIndirizziRubricaPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'Cap'
+    alias: 'Cap',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'Cellulare'
+    alias: 'Cellulare',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'Citta'
+    alias: 'Citta',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdRubrica'
+    alias: 'IdRubrica',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'Mail'
+    alias: 'Mail',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'SkypeUser'
+    alias: 'SkypeUser',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'Telefono'
+    alias: 'Telefono',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtLiberoIndirizzo'
+    alias: 'TxtLiberoIndirizzo',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'Via'
+    alias: 'Via',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdZona'
+    alias: 'IdZona',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdNazione'
+    alias: 'IdNazione',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'NomeNazione'
+    alias: 'NomeNazione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'NomeNazioneIng'
+    alias: 'NomeNazioneIng',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'OrdineIndirizzi'
+    alias: 'OrdineIndirizzi',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdIndirizzoRubrica'
+    alias: 'IdIndirizzoRubrica',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtIndirizzoRubrica'
+    alias: 'TxtIndirizzoRubrica',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'DescrizioneStampabile'
+    alias: 'DescrizioneStampabile',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'Fax'
+    alias: 'Fax',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IndirizzoCompletoVCard'
+    alias: 'IndirizzoCompletoVCard',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagConValori'
+    alias: 'FlagConValori',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'Social'
+    alias: 'Social',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'Linkedin'
+    alias: 'Linkedin',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'PasswordWeb'
+    alias: 'PasswordWeb',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagWebAttivo'
+    alias: 'FlagWebAttivo',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagDisiscrittoMailingList'
+    alias: 'FlagDisiscrittoMailingList',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'Facebook'
+    alias: 'Facebook',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'Twitter'
+    alias: 'Twitter',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'Instagram'
+    alias: 'Instagram',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdTipiRuoliNoVisualizzazione'
+    alias: 'IdTipiRuoliNoVisualizzazione',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdUtentiNoVisualizzazione'
+    alias: 'IdUtentiNoVisualizzazione',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'InternoTelefono'
+    alias: 'InternoTelefono',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

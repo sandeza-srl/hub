@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IScaglioniCicliPrivate } from './ScaglioniCicli.Types.Private';
 
@@ -15,455 +16,578 @@ const ScaglioniCicliSchema = new mongoose.Schema<IScaglioniCicliPrivate>({
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagAggiornaDati01'
+    alias: 'FlagAggiornaDati01',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagFornituraCreata'
+    alias: 'FlagFornituraCreata',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdArticolo'
+    alias: 'IdArticolo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdCiclo'
+    alias: 'IdCiclo',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdScaglione'
+    alias: 'IdScaglione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'CTLET'
+    alias: 'CTLET',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'CTLT'
+    alias: 'CTLT',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'CTMT'
+    alias: 'CTMT',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'CTPT'
+    alias: 'CTPT',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'CTST'
+    alias: 'CTST',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'CTT'
+    alias: 'CTT',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'CTT_Ricarico'
+    alias: 'CTT_Ricarico',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'CTTRAT'
+    alias: 'CTTRAT',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'CUT'
+    alias: 'CUT',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'CUT_Ricarico'
+    alias: 'CUT_Ricarico',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataInvio'
+    alias: 'DataInvio',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'PercCUADT'
+    alias: 'PercCUADT',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'PercCULET'
+    alias: 'PercCULET',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'PercCULT'
+    alias: 'PercCULT',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'PercCUMT'
+    alias: 'PercCUMT',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'PercCUPT'
+    alias: 'PercCUPT',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'PercCUST'
+    alias: 'PercCUST',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'PercCUTRAT'
+    alias: 'PercCUTRAT',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'Quantita'
+    alias: 'Quantita',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtUtenteCreazione'
+    alias: 'TxtUtenteCreazione',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtUtenteModifica'
+    alias: 'TxtUtenteModifica',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtScaglione'
+    alias: 'TxtScaglione',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'CTADT'
+    alias: 'CTADT',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'CUPT'
+    alias: 'CUPT',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'CULT'
+    alias: 'CULT',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'CULET'
+    alias: 'CULET',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'CUADT'
+    alias: 'CUADT',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'CUMT'
+    alias: 'CUMT',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'CUTRAT'
+    alias: 'CUTRAT',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'CUST'
+    alias: 'CUST',
+
   },
   __Dati_Numero031: {
     type: Number,
-    alias: 'CTPnT'
+    alias: 'CTPnT',
+
   },
   __Dati_Numero032: {
     type: Number,
-    alias: 'CTFT'
+    alias: 'CTFT',
+
   },
   __Dati_Numero033: {
     type: Number,
-    alias: 'CUFT'
+    alias: 'CUFT',
+
   },
   __Dati_Numero034: {
     type: Number,
-    alias: 'CUPnT'
+    alias: 'CUPnT',
+
   },
   __Dati_Numero035: {
     type: Number,
-    alias: 'CTT_UnitaBuone'
+    alias: 'CTT_UnitaBuone',
+
   },
   __Dati_Numero036: {
     type: Number,
-    alias: 'CUT_UnitaBuone'
+    alias: 'CUT_UnitaBuone',
+
   },
   __Dati_Numero037: {
     type: Number,
-    alias: 'PercCUPnTsuCUPT'
+    alias: 'PercCUPnTsuCUPT',
+
   },
   __Dati_Numero038: {
     type: Number,
-    alias: 'PercCUFTsuCUPT'
+    alias: 'PercCUFTsuCUPT',
+
   },
   __Dati_Numero039: {
     type: Number,
-    alias: 'PercCUT_UnitaBuone'
+    alias: 'PercCUT_UnitaBuone',
+
   },
   __Dati_Numero040: {
     type: Number,
-    alias: 'PercCUPnT'
+    alias: 'PercCUPnT',
+
   },
   __Dati_Numero041: {
     type: Number,
-    alias: 'PercCUFT'
+    alias: 'PercCUFT',
+
   },
   __Dati_Numero042: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_Numero043: {
     type: Number,
-    alias: 'CTQT'
+    alias: 'CTQT',
+
   },
   __Dati_Numero044: {
     type: Number,
-    alias: 'CTUtT'
+    alias: 'CTUtT',
+
   },
   __Dati_Numero045: {
     type: Number,
-    alias: 'CUQT'
+    alias: 'CUQT',
+
   },
   __Dati_Numero046: {
     type: Number,
-    alias: 'CUUtT'
+    alias: 'CUUtT',
+
   },
   __Dati_Numero047: {
     type: Number,
-    alias: 'PercCUQT'
+    alias: 'PercCUQT',
+
   },
   __Dati_Numero048: {
     type: Number,
-    alias: 'PercCUUtT'
+    alias: 'PercCUUtT',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdScaglionePrecedente'
+    alias: 'IdScaglionePrecedente',
+
   },
   __Dati_Numero049: {
     type: Number,
-    alias: 'VariazioneScaglionePrecedente'
+    alias: 'VariazioneScaglionePrecedente',
+
   },
   __Dati_Numero050: {
     type: Number,
-    alias: 'VariazionePercScaglionePrecedente'
+    alias: 'VariazionePercScaglionePrecedente',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtUtenteInvio'
+    alias: 'TxtUtenteInvio',
+
   },
   __Dati_Numero051: {
     type: Number,
-    alias: 'PercCProg'
+    alias: 'PercCProg',
+
   },
   __Dati_Numero052: {
     type: Number,
-    alias: 'PercCIng'
+    alias: 'PercCIng',
+
   },
   __Dati_Numero053: {
     type: Number,
-    alias: 'CTProgT'
+    alias: 'CTProgT',
+
   },
   __Dati_Numero054: {
     type: Number,
-    alias: 'CTIngT'
+    alias: 'CTIngT',
+
   },
   __Dati_Numero055: {
     type: Number,
-    alias: 'CUProgT'
+    alias: 'CUProgT',
+
   },
   __Dati_Numero056: {
     type: Number,
-    alias: 'CUIngT'
+    alias: 'CUIngT',
+
   },
   __Dati_Numero057: {
     type: Number,
-    alias: 'GiorniApprovvigionamento'
+    alias: 'GiorniApprovvigionamento',
+
   },
   __Dati_Numero058: {
     type: Number,
-    alias: 'FlagCalcoloInCorso'
+    alias: 'FlagCalcoloInCorso',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdTipoScaglioneTipoArticolo'
+    alias: 'IdTipoScaglioneTipoArticolo',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdUtenteCreazione'
+    alias: 'IdUtenteCreazione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdUtenteInvio'
+    alias: 'IdUtenteInvio',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdUtenteModifica'
+    alias: 'IdUtenteModifica',
+
   },
   __Dati_Numero059: {
     type: Number,
-    alias: 'GiorniLavorazioniNonPianificabili'
+    alias: 'GiorniLavorazioniNonPianificabili',
+
   },
   __Dati_Numero060: {
     type: Number,
-    alias: 'GiorniProduzione'
+    alias: 'GiorniProduzione',
+
   },
   __Dati_Numero061: {
     type: Number,
-    alias: 'OreTotaliProduzione'
+    alias: 'OreTotaliProduzione',
+
   },
   __Dati_Numero062: {
     type: Number,
-    alias: 'FlagAggiornaDaCostBreakdown'
+    alias: 'FlagAggiornaDaCostBreakdown',
+
   },
   __Dati_Numero063: {
     type: Number,
-    alias: 'CostoRiclassificato_CTADT'
+    alias: 'CostoRiclassificato_CTADT',
+
   },
   __Dati_Numero064: {
     type: Number,
-    alias: 'CostoRiclassificato_CTFT'
+    alias: 'CostoRiclassificato_CTFT',
+
   },
   __Dati_Numero065: {
     type: Number,
-    alias: 'CostoRiclassificato_CTIngT'
+    alias: 'CostoRiclassificato_CTIngT',
+
   },
   __Dati_Numero066: {
     type: Number,
-    alias: 'CostoRiclassificato_CTLET'
+    alias: 'CostoRiclassificato_CTLET',
+
   },
   __Dati_Numero067: {
     type: Number,
-    alias: 'CostoRiclassificato_CTLT'
+    alias: 'CostoRiclassificato_CTLT',
+
   },
   __Dati_Numero068: {
     type: Number,
-    alias: 'CostoRiclassificato_CTMT_Buy'
+    alias: 'CostoRiclassificato_CTMT_Buy',
+
   },
   __Dati_Numero069: {
     type: Number,
-    alias: 'CostoRiclassificato_CTPnT'
+    alias: 'CostoRiclassificato_CTPnT',
+
   },
   __Dati_Numero070: {
     type: Number,
-    alias: 'CostoRiclassificato_CTProgT'
+    alias: 'CostoRiclassificato_CTProgT',
+
   },
   __Dati_Numero071: {
     type: Number,
-    alias: 'CostoRiclassificato_CTPT'
+    alias: 'CostoRiclassificato_CTPT',
+
   },
   __Dati_Numero072: {
     type: Number,
-    alias: 'CostoRiclassificato_CTQT'
+    alias: 'CostoRiclassificato_CTQT',
+
   },
   __Dati_Numero073: {
     type: Number,
-    alias: 'CostoRiclassificato_CTST'
+    alias: 'CostoRiclassificato_CTST',
+
   },
   __Dati_Numero074: {
     type: Number,
-    alias: 'CostoRiclassificato_CTTRAT'
+    alias: 'CostoRiclassificato_CTTRAT',
+
   },
   __Dati_Numero075: {
     type: Number,
-    alias: 'CostoRiclassificato_CTUt_Buy'
+    alias: 'CostoRiclassificato_CTUt_Buy',
+
   },
   __Dati_Numero076: {
     type: Number,
-    alias: 'CostoRiclassificato_CUADT'
+    alias: 'CostoRiclassificato_CUADT',
+
   },
   __Dati_Numero077: {
     type: Number,
-    alias: 'CostoRiclassificato_CUFT'
+    alias: 'CostoRiclassificato_CUFT',
+
   },
   __Dati_Numero078: {
     type: Number,
-    alias: 'CostoRiclassificato_CUIngT'
+    alias: 'CostoRiclassificato_CUIngT',
+
   },
   __Dati_Numero079: {
     type: Number,
-    alias: 'CostoRiclassificato_CULET'
+    alias: 'CostoRiclassificato_CULET',
+
   },
   __Dati_Numero080: {
     type: Number,
-    alias: 'CostoRiclassificato_CULT'
+    alias: 'CostoRiclassificato_CULT',
+
   },
   __Dati_Numero081: {
     type: Number,
-    alias: 'CostoRiclassificato_CUMT_Buy'
+    alias: 'CostoRiclassificato_CUMT_Buy',
+
   },
   __Dati_Numero082: {
     type: Number,
-    alias: 'CostoRiclassificato_CUPnT'
+    alias: 'CostoRiclassificato_CUPnT',
+
   },
   __Dati_Numero083: {
     type: Number,
-    alias: 'CostoRiclassificato_CUProgT'
+    alias: 'CostoRiclassificato_CUProgT',
+
   },
   __Dati_Numero084: {
     type: Number,
-    alias: 'CostoRiclassificato_CUPT'
+    alias: 'CostoRiclassificato_CUPT',
+
   },
   __Dati_Numero085: {
     type: Number,
-    alias: 'CostoRiclassificato_CUQT'
+    alias: 'CostoRiclassificato_CUQT',
+
   },
   __Dati_Numero086: {
     type: Number,
-    alias: 'CostoRiclassificato_CUST'
+    alias: 'CostoRiclassificato_CUST',
+
   },
   __Dati_Numero087: {
     type: Number,
-    alias: 'CostoRiclassificato_CUTRAT'
+    alias: 'CostoRiclassificato_CUTRAT',
+
   },
   __Dati_Numero088: {
     type: Number,
-    alias: 'CostoRiclassificato_CUUt_Buy'
+    alias: 'CostoRiclassificato_CUUt_Buy',
+
   },
   __Dati_Numero089: {
     type: Number,
-    alias: 'CostoRiclassificato_CTT'
+    alias: 'CostoRiclassificato_CTT',
+
   },
   __Dati_Numero090: {
     type: Number,
-    alias: 'CostoRiclassificato_CUT'
+    alias: 'CostoRiclassificato_CUT',
+
   },
   __Dati_Numero091: {
     type: Number,
-    alias: 'CostBreakdown_FlagForzaAggiornamentoFigli'
+    alias: 'CostBreakdown_FlagForzaAggiornamentoFigli',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   }
 }, {
   timestamps: true

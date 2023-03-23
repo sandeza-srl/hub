@@ -53,5 +53,13 @@ export interface ITipiContenitori {
   /** Reflected: __Dati_Testo014*/ 
   CodiceTxtTipoContenitoreAutomatico: string;
   /** Reflected: __Dati_Testo015*/ 
-  IdInstallazione: string
+  IdInstallazione: string;
+  /** Reflected: __Dati_Numero010*/ 
+  FlagAggiornaContenutiDaItems: number;
+  /** Reflected: __Dati_Testo016*/ 
+  UnitaMisura: string;
+  /** Reflected: __Dati_Testo017*/ 
+  IdDocumentoPrincipale: string;
+  /** Reflected: __Dati_Numero011*/ 
+  NumeroContenitoriInVerifica: number
 }

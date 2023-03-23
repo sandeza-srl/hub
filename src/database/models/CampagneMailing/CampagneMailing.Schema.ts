@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICampagneMailingPrivate } from './CampagneMailing.Types.Private';
 
@@ -15,99 +16,127 @@ const CampagneMailingSchema = new mongoose.Schema<ICampagneMailingPrivate>({
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraModifica'
+    alias: 'DataOraModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdEstrazioneContatti'
+    alias: 'IdEstrazioneContatti',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdCampagnaMailing'
+    alias: 'IdCampagnaMailing',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtEstrazioneContatti'
+    alias: 'TxtEstrazioneContatti',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtCampagnaMailing'
+    alias: 'TxtCampagnaMailing',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiorna'
+    alias: 'FlagAggiorna',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'NumeroInviate'
+    alias: 'NumeroInviate',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'NumeroBounce'
+    alias: 'NumeroBounce',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'NumeroClick'
+    alias: 'NumeroClick',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'NumeroDisiscritto'
+    alias: 'NumeroDisiscritto',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'NumeroRicevuta'
+    alias: 'NumeroRicevuta',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'NumeroSpam'
+    alias: 'NumeroSpam',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'NumeroAperta'
+    alias: 'NumeroAperta',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'HtmlMail'
+    alias: 'HtmlMail',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'OggettoMail'
+    alias: 'OggettoMail',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TestoMail'
+    alias: 'TestoMail',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdDocumentiAllegati'
+    alias: 'IdDocumentiAllegati',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IndirizzoWebCampagna'
+    alias: 'IndirizzoWebCampagna',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'NumeroContattiTotale'
+    alias: 'NumeroContattiTotale',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IStoricoTipoAnagraficaPrivate } from './StoricoTipoAnagrafica.Types.Private';
 
@@ -15,79 +16,102 @@ const StoricoTipoAnagraficaSchema = new mongoose.Schema<IStoricoTipoAnagraficaPr
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipologiaAccount'
+    alias: 'IdTipologiaAccount',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtTipologiaAccount'
+    alias: 'TxtTipologiaAccount',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'Data'
+    alias: 'Data',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdStoricoTipoAnagrafica'
+    alias: 'IdStoricoTipoAnagrafica',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'Ora'
+    alias: 'Ora',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOra'
+    alias: 'DataOra',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceTipologiaAccount'
+    alias: 'CodiceTipologiaAccount',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagCompagnia'
+    alias: 'FlagCompagnia',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagClientePrimario'
+    alias: 'FlagClientePrimario',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagIntermediario'
+    alias: 'FlagIntermediario',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagClienteFinale'
+    alias: 'FlagClienteFinale',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagFornitore'
+    alias: 'FlagFornitore',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagOperatore'
+    alias: 'FlagOperatore',
+
   }
 }, {
   timestamps: true

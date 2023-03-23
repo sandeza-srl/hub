@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IProgrammiMacchinaOpzioneProdPrivate } from './ProgrammiMacchinaOpzioneProd.Types.Private';
 
@@ -15,99 +16,129 @@ const ProgrammiMacchinaOpzioneProdSchema = new mongoose.Schema<IProgrammiMacchin
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdProgrammaMacchina'
+    alias: 'IdProgrammaMacchina',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtProgrammaMacchina'
+    alias: 'TxtProgrammaMacchina',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdUtenteCreazione'
+    alias: 'IdUtenteCreazione',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdOpzioneProd'
+    alias: 'IdOpzioneProd',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdDocImgProgrammaMacchina'
+    alias: 'IdDocImgProgrammaMacchina',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'NumeroRevisione'
+    alias: 'NumeroRevisione',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagRevisioneAttiva'
+    alias: 'FlagRevisioneAttiva',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagBenestare'
+    alias: 'FlagBenestare',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataBenestare'
+    alias: 'DataBenestare',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdUtenteBenestare'
+    alias: 'IdUtenteBenestare',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtUtenteCreazione'
+    alias: 'TxtUtenteCreazione',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtUtenteBenestare'
+    alias: 'TxtUtenteBenestare',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'FileZipDocumenti'
+    alias: 'FileZipDocumenti',
+
   },
   __Dati_Contenitore002: {
     type: String,
-    alias: 'Contenitore_TEMP'
+    alias: 'Contenitore_TEMP',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   }
 }, {
   timestamps: true

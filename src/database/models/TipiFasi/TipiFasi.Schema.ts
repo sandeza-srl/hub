@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiFasiPrivate } from './TipiFasi.Types.Private';
 
@@ -15,231 +16,296 @@ const TipiFasiSchema = new mongoose.Schema<ITipiFasiPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoFase'
+    alias: 'IdTipoFase',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtTipoFase'
+    alias: 'TxtTipoFase',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdRisorsa'
+    alias: 'IdRisorsa',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'GgLavorazione'
+    alias: 'GgLavorazione',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtRisorsa'
+    alias: 'TxtRisorsa',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FrequenzaControllo'
+    alias: 'FrequenzaControllo',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'UnitaMisura'
+    alias: 'UnitaMisura',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'IncidenzaScarto'
+    alias: 'IncidenzaScarto',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'CodiceTipoFase'
+    alias: 'CodiceTipoFase',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceRisorsa'
+    alias: 'CodiceRisorsa',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdTipiControlli'
+    alias: 'IdTipiControlli',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'TA_T'
+    alias: 'TA_T',
+
   },
   __Dati_Ora002: {
     type: String,
-    alias: 'TD_T'
+    alias: 'TD_T',
+
   },
   __Dati_Ora003: {
     type: String,
-    alias: 'TAttraversamentoLinea_T'
+    alias: 'TAttraversamentoLinea_T',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'NUmOpzColpo_T'
+    alias: 'NUmOpzColpo_T',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'ProdUmOpzHP_T'
+    alias: 'ProdUmOpzHP_T',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'CodiceTxtTipoFaseAutomatico'
+    alias: 'CodiceTxtTipoFaseAutomatico',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CodiceTxtTipoFaseRisorsaAutomatico'
+    alias: 'CodiceTxtTipoFaseRisorsaAutomatico',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdItemLavorazione'
+    alias: 'IdItemLavorazione',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagImballoFinale'
+    alias: 'FlagImballoFinale',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagImballoParziale'
+    alias: 'FlagImballoParziale',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagLavEsterna'
+    alias: 'FlagLavEsterna',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagNestedPossibile'
+    alias: 'FlagNestedPossibile',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagLavInternaPianificabile'
+    alias: 'FlagLavInternaPianificabile',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagTempoManualePossibile'
+    alias: 'FlagTempoManualePossibile',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtItemLavorazione'
+    alias: 'TxtItemLavorazione',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdTipiImballo'
+    alias: 'IdTipiImballo',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtTipoImballo'
+    alias: 'TxtTipoImballo',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'CUL_T'
+    alias: 'CUL_T',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagLavInternaNonPianificabile'
+    alias: 'FlagLavInternaNonPianificabile',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'FlagSelezione'
+    alias: 'FlagSelezione',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagDaBenestariare'
+    alias: 'FlagDaBenestariare',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'PercScartoImpostata'
+    alias: 'PercScartoImpostata',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdItemTrasporto'
+    alias: 'IdItemTrasporto',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'TxtItemTrasporto'
+    alias: 'TxtItemTrasporto',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'FlagRegistraContenitore'
+    alias: 'FlagRegistraContenitore',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdTipoContenitore'
+    alias: 'IdTipoContenitore',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'TxtTipoContenitore'
+    alias: 'TxtTipoContenitore',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagScartoRilavorabile'
+    alias: 'FlagScartoRilavorabile',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'QtPerBenestare'
+    alias: 'QtPerBenestare',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagRisorseAssociate'
+    alias: 'FlagRisorseAssociate',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'FlagVerificaControlli'
+    alias: 'FlagVerificaControlli',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'ControlliQualita_FlagAvvisoFisso'
+    alias: 'ControlliQualita_FlagAvvisoFisso',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'ControlliQualita_TxtAvvisoFisso'
+    alias: 'ControlliQualita_TxtAvvisoFisso',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   }
 }, {
   timestamps: true

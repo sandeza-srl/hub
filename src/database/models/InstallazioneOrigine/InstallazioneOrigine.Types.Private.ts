@@ -195,5 +195,7 @@ export interface IInstallazioneOriginePrivate {
   /** Reflected: PrintNode_Password*/ 
   __Dati_Testo037: string;
   /** Reflected: PrintNode_APIKey*/ 
-  __Dati_Testo038: string
+  __Dati_Testo038: string;
+  /** Reflected: ApiGateway_DB_Mongo*/ 
+  __Dati_Testo039: string
 }

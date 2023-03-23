@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiGruppiLavoroPrivate } from './TipiGruppiLavoro.Types.Private';
 
@@ -15,83 +16,107 @@ const TipiGruppiLavoroSchema = new mongoose.Schema<ITipiGruppiLavoroPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoGruppoLavoro'
+    alias: 'IdTipoGruppoLavoro',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'NomeFormato'
+    alias: 'NomeFormato',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'NomeScriptStampa'
+    alias: 'NomeScriptStampa',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtTipoGruppoLavoro'
+    alias: 'TxtTipoGruppoLavoro',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtUtenteCreazione'
+    alias: 'TxtUtenteCreazione',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtUtenteModifica'
+    alias: 'TxtUtenteModifica',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'CodiceTipoGruppoLavoro'
+    alias: 'CodiceTipoGruppoLavoro',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiorna_DaTipiRuoliTipiGruppoLavoro'
+    alias: 'FlagAggiorna_DaTipiRuoliTipiGruppoLavoro',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'NumeroTipiRuoliTipiGruppoLavoro'
+    alias: 'NumeroTipiRuoliTipiGruppoLavoro',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdTipiRuoliPerTipoGruppoLavoro_Tutti'
+    alias: 'IdTipiRuoliPerTipoGruppoLavoro_Tutti',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdReferenteTipiRuoliTipiGruppoLavoro'
+    alias: 'IdReferenteTipiRuoliTipiGruppoLavoro',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'TxtTipiRuoliPerTipoGruppoLavoro_Tutti'
+    alias: 'TxtTipiRuoliPerTipoGruppoLavoro_Tutti',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'TxtTipoRuoloReferente'
+    alias: 'TxtTipoRuoloReferente',
+
   }
 }, {
   timestamps: true

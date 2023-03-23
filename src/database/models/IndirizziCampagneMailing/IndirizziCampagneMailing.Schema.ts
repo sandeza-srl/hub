@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IIndirizziCampagneMailingPrivate } from './IndirizziCampagneMailing.Types.Private';
 
@@ -15,87 +16,114 @@ const IndirizziCampagneMailingSchema = new mongoose.Schema<IIndirizziCampagneMai
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'Cognome'
+    alias: 'Cognome',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdRubrica'
+    alias: 'IdRubrica',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'Nome'
+    alias: 'Nome',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'NomeRubrica'
+    alias: 'NomeRubrica',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraInvio'
+    alias: 'DataOraInvio',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraRicezione'
+    alias: 'DataOraRicezione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagSpam'
+    alias: 'FlagSpam',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdCampagnaMailing'
+    alias: 'IdCampagnaMailing',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtCampagnaMailing'
+    alias: 'TxtCampagnaMailing',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdEstrazioneContatti'
+    alias: 'IdEstrazioneContatti',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagBounce'
+    alias: 'FlagBounce',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagRicevuta'
+    alias: 'FlagRicevuta',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagClick'
+    alias: 'FlagClick',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagInviata'
+    alias: 'FlagInviata',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagDisiscritto'
+    alias: 'FlagDisiscritto',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagAperta'
+    alias: 'FlagAperta',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

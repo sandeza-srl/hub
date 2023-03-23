@@ -819,5 +819,7 @@ export interface IItemsPrivate {
   /** Reflected: ControlloEliminazione_FlagItemEliminabile*/ 
   __Dati_Numero323: number;
   /** Reflected: ControlloEliminazione_FlagAggiornaItemEliminabile*/ 
-  __Dati_Numero324: number
+  __Dati_Numero324: number;
+  /** Reflected: Cruscotto_FlagEscludi*/ 
+  __Dati_Numero325: number
 }

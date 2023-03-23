@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiPrimoContattoPrivate } from './TipiPrimoContatto.Types.Private';
 
@@ -15,27 +16,33 @@ const TipiPrimoContattoSchema = new mongoose.Schema<ITipiPrimoContattoPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdTipoPrimoContatto'
+    alias: 'IdTipoPrimoContatto',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtTipoPrimoContatto'
+    alias: 'TxtTipoPrimoContatto',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

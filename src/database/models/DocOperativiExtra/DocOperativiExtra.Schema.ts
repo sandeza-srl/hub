@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IDocOperativiExtraPrivate } from './DocOperativiExtra.Types.Private';
 
@@ -15,347 +16,470 @@ const DocOperativiExtraSchema = new mongoose.Schema<IDocOperativiExtraPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'CodiceProgramma'
+    alias: 'CodiceProgramma',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataFine'
+    alias: 'DataFine',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataInizio'
+    alias: 'DataInizio',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraFine'
+    alias: 'DataOraFine',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraInizio'
+    alias: 'DataOraInizio',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'MailA'
+    alias: 'MailA',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'MailCC'
+    alias: 'MailCC',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'OraFine'
+    alias: 'OraFine',
+
   },
   __Dati_Ora002: {
     type: String,
-    alias: 'OraInizio'
+    alias: 'OraInizio',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TerminiPagamento'
+    alias: 'TerminiPagamento',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataRestituzione'
+    alias: 'DataRestituzione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataRestituzioneRichiesta'
+    alias: 'DataRestituzioneRichiesta',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagDaRendere'
+    alias: 'FlagDaRendere',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'FlagDaRendereVedi'
+    alias: 'FlagDaRendereVedi',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagResa'
+    alias: 'FlagResa',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'FlagResaVedi'
+    alias: 'FlagResaVedi',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'NumColli'
+    alias: 'NumColli',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Peso'
+    alias: 'Peso',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'Porto'
+    alias: 'Porto',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TipoVettore'
+    alias: 'TipoVettore',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'DestinazioneStampabilePagatore'
+    alias: 'DestinazioneStampabilePagatore',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdDocOperativo'
+    alias: 'IdDocOperativo',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'NotePagamento'
+    alias: 'NotePagamento',
+
   },
   __Dati_Data005: {
     type: Date,
-    alias: 'DataSpedizione'
+    alias: 'DataSpedizione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data006: {
     type: Date,
-    alias: 'DataConsegnaRichiesta'
+    alias: 'DataConsegnaRichiesta',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'NoteCondizioni'
+    alias: 'NoteCondizioni',
+
   },
   __Dati_Data007: {
     type: Date,
-    alias: 'DataConsegnaPrevista'
+    alias: 'DataConsegnaPrevista',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'SettimanaConsegnaRichiesta'
+    alias: 'SettimanaConsegnaRichiesta',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'PesoLordo'
+    alias: 'PesoLordo',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'PesoNetto'
+    alias: 'PesoNetto',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'Volume'
+    alias: 'Volume',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraTrasporto'
+    alias: 'DataOraTrasporto',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra004: {
     type: Date,
-    alias: 'DataOraRitiro'
+    alias: 'DataOraRitiro',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'AspettoEsteriore'
+    alias: 'AspettoEsteriore',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdCassaBancaAppoggio'
+    alias: 'IdCassaBancaAppoggio',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtCassaBancaAppoggio'
+    alias: 'TxtCassaBancaAppoggio',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdAccountEmittente'
+    alias: 'IdAccountEmittente',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagRipetizione01'
+    alias: 'FlagRipetizione01',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagRipetizione02'
+    alias: 'FlagRipetizione02',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagRipetizione03'
+    alias: 'FlagRipetizione03',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagRipetizione04'
+    alias: 'FlagRipetizione04',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagRipetizione05'
+    alias: 'FlagRipetizione05',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagRipetizione06'
+    alias: 'FlagRipetizione06',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagRipetizione07'
+    alias: 'FlagRipetizione07',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagRipetizione08'
+    alias: 'FlagRipetizione08',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'FlagRipetizione09'
+    alias: 'FlagRipetizione09',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagRipetizione10'
+    alias: 'FlagRipetizione10',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'FlagRipetizione11'
+    alias: 'FlagRipetizione11',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagRipetizione12'
+    alias: 'FlagRipetizione12',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'CausaleTrasporto'
+    alias: 'CausaleTrasporto',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'IdTipoDocOperativo'
+    alias: 'IdTipoDocOperativo',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdAccountDocOperativo'
+    alias: 'IdAccountDocOperativo',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'FirmaTxt'
+    alias: 'FirmaTxt',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'GeolocalizzazioneFirma'
+    alias: 'GeolocalizzazioneFirma',
+
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'Firma'
+    alias: 'Firma',
+
   },
   __Dati_DataOra005: {
     type: Date,
-    alias: 'DataOraFirma'
+    alias: 'DataOraFirma',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'FlagProvvigione'
+    alias: 'FlagProvvigione',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'FlagProvvigioneValoreFisso'
+    alias: 'FlagProvvigioneValoreFisso',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'FlagProvvigionePercentuale'
+    alias: 'FlagProvvigionePercentuale',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'TxtProvvigionePercentualeFissa'
+    alias: 'TxtProvvigionePercentualeFissa',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'ValoreProvvigione'
+    alias: 'ValoreProvvigione',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdCassaBancaRiferimento'
+    alias: 'IdCassaBancaRiferimento',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'TxtCassaBancaRiferimento'
+    alias: 'TxtCassaBancaRiferimento',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'TargaVettore'
+    alias: 'TargaVettore',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'TargaSecondoVettore'
+    alias: 'TargaSecondoVettore',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdIncoterm'
+    alias: 'IdIncoterm',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'TxtIncoterm'
+    alias: 'TxtIncoterm',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'FlagConfermaDocOperativoConVariazioni'
+    alias: 'FlagConfermaDocOperativoConVariazioni',
+
   },
   __Dati_Data008: {
     type: Date,
-    alias: 'DataTrasporto'
+    alias: 'DataTrasporto',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'TrackingNumber'
+    alias: 'TrackingNumber',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'LinkTracking'
+    alias: 'LinkTracking',
+
   },
   __Dati_DataOra006: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'FE_CodiceCIG'
+    alias: 'FE_CodiceCIG',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'FE_CodiceCUP'
+    alias: 'FE_CodiceCUP',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'FE_CodiceCommessa'
+    alias: 'FE_CodiceCommessa',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'FE_Causale'
+    alias: 'FE_Causale',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'FE_Contratto'
+    alias: 'FE_Contratto',
+
   },
   __Dati_Data009: {
     type: Date,
-    alias: 'FE_DataContratto'
+    alias: 'FE_DataContratto',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'FE_RiferimentoAmministrazione'
+    alias: 'FE_RiferimentoAmministrazione',
+
   },
   __Dati_Data010: {
     type: Date,
-    alias: 'FE_DataCompetenzaIva'
+    alias: 'FE_DataCompetenzaIva',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'Avanzamento'
+    alias: 'Avanzamento',
+
+  },
+  __Dati_Testo040: {
+    type: String,
+    alias: 'IdDocOperativiExtra',
+
   }
 }, {
   timestamps: true

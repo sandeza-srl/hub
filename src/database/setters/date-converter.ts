@@ -1,11 +1,16 @@
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
 
 dayjs.extend(customParseFormat);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 
 export default class DateConverter {
+
 
   public static convertDate(value: any) {
 
@@ -14,7 +19,9 @@ export default class DateConverter {
     }
 
     if (typeof value === 'string') {
-      return dayjs(value, 'DD-MM-YYYY').toDate();
+      const newDate = dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Dublin').toDate();
+      console.log(newDate);
+      return dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Dublin').toDate();
     }
 
     return value;

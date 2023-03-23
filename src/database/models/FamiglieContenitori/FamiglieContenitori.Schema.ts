@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IFamiglieContenitoriPrivate } from './FamiglieContenitori.Types.Private';
 
@@ -15,63 +16,87 @@ const FamiglieContenitoriSchema = new mongoose.Schema<IFamiglieContenitoriPrivat
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdSottoFamigliaContenitore'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdFamigliaContenitore'
+    alias: 'IdFamigliaContenitore',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtFamigliaContenitore'
+    alias: 'TxtFamigliaContenitore',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'GeneraCodice_CifreProgressivo'
+    alias: 'GeneraCodice_CifreProgressivo',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'GeneraCodice_Testo'
+    alias: 'GeneraCodice_Testo',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'GeneraCodice_Progressivo'
+    alias: 'GeneraCodice_Progressivo',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'GeneraCodice_ProssimoCodice'
+    alias: 'GeneraCodice_ProssimoCodice',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagControlloImpostazione'
+    alias: 'FlagControlloImpostazione',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
+  },
+  __Dati_Numero006: {
+    type: Number,
+    alias: 'FlagUsaCodificaUnicaItem',
+
   }
 }, {
   timestamps: true

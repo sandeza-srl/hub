@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICodificheSocietaPrivate } from './CodificheSocieta.Types.Private';
 
@@ -15,423 +16,528 @@ const CodificheSocietaSchema = new mongoose.Schema<ICodificheSocietaPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'FatTesto'
+    alias: 'FatTesto',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FatCifreProgressivo'
+    alias: 'FatCifreProgressivo',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FatFlagAnno'
+    alias: 'FatFlagAnno',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FatFlagMese'
+    alias: 'FatFlagMese',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'FatFlagAnnoVedi'
+    alias: 'FatFlagAnnoVedi',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'FatFlagMeseVedi'
+    alias: 'FatFlagMeseVedi',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FatCodiceTest'
+    alias: 'FatCodiceTest',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FatRitenuta'
+    alias: 'FatRitenuta',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdCodifica'
+    alias: 'IdCodifica',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'OffCifreProgressivo'
+    alias: 'OffCifreProgressivo',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'OffCodiceTest'
+    alias: 'OffCodiceTest',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'OffFlagAnno'
+    alias: 'OffFlagAnno',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'OffFlagAnnoVedi'
+    alias: 'OffFlagAnnoVedi',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'OffFlagMese'
+    alias: 'OffFlagMese',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'OffFlagMeseVedi'
+    alias: 'OffFlagMeseVedi',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'OffTesto'
+    alias: 'OffTesto',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'PjCodiceTest'
+    alias: 'PjCodiceTest',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'PjFlagAnno'
+    alias: 'PjFlagAnno',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'PjFlagAnnoVedi'
+    alias: 'PjFlagAnnoVedi',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'PjFlagMese'
+    alias: 'PjFlagMese',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'PjFlagMeseVedi'
+    alias: 'PjFlagMeseVedi',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'PjTesto'
+    alias: 'PjTesto',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'OrfCodiceTest'
+    alias: 'OrfCodiceTest',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'OrfFlagAnno'
+    alias: 'OrfFlagAnno',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'OrfFlagAnnoVedi'
+    alias: 'OrfFlagAnnoVedi',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'OrfFlagMese'
+    alias: 'OrfFlagMese',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'OrfFlagMeseVedi'
+    alias: 'OrfFlagMeseVedi',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'OrfTesto'
+    alias: 'OrfTesto',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'FatTerminiPagamento'
+    alias: 'FatTerminiPagamento',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FatIdFirma'
+    alias: 'FatIdFirma',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'FatIdAccountIntestazione'
+    alias: 'FatIdAccountIntestazione',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'PjCifreProgressivo'
+    alias: 'PjCifreProgressivo',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'OrfCifreProgressivo'
+    alias: 'OrfCifreProgressivo',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'PjTipoPagamento'
+    alias: 'PjTipoPagamento',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'PjGiorniPagamento'
+    alias: 'PjGiorniPagamento',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'PagFlagConfermato'
+    alias: 'PagFlagConfermato',
+
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'ImgBloccato'
+    alias: 'ImgBloccato',
+
   },
   __Dati_Contenitore002: {
     type: String,
-    alias: 'ImgSbloccato'
+    alias: 'ImgSbloccato',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'PasswordBlocco'
+    alias: 'PasswordBlocco',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'PasswordBloccoVisualizza'
+    alias: 'PasswordBloccoVisualizza',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'FatFlagPdfAuto'
+    alias: 'FatFlagPdfAuto',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'FatFlagPdfAutoVedi'
+    alias: 'FatFlagPdfAutoVedi',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'PagFlagConfermatoVedi'
+    alias: 'PagFlagConfermatoVedi',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'FatFlagMailAuto'
+    alias: 'FatFlagMailAuto',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'FatFlagMailAutoVedi'
+    alias: 'FatFlagMailAutoVedi',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'DdtCifreProgressivo'
+    alias: 'DdtCifreProgressivo',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'DdtCodiceTest'
+    alias: 'DdtCodiceTest',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'DdtFlagAnno'
+    alias: 'DdtFlagAnno',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'DdtFlagAnnoVedi'
+    alias: 'DdtFlagAnnoVedi',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'DdtFlagMese'
+    alias: 'DdtFlagMese',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'DdtFlagMeseVedi'
+    alias: 'DdtFlagMeseVedi',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'DdtIdAccountIntestazione'
+    alias: 'DdtIdAccountIntestazione',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'DdtPorto'
+    alias: 'DdtPorto',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'DdtDaMagazzino'
+    alias: 'DdtDaMagazzino',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'DdtDaMagazzinoVedi'
+    alias: 'DdtDaMagazzinoVedi',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'DdtIdTipoPagamento'
+    alias: 'DdtIdTipoPagamento',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'DdtTesto'
+    alias: 'DdtTesto',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'DdtIdTipoFatturazione'
+    alias: 'DdtIdTipoFatturazione',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'DdtNote'
+    alias: 'DdtNote',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'PagIdAliquota'
+    alias: 'PagIdAliquota',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'PagTxtAliquota'
+    alias: 'PagTxtAliquota',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'FatFlagRecCrediti'
+    alias: 'FatFlagRecCrediti',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'FatFlagRecCreditiVedi'
+    alias: 'FatFlagRecCreditiVedi',
+
   },
   __Dati_Numero031: {
     type: Number,
-    alias: 'FatFlagRitenuta'
+    alias: 'FatFlagRitenuta',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'FatFlagRitenutaVedi'
+    alias: 'FatFlagRitenutaVedi',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'FatTitoloRitenuta'
+    alias: 'FatTitoloRitenuta',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'FatTitoloRecuperoCrediti'
+    alias: 'FatTitoloRecuperoCrediti',
+
   },
   __Dati_Numero032: {
     type: Number,
-    alias: 'FatPercRitenuta'
+    alias: 'FatPercRitenuta',
+
   },
   __Dati_Numero033: {
     type: Number,
-    alias: 'FatValorePrimoRecuperoCrediti'
+    alias: 'FatValorePrimoRecuperoCrediti',
+
   },
   __Dati_Numero034: {
     type: Number,
-    alias: 'FatIdAliquotaRecuperoCrediti'
+    alias: 'FatIdAliquotaRecuperoCrediti',
+
   },
   __Dati_Numero035: {
     type: Number,
-    alias: 'FatValoreSecondoRecuperoCrediti'
+    alias: 'FatValoreSecondoRecuperoCrediti',
+
   },
   __Dati_Numero036: {
     type: Number,
-    alias: 'FatGgPrimoRecuperoCrediti'
+    alias: 'FatGgPrimoRecuperoCrediti',
+
   },
   __Dati_Numero037: {
     type: Number,
-    alias: 'FatGgSecondoRecuperoCrediti'
+    alias: 'FatGgSecondoRecuperoCrediti',
+
   },
   __Dati_Numero038: {
     type: Number,
-    alias: 'DdtFlagEtichettaStock'
+    alias: 'DdtFlagEtichettaStock',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'DdtFlagEtichettaStockVedi'
+    alias: 'DdtFlagEtichettaStockVedi',
+
   },
   __Dati_Numero039: {
     type: Number,
-    alias: 'DdtFlagEtichettaSped'
+    alias: 'DdtFlagEtichettaSped',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'DdtFlagEtichettaSpedVedi'
+    alias: 'DdtFlagEtichettaSpedVedi',
+
   },
   __Dati_Numero040: {
     type: Number,
-    alias: 'RiPCifreProgressivo'
+    alias: 'RiPCifreProgressivo',
+
   },
   __Dati_Numero041: {
     type: Number,
-    alias: 'RiPCodiceTest'
+    alias: 'RiPCodiceTest',
+
   },
   __Dati_Numero042: {
     type: Number,
-    alias: 'RiPFlagAnno'
+    alias: 'RiPFlagAnno',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'RiPFlagAnnoVedi'
+    alias: 'RiPFlagAnnoVedi',
+
   },
   __Dati_Numero043: {
     type: Number,
-    alias: 'RiPFlagMese'
+    alias: 'RiPFlagMese',
+
   },
   __Dati_Testo040: {
     type: String,
-    alias: 'RiPFlagMeseVedi'
+    alias: 'RiPFlagMeseVedi',
+
   },
   __Dati_Testo041: {
     type: String,
-    alias: 'RiPTesto'
+    alias: 'RiPTesto',
+
   },
   __Dati_Testo042: {
     type: String,
-    alias: 'CodiceSIAperRiba'
+    alias: 'CodiceSIAperRiba',
+
   },
   __Dati_Numero044: {
     type: Number,
-    alias: 'FlagContabilizzabile'
+    alias: 'FlagContabilizzabile',
+
   },
   __Dati_Numero045: {
     type: Number,
-    alias: 'ValoreMinimoAlertScaduto'
+    alias: 'ValoreMinimoAlertScaduto',
+
   },
   __Dati_Testo043: {
     type: String,
-    alias: 'ConservazioneSostitutivaUser'
+    alias: 'ConservazioneSostitutivaUser',
+
   },
   __Dati_Testo044: {
     type: String,
-    alias: 'ConservazioneSostitutivaPassword'
+    alias: 'ConservazioneSostitutivaPassword',
+
   },
   __Dati_Testo045: {
     type: String,
-    alias: 'ConservazioneSostitutivaWeb'
+    alias: 'ConservazioneSostitutivaWeb',
+
   },
   __Dati_Numero046: {
     type: Number,
-    alias: 'FlagFattElettAutomatica'
+    alias: 'FlagFattElettAutomatica',
+
   },
   __Dati_Numero047: {
     type: Number,
-    alias: 'FlagFattElettPEC'
+    alias: 'FlagFattElettPEC',
+
   },
   __Dati_Numero048: {
     type: Number,
-    alias: 'FlagFatEl'
+    alias: 'FlagFatEl',
+
   },
   __Dati_Numero049: {
     type: Number,
-    alias: 'FlagEsportaItem'
+    alias: 'FlagEsportaItem',
+
   },
   __Dati_Numero050: {
     type: Number,
-    alias: 'FlagImportaItem'
+    alias: 'FlagImportaItem',
+
   },
   __Dati_Numero051: {
     type: Number,
-    alias: 'FlagPartenzaMappadaIntervento'
+    alias: 'FlagPartenzaMappadaIntervento',
+
   },
   __Dati_Numero052: {
     type: Number,
-    alias: 'FlagArrivoMappadaIntervento'
+    alias: 'FlagArrivoMappadaIntervento',
+
   },
   __Dati_Numero053: {
     type: Number,
-    alias: 'FlagGestioneRipartitori'
+    alias: 'FlagGestioneRipartitori',
+
   },
   __Dati_Numero054: {
     type: Number,
-    alias: 'FlagGestioneFiltri'
+    alias: 'FlagGestioneFiltri',
+
   },
   __Dati_Testo046: {
     type: String,
-    alias: 'NomeFileFatturaElettronica'
+    alias: 'NomeFileFatturaElettronica',
+
   },
   __Dati_Testo047: {
     type: String,
-    alias: 'NomeFileConnettoreContabilita'
+    alias: 'NomeFileConnettoreContabilita',
+
   },
   __Dati_Numero055: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo048: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

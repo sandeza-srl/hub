@@ -329,5 +329,11 @@ export interface ITipiDocOperativiPrivate {
   /** Reflected: TipiRuoli_IdTipiRuoli_Tutti*/ 
   __Dati_Testo047: string;
   /** Reflected: FlagRegoleStati_AperturaForzataPossibile*/ 
-  __Dati_Numero116: number
+  __Dati_Numero116: number;
+  /** Reflected: LucchettoDocumento_FlagBloccoParziale*/ 
+  __Dati_Numero117: number;
+  /** Reflected: LucchettoDocumento_EsclusiBlocco_CodiceEsterno*/ 
+  __Dati_Numero118: number;
+  /** Reflected: LucchettoDocumento_EsclusiBlocco_Descrizione*/ 
+  __Dati_Numero119: number
 }

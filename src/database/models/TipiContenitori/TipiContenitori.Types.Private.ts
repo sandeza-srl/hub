@@ -53,5 +53,13 @@ export interface ITipiContenitoriPrivate {
   /** Reflected: CodiceTxtTipoContenitoreAutomatico*/ 
   __Dati_Testo014: string;
   /** Reflected: IdInstallazione*/ 
-  __Dati_Testo015: string
+  __Dati_Testo015: string;
+  /** Reflected: FlagAggiornaContenutiDaItems*/ 
+  __Dati_Numero010: number;
+  /** Reflected: UnitaMisura*/ 
+  __Dati_Testo016: string;
+  /** Reflected: IdDocumentoPrincipale*/ 
+  __Dati_Testo017: string;
+  /** Reflected: NumeroContenitoriInVerifica*/ 
+  __Dati_Numero011: number
 }

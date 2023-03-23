@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IProvvigioniPrivate } from './Provvigioni.Types.Private';
 
@@ -15,139 +16,175 @@ const ProvvigioniSchema = new mongoose.Schema<IProvvigioniPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'FlagCosaIncludeVedi'
+    alias: 'FlagCosaIncludeVedi',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagPercentuale'
+    alias: 'FlagPercentuale',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'FlagPercentualeVedi'
+    alias: 'FlagPercentualeVedi',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagSoloItem'
+    alias: 'FlagSoloItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'FlagSoloItemVedi'
+    alias: 'FlagSoloItemVedi',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagTuttaFamiglia'
+    alias: 'FlagTuttaFamiglia',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'FlagTuttaFamigliaVedi'
+    alias: 'FlagTuttaFamigliaVedi',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagTuttaSottoFamiglia'
+    alias: 'FlagTuttaSottoFamiglia',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'FlagTuttaSottoFamigliaVedi'
+    alias: 'FlagTuttaSottoFamigliaVedi',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagTutto'
+    alias: 'FlagTutto',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'FlagTuttoVedi'
+    alias: 'FlagTuttoVedi',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdProvvigioni'
+    alias: 'IdProvvigioni',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'PrezzoFisso'
+    alias: 'PrezzoFisso',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'VariazionePrezzoDiretta'
+    alias: 'VariazionePrezzoDiretta',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'VariazionePrezzoPercentuale'
+    alias: 'VariazionePrezzoPercentuale',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagVendita'
+    alias: 'FlagVendita',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagAcquisto'
+    alias: 'FlagAcquisto',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'TxtVenditaAcquisto'
+    alias: 'TxtVenditaAcquisto',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdAccountClientePrimario'
+    alias: 'IdAccountClientePrimario',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagProduttore'
+    alias: 'FlagProduttore',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'FlagProduttoreVedi'
+    alias: 'FlagProduttoreVedi',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtAccountProduttore'
+    alias: 'TxtAccountProduttore',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtSottoFamigliaItem'
+    alias: 'TxtSottoFamigliaItem',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TxtFamigliaItem'
+    alias: 'TxtFamigliaItem',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

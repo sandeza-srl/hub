@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipoScadenzeAccountPrivate } from './TipoScadenzeAccount.Types.Private';
 
@@ -15,63 +16,80 @@ const TipoScadenzeAccountSchema = new mongoose.Schema<ITipoScadenzeAccountPrivat
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdRegolaScadenza'
+    alias: 'IdRegolaScadenza',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtRegolaScadenza'
+    alias: 'TxtRegolaScadenza',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtMetodoPagamento'
+    alias: 'TxtMetodoPagamento',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdMetodoPagamento'
+    alias: 'IdMetodoPagamento',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'FlagIncassoImmediato'
+    alias: 'FlagIncassoImmediato',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagAcquisto'
+    alias: 'FlagAcquisto',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagVendita'
+    alias: 'FlagVendita',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdTipoScadenzeAccount'
+    alias: 'IdTipoScadenzeAccount',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtMetodoRegola'
+    alias: 'TxtMetodoRegola',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IItemRipartitoriPrivate } from './ItemRipartitori.Types.Private';
 
@@ -15,59 +16,77 @@ const ItemRipartitoriSchema = new mongoose.Schema<IItemRipartitoriPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagDaEliminare'
+    alias: 'FlagDaEliminare',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagTipoAzione'
+    alias: 'FlagTipoAzione',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagTipoBene'
+    alias: 'FlagTipoBene',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagTipoContratto'
+    alias: 'FlagTipoContratto',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagTipoLavorazione'
+    alias: 'FlagTipoLavorazione',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagTipoOraLavoro'
+    alias: 'FlagTipoOraLavoro',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagInserimentoAutomaticoInterventi'
+    alias: 'FlagInserimentoAutomaticoInterventi',
+
   }
 }, {
   timestamps: true

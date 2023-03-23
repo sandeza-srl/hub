@@ -17,5 +17,7 @@ export interface IDescrizioneMetodiPagamentoPrivate {
   /** Reflected: Zero*/ 
   __Dati_Numero002: number;
   /** Reflected: IdInstallazione*/ 
-  __Dati_Testo005: string
+  __Dati_Testo005: string;
+  /** Reflected: IdDescrizioneMetodoPagmento*/ 
+  __Dati_Testo006: string
 }

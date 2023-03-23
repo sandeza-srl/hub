@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICodiciCatastaliPrivate } from './CodiciCatastali.Types.Private';
 
@@ -15,31 +16,38 @@ const CodiciCatastaliSchema = new mongoose.Schema<ICodiciCatastaliPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'CodiceCatastale'
+    alias: 'CodiceCatastale',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdNazione'
+    alias: 'IdNazione',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'Comune'
+    alias: 'Comune',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdCodiceCatastale'
+    alias: 'IdCodiceCatastale',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IDatiRipartitoriPrivate } from './DatiRipartitori.Types.Private';
 
@@ -15,175 +16,218 @@ const DatiRipartitoriSchema = new mongoose.Schema<IDatiRipartitoriPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Altezza'
+    alias: 'Altezza',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'CoefficienteDispersioneVolumica'
+    alias: 'CoefficienteDispersioneVolumica',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'DescrizioneLocale'
+    alias: 'DescrizioneLocale',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiorna01'
+    alias: 'FlagAggiorna01',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagAggiorna02'
+    alias: 'FlagAggiorna02',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdImpianto'
+    alias: 'IdImpianto',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdOperatoreInstallatore'
+    alias: 'IdOperatoreInstallatore',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdRigaDistintaImpianto'
+    alias: 'IdRigaDistintaImpianto',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdRigaDistintaImpiantoCustom'
+    alias: 'IdRigaDistintaImpiantoCustom',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Larghezza'
+    alias: 'Larghezza',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'NumElementi'
+    alias: 'NumElementi',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'Watt_02'
+    alias: 'Watt_02',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'Passo'
+    alias: 'Passo',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'Profondita'
+    alias: 'Profondita',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'Superficie_01'
+    alias: 'Superficie_01',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TipoRadiatore'
+    alias: 'TipoRadiatore',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'Volume_01'
+    alias: 'Volume_01',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'CodiceFinestraLetture'
+    alias: 'CodiceFinestraLetture',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'Piano'
+    alias: 'Piano',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'Padiglione'
+    alias: 'Padiglione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'Reparto'
+    alias: 'Reparto',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'TipoUbicazione'
+    alias: 'TipoUbicazione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'Ubicazione'
+    alias: 'Ubicazione',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'PortataMinima'
+    alias: 'PortataMinima',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'PortataMassima'
+    alias: 'PortataMassima',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'Interasse'
+    alias: 'Interasse',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'Diametro'
+    alias: 'Diametro',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TipoSensore'
+    alias: 'TipoSensore',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'SerialeCentrale'
+    alias: 'SerialeCentrale',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'TipoMisurazione'
+    alias: 'TipoMisurazione',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'IdDescrizioneRipartitori'
+    alias: 'IdDescrizioneRipartitori',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'IdMaterialiRadiatori'
+    alias: 'IdMaterialiRadiatori',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'TxtDescrizioneRipartitori'
+    alias: 'TxtDescrizioneRipartitori',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'TxtMaterialeRadiatore'
+    alias: 'TxtMaterialeRadiatore',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagRipartitoreInstallato'
+    alias: 'FlagRipartitoreInstallato',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'IdTipologiaRadiatori'
+    alias: 'IdTipologiaRadiatori',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'TxtTipologiaRadiatori'
+    alias: 'TxtTipologiaRadiatori',
+
   }
 }, {
   timestamps: true

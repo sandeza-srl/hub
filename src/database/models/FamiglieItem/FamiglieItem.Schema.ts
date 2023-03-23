@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IFamiglieItemPrivate } from './FamiglieItem.Types.Private';
 
@@ -15,139 +16,177 @@ const FamiglieItemSchema = new mongoose.Schema<IFamiglieItemPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtFamigliaItem'
+    alias: 'TxtFamigliaItem',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagTipoAzione'
+    alias: 'FlagTipoAzione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagTipoBene'
+    alias: 'FlagTipoBene',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagTipoContratto'
+    alias: 'FlagTipoContratto',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagTipoLavorazione'
+    alias: 'FlagTipoLavorazione',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'CodiceFamigliaItem'
+    alias: 'CodiceFamigliaItem',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdFamigliaItemOrigine'
+    alias: 'IdFamigliaItemOrigine',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'GeneraCodiceItem_AltroIdFamigliaItemPerCodice'
+    alias: 'GeneraCodiceItem_AltroIdFamigliaItemPerCodice',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'GeneraCodiceItem_CodiceTest'
+    alias: 'GeneraCodiceItem_CodiceTest',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagTipoCodice_AltraFamiglia'
+    alias: 'GeneraCodiceItem_FlagTipoCodice_AltraFamiglia',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'GeneraCodiceItem_NumeroCifre'
+    alias: 'GeneraCodiceItem_NumeroCifre',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'GeneraCodiceItem_OrdineProgressivo'
+    alias: 'GeneraCodiceItem_OrdineProgressivo',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'GeneraCodiceItem_OrdineTesto'
+    alias: 'GeneraCodiceItem_OrdineTesto',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'GeneraCodiceItem_Progressivo'
+    alias: 'GeneraCodiceItem_Progressivo',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'GeneraCodiceItem_Testo'
+    alias: 'GeneraCodiceItem_Testo',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'GeneraCodiceItem_Espressione'
+    alias: 'GeneraCodiceItem_Espressione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'GeneraCodiceItem_CodiceEsempio'
+    alias: 'GeneraCodiceItem_CodiceEsempio',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagTipoCodice_Standard'
+    alias: 'GeneraCodiceItem_FlagTipoCodice_Standard',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagCodiceValidato'
+    alias: 'GeneraCodiceItem_FlagCodiceValidato',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagTipoOraLavoro'
+    alias: 'FlagTipoOraLavoro',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'UnitaDiMisura'
+    alias: 'UnitaDiMisura',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagTipoCodice_Proprio'
+    alias: 'GeneraCodiceItem_FlagTipoCodice_Proprio',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagProgressivoContinuo'
+    alias: 'GeneraCodiceItem_FlagProgressivoContinuo',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagProgressivoAnnuale'
+    alias: 'GeneraCodiceItem_FlagProgressivoAnnuale',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagProgressivoMensile'
+    alias: 'GeneraCodiceItem_FlagProgressivoMensile',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'GeneraCodiceItem_FlagModificaCodicePermessa'
+    alias: 'GeneraCodiceItem_FlagModificaCodicePermessa',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'GeneraCodiceItem_TxtTipoCodice'
+    alias: 'GeneraCodiceItem_TxtTipoCodice',
+
   }
 }, {
   timestamps: true

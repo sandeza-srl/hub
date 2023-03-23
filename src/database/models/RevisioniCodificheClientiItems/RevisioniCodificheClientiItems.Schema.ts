@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IRevisioniCodificheClientiItemsPrivate } from './RevisioniCodificheClientiItems.Types.Private';
 
@@ -15,83 +16,113 @@ const RevisioniCodificheClientiItemsSchema = new mongoose.Schema<IRevisioniCodif
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraModifica'
+    alias: 'DataOraModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataRevisione'
+    alias: 'DataRevisione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCodificaClienteItem'
+    alias: 'IdCodificaClienteItem',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdRevisione'
+    alias: 'IdRevisione',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'NumeroRevisione'
+    alias: 'NumeroRevisione',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'CodiceRevisioneAutomatico'
+    alias: 'CodiceRevisioneAutomatico',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'Protocollo'
+    alias: 'Protocollo',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

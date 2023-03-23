@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IViaggiPrivate } from './Viaggi.Types.Private';
 
@@ -15,223 +16,286 @@ const ViaggiSchema = new mongoose.Schema<IViaggiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdViaggi'
+    alias: 'IdViaggi',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraModifica'
+    alias: 'DataOraModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccountPartenza'
+    alias: 'IdAccountPartenza',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdAccountArrivo'
+    alias: 'IdAccountArrivo',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdSedeArrivo'
+    alias: 'IdSedeArrivo',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdSedePartenza'
+    alias: 'IdSedePartenza',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdAccountOperatore'
+    alias: 'IdAccountOperatore',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdInterventoArrivo'
+    alias: 'IdInterventoArrivo',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdInterventoPartenza'
+    alias: 'IdInterventoPartenza',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'TxtAccountArrivo'
+    alias: 'TxtAccountArrivo',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'TxtAccountOperatore'
+    alias: 'TxtAccountOperatore',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'TxtAccountPartenza'
+    alias: 'TxtAccountPartenza',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'TxtSedeArrivo'
+    alias: 'TxtSedeArrivo',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'TxtSedePartenza'
+    alias: 'TxtSedePartenza',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataPartenza'
+    alias: 'DataPartenza',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataArrivo'
+    alias: 'DataArrivo',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'OraArrivo'
+    alias: 'OraArrivo',
+
   },
   __Dati_Ora002: {
     type: String,
-    alias: 'OraPartenza'
+    alias: 'OraPartenza',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'TempoViaggioNumerico'
+    alias: 'TempoViaggioNumerico',
+
   },
   __Dati_Ora003: {
     type: String,
-    alias: 'TempoViaggioTime'
+    alias: 'TempoViaggioTime',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'KmViaggio'
+    alias: 'KmViaggio',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'CapPartenza'
+    alias: 'CapPartenza',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'CittaPartenza'
+    alias: 'CittaPartenza',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'LatitudinePartenza'
+    alias: 'LatitudinePartenza',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'LongitudinePartenza'
+    alias: 'LongitudinePartenza',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'ProvinciaPartenza'
+    alias: 'ProvinciaPartenza',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'ViaPartenza'
+    alias: 'ViaPartenza',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdNazionePartenza'
+    alias: 'IdNazionePartenza',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'NomeNazionePartenza'
+    alias: 'NomeNazionePartenza',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'NomeNazioneIngPartenza'
+    alias: 'NomeNazioneIngPartenza',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'CapArrivo'
+    alias: 'CapArrivo',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'CittaArrivo'
+    alias: 'CittaArrivo',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdNazioneArrivo'
+    alias: 'IdNazioneArrivo',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'LatitudineArrivo'
+    alias: 'LatitudineArrivo',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'LongitudineArrivo'
+    alias: 'LongitudineArrivo',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'NomeNazioneIngArrivo'
+    alias: 'NomeNazioneIngArrivo',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'NomeNazioneArrivo'
+    alias: 'NomeNazioneArrivo',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'ProvinciaArrivo'
+    alias: 'ProvinciaArrivo',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'ViaArrivo'
+    alias: 'ViaArrivo',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'CodiceInterventoPartenza'
+    alias: 'CodiceInterventoPartenza',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'CodiceInterventoArrivo'
+    alias: 'CodiceInterventoArrivo',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'KmViaggioStimato'
+    alias: 'KmViaggioStimato',
+
   },
   __Dati_Ora004: {
     type: String,
-    alias: 'TempoViaggioTimeStimato'
+    alias: 'TempoViaggioTimeStimato',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'TempoViaggioNumericoStimato'
+    alias: 'TempoViaggioNumericoStimato',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'IdDocumentoCollegato'
+    alias: 'IdDocumentoCollegato',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagViaggioTerminato'
+    alias: 'FlagViaggioTerminato',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagViaggioInCorso'
+    alias: 'FlagViaggioInCorso',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'IdInterventoTutti'
+    alias: 'IdInterventoTutti',
+
   },
   __Dati_Ora005: {
     type: String,
-    alias: 'InizioPausaTime'
+    alias: 'InizioPausaTime',
+
   },
   __Dati_Ora006: {
     type: String,
-    alias: 'FinePausaTime'
+    alias: 'FinePausaTime',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

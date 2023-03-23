@@ -79,5 +79,27 @@ export interface IContenitori {
   /** Reflected: __Dati_Testo027*/ 
   TxtTipoStatoPosizioneContenitoreAutomatico: string;
   /** Reflected: __Dati_Testo028*/ 
-  IdInstallazione: string
+  IdInstallazione: string;
+  /** Reflected: __Dati_Numero009*/ 
+  FlagInVerifica: number;
+  /** Reflected: __Dati_Testo029*/ 
+  CodiceReparto: string;
+  /** Reflected: __Dati_Data003*/ 
+  DataInstallazione: Date;
+  /** Reflected: __Dati_Data004*/ 
+  DataInizioAttivita: Date;
+  /** Reflected: __Dati_Numero010*/ 
+  GiorniEsercizio: number;
+  /** Reflected: __Dati_Testo030*/ 
+  IdAccountOperatore: string;
+  /** Reflected: __Dati_Testo031*/ 
+  IdRisorsa: string;
+  /** Reflected: __Dati_Testo032*/ 
+  IdOperatoreProduzione: string;
+  /** Reflected: __Dati_Testo033*/ 
+  CodiceTxtContenitoreNumeroSerie: string;
+  /** Reflected: __Dati_Testo034*/ 
+  TxtAccountOperatore: string;
+  /** Reflected: __Dati_Testo035*/ 
+  IdDocumentoPrincipale: string
 }

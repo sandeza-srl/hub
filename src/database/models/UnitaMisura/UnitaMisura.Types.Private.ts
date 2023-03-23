@@ -13,5 +13,7 @@ export interface IUnitaMisuraPrivate {
   /** Reflected: Zero*/ 
   __Dati_Numero002: number;
   /** Reflected: IdInstallazione*/ 
-  __Dati_Testo003: string
+  __Dati_Testo003: string;
+  /** Reflected: IdUnitaMisura*/ 
+  __Dati_Testo004: string
 }

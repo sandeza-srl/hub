@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { INazioniPrivate } from './Nazioni.Types.Private';
 
@@ -15,39 +16,48 @@ const NazioniSchema = new mongoose.Schema<INazioniPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdNazione'
+    alias: 'IdNazione',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'NomeNazione'
+    alias: 'NomeNazione',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'Prefisso'
+    alias: 'Prefisso',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'NomeNazioneIng'
+    alias: 'NomeNazioneIng',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagPredefinita'
+    alias: 'FlagPredefinita',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagCEE'
+    alias: 'FlagCEE',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IOpzioniProdPrivate } from './OpzioniProd.Types.Private';
 
@@ -15,715 +16,899 @@ const OpzioniProdSchema = new mongoose.Schema<IOpzioniProdPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdArticolo'
+    alias: 'IdArticolo',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCiclo'
+    alias: 'IdCiclo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'CodiceFase'
+    alias: 'CodiceFase',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtFase'
+    alias: 'TxtFase',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdRisorsa'
+    alias: 'IdRisorsa',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtRisorsa'
+    alias: 'TxtRisorsa',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'SecUmFin_T'
+    alias: 'SecUmFin_T',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Resa_T'
+    alias: 'Resa_T',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'ProdUmFinHP_T'
+    alias: 'ProdUmFinHP_T',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'UmOpzione'
+    alias: 'UmOpzione',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'SecColpo_T'
+    alias: 'SecColpo_T',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'ProdUmFinHPF_T'
+    alias: 'ProdUmFinHPF_T',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdTipoFase'
+    alias: 'IdTipoFase',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdOpzioneProd'
+    alias: 'IdOpzioneProd',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'ConvUmOpzUmFin'
+    alias: 'ConvUmOpzUmFin',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'NoteProduzione'
+    alias: 'NoteProduzione',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'NUmOpzColpo_T'
+    alias: 'NUmOpzColpo_T',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'NUmFinColpo_T'
+    alias: 'NUmFinColpo_T',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'SecUmOpz_T'
+    alias: 'SecUmOpz_T',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'ProdUmOpzHP_T'
+    alias: 'ProdUmOpzHP_T',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'ProdUmOpzHPF_T'
+    alias: 'ProdUmOpzHPF_T',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'NoteImballo'
+    alias: 'NoteImballo',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdTipoImballo'
+    alias: 'IdTipoImballo',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'NoteUtensili'
+    alias: 'NoteUtensili',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdFamigliaRisorsa'
+    alias: 'IdFamigliaRisorsa',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'CHAddettoAggiuntivo_T'
+    alias: 'CHAddettoAggiuntivo_T',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'CHAD_T'
+    alias: 'CHAD_T',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'CHF_T_Risorsa'
+    alias: 'CHF_T_Risorsa',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'CHP_T_Risorsa'
+    alias: 'CHP_T_Risorsa',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'CULE_T_Opz'
+    alias: 'CULE_T_Opz',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'IncidenzaScarto'
+    alias: 'IncidenzaScarto',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'GgLavorazione'
+    alias: 'GgLavorazione',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'FrequenzaControllo'
+    alias: 'FrequenzaControllo',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'UmFinito'
+    alias: 'UmFinito',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'NUmOpzColpo_R'
+    alias: 'NUmOpzColpo_R',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'ProdUmOpzHP_R'
+    alias: 'ProdUmOpzHP_R',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'ProdUmOpzHPF_R'
+    alias: 'ProdUmOpzHPF_R',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'NUmFinColpo_R'
+    alias: 'NUmFinColpo_R',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'ProdUmFinHP_R'
+    alias: 'ProdUmFinHP_R',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'ProdUmFinHPF_R'
+    alias: 'ProdUmFinHPF_R',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'Resa_R'
+    alias: 'Resa_R',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'SecColpo_R'
+    alias: 'SecColpo_R',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'SecUmOpz_R'
+    alias: 'SecUmOpz_R',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'SecUmFin_R'
+    alias: 'SecUmFin_R',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'TA_R'
+    alias: 'TA_R',
+
   },
   __Dati_Ora002: {
     type: String,
-    alias: 'TD_R'
+    alias: 'TD_R',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'NoteAttrezzaggio'
+    alias: 'NoteAttrezzaggio',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'NoteMovimentazione'
+    alias: 'NoteMovimentazione',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'TxtArticolo'
+    alias: 'TxtArticolo',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'TxtCiclo'
+    alias: 'TxtCiclo',
+
   },
   __Dati_Numero031: {
     type: Number,
-    alias: 'FlagLavInternaPianificabile'
+    alias: 'FlagLavInternaPianificabile',
+
   },
   __Dati_Numero032: {
     type: Number,
-    alias: 'FlagImballoParziale'
+    alias: 'FlagImballoParziale',
+
   },
   __Dati_Numero033: {
     type: Number,
-    alias: 'FlagImballoFinale'
+    alias: 'FlagImballoFinale',
+
   },
   __Dati_Numero034: {
     type: Number,
-    alias: 'FlagLavEsterna'
+    alias: 'FlagLavEsterna',
+
   },
   __Dati_Numero035: {
     type: Number,
-    alias: 'NumeroAddetti'
+    alias: 'NumeroAddetti',
+
   },
   __Dati_Numero036: {
     type: Number,
-    alias: 'CHPF_T'
+    alias: 'CHPF_T',
+
   },
   __Dati_Numero037: {
     type: Number,
-    alias: 'CHP_T'
+    alias: 'CHP_T',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'TxtImballo'
+    alias: 'TxtImballo',
+
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'ImgImballo'
+    alias: 'ImgImballo',
+
   },
   __Dati_Numero038: {
     type: Number,
-    alias: 'LarghezzaImballo'
+    alias: 'LarghezzaImballo',
+
   },
   __Dati_Numero039: {
     type: Number,
-    alias: 'LunghezzaImballo'
+    alias: 'LunghezzaImballo',
+
   },
   __Dati_Numero040: {
     type: Number,
-    alias: 'AltezzaImballo'
+    alias: 'AltezzaImballo',
+
   },
   __Dati_Numero041: {
     type: Number,
-    alias: 'AreaImballo'
+    alias: 'AreaImballo',
+
   },
   __Dati_Numero042: {
     type: Number,
-    alias: 'VolumeImballo'
+    alias: 'VolumeImballo',
+
   },
   __Dati_Numero043: {
     type: Number,
-    alias: 'UmOpzPerImballo'
+    alias: 'UmOpzPerImballo',
+
   },
   __Dati_Numero044: {
     type: Number,
-    alias: 'CUP_T_Opz'
+    alias: 'CUP_T_Opz',
+
   },
   __Dati_Numero045: {
     type: Number,
-    alias: 'CUPn_T_Opz'
+    alias: 'CUPn_T_Opz',
+
   },
   __Dati_Numero046: {
     type: Number,
-    alias: 'CHF_T'
+    alias: 'CHF_T',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'TxtTipoImballo'
+    alias: 'TxtTipoImballo',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'FlagSelezione'
+    alias: 'FlagSelezione',
+
   },
   __Dati_Numero047: {
     type: Number,
-    alias: 'CUT_T_Opz'
+    alias: 'CUT_T_Opz',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'IdDocImballo'
+    alias: 'IdDocImballo',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'TxtImgImballo'
+    alias: 'TxtImgImballo',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdDocImgImballo'
+    alias: 'IdDocImgImballo',
+
   },
   __Dati_Numero048: {
     type: Number,
-    alias: 'CTA_T'
+    alias: 'CTA_T',
+
   },
   __Dati_Numero049: {
     type: Number,
-    alias: 'CTD_T'
+    alias: 'CTD_T',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'CodiceRisorsa'
+    alias: 'CodiceRisorsa',
+
   },
   __Dati_Contenitore002: {
     type: String,
-    alias: 'ImgDocImballo'
+    alias: 'ImgDocImballo',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'IdDocImgNoteProduzione'
+    alias: 'IdDocImgNoteProduzione',
+
   },
   __Dati_Contenitore003: {
     type: String,
-    alias: 'ImgNoteProduzione'
+    alias: 'ImgNoteProduzione',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'IdDocImgNoteAttrezzaggio'
+    alias: 'IdDocImgNoteAttrezzaggio',
+
   },
   __Dati_Contenitore004: {
     type: String,
-    alias: 'ImgNoteAttrezzaggio'
+    alias: 'ImgNoteAttrezzaggio',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdDocImgNoteMovimentazione'
+    alias: 'IdDocImgNoteMovimentazione',
+
   },
   __Dati_Contenitore005: {
     type: String,
-    alias: 'ImgNoteUtensili'
+    alias: 'ImgNoteUtensili',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'IdDocImgNoteUtensili'
+    alias: 'IdDocImgNoteUtensili',
+
   },
   __Dati_Contenitore006: {
     type: String,
-    alias: 'ImgNoteMovimentazione'
+    alias: 'ImgNoteMovimentazione',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero050: {
     type: Number,
-    alias: 'CUM_T_Opz'
+    alias: 'CUM_T_Opz',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'ProdUmOpzHP_QPMedia_R'
+    alias: 'ProdUmOpzHP_QPMedia_R',
+
   },
   __Dati_Numero051: {
     type: Number,
-    alias: 'FlagNestedPossibile'
+    alias: 'FlagNestedPossibile',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'IdItemLavorazione'
+    alias: 'IdItemLavorazione',
+
   },
   __Dati_Numero052: {
     type: Number,
-    alias: 'FlagTempoManualePossibile'
+    alias: 'FlagTempoManualePossibile',
+
   },
   __Dati_Ora003: {
     type: String,
-    alias: 'TAttraversamentoLinea_T'
+    alias: 'TAttraversamentoLinea_T',
+
   },
   __Dati_Numero053: {
     type: Number,
-    alias: 'CostoOrarioMacchinaAttrezzaggio'
+    alias: 'CostoOrarioMacchinaAttrezzaggio',
+
   },
   __Dati_Numero054: {
     type: Number,
-    alias: 'CostoOrarioMacchinaFermoMacchina'
+    alias: 'CostoOrarioMacchinaFermoMacchina',
+
   },
   __Dati_Numero055: {
     type: Number,
-    alias: 'CostoOrarioMacchinaProduzione'
+    alias: 'CostoOrarioMacchinaProduzione',
+
   },
   __Dati_Numero056: {
     type: Number,
-    alias: 'CostoOrarioAddettoAttrezzaggio'
+    alias: 'CostoOrarioAddettoAttrezzaggio',
+
   },
   __Dati_Numero057: {
     type: Number,
-    alias: 'CostoOrarioAddettoFermoMacchina'
+    alias: 'CostoOrarioAddettoFermoMacchina',
+
   },
   __Dati_Numero058: {
     type: Number,
-    alias: 'CostoOrarioAddettoProduzione'
+    alias: 'CostoOrarioAddettoProduzione',
+
   },
   __Dati_Numero059: {
     type: Number,
-    alias: 'QuotaAddettoAttrezzaggio'
+    alias: 'QuotaAddettoAttrezzaggio',
+
   },
   __Dati_Numero060: {
     type: Number,
-    alias: 'QuotaAddettoFermoMacchina'
+    alias: 'QuotaAddettoFermoMacchina',
+
   },
   __Dati_Numero061: {
     type: Number,
-    alias: 'QuotaAddettoProduzione'
+    alias: 'QuotaAddettoProduzione',
+
   },
   __Dati_Numero062: {
     type: Number,
-    alias: 'NumeroFase'
+    alias: 'NumeroFase',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'CodiceTxtRisorsaAutomatico'
+    alias: 'CodiceTxtRisorsaAutomatico',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'CodiceTxtFaseAutomatico'
+    alias: 'CodiceTxtFaseAutomatico',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'CodiceTxtFaseRisorsaAutomatico'
+    alias: 'CodiceTxtFaseRisorsaAutomatico',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'TxtItemLavorazione'
+    alias: 'TxtItemLavorazione',
+
   },
   __Dati_Numero063: {
     type: Number,
-    alias: 'TaraImballo'
+    alias: 'TaraImballo',
+
   },
   __Dati_Numero064: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero065: {
     type: Number,
-    alias: 'FlagAggiornaValori_01'
+    alias: 'FlagAggiornaValori_01',
+
   },
   __Dati_Numero066: {
     type: Number,
-    alias: 'ConvUmOpzUmLavorazione'
+    alias: 'ConvUmOpzUmLavorazione',
+
   },
   __Dati_Numero067: {
     type: Number,
-    alias: 'ConvUmFinUmOpz'
+    alias: 'ConvUmFinUmOpz',
+
   },
   __Dati_Numero068: {
     type: Number,
-    alias: 'ConvUmLavorazioneUmOpz'
+    alias: 'ConvUmLavorazioneUmOpz',
+
   },
   __Dati_Numero069: {
     type: Number,
-    alias: 'CUL_T_Opz'
+    alias: 'CUL_T_Opz',
+
   },
   __Dati_Numero070: {
     type: Number,
-    alias: 'FlagLavInternaNonPianificabile'
+    alias: 'FlagLavInternaNonPianificabile',
+
   },
   __Dati_Numero071: {
     type: Number,
-    alias: 'NumeroAddettiStandard'
+    alias: 'NumeroAddettiStandard',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'TxtFaseRisorsaAutomatico'
+    alias: 'TxtFaseRisorsaAutomatico',
+
   },
   __Dati_Numero072: {
     type: Number,
-    alias: 'NumeroAlternativa'
+    alias: 'NumeroAlternativa',
+
   },
   __Dati_Numero073: {
     type: Number,
-    alias: 'Pianificazione_FlagAttesaTotale'
+    alias: 'Pianificazione_FlagAttesaTotale',
+
   },
   __Dati_Numero074: {
     type: Number,
-    alias: 'Pianificazione_HAttesa'
+    alias: 'Pianificazione_HAttesa',
+
   },
   __Dati_Numero075: {
     type: Number,
-    alias: 'FlagAggiornaDaControlli'
+    alias: 'FlagAggiornaDaControlli',
+
   },
   __Dati_Numero076: {
     type: Number,
-    alias: 'NumeroControlliOpzione'
+    alias: 'NumeroControlliOpzione',
+
   },
   __Dati_Numero077: {
     type: Number,
-    alias: 'FlagAggiornaValori_02'
+    alias: 'FlagAggiornaValori_02',
+
   },
   __Dati_Numero078: {
     type: Number,
-    alias: 'FlagDaBenestariare'
+    alias: 'FlagDaBenestariare',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'NoteQualita'
+    alias: 'NoteQualita',
+
   },
   __Dati_Testo040: {
     type: String,
-    alias: 'IdDocImgNoteQualita'
+    alias: 'IdDocImgNoteQualita',
+
   },
   __Dati_Testo041: {
     type: String,
-    alias: 'IdDocImgProgrammiMacchina'
+    alias: 'IdDocImgProgrammiMacchina',
+
   },
   __Dati_Numero079: {
     type: Number,
-    alias: 'QtPerImballo'
+    alias: 'QtPerImballo',
+
   },
   __Dati_Ora004: {
     type: String,
-    alias: 'TempoColpo_T'
+    alias: 'TempoColpo_T',
+
   },
   __Dati_Testo042: {
     type: String,
-    alias: 'CodiceTxtRisorsaNumeroAlternativaAutomatico'
+    alias: 'CodiceTxtRisorsaNumeroAlternativaAutomatico',
+
   },
   __Dati_Numero080: {
     type: Number,
-    alias: 'PercScartoImpostata'
+    alias: 'PercScartoImpostata',
+
   },
   __Dati_Numero081: {
     type: Number,
-    alias: 'CUQ_T_Opz'
+    alias: 'CUQ_T_Opz',
+
   },
   __Dati_Numero082: {
     type: Number,
-    alias: 'CUP_T_Fin'
+    alias: 'CUP_T_Fin',
+
   },
   __Dati_Numero083: {
     type: Number,
-    alias: 'CUPn_T_Fin'
+    alias: 'CUPn_T_Fin',
+
   },
   __Dati_Numero084: {
     type: Number,
-    alias: 'CUQ_T_Fin'
+    alias: 'CUQ_T_Fin',
+
   },
   __Dati_Numero085: {
     type: Number,
-    alias: 'CUT_T_Fin'
+    alias: 'CUT_T_Fin',
+
   },
   __Dati_Numero086: {
     type: Number,
-    alias: 'CUM_T_Fin'
+    alias: 'CUM_T_Fin',
+
   },
   __Dati_Numero087: {
     type: Number,
-    alias: 'CULE_T_Fin'
+    alias: 'CULE_T_Fin',
+
   },
   __Dati_Numero088: {
     type: Number,
-    alias: 'CUL_T_Fin'
+    alias: 'CUL_T_Fin',
+
   },
   __Dati_Numero089: {
     type: Number,
-    alias: 'CUUt_T_Fin'
+    alias: 'CUUt_T_Fin',
+
   },
   __Dati_Numero090: {
     type: Number,
-    alias: 'CUUt_T_Opz'
+    alias: 'CUUt_T_Opz',
+
   },
   __Dati_Testo043: {
     type: String,
-    alias: 'IdItemTrasporto'
+    alias: 'IdItemTrasporto',
+
   },
   __Dati_Numero091: {
     type: Number,
-    alias: 'CUTra_T_Fin'
+    alias: 'CUTra_T_Fin',
+
   },
   __Dati_Numero092: {
     type: Number,
-    alias: 'CUTra_T_Opz'
+    alias: 'CUTra_T_Opz',
+
   },
   __Dati_Numero093: {
     type: Number,
-    alias: 'ConvUmTrasportoUmOpz'
+    alias: 'ConvUmTrasportoUmOpz',
+
   },
   __Dati_Numero094: {
     type: Number,
-    alias: 'ConvUmOpzUmTrasporto'
+    alias: 'ConvUmOpzUmTrasporto',
+
   },
   __Dati_Ora005: {
     type: String,
-    alias: 'TA_T'
+    alias: 'TA_T',
+
   },
   __Dati_Ora006: {
     type: String,
-    alias: 'TD_T'
+    alias: 'TD_T',
+
   },
   __Dati_Numero095: {
     type: Number,
-    alias: 'FlagRegistraContenitore'
+    alias: 'FlagRegistraContenitore',
+
   },
   __Dati_Testo044: {
     type: String,
-    alias: 'IdTipoContenitore'
+    alias: 'IdTipoContenitore',
+
   },
   __Dati_Testo045: {
     type: String,
-    alias: 'TxtTipoContenitore'
+    alias: 'TxtTipoContenitore',
+
   },
   __Dati_Numero096: {
     type: Number,
-    alias: 'FlagAlternativaPianificabile'
+    alias: 'FlagAlternativaPianificabile',
+
   },
   __Dati_Numero097: {
     type: Number,
-    alias: 'FlagScartoRilavorabile'
+    alias: 'FlagScartoRilavorabile',
+
   },
   __Dati_Numero098: {
     type: Number,
-    alias: 'FlagAlertNoteAttrezzaggio'
+    alias: 'FlagAlertNoteAttrezzaggio',
+
   },
   __Dati_Numero099: {
     type: Number,
-    alias: 'FlagAlertNoteMovimentazione'
+    alias: 'FlagAlertNoteMovimentazione',
+
   },
   __Dati_Numero100: {
     type: Number,
-    alias: 'FlagAlertNoteProduzione'
+    alias: 'FlagAlertNoteProduzione',
+
   },
   __Dati_Numero101: {
     type: Number,
-    alias: 'FlagAlertNoteImballo'
+    alias: 'FlagAlertNoteImballo',
+
   },
   __Dati_Numero102: {
     type: Number,
-    alias: 'FlagAlertNoteUtensili'
+    alias: 'FlagAlertNoteUtensili',
+
   },
   __Dati_Numero103: {
     type: Number,
-    alias: 'FlagAlertNoteQualita'
+    alias: 'FlagAlertNoteQualita',
+
   },
   __Dati_Numero104: {
     type: Number,
-    alias: 'QtPerBenestare'
+    alias: 'QtPerBenestare',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo046: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero105: {
     type: Number,
-    alias: 'FlagTempiVerificati'
+    alias: 'FlagTempiVerificati',
+
   },
   __Dati_Testo047: {
     type: String,
-    alias: 'TxtUtenteVerificaTempi'
+    alias: 'TxtUtenteVerificaTempi',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraVerificaTempi'
+    alias: 'DataOraVerificaTempi',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo048: {
     type: String,
-    alias: 'CodiceTxtItemLavorazione'
+    alias: 'CodiceTxtItemLavorazione',
+
   },
   __Dati_Numero106: {
     type: Number,
-    alias: 'MinutiColpo_T'
+    alias: 'MinutiColpo_T',
+
   },
   __Dati_Numero107: {
     type: Number,
-    alias: 'MinutiUmOpz_T'
+    alias: 'MinutiUmOpz_T',
+
   },
   __Dati_Numero108: {
     type: Number,
-    alias: 'NumeroItemsOpzioneProd'
+    alias: 'NumeroItemsOpzioneProd',
+
   },
   __Dati_Numero109: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaItems'
+    alias: 'FlagAggiornaContenutiDaItems',
+
   },
   __Dati_Numero110: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaRisorsa'
+    alias: 'FlagAggiornaContenutiDaRisorsa',
+
   },
   __Dati_Numero111: {
     type: Number,
-    alias: 'ControlliQualita_FlagAvvisoFisso'
+    alias: 'ControlliQualita_FlagAvvisoFisso',
+
   },
   __Dati_Testo049: {
     type: String,
-    alias: 'ControlliQualita_TxtAvvisoFisso'
+    alias: 'ControlliQualita_TxtAvvisoFisso',
+
   },
   __Dati_Testo050: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo051: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Testo052: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   }
 }, {
   timestamps: true

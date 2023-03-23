@@ -23,7 +23,8 @@ export class SystemService {
         // Update the record
         await Model.replaceOne({ _id: id }, source);
       }
-    }).catch(() => {
+    }).catch((err) => {
+      console.log(err);
       throw new BadRequestException(
         'Could not update or create record',
         'invalid fields'

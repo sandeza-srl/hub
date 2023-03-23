@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IUpdateCostiArticoli_VariazioniPrivate } from './UpdateCostiArticoli_Variazioni.Types.Private';
 
@@ -15,99 +16,127 @@ const UpdateCostiArticoli_VariazioniSchema = new mongoose.Schema<IUpdateCostiArt
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdUpdateCostiArticoli'
+    alias: 'IdUpdateCostiArticoli',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdArticolo'
+    alias: 'IdArticolo',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdUpdateCostiArticoli_Variazioni'
+    alias: 'IdUpdateCostiArticoli_Variazioni',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdScaglione'
+    alias: 'IdScaglione',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'CUT_Vecchio'
+    alias: 'CUT_Vecchio',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'CUT_Nuovo'
+    alias: 'CUT_Nuovo',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtArticolo'
+    alias: 'TxtArticolo',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'QtScaglione'
+    alias: 'QtScaglione',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'DiffVarCUT'
+    alias: 'DiffVarCUT',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'CodiceTxtRisorsa'
+    alias: 'CodiceTxtRisorsa',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdRisorsa'
+    alias: 'IdRisorsa',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CodiceArticolo'
+    alias: 'CodiceArticolo',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'CodiceTxtDisegnoArticoloAutomatico'
+    alias: 'CodiceTxtDisegnoArticoloAutomatico',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IFasiPrivate } from './Fasi.Types.Private';
 
@@ -15,131 +16,167 @@ const FasiSchema = new mongoose.Schema<IFasiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdFase'
+    alias: 'IdFase',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCiclo'
+    alias: 'IdCiclo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdArticolo'
+    alias: 'IdArticolo',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdOpzioneProd'
+    alias: 'IdOpzioneProd',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdRisorsa'
+    alias: 'IdRisorsa',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'IncidenzaScarto'
+    alias: 'IncidenzaScarto',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtFase'
+    alias: 'TxtFase',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtRisorsa'
+    alias: 'TxtRisorsa',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'PercScartoFaseSuTotaleScarto'
+    alias: 'PercScartoFaseSuTotaleScarto',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'HAttesa'
+    alias: 'HAttesa',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagAttesaTotale'
+    alias: 'FlagAttesaTotale',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'CodiceFase'
+    alias: 'CodiceFase',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'CodiceRisorsa'
+    alias: 'CodiceRisorsa',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'NumeroFase'
+    alias: 'NumeroFase',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagAggiornaFase'
+    alias: 'FlagAggiornaFase',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'CodiceTxtFaseAutomatico'
+    alias: 'CodiceTxtFaseAutomatico',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'CodiceTxtFaseRisorsaAutomatico'
+    alias: 'CodiceTxtFaseRisorsaAutomatico',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CodiceTxtRisorsaAutomatico'
+    alias: 'CodiceTxtRisorsaAutomatico',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'FlagSelezione'
+    alias: 'FlagSelezione',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'PercScartoSingolaFase'
+    alias: 'PercScartoSingolaFase',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'PercQtEntrataFase'
+    alias: 'PercQtEntrataFase',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'PercScartoImpostata'
+    alias: 'PercScartoImpostata',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaRisorsa'
+    alias: 'FlagAggiornaContenutiDaRisorsa',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   }
 }, {
   timestamps: true

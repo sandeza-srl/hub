@@ -171,5 +171,7 @@ export interface IDocOperativiExtraPrivate {
   /** Reflected: FE_DataCompetenzaIva*/ 
   __Dati_Data010: Date;
   /** Reflected: Avanzamento*/ 
-  __Dati_Numero028: number
+  __Dati_Numero028: number;
+  /** Reflected: IdDocOperativiExtra*/ 
+  __Dati_Testo040: string
 }

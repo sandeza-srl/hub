@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiStatiArticoloCicloPrivate } from './TipiStatiArticoloCiclo.Types.Private';
 
@@ -15,107 +16,141 @@ const TipiStatiArticoloCicloSchema = new mongoose.Schema<ITipiStatiArticoloCiclo
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdStatoArticoloCiclo'
+    alias: 'IdStatoArticoloCiclo',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtStatoArticoloCiclo'
+    alias: 'TxtStatoArticoloCiclo',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagProduzione'
+    alias: 'FlagProduzione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Ordinamento'
+    alias: 'Ordinamento',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'CodiceStatoArticoloCiclo'
+    alias: 'CodiceStatoArticoloCiclo',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'CodiceTxtOrdinamentoStatoAutomatico'
+    alias: 'CodiceTxtOrdinamentoStatoAutomatico',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagArticolo'
+    alias: 'FlagArticolo',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagCiclo'
+    alias: 'FlagCiclo',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtOrdinamentoStatoAutomatico'
+    alias: 'TxtOrdinamentoStatoAutomatico',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagGeneraRevisione'
+    alias: 'FlagGeneraRevisione',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagFirmaStatoArticolo'
+    alias: 'FlagFirmaStatoArticolo',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdTipoRuoloFirma'
+    alias: 'IdTipoRuoloFirma',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   }
 }, {
   timestamps: true

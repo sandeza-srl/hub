@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IVociTipiZonePrivate } from './VociTipiZone.Types.Private';
 
@@ -15,55 +16,68 @@ const VociTipiZoneSchema = new mongoose.Schema<IVociTipiZonePrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'CodiceZona'
+    alias: 'CodiceZona',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagCap'
+    alias: 'FlagCap',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagCitta'
+    alias: 'FlagCitta',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagLibero'
+    alias: 'FlagLibero',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagNazione'
+    alias: 'FlagNazione',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdZona'
+    alias: 'IdZona',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtZona'
+    alias: 'TxtZona',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdVoceTipoZona'
+    alias: 'IdVoceTipoZona',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtVoceTipoZona'
+    alias: 'TxtVoceTipoZona',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

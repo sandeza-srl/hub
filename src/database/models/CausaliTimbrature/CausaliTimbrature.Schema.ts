@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ICausaliTimbraturePrivate } from './CausaliTimbrature.Types.Private';
 
@@ -15,63 +16,78 @@ const CausaliTimbratureSchema = new mongoose.Schema<ICausaliTimbraturePrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCausale'
+    alias: 'IdCausale',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtCausale'
+    alias: 'TxtCausale',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagLavoro'
+    alias: 'FlagLavoro',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagMutua'
+    alias: 'FlagMutua',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagFestivo'
+    alias: 'FlagFestivo',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagStraordinario'
+    alias: 'FlagStraordinario',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagPermesso'
+    alias: 'FlagPermesso',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagFerie'
+    alias: 'FlagFerie',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagPausa'
+    alias: 'FlagPausa',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagPredefinito'
+    alias: 'FlagPredefinito',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'CodiceCausale'
+    alias: 'CodiceCausale',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

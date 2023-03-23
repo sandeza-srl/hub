@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IListinoItemPrivate } from './ListinoItem.Types.Private';
 
@@ -15,199 +16,260 @@ const ListinoItemSchema = new mongoose.Schema<IListinoItemPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagVendita'
+    alias: 'FlagVendita',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'FlagVenditaVedi'
+    alias: 'FlagVenditaVedi',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'VVenditaUnitario'
+    alias: 'VVenditaUnitario',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'QtMinima'
+    alias: 'QtMinima',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdListinoItem'
+    alias: 'IdListinoItem',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'QtImpostata'
+    alias: 'QtImpostata',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'Priorita'
+    alias: 'Priorita',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdTipoListino'
+    alias: 'IdTipoListino',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'TxtTipoListino'
+    alias: 'TxtTipoListino',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'TxtListinoItem'
+    alias: 'TxtListinoItem',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'VVenditaUnitarioPrecedente'
+    alias: 'VVenditaUnitarioPrecedente',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataPrezzoUnitario'
+    alias: 'DataPrezzoUnitario',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataPrezzoUnitarioPrecedente'
+    alias: 'DataPrezzoUnitarioPrecedente',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'DifferenzaPrezzoPercentuale'
+    alias: 'DifferenzaPrezzoPercentuale',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagListinoPrincipale'
+    alias: 'FlagListinoPrincipale',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdTipoListinoRiferimento'
+    alias: 'IdTipoListinoRiferimento',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'VVenditaUnitarioCalcolato'
+    alias: 'VVenditaUnitarioCalcolato',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdAliquota'
+    alias: 'IdAliquota',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataFineValidita'
+    alias: 'DataFineValidita',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataInizioValidita'
+    alias: 'DataInizioValidita',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagValiditaData'
+    alias: 'FlagValiditaData',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagValiditaFamiglia'
+    alias: 'FlagValiditaFamiglia',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagValiditaSottoFamiglia'
+    alias: 'FlagValiditaSottoFamiglia',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagValidoSempre'
+    alias: 'FlagValidoSempre',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagValoreFisso'
+    alias: 'FlagValoreFisso',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagValoreRicarico'
+    alias: 'FlagValoreRicarico',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'CodiceItem'
+    alias: 'CodiceItem',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'TxtSottoFamigliaItem'
+    alias: 'TxtSottoFamigliaItem',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtFamigliaItem'
+    alias: 'TxtFamigliaItem',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagManuale'
+    alias: 'FlagManuale',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdTipoListinoOrigine'
+    alias: 'IdTipoListinoOrigine',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdItemOrigine'
+    alias: 'IdItemOrigine',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'FlagListinoIvato'
+    alias: 'FlagListinoIvato',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'PercentualeAliquota'
+    alias: 'PercentualeAliquota',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'VVenditaUnitarioIvato'
+    alias: 'VVenditaUnitarioIvato',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'VVenditaUnitarioPrecedenteIvato'
+    alias: 'VVenditaUnitarioPrecedenteIvato',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaItems'
+    alias: 'FlagAggiornaContenutiDaItems',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'CodiceTxtItemAutomatico'
+    alias: 'CodiceTxtItemAutomatico',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'TxtListinoItemPrioritaAutomatico'
+    alias: 'TxtListinoItemPrioritaAutomatico',
+
   }
 }, {
   timestamps: true

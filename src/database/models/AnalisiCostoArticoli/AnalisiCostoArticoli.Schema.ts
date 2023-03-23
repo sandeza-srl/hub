@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IAnalisiCostoArticoliPrivate } from './AnalisiCostoArticoli.Types.Private';
 
@@ -15,495 +16,630 @@ const AnalisiCostoArticoliSchema = new mongoose.Schema<IAnalisiCostoArticoliPriv
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAnalisiCosto'
+    alias: 'IdAnalisiCosto',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'FlagAggiornaTotali01'
+    alias: 'FlagAggiornaTotali01',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagAggiornaTotali02'
+    alias: 'FlagAggiornaTotali02',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdTipoArticolo'
+    alias: 'IdTipoArticolo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'PercRicarico'
+    alias: 'PercRicarico',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'CodiceDisegno'
+    alias: 'CodiceDisegno',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'RevisioneDisegno'
+    alias: 'RevisioneDisegno',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdAccountCliente'
+    alias: 'IdAccountCliente',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceProgetto'
+    alias: 'CodiceProgetto',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtAnalisiCosto'
+    alias: 'TxtAnalisiCosto',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagInCorso'
+    alias: 'FlagInCorso',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagChiusa'
+    alias: 'FlagChiusa',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraChiusura'
+    alias: 'DataOraChiusura',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'UtenteChiusura'
+    alias: 'UtenteChiusura',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'Quantita'
+    alias: 'Quantita',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'Quantita_TollPiuPerc'
+    alias: 'Quantita_TollPiuPerc',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'Quantita_TollMenoPerc'
+    alias: 'Quantita_TollMenoPerc',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'Quantita_LimiteInferiore'
+    alias: 'Quantita_LimiteInferiore',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'Quantita_LimiteSuperiore'
+    alias: 'Quantita_LimiteSuperiore',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'CTADT'
+    alias: 'CTADT',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'CTIngT'
+    alias: 'CTIngT',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'CTLET'
+    alias: 'CTLET',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'CTLT'
+    alias: 'CTLT',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'CTMT'
+    alias: 'CTMT',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'CTProgT'
+    alias: 'CTProgT',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'CTPT'
+    alias: 'CTPT',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'CTQT'
+    alias: 'CTQT',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'CTST'
+    alias: 'CTST',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'CTT'
+    alias: 'CTT',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'CTT_Ricarico'
+    alias: 'CTT_Ricarico',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'CTT_UnitaBuone'
+    alias: 'CTT_UnitaBuone',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'CTTRAT'
+    alias: 'CTTRAT',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'CTUtT'
+    alias: 'CTUtT',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'CUADT'
+    alias: 'CUADT',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'CUIngT'
+    alias: 'CUIngT',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'CULET'
+    alias: 'CULET',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'CULT'
+    alias: 'CULT',
+
   },
   __Dati_Numero031: {
     type: Number,
-    alias: 'CUMT'
+    alias: 'CUMT',
+
   },
   __Dati_Numero032: {
     type: Number,
-    alias: 'CUProgT'
+    alias: 'CUProgT',
+
   },
   __Dati_Numero033: {
     type: Number,
-    alias: 'CUPT'
+    alias: 'CUPT',
+
   },
   __Dati_Numero034: {
     type: Number,
-    alias: 'CUQT'
+    alias: 'CUQT',
+
   },
   __Dati_Numero035: {
     type: Number,
-    alias: 'CUST'
+    alias: 'CUST',
+
   },
   __Dati_Numero036: {
     type: Number,
-    alias: 'CUT'
+    alias: 'CUT',
+
   },
   __Dati_Numero037: {
     type: Number,
-    alias: 'CUT_Ricarico'
+    alias: 'CUT_Ricarico',
+
   },
   __Dati_Numero038: {
     type: Number,
-    alias: 'CUT_UnitaBuone'
+    alias: 'CUT_UnitaBuone',
+
   },
   __Dati_Numero039: {
     type: Number,
-    alias: 'CUTRAT'
+    alias: 'CUTRAT',
+
   },
   __Dati_Numero040: {
     type: Number,
-    alias: 'CUUtT'
+    alias: 'CUUtT',
+
   },
   __Dati_Numero041: {
     type: Number,
-    alias: 'Risultato_CUADT_Media'
+    alias: 'Risultato_CUADT_Media',
+
   },
   __Dati_Numero042: {
     type: Number,
-    alias: 'Risultato_CUADT_Deviazione'
+    alias: 'Risultato_CUADT_Deviazione',
+
   },
   __Dati_Numero043: {
     type: Number,
-    alias: 'Risultato_CUPT_Deviazione'
+    alias: 'Risultato_CUPT_Deviazione',
+
   },
   __Dati_Numero044: {
     type: Number,
-    alias: 'Risultato_CUPT_Media'
+    alias: 'Risultato_CUPT_Media',
+
   },
   __Dati_Numero045: {
     type: Number,
-    alias: 'Risultato_CULET_Media'
+    alias: 'Risultato_CULET_Media',
+
   },
   __Dati_Numero046: {
     type: Number,
-    alias: 'Risultato_CULT_Media'
+    alias: 'Risultato_CULT_Media',
+
   },
   __Dati_Numero047: {
     type: Number,
-    alias: 'Risultato_CUMT_Media'
+    alias: 'Risultato_CUMT_Media',
+
   },
   __Dati_Numero048: {
     type: Number,
-    alias: 'Risultato_CUST_Media'
+    alias: 'Risultato_CUST_Media',
+
   },
   __Dati_Numero049: {
     type: Number,
-    alias: 'Risultato_CUTRAT_Media'
+    alias: 'Risultato_CUTRAT_Media',
+
   },
   __Dati_Numero050: {
     type: Number,
-    alias: 'Risultato_CUQT_Media'
+    alias: 'Risultato_CUQT_Media',
+
   },
   __Dati_Numero051: {
     type: Number,
-    alias: 'Risultato_CUUtT_Media'
+    alias: 'Risultato_CUUtT_Media',
+
   },
   __Dati_Numero052: {
     type: Number,
-    alias: 'Risultato_CTIngT_Media'
+    alias: 'Risultato_CTIngT_Media',
+
   },
   __Dati_Numero053: {
     type: Number,
-    alias: 'Risultato_CTProgT_Media'
+    alias: 'Risultato_CTProgT_Media',
+
   },
   __Dati_Numero054: {
     type: Number,
-    alias: 'Risultato_CUT_Media'
+    alias: 'Risultato_CUT_Media',
+
   },
   __Dati_Numero055: {
     type: Number,
-    alias: 'Risultato_CTIngT_Deviazione'
+    alias: 'Risultato_CTIngT_Deviazione',
+
   },
   __Dati_Numero056: {
     type: Number,
-    alias: 'Risultato_CULET_Deviazione'
+    alias: 'Risultato_CULET_Deviazione',
+
   },
   __Dati_Numero057: {
     type: Number,
-    alias: 'Risultato_CULT_Deviazione'
+    alias: 'Risultato_CULT_Deviazione',
+
   },
   __Dati_Numero058: {
     type: Number,
-    alias: 'Risultato_CUMT_Deviazione'
+    alias: 'Risultato_CUMT_Deviazione',
+
   },
   __Dati_Numero059: {
     type: Number,
-    alias: 'Risultato_CTProgT_Deviazione'
+    alias: 'Risultato_CTProgT_Deviazione',
+
   },
   __Dati_Numero060: {
     type: Number,
-    alias: 'Risultato_CUQT_Deviazione'
+    alias: 'Risultato_CUQT_Deviazione',
+
   },
   __Dati_Numero061: {
     type: Number,
-    alias: 'Risultato_CUST_Deviazione'
+    alias: 'Risultato_CUST_Deviazione',
+
   },
   __Dati_Numero062: {
     type: Number,
-    alias: 'Risultato_CUT_Deviazione'
+    alias: 'Risultato_CUT_Deviazione',
+
   },
   __Dati_Numero063: {
     type: Number,
-    alias: 'Risultato_CUTRAT_Deviazione'
+    alias: 'Risultato_CUTRAT_Deviazione',
+
   },
   __Dati_Numero064: {
     type: Number,
-    alias: 'Risultato_CUUtT_Deviazione'
+    alias: 'Risultato_CUUtT_Deviazione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdAccountOperatore'
+    alias: 'IdAccountOperatore',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'TxtAccountClienteFinale'
+    alias: 'TxtAccountClienteFinale',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtAccountOperatore'
+    alias: 'TxtAccountOperatore',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataScadenza'
+    alias: 'DataScadenza',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdDocumentoDisegno'
+    alias: 'IdDocumentoDisegno',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdDocumentoImmagine'
+    alias: 'IdDocumentoImmagine',
+
   },
   __Dati_Numero065: {
     type: Number,
-    alias: 'CUADT_Deviazione'
+    alias: 'CUADT_Deviazione',
+
   },
   __Dati_Numero066: {
     type: Number,
-    alias: 'CUIngT_Deviazione'
+    alias: 'CUIngT_Deviazione',
+
   },
   __Dati_Numero067: {
     type: Number,
-    alias: 'CULET_Deviazione'
+    alias: 'CULET_Deviazione',
+
   },
   __Dati_Numero068: {
     type: Number,
-    alias: 'CULT_Deviazione'
+    alias: 'CULT_Deviazione',
+
   },
   __Dati_Numero069: {
     type: Number,
-    alias: 'CUMT_Deviazione'
+    alias: 'CUMT_Deviazione',
+
   },
   __Dati_Numero070: {
     type: Number,
-    alias: 'CUProgT_Deviazione'
+    alias: 'CUProgT_Deviazione',
+
   },
   __Dati_Numero071: {
     type: Number,
-    alias: 'CUPT_Deviazione'
+    alias: 'CUPT_Deviazione',
+
   },
   __Dati_Numero072: {
     type: Number,
-    alias: 'CUQT_Deviazione'
+    alias: 'CUQT_Deviazione',
+
   },
   __Dati_Numero073: {
     type: Number,
-    alias: 'CUST_Deviazione'
+    alias: 'CUST_Deviazione',
+
   },
   __Dati_Numero074: {
     type: Number,
-    alias: 'CUTRAT_Deviazione'
+    alias: 'CUTRAT_Deviazione',
+
   },
   __Dati_Numero075: {
     type: Number,
-    alias: 'CUUtT_Deviazione'
+    alias: 'CUUtT_Deviazione',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'CodificaClienteItem'
+    alias: 'CodificaClienteItem',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'DescrizioneClienteItem'
+    alias: 'DescrizioneClienteItem',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'TxtTipoArticolo'
+    alias: 'TxtTipoArticolo',
+
   },
   __Dati_Numero076: {
     type: Number,
-    alias: 'CUT_Deviazione'
+    alias: 'CUT_Deviazione',
+
   },
   __Dati_Numero077: {
     type: Number,
-    alias: 'CUT_UnitaBuone_Deviazione'
+    alias: 'CUT_UnitaBuone_Deviazione',
+
   },
   __Dati_Numero078: {
     type: Number,
-    alias: 'CUT_Ricarico_Deviazione'
+    alias: 'CUT_Ricarico_Deviazione',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'CUADT_Id'
+    alias: 'CUADT_Id',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'CUIngT_Id'
+    alias: 'CUIngT_Id',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'CULET_Id'
+    alias: 'CULET_Id',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'CULT_Id'
+    alias: 'CULT_Id',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'CUMT_Id'
+    alias: 'CUMT_Id',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'CUProgT_Id'
+    alias: 'CUProgT_Id',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'CUPT_Id'
+    alias: 'CUPT_Id',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'CUQT_Id'
+    alias: 'CUQT_Id',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'CUST_Id'
+    alias: 'CUST_Id',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'CUT_Id'
+    alias: 'CUT_Id',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'CUTRAT_Id'
+    alias: 'CUTRAT_Id',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'CUUtT_Id'
+    alias: 'CUUtT_Id',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'IdTipoCiclo'
+    alias: 'IdTipoCiclo',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Testo039: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   }
 }, {
   timestamps: true

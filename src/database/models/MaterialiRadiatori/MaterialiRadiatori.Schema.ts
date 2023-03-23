@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IMaterialiRadiatoriPrivate } from './MaterialiRadiatori.Types.Private';
 
@@ -15,43 +16,57 @@ const MaterialiRadiatoriSchema = new mongoose.Schema<IMaterialiRadiatoriPrivate>
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdMaterialiRadiatori'
+    alias: 'IdMaterialiRadiatori',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtMaterialeRadiatore'
+    alias: 'TxtMaterialeRadiatore',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiornaValori'
+    alias: 'FlagAggiornaValori',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtOrdineMaterialeRadiatore'
+    alias: 'TxtOrdineMaterialeRadiatore',
+
   }
 }, {
   timestamps: true

@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipologieDestinatariMailPrivate } from './TipologieDestinatariMail.Types.Private';
 
@@ -15,47 +16,58 @@ const TipologieDestinatariMailSchema = new mongoose.Schema<ITipologieDestinatari
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'TipoDestinatarioMail'
+    alias: 'TipoDestinatarioMail',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagA'
+    alias: 'FlagA',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'FlagAVedi'
+    alias: 'FlagAVedi',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagCC'
+    alias: 'FlagCC',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'FlagCCVedi'
+    alias: 'FlagCCVedi',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagCCN'
+    alias: 'FlagCCN',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'FlagCCNVedi'
+    alias: 'FlagCCNVedi',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

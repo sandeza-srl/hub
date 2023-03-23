@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiControlliPrivate } from './TipiControlli.Types.Private';
 
@@ -15,171 +16,221 @@ const TipiControlliSchema = new mongoose.Schema<ITipiControlliPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoControllo'
+    alias: 'IdTipoControllo',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtTipoControllo'
+    alias: 'TxtTipoControllo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdTipoStrumento'
+    alias: 'IdTipoStrumento',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Criticita'
+    alias: 'Criticita',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtTipoResponsabile'
+    alias: 'TxtTipoResponsabile',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtTipoStrumento'
+    alias: 'TxtTipoStrumento',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'UnitaMisura'
+    alias: 'UnitaMisura',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagCalcoloMatematico'
+    alias: 'FlagCalcoloMatematico',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceTipoStrumento'
+    alias: 'CodiceTipoStrumento',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'CodiceTipoControllo'
+    alias: 'CodiceTipoControllo',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'CodiceTxtTipoControlloAutomatico'
+    alias: 'CodiceTxtTipoControlloAutomatico',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdTipoResponsabile'
+    alias: 'IdTipoResponsabile',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'FlagSelezione'
+    alias: 'FlagSelezione',
+
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'IconaTipoControllo'
+    alias: 'IconaTipoControllo',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CalcoloValoriMultipliVisibile'
+    alias: 'CalcoloValoriMultipliVisibile',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'CalcoloValoriMultipli'
+    alias: 'CalcoloValoriMultipli',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'TxtFamigliaStrumento'
+    alias: 'TxtFamigliaStrumento',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'CodiceTxtTipoControlloStrumentoAutomatico'
+    alias: 'CodiceTxtTipoControlloStrumentoAutomatico',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'CUQ_T'
+    alias: 'CUQ_T',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagControlloMacchina'
+    alias: 'FlagControlloMacchina',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdFamigliaTipoControllo'
+    alias: 'IdFamigliaTipoControllo',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'TxtFamigliaTipoControllo'
+    alias: 'TxtFamigliaTipoControllo',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagValoriMultipli'
+    alias: 'FlagValoriMultipli',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'NumValoriMultipli'
+    alias: 'NumValoriMultipli',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagValidazioneCalcolo'
+    alias: 'FlagValidazioneCalcolo',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagMatricolaStrumento'
+    alias: 'FlagMatricolaStrumento',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'IdTipoPianoCampionamento'
+    alias: 'IdTipoPianoCampionamento',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'TxtTipoPianoCampionamento'
+    alias: 'TxtTipoPianoCampionamento',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagPianoCampionamento_VinceTipoControllo'
+    alias: 'FlagPianoCampionamento_VinceTipoControllo',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   }
 }, {
   timestamps: true

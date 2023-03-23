@@ -1,0 +1,28 @@
+import * as mongoose from 'mongoose';
+
+import OriginiTipiDocOperativiSchema from './OriginiTipiDocOperativi.Schema';
+import type { IOriginiTipiDocOperativi } from './OriginiTipiDocOperativi.Types';
+
+
+/* --------
+* Model Definition
+* -------- */
+const OriginiTipiDocOperativi = mongoose.model<IOriginiTipiDocOperativi>(
+  'OriginiTipiDocOperativi',
+  OriginiTipiDocOperativiSchema as any
+) as mongoose.Model<IOriginiTipiDocOperativi>;
+
+/* --------
+* Module Exports
+* -------- */
+export default OriginiTipiDocOperativi;
+
+export { OriginiTipiDocOperativiSchema };
+
+export type TOriginiTipiDocOperativiModel = typeof OriginiTipiDocOperativi;
+
+export type TOriginiTipiDocOperativiDocument = 
+& mongoose.Document<any, {}, IOriginiTipiDocOperativi>
+& IOriginiTipiDocOperativi;
+
+export { IOriginiTipiDocOperativi };

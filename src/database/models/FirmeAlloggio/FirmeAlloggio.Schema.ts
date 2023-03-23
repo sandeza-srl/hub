@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IFirmeAlloggioPrivate } from './FirmeAlloggio.Types.Private';
 
@@ -15,75 +16,99 @@ const FirmeAlloggioSchema = new mongoose.Schema<IFirmeAlloggioPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAbbinamento'
+    alias: 'IdAbbinamento',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagNonRichiesta'
+    alias: 'FlagNonRichiesta',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagRichiesta'
+    alias: 'FlagRichiesta',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagNonPresente'
+    alias: 'FlagNonPresente',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtAbbinamento'
+    alias: 'TxtAbbinamento',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'FirmaClienteMatricola'
+    alias: 'FirmaClienteMatricola',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdIntervento'
+    alias: 'IdIntervento',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraFirma'
+    alias: 'DataOraFirma',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'FirmaCliente'
+    alias: 'FirmaCliente',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'FirmaClienteEstesa'
+    alias: 'FirmaClienteEstesa',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'GeolocalizzazioneFirma'
+    alias: 'GeolocalizzazioneFirma',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdFirmaAlloggio'
+    alias: 'IdFirmaAlloggio',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdImpianto'
+    alias: 'IdImpianto',
+
   }
 }, {
   timestamps: true

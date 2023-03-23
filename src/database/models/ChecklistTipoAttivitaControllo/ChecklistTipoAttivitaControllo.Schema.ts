@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IChecklistTipoAttivitaControlloPrivate } from './ChecklistTipoAttivitaControllo.Types.Private';
 
@@ -15,271 +16,342 @@ const ChecklistTipoAttivitaControlloSchema = new mongoose.Schema<IChecklistTipoA
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoAttivitaControllo'
+    alias: 'IdTipoAttivitaControllo',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdCheckTipoAttivita'
+    alias: 'IdCheckTipoAttivita',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagObbligatorio'
+    alias: 'FlagObbligatorio',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagTipoNumero'
+    alias: 'FlagTipoNumero',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagTipoTesto'
+    alias: 'FlagTipoTesto',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagTipoData'
+    alias: 'FlagTipoData',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagTipoDataOra'
+    alias: 'FlagTipoDataOra',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'FlagTipoFirma'
+    alias: 'FlagTipoFirma',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagTipoGeolocalizzazione'
+    alias: 'FlagTipoGeolocalizzazione',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagTipoFoto'
+    alias: 'FlagTipoFoto',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagTipoVideo'
+    alias: 'FlagTipoVideo',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagTipoAudio'
+    alias: 'FlagTipoAudio',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagTipoDocumento'
+    alias: 'FlagTipoDocumento',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagValoriLiberi'
+    alias: 'FlagValoriLiberi',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagValoriRange'
+    alias: 'FlagValoriRange',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagValoriLista'
+    alias: 'FlagValoriLista',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtCheckTipoAttivita'
+    alias: 'TxtCheckTipoAttivita',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'NoteEsecuzione'
+    alias: 'NoteEsecuzione',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'NoteRegistrazione'
+    alias: 'NoteRegistrazione',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagValoriOkKo'
+    alias: 'FlagValoriOkKo',
+
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'TempoEsecuzionePrevisto'
+    alias: 'TempoEsecuzionePrevisto',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'CodiceCheckTipoAttivita'
+    alias: 'CodiceCheckTipoAttivita',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'Ordine'
+    alias: 'Ordine',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'FlagValoriTxt'
+    alias: 'FlagValoriTxt',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'GruppoCheck'
+    alias: 'GruppoCheck',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdTipoDocumento'
+    alias: 'IdTipoDocumento',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdSottotipoDocumento'
+    alias: 'IdSottotipoDocumento',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdDocumentoPorzioneDisegno'
+    alias: 'IdDocumentoPorzioneDisegno',
+
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'ImgPorzioneDisegno'
+    alias: 'ImgPorzioneDisegno',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagTipoControlloQualita'
+    alias: 'FlagTipoControlloQualita',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdTipoControllo'
+    alias: 'IdTipoControllo',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdFamigliaTipoControllo'
+    alias: 'IdFamigliaTipoControllo',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdTipoNormativa'
+    alias: 'IdTipoNormativa',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'IdTipoResponsabile'
+    alias: 'IdTipoResponsabile',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'IdTipoStrumento'
+    alias: 'IdTipoStrumento',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'CodiceTipoControllo'
+    alias: 'CodiceTipoControllo',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'CodiceTipoNormativa'
+    alias: 'CodiceTipoNormativa',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'CodiceTipoStrumento'
+    alias: 'CodiceTipoStrumento',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'CodiceTxtTipoControlloAutomatico'
+    alias: 'CodiceTxtTipoControlloAutomatico',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'CodiceTxtTipoControlloPosizioneAutomatico'
+    alias: 'CodiceTxtTipoControlloPosizioneAutomatico',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'CodiceTxtTipoNormativaAutomatico'
+    alias: 'CodiceTxtTipoNormativaAutomatico',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'CodiceTxtTipoStrumentoAutomatico'
+    alias: 'CodiceTxtTipoStrumentoAutomatico',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'Criticita'
+    alias: 'Criticita',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'FlagCalcoloMatematico'
+    alias: 'FlagCalcoloMatematico',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'FlagControlloMacchina'
+    alias: 'FlagControlloMacchina',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'FlagSelezione'
+    alias: 'FlagSelezione',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'Note'
+    alias: 'Note',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'PosizioneControllo'
+    alias: 'PosizioneControllo',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'CoordinateControlloQuotaX'
+    alias: 'CoordinateControlloQuotaX',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'CoordinateControlloQuotaY'
+    alias: 'CoordinateControlloQuotaY',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'CoordinateControlloQuotaZ'
+    alias: 'CoordinateControlloQuotaZ',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'TxtFamigliaTipoControllo'
+    alias: 'TxtFamigliaTipoControllo',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'TxtTipoControllo'
+    alias: 'TxtTipoControllo',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'TxtTipoNormativa'
+    alias: 'TxtTipoNormativa',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'TxtTipoResponsabile'
+    alias: 'TxtTipoResponsabile',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'TxtTipoStrumento'
+    alias: 'TxtTipoStrumento',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'UnitaMisura'
+    alias: 'UnitaMisura',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'TolleranzaMeno'
+    alias: 'TolleranzaMeno',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'TolleranzaPiu'
+    alias: 'TolleranzaPiu',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'ValoreNominale'
+    alias: 'ValoreNominale',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'FlagEsitoPositivoObbligatorio'
+    alias: 'FlagEsitoPositivoObbligatorio',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

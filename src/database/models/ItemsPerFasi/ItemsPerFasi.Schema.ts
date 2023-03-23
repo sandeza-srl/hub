@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IItemsPerFasiPrivate } from './ItemsPerFasi.Types.Private';
 
@@ -15,83 +16,107 @@ const ItemsPerFasiSchema = new mongoose.Schema<IItemsPerFasiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdArticolo'
+    alias: 'IdArticolo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdCiclo'
+    alias: 'IdCiclo',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdFase'
+    alias: 'IdFase',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdRisorsa'
+    alias: 'IdRisorsa',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdOpzioneProd'
+    alias: 'IdOpzioneProd',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'CUMT'
+    alias: 'CUMT',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'QtPerUmOpz'
+    alias: 'QtPerUmOpz',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'RelazionePerStampa'
+    alias: 'RelazionePerStampa',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagDaEliminare'
+    alias: 'FlagDaEliminare',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'CodiceItem'
+    alias: 'CodiceItem',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdItemFase'
+    alias: 'IdItemFase',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdItemOpzioneProd'
+    alias: 'IdItemOpzioneProd',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

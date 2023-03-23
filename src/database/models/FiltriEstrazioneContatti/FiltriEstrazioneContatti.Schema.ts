@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IFiltriEstrazioneContattiPrivate } from './FiltriEstrazioneContatti.Types.Private';
 
@@ -15,31 +16,38 @@ const FiltriEstrazioneContattiSchema = new mongoose.Schema<IFiltriEstrazioneCont
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdEstrazioneContatti'
+    alias: 'IdEstrazioneContatti',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdFiltroEstrazione'
+    alias: 'IdFiltroEstrazione',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'NomeFiltro'
+    alias: 'NomeFiltro',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

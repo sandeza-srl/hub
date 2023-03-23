@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IInfoAggiuntiveAnagraficaPrivate } from './InfoAggiuntiveAnagrafica.Types.Private';
 
@@ -15,67 +16,87 @@ const InfoAggiuntiveAnagraficaSchema = new mongoose.Schema<IInfoAggiuntiveAnagra
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccount'
+    alias: 'IdAccount',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'Etichetta'
+    alias: 'Etichetta',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'Contenuto'
+    alias: 'Contenuto',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdTipoInfoAggiuntiva'
+    alias: 'IdTipoInfoAggiuntiva',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdTipologiaAnagrafica'
+    alias: 'IdTipologiaAnagrafica',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'CodiceTipologiaAnagrafica'
+    alias: 'CodiceTipologiaAnagrafica',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdTipoEtichetta'
+    alias: 'IdTipoEtichetta',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'ContenutoData'
+    alias: 'ContenutoData',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'ContenutoNumero'
+    alias: 'ContenutoNumero',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'IdUtentiNoVisualizzazione'
+    alias: 'IdUtentiNoVisualizzazione',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'IdInfoAggiuntivaAnagrafica'
+    alias: 'IdInfoAggiuntivaAnagrafica',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

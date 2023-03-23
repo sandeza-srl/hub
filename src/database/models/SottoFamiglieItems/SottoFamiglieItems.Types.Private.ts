@@ -157,5 +157,7 @@ export interface ISottoFamiglieItemsPrivate {
   /** Reflected: FlagEliminaCodificheClienteConRevPermessa*/ 
   __Dati_Numero053: number;
   /** Reflected: JSON_ImpostazioniSottofamiglia*/ 
-  __Dati_Testo024: string
+  __Dati_Testo024: string;
+  /** Reflected: Cruscotto_FlagEscludi*/ 
+  __Dati_Numero054: number
 }

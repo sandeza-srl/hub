@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiArticoliPrivate } from './TipiArticoli.Types.Private';
 
@@ -15,231 +16,296 @@ const TipiArticoliSchema = new mongoose.Schema<ITipiArticoliPrivate>({
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdTipoArticolo'
+    alias: 'IdTipoArticolo',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtTipoArticolo'
+    alias: 'TxtTipoArticolo',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'PercRicarico'
+    alias: 'PercRicarico',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'CodiceTipoArticolo'
+    alias: 'CodiceTipoArticolo',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdTipoPianoCampionamento'
+    alias: 'IdTipoPianoCampionamento',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtTipoPianoCampionamento'
+    alias: 'TxtTipoPianoCampionamento',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'GeneraCodice_Testo'
+    alias: 'GeneraCodice_Testo',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'GeneraCodice_OrdineTesto'
+    alias: 'GeneraCodice_OrdineTesto',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'GeneraCodice_Progressivo'
+    alias: 'GeneraCodice_Progressivo',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'GeneraCodice_NumeroCifre'
+    alias: 'GeneraCodice_NumeroCifre',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'GeneraCodice_CodiceTest'
+    alias: 'GeneraCodice_CodiceTest',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'GeneraCodice_OrdineProgressivo'
+    alias: 'GeneraCodice_OrdineProgressivo',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'GeneraCodice_AltroIdTipoArticoloPerCodice'
+    alias: 'GeneraCodice_AltroIdTipoArticoloPerCodice',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'GeneraCodice_FlagUsaCodiceAltro'
+    alias: 'GeneraCodice_FlagUsaCodiceAltro',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagEsplodiDistinta'
+    alias: 'FlagEsplodiDistinta',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'FlagUsaCodificaUnicaItem'
+    alias: 'FlagUsaCodificaUnicaItem',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'FlagFrequenzaStandard'
+    alias: 'FlagFrequenzaStandard',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagFrequenzaPianiCampionamento'
+    alias: 'FlagFrequenzaPianiCampionamento',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagCostBreakdownAttivo'
+    alias: 'FlagCostBreakdownAttivo',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagTipiScaglioniPresenti'
+    alias: 'FlagTipiScaglioniPresenti',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagTipiFasiVincolate'
+    alias: 'FlagTipiFasiVincolate',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdTipiFasiAbilitate'
+    alias: 'IdTipiFasiAbilitate',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'NomeFormato_SchedaArticolo_MaterialiQuantita'
+    alias: 'NomeFormato_SchedaArticolo_MaterialiQuantita',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'NomeFormato_SchedaArticolo_Qualita'
+    alias: 'NomeFormato_SchedaArticolo_Qualita',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'NomeFormato_SchedaArticolo_Costi'
+    alias: 'NomeFormato_SchedaArticolo_Costi',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'NomeFormato_SchedaArticolo_TempiLavorazioni'
+    alias: 'NomeFormato_SchedaArticolo_TempiLavorazioni',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'NomeFormato_SchedaArticolo_Codifiche'
+    alias: 'NomeFormato_SchedaArticolo_Codifiche',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'ScriptStampa_SchedaArticolo_Codifiche'
+    alias: 'ScriptStampa_SchedaArticolo_Codifiche',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'ScriptStampa_SchedaArticolo_Costi'
+    alias: 'ScriptStampa_SchedaArticolo_Costi',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'ScriptStampa_SchedaArticolo_MaterialiQuantita'
+    alias: 'ScriptStampa_SchedaArticolo_MaterialiQuantita',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'ScriptStampa_SchedaArticolo_Qualita'
+    alias: 'ScriptStampa_SchedaArticolo_Qualita',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'ScriptStampa_SchedaArticolo_TempiLavorazioni'
+    alias: 'ScriptStampa_SchedaArticolo_TempiLavorazioni',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'IdTipoDocumento_SchedaArticolo_Codifiche'
+    alias: 'IdTipoDocumento_SchedaArticolo_Codifiche',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'IdTipoDocumento_SchedaArticolo_Costi'
+    alias: 'IdTipoDocumento_SchedaArticolo_Costi',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'IdTipoDocumento_SchedaArticolo_MaterialiQuantita'
+    alias: 'IdTipoDocumento_SchedaArticolo_MaterialiQuantita',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'IdTipoDocumento_SchedaArticolo_Qualita'
+    alias: 'IdTipoDocumento_SchedaArticolo_Qualita',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'IdTipoDocumento_SchedaArticolo_TempiLavorazioni'
+    alias: 'IdTipoDocumento_SchedaArticolo_TempiLavorazioni',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'IdSottotipoDocumento_SchedaArticolo_Codifiche'
+    alias: 'IdSottotipoDocumento_SchedaArticolo_Codifiche',
+
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'IdSottotipoDocumento_SchedaArticolo_Costi'
+    alias: 'IdSottotipoDocumento_SchedaArticolo_Costi',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'IdSottotipoDocumento_SchedaArticolo_MaterialiQuantita'
+    alias: 'IdSottotipoDocumento_SchedaArticolo_MaterialiQuantita',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'IdSottotipoDocumento_SchedaArticolo_Qualita'
+    alias: 'IdSottotipoDocumento_SchedaArticolo_Qualita',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'IdSottotipoDocumento_SchedaArticolo_TempiLavorazioni'
+    alias: 'IdSottotipoDocumento_SchedaArticolo_TempiLavorazioni',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'IdUtente'
+    alias: 'IdUtente',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'TxtUtente'
+    alias: 'TxtUtente',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'IdRicorrenzaRecord'
+    alias: 'IdRicorrenzaRecord',
+
   }
 }, {
   timestamps: true

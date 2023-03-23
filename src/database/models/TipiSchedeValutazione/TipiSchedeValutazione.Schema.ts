@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipiSchedeValutazionePrivate } from './TipiSchedeValutazione.Types.Private';
 
@@ -15,55 +16,68 @@ const TipiSchedeValutazioneSchema = new mongoose.Schema<ITipiSchedeValutazionePr
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdTipoSchedaValutazione'
+    alias: 'IdTipoSchedaValutazione',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtTipoSchedaValutazione'
+    alias: 'TxtTipoSchedaValutazione',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'FlagClienteFinale'
+    alias: 'FlagClienteFinale',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagClientePrimario'
+    alias: 'FlagClientePrimario',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagCompagnia'
+    alias: 'FlagCompagnia',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagDistributore'
+    alias: 'FlagDistributore',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagFornitore'
+    alias: 'FlagFornitore',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'FlagOperatore'
+    alias: 'FlagOperatore',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'NoteValutazione'
+    alias: 'NoteValutazione',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

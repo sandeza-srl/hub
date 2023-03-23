@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITipoPotenzialePrivate } from './TipoPotenziale.Types.Private';
 
@@ -15,35 +16,43 @@ const TipoPotenzialeSchema = new mongoose.Schema<ITipoPotenzialePrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdTipoPotenziale'
+    alias: 'IdTipoPotenziale',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'TxtTipoPotenziale'
+    alias: 'TxtTipoPotenziale',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'CodicePotenziale'
+    alias: 'CodicePotenziale',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'ValoreRiferimento'
+    alias: 'ValoreRiferimento',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

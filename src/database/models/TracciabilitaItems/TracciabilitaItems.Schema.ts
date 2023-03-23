@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { ITracciabilitaItemsPrivate } from './TracciabilitaItems.Types.Private';
 
@@ -15,187 +16,245 @@ const TracciabilitaItemsSchema = new mongoose.Schema<ITracciabilitaItemsPrivate>
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdFamigliaItem'
+    alias: 'IdFamigliaItem',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdSottoFamigliaItem'
+    alias: 'IdSottoFamigliaItem',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'QuantitaResidua'
+    alias: 'QuantitaResidua',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'Tracciabilita_Taglia'
+    alias: 'Tracciabilita_Taglia',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'Tracciabilita_Colore'
+    alias: 'Tracciabilita_Colore',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'Tracciabilita_InfoExtra'
+    alias: 'Tracciabilita_InfoExtra',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdScarto'
+    alias: 'IdScarto',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagSerialeUtilizzato'
+    alias: 'FlagSerialeUtilizzato',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagTracciabilitaAutomatica'
+    alias: 'FlagTracciabilitaAutomatica',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'Tracciabilita_CodiceLotto'
+    alias: 'Tracciabilita_CodiceLotto',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'Tracciabilita_DataScadenza'
+    alias: 'Tracciabilita_DataScadenza',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'Tracciabilita_NumeroSerie'
+    alias: 'Tracciabilita_NumeroSerie',
+
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataMinEntrata'
+    alias: 'DataMinEntrata',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataMaxUscita'
+    alias: 'DataMaxUscita',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'QuantitaEntrata'
+    alias: 'QuantitaEntrata',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'AnnoMeseEntrata'
+    alias: 'AnnoMeseEntrata',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'AnnoSettimanaEntrata'
+    alias: 'AnnoSettimanaEntrata',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'AnnoMeseScadenza'
+    alias: 'AnnoMeseScadenza',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'AnnoSettimanaScadenza'
+    alias: 'AnnoSettimanaScadenza',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'AnnoMeseUscita'
+    alias: 'AnnoMeseUscita',
+
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'AnnoSettimanaUscita'
+    alias: 'AnnoSettimanaUscita',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'GiorniPermanenza'
+    alias: 'GiorniPermanenza',
+
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataCorrente'
+    alias: 'DataCorrente',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagScaduto'
+    alias: 'FlagScaduto',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'CodiceTxtItemAutomatico'
+    alias: 'CodiceTxtItemAutomatico',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdTracciabilitaItem'
+    alias: 'IdTracciabilitaItem',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'QuantitaUscita'
+    alias: 'QuantitaUscita',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagAggiornaDaMovimenti'
+    alias: 'FlagAggiornaDaMovimenti',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'IdRegistrazioneFaseProduzione'
+    alias: 'IdRegistrazioneFaseProduzione',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'IdFaseProduzione'
+    alias: 'IdFaseProduzione',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'IdLottoProduzione'
+    alias: 'IdLottoProduzione',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagEsaurito'
+    alias: 'FlagEsaurito',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'Tracciabilita_TxtAutomatico'
+    alias: 'Tracciabilita_TxtAutomatico',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'Tracciabilita_CodiceAutomatico'
+    alias: 'Tracciabilita_CodiceAutomatico',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'StringaControllo'
+    alias: 'StringaControllo',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'Progressivo'
+    alias: 'Progressivo',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'IdDocumentoTracciabilita'
+    alias: 'IdDocumentoTracciabilita',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'Tracciabilita_CodiceTxtAutomatico'
+    alias: 'Tracciabilita_CodiceTxtAutomatico',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaItems'
+    alias: 'FlagAggiornaContenutiDaItems',
+
   }
 }, {
   timestamps: true

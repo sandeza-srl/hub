@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IItemsAlternativiPrivate } from './ItemsAlternativi.Types.Private';
 
@@ -15,71 +16,92 @@ const ItemsAlternativiSchema = new mongoose.Schema<IItemsAlternativiPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'CodiceItem'
+    alias: 'CodiceItem',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdItemPadre'
+    alias: 'IdItemPadre',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtItem'
+    alias: 'TxtItem',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'CodiceTxtItemAutomatico'
+    alias: 'CodiceTxtItemAutomatico',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdItemAlternativo'
+    alias: 'IdItemAlternativo',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiornaContenutiDaItems'
+    alias: 'FlagAggiornaContenutiDaItems',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtItemPadre'
+    alias: 'TxtItemPadre',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'CodiceTxtItemAutomaticoPadre'
+    alias: 'CodiceTxtItemAutomaticoPadre',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'CodiceItemPadre'
+    alias: 'CodiceItemPadre',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'IdItemTutti'
+    alias: 'IdItemTutti',
+
   }
 }, {
   timestamps: true

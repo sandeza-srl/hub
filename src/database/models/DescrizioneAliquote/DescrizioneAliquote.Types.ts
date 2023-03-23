@@ -17,5 +17,7 @@ export interface IDescrizioneAliquote {
   /** Reflected: __Dati_Numero002*/ 
   Zero: number;
   /** Reflected: __Dati_Testo005*/ 
-  IdInstallazione: string
+  IdInstallazione: string;
+  /** Reflected: __Dati_Testo006*/ 
+  IdDescrizioneAliquota: string
 }

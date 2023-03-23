@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IPeriodiChiusuraPrivate } from './PeriodiChiusura.Types.Private';
 
@@ -15,83 +16,115 @@ const PeriodiChiusuraSchema = new mongoose.Schema<IPeriodiChiusuraPrivate>({
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdPeriodoChiusura'
+    alias: 'IdPeriodoChiusura',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdSede'
+    alias: 'IdSede',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataInizioPeriodo'
+    alias: 'DataInizioPeriodo',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataFinePeriodo'
+    alias: 'DataFinePeriodo',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'SettimaneChiusura'
+    alias: 'SettimaneChiusura',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdItem'
+    alias: 'IdItem',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'AnnoSettimanaInizioChiusura'
+    alias: 'AnnoSettimanaInizioChiusura',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'AnnoSettimanaFineChiusura'
+    alias: 'AnnoSettimanaFineChiusura',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'UtenteCreazione'
+    alias: 'UtenteCreazione',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'UtenteModifica'
+    alias: 'UtenteModifica',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataCorrente'
+    alias: 'DataCorrente',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataCreazione'
+    alias: 'DataCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data005: {
     type: Date,
-    alias: 'DataModifica'
+    alias: 'DataModifica',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'AnnoSettimaneChiusura'
+    alias: 'AnnoSettimaneChiusura',
+
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'GiorniChiusura'
+    alias: 'GiorniChiusura',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true

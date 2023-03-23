@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IInstallazioneOriginePrivate } from './InstallazioneOrigine.Types.Private';
 
@@ -15,395 +16,516 @@ const InstallazioneOrigineSchema = new mongoose.Schema<IInstallazioneOriginePriv
   },
   __Dati_Contenitore001: {
     type: String,
-    alias: 'LogoProdotto'
+    alias: 'LogoProdotto',
+
   },
   __Dati_Contenitore002: {
     type: String,
-    alias: 'LogoProduttore'
+    alias: 'LogoProduttore',
+
   },
   __Dati_Contenitore003: {
     type: String,
-    alias: 'LogoProdottoStampa'
+    alias: 'LogoProdottoStampa',
+
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'Produttore'
+    alias: 'Produttore',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'VersioneProdotto'
+    alias: 'VersioneProdotto',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'UtentiUfficioAbilitati'
+    alias: 'UtentiUfficioAbilitati',
+
   },
   __Dati_Data001: {
     type: Date,
-    alias: 'DataInstallazione'
+    alias: 'DataInstallazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data002: {
     type: Date,
-    alias: 'DataUltimoAggiornamentoDati'
+    alias: 'DataUltimoAggiornamentoDati',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'TxtProdotto'
+    alias: 'TxtProdotto',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdProdotto'
+    alias: 'IdProdotto',
+
   },
   __Dati_Data003: {
     type: Date,
-    alias: 'DataScadenzaNoleggio'
+    alias: 'DataScadenzaNoleggio',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'FlagScadenzaNoleggio'
+    alias: 'FlagScadenzaNoleggio',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtInstallatore'
+    alias: 'TxtInstallatore',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'UtentiGoAbilitati'
+    alias: 'UtentiGoAbilitati',
+
   },
   __Dati_Data004: {
     type: Date,
-    alias: 'DataUltimoIngresso'
+    alias: 'DataUltimoIngresso',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Data005: {
     type: Date,
-    alias: 'DataIngressoAttuale'
+    alias: 'DataIngressoAttuale',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero006: {
     type: Number,
-    alias: 'FlagScadutoNoleggio'
+    alias: 'FlagScadutoNoleggio',
+
   },
   __Dati_Contenitore004: {
     type: String,
-    alias: 'LogoProdottoZChiusa'
+    alias: 'LogoProdottoZChiusa',
+
   },
   __Dati_Contenitore005: {
     type: String,
-    alias: 'VideoProdotto'
+    alias: 'VideoProdotto',
+
   },
   __Dati_Contenitore006: {
     type: String,
-    alias: 'LogoScuro'
+    alias: 'LogoScuro',
+
   },
   __Dati_Numero007: {
     type: Number,
-    alias: 'UtentiProduzioneAbilitati'
+    alias: 'UtentiProduzioneAbilitati',
+
   },
   __Dati_Numero008: {
     type: Number,
-    alias: 'UtentiWebAbilitati'
+    alias: 'UtentiWebAbilitati',
+
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'UtentiGoDisponibili'
+    alias: 'UtentiGoDisponibili',
+
   },
   __Dati_Numero010: {
     type: Number,
-    alias: 'UtentiUfficioDisponibili'
+    alias: 'UtentiUfficioDisponibili',
+
   },
   __Dati_Contenitore007: {
     type: String,
-    alias: 'LogoProduttoreScuro'
+    alias: 'LogoProduttoreScuro',
+
   },
   __Dati_Numero011: {
     type: Number,
-    alias: 'UtentiProduzioneDisponibili'
+    alias: 'UtentiProduzioneDisponibili',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'NomeInstallazione'
+    alias: 'NomeInstallazione',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'MailHelp'
+    alias: 'MailHelp',
+
   },
   __Dati_Data006: {
     type: Date,
-    alias: 'DataScadenzaAggiornamento'
+    alias: 'DataScadenzaAggiornamento',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
   },
   __Dati_Numero012: {
     type: Number,
-    alias: 'FlagScadenzaAggiornamento'
+    alias: 'FlagScadenzaAggiornamento',
+
   },
   __Dati_Numero013: {
     type: Number,
-    alias: 'FlagScadutoAggiornamento'
+    alias: 'FlagScadutoAggiornamento',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtRespCommerciale'
+    alias: 'TxtRespCommerciale',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'TxtRespLogistica'
+    alias: 'TxtRespLogistica',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'TxtRespTecnico'
+    alias: 'TxtRespTecnico',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'IdPersistenteServer'
+    alias: 'IdPersistenteServer',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'JS_SandezaApp'
+    alias: 'JS_SandezaApp',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'CSS_FullCalendar'
+    alias: 'CSS_FullCalendar',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'CSS_jQueryUI'
+    alias: 'CSS_jQueryUI',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'CSS_FrappeGantt'
+    alias: 'CSS_FrappeGantt',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'CSS_SandezaUI'
+    alias: 'CSS_SandezaUI',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'JS_AccountingJS'
+    alias: 'JS_AccountingJS',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'JS_AngularJS'
+    alias: 'JS_AngularJS',
+
   },
   __Dati_Numero014: {
     type: Number,
-    alias: 'FlagDialogoGestionale'
+    alias: 'FlagDialogoGestionale',
+
   },
   __Dati_Numero015: {
     type: Number,
-    alias: 'FlagDialogoContabilita'
+    alias: 'FlagDialogoContabilita',
+
   },
   __Dati_Numero016: {
     type: Number,
-    alias: 'FlagDialogoEasycom'
+    alias: 'FlagDialogoEasycom',
+
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagDialogoMacchine'
+    alias: 'FlagDialogoMacchine',
+
   },
   __Dati_Numero018: {
     type: Number,
-    alias: 'FlagDialogoWeb'
+    alias: 'FlagDialogoWeb',
+
   },
   __Dati_Numero019: {
     type: Number,
-    alias: 'FlagFatturazioneElettronica'
+    alias: 'FlagFatturazioneElettronica',
+
   },
   __Dati_Numero020: {
     type: Number,
-    alias: 'CollegamentoMacchine_FlagOrchestra'
+    alias: 'CollegamentoMacchine_FlagOrchestra',
+
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'CollegamentoMacchine_Url_Orchestra'
+    alias: 'CollegamentoMacchine_Url_Orchestra',
+
   },
   __Dati_Numero021: {
     type: Number,
-    alias: 'CollegamentoMacchine_FlagAEC'
+    alias: 'CollegamentoMacchine_FlagAEC',
+
   },
   __Dati_Testo020: {
     type: String,
-    alias: 'CollegamentoMacchine_Url_AEC'
+    alias: 'CollegamentoMacchine_Url_AEC',
+
   },
   __Dati_Testo021: {
     type: String,
-    alias: 'JS_FullCalendar'
+    alias: 'JS_FullCalendar',
+
   },
   __Dati_Testo022: {
     type: String,
-    alias: 'JS_jQuery'
+    alias: 'JS_jQuery',
+
   },
   __Dati_Testo023: {
     type: String,
-    alias: 'JS_jQueryUI'
+    alias: 'JS_jQueryUI',
+
   },
   __Dati_Testo024: {
     type: String,
-    alias: 'JS_MomentJS'
+    alias: 'JS_MomentJS',
+
   },
   __Dati_Testo025: {
     type: String,
-    alias: 'JS_Lodash'
+    alias: 'JS_Lodash',
+
   },
   __Dati_Testo026: {
     type: String,
-    alias: 'JS_ChartJS'
+    alias: 'JS_ChartJS',
+
   },
   __Dati_Testo027: {
     type: String,
-    alias: 'JS_FrappeGantt'
+    alias: 'JS_FrappeGantt',
+
   },
   __Dati_Testo028: {
     type: String,
-    alias: 'JS_D3JS'
+    alias: 'JS_D3JS',
+
   },
   __Dati_Numero022: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Numero023: {
     type: Number,
-    alias: 'FlagDialogoTableau'
+    alias: 'FlagDialogoTableau',
+
   },
   __Dati_Numero024: {
     type: Number,
-    alias: 'FlagDialogoTableau_Registries'
+    alias: 'FlagDialogoTableau_Registries',
+
   },
   __Dati_Numero025: {
     type: Number,
-    alias: 'FlagDialogoTableau_AccountingDocs'
+    alias: 'FlagDialogoTableau_AccountingDocs',
+
   },
   __Dati_Numero026: {
     type: Number,
-    alias: 'FlagDialogoTableau_OperativeDocs'
+    alias: 'FlagDialogoTableau_OperativeDocs',
+
   },
   __Dati_Numero027: {
     type: Number,
-    alias: 'FlagDialogoTableau_Items'
+    alias: 'FlagDialogoTableau_Items',
+
   },
   __Dati_Numero028: {
     type: Number,
-    alias: 'FlagDialogoTableau_Articles'
+    alias: 'FlagDialogoTableau_Articles',
+
   },
   __Dati_Numero029: {
     type: Number,
-    alias: 'FlagDialogoTableau_Addresses'
+    alias: 'FlagDialogoTableau_Addresses',
+
   },
   __Dati_Numero030: {
     type: Number,
-    alias: 'FlagDialogoTableau_DataRecorded'
+    alias: 'FlagDialogoTableau_DataRecorded',
+
   },
   __Dati_Numero031: {
     type: Number,
-    alias: 'FlagDialogoTableau_Offers'
+    alias: 'FlagDialogoTableau_Offers',
+
   },
   __Dati_Numero032: {
     type: Number,
-    alias: 'FlagDialogoTableau_Orders'
+    alias: 'FlagDialogoTableau_Orders',
+
   },
   __Dati_Numero033: {
     type: Number,
-    alias: 'FlagDialogoTableau_Events'
+    alias: 'FlagDialogoTableau_Events',
+
   },
   __Dati_Numero034: {
     type: Number,
-    alias: 'FlagDialogoTableau_Stock'
+    alias: 'FlagDialogoTableau_Stock',
+
   },
   __Dati_Numero035: {
     type: Number,
-    alias: 'FlagDialogoTableau_Resources'
+    alias: 'FlagDialogoTableau_Resources',
+
   },
   __Dati_Testo029: {
     type: String,
-    alias: 'ImportCustomNomeFile'
+    alias: 'ImportCustomNomeFile',
+
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'JS_TreeTable'
+    alias: 'JS_TreeTable',
+
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'JS_TreeTableTest'
+    alias: 'JS_TreeTableTest',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Numero036: {
     type: Number,
-    alias: 'FlagDialogoGestionale_TipiUtensiliPerFaseProduzione'
+    alias: 'FlagDialogoGestionale_TipiUtensiliPerFaseProduzione',
+
   },
   __Dati_Numero037: {
     type: Number,
-    alias: 'FlagDialogoGestionale_Registries'
+    alias: 'FlagDialogoGestionale_Registries',
+
   },
   __Dati_Numero038: {
     type: Number,
-    alias: 'FlagDialogoGestionale_Items'
+    alias: 'FlagDialogoGestionale_Items',
+
   },
   __Dati_Numero039: {
     type: Number,
-    alias: 'FlagBloccoAggiornamenti'
+    alias: 'FlagBloccoAggiornamenti',
+
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraBloccoAggiornamenti'
+    alias: 'DataOraBloccoAggiornamenti',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'TxtUtenteBloccoAggiornamenti'
+    alias: 'TxtUtenteBloccoAggiornamenti',
+
   },
   __Dati_Numero040: {
     type: Number,
-    alias: 'RedboothWorkspaceID'
+    alias: 'RedboothWorkspaceID',
+
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'Redbooth_API_Client_ID'
+    alias: 'Redbooth_API_Client_ID',
+
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'Redbooth_API_Client_Secret'
+    alias: 'Redbooth_API_Client_Secret',
+
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'Field114'
+    alias: 'Field114',
+
   },
   __Dati_Numero041: {
     type: Number,
-    alias: 'CollegamentoMacchine_FlagCamngo'
+    alias: 'CollegamentoMacchine_FlagCamngo',
+
   },
   __Dati_Numero042: {
     type: Number,
-    alias: 'FlagAbilitaCardNoteRelease'
+    alias: 'FlagAbilitaCardNoteRelease',
+
   },
   __Dati_Numero043: {
     type: Number,
-    alias: 'CollegamentoMacchine_FlagInvioProgrammaMacchina'
+    alias: 'CollegamentoMacchine_FlagInvioProgrammaMacchina',
+
   },
   __Dati_Numero044: {
     type: Number,
-    alias: 'CollegamentoMacchine_FlagRicezioneProgrammaMacchina'
+    alias: 'CollegamentoMacchine_FlagRicezioneProgrammaMacchina',
+
   },
   __Dati_Testo036: {
     type: String,
-    alias: 'PrintNode_IndirizzoMail'
+    alias: 'PrintNode_IndirizzoMail',
+
   },
   __Dati_Testo037: {
     type: String,
-    alias: 'PrintNode_Password'
+    alias: 'PrintNode_Password',
+
   },
   __Dati_Testo038: {
     type: String,
-    alias: 'PrintNode_APIKey'
+    alias: 'PrintNode_APIKey',
+
+  },
+  __Dati_Testo039: {
+    type: String,
+    alias: 'ApiGateway_DB_Mongo',
+
   }
 }, {
   timestamps: true

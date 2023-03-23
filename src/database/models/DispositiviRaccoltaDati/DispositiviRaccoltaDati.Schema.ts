@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 import * as uuid from 'uuid';
+import DateConverter from '../../setters/date-converter';
 
 import type { IDispositiviRaccoltaDatiPrivate } from './DispositiviRaccoltaDati.Types.Private';
 
@@ -15,115 +16,149 @@ const DispositiviRaccoltaDatiSchema = new mongoose.Schema<IDispositiviRaccoltaDa
   },
   __Dati_Testo001: {
     type: String,
-    alias: 'IdAccountCompagnia'
+    alias: 'IdAccountCompagnia',
+
   },
   __Dati_Testo002: {
     type: String,
-    alias: 'IdReparto'
+    alias: 'IdReparto',
+
   },
   __Dati_Testo003: {
     type: String,
-    alias: 'IdStazioneRaccoltaDati'
+    alias: 'IdStazioneRaccoltaDati',
+
   },
   __Dati_Testo004: {
     type: String,
-    alias: 'TxtReparto'
+    alias: 'TxtReparto',
+
   },
   __Dati_Testo005: {
     type: String,
-    alias: 'TxtStazioneRaccoltaDati'
+    alias: 'TxtStazioneRaccoltaDati',
+
   },
   __Dati_Numero001: {
     type: Number,
-    alias: 'Uno'
+    alias: 'Uno',
+
   },
   __Dati_Numero002: {
     type: Number,
-    alias: 'Zero'
+    alias: 'Zero',
+
   },
   __Dati_Testo006: {
     type: String,
-    alias: 'IdDispositivoRaccoltaDati'
+    alias: 'IdDispositivoRaccoltaDati',
+
   },
   __Dati_Testo007: {
     type: String,
-    alias: 'IdOperatoreProduzione'
+    alias: 'IdOperatoreProduzione',
+
   },
   __Dati_Testo008: {
     type: String,
-    alias: 'TxtOperatoreProduzione'
+    alias: 'TxtOperatoreProduzione',
+
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagAggiorna'
+    alias: 'FlagAggiorna',
+
   },
   __Dati_Testo009: {
     type: String,
-    alias: 'FM_Lingua'
+    alias: 'FM_Lingua',
+
   },
   __Dati_Testo010: {
     type: String,
-    alias: 'FM_NomeUtente'
+    alias: 'FM_NomeUtente',
+
   },
   __Dati_Testo011: {
     type: String,
-    alias: 'FM_PluginInstallati'
+    alias: 'FM_PluginInstallati',
+
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'FM_Versione'
+    alias: 'FM_Versione',
+
   },
   __Dati_Testo013: {
     type: String,
-    alias: 'Postazione_IndirizzoIP'
+    alias: 'Postazione_IndirizzoIP',
+
   },
   __Dati_Testo014: {
     type: String,
-    alias: 'Postazione_LinguaSO'
+    alias: 'Postazione_LinguaSO',
+
   },
   __Dati_Testo015: {
     type: String,
-    alias: 'Postazione_Nome'
+    alias: 'Postazione_Nome',
+
   },
   __Dati_Testo016: {
     type: String,
-    alias: 'Postazione_SO'
+    alias: 'Postazione_SO',
+
   },
   __Dati_Testo017: {
     type: String,
-    alias: 'Postazione_SODescrittivo'
+    alias: 'Postazione_SODescrittivo',
+
   },
   __Dati_Testo018: {
     type: String,
-    alias: 'Postazione_VersioneSO'
+    alias: 'Postazione_VersioneSO',
+
   },
   __Dati_Numero004: {
     type: Number,
-    alias: 'Postazione_Tipo'
+    alias: 'Postazione_Tipo',
+
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagAttivo'
+    alias: 'FlagAttivo',
+
   },
   __Dati_DataOra001: {
     type: Date,
-    alias: 'DataOraUltimoAccesso'
+    alias: 'DataOraUltimoAccesso',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Ora001: {
     type: String,
-    alias: 'TempoAnnullamentoRegistrazione'
+    alias: 'TempoAnnullamentoRegistrazione',
+
   },
   __Dati_DataOra002: {
     type: Date,
-    alias: 'DataOraCreazione'
+    alias: 'DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_DataOra003: {
     type: Date,
-    alias: 'DataOraUltimaModifica'
+    alias: 'DataOraUltimaModifica',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   },
   __Dati_Testo019: {
     type: String,
-    alias: 'IdInstallazione'
+    alias: 'IdInstallazione',
+
   }
 }, {
   timestamps: true
