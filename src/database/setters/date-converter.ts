@@ -19,8 +19,6 @@ export default class DateConverter {
     }
 
     if (typeof value === 'string') {
-      const newDate = dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Dublin').toDate();
-      console.log(newDate);
       return dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Dublin').toDate();
     }
 
@@ -36,7 +34,7 @@ export default class DateConverter {
     }
 
     if (typeof value === 'string') {
-      return dayjs(value, 'DD-MM-YYYY HH:mm:ss').toDate();
+      return dayjs.tz(value, 'DD-MM-YYYY HH:mm:ss', 'Europe/Dublin').toDate();
     }
 
     return value;
