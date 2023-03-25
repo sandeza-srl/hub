@@ -12,6 +12,9 @@ import { hasValidAdminKey } from '../api/auth/utils';
 import { MONGO_DB_SELECTOR } from './constants';
 import { MONGOOSE_TO_OBJECT_DEFAULTS } from './database.options';
 
+import { AccessTokenService } from '../token/services/access-token.service';
+import { RefreshTokenService } from '../token/services/refresh-token.service';
+
 
 /* --------
  * Define default properties for Mongoose connection
@@ -32,14 +35,16 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
 
   constructor(
     @Inject(REQUEST)
-    private readonly request: Request
+    private readonly request: Request,
+    private readonly accessTokenService: AccessTokenService,
+    private readonly refreshTokenService: RefreshTokenService
   ) {
   }
 
 
   public createMongooseOptions(): Promise<MongooseModuleOptions> | MongooseModuleOptions {
     /** Initialize the db name container */
-    let db: string | null = null;
+    let db: string | null;
 
     /** If the user is connecting as admin, get the db from the query params */
     if (hasValidAdminKey(this.request)) {
@@ -48,6 +53,11 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
     /** For auth request, extract the db id from body */
     else if (this.request.url.match(/auth\/(login|refresh)/)) {
       db = this.request.body?.[MONGO_DB_SELECTOR] ?? this.request.query[MONGO_DB_SELECTOR];
+    }
+    /** Else, try to load the database from access token */
+    else {
+      db = this.accessTokenService.getMongoDatabaseName(this.request)
+        ?? this.refreshTokenService.getMongoDatabaseName(this.request);
     }
 
     /** TODO: If database connection is null, extract from AuthToken */
