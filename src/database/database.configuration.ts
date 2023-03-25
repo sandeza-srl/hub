@@ -9,7 +9,7 @@ import { MongooseOptionsFactory, MongooseModuleOptions } from '@nestjs/mongoose'
 
 import { hasValidAdminKey } from '../api/auth/utils';
 
-import { MONGOOSE_DATABASE_QUERY_PARAM_SELECTOR } from './constants';
+import { MONGO_DB_SELECTOR } from './constants';
 import { MONGOOSE_TO_OBJECT_DEFAULTS } from './database.options';
 
 
@@ -43,7 +43,7 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
 
     /** If the user is connecting as admin, get the db from the query params */
     if (hasValidAdminKey(this.request)) {
-      db = (this.request.query[MONGOOSE_DATABASE_QUERY_PARAM_SELECTOR]?.toString()) ?? null;
+      db = (this.request.query[MONGO_DB_SELECTOR]?.toString()) ?? null;
     }
 
     /** TODO: If database connection is null, extract from AuthToken */

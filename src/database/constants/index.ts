@@ -3,4 +3,4 @@
  * to extract the database instance to use while executing a request handler
  * using the ADMIN_KEY authorization
  */
-export const MONGOOSE_DATABASE_QUERY_PARAM_SELECTOR = 'db';
+export const MONGO_DB_SELECTOR = 'db';
