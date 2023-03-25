@@ -49,6 +49,15 @@ export class AuthService {
 
 
   /**
+   * Sign a new AccessToken
+   * @param userData
+   */
+  public grantAccessToken(userData: IUserData): string {
+    return this.accessTokenService.sign(userData);
+  }
+
+
+  /**
    * Verify the user login data and return a proper IUserData object
    * @param loginDto
    */
@@ -104,6 +113,41 @@ export class AuthService {
 
   // TODO: Use login data to check credentials in Societa collection
   private async verifyLoginFromSocietaAsync(loginDto: UserLoginDto): Promise<unknown | null> {
+    throw new NotImplementedException();
+  }
+
+
+  /**
+   * Starting from an id, search into all auth sources to get the right UserData object
+   * @param id
+   * @private
+   */
+  public async getByIdAsync(id: string): Promise<IUserData | null> {
+    /** Search the user into IndirizziRubrica */
+    const privateUserData = await this.getByIdFromIndirizziRubricaAsync(id);
+
+    /** If a private user has been found, return its minimal data */
+    if (privateUserData) {
+      return this.createUserData({ type: 'user', doc: privateUserData });
+    }
+
+    /** Fallback to null */
+    return null;
+  }
+
+
+  /**
+   * Get the main document from an ID
+   * @param id
+   * @private
+   */
+  private async getByIdFromIndirizziRubricaAsync(id: string): Promise<TIndirizziRubricaDocument | null> {
+    return this.IndirizziRubrica.findById(id).exec();
+  }
+
+
+  // TODO: Use id to get doc in Societa collection
+  private async getByIdFromSocietaAsync(id: string): Promise<unknown | null> {
     throw new NotImplementedException();
   }
 
