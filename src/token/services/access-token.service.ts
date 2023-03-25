@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 
+import type { Request } from 'express';
+
 import { getRequiredEnv } from '../../utils';
 
 import AbstractedTokenService from './abstractions/abstracted-token.service';
@@ -17,4 +19,14 @@ export class AccessTokenService extends AbstractedTokenService(
     super(jwtService);
   }
 
+
+  public extractFromRequest(request: Request): string | null {
+    /** Assert the request header is present */
+    if (!request.header('Authorization')) {
+      return null;
+    }
+
+    /** Remove the bearer token from header value */
+    return request.header('Authorization')!.replace(/^Bearer\s/ig, '');
+  }
 }

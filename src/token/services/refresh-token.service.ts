@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
+
+import type { Request } from 'express';
 
 import { getRequiredEnv } from '../../utils';
 
 import AbstractedTokenService from './abstractions/abstracted-token.service';
-import { ITokenPayload } from '../interfaces/TokenPayload';
-import { JwtService, JwtSignOptions, JwtVerifyOptions } from '@nestjs/jwt';
 
 
 @Injectable()
@@ -20,20 +21,17 @@ export class RefreshTokenService extends AbstractedTokenService(
   }
 
 
-  public signToken(payload: ITokenPayload, options?: Omit<JwtSignOptions, 'secret'>): string {
-    /** Sign the token */
-    const signedToken = super.signToken(payload, options);
-
-    /** Return converted in base64 */
-    return Buffer.from(signedToken).toString('base64');
+  public encodeTokenString(token: string): string {
+    return Buffer.from(token).toString('base64');
   }
 
 
-  public verify(token: string, options?: Omit<JwtVerifyOptions, 'secret'>): ITokenPayload {
-    /** Convert from base64 to string */
-    const signedToken = Buffer.from(token, 'base64').toString('ascii');
+  public decodeTokenString(token: string): string {
+    return Buffer.from(token, 'base64').toString('ascii');
+  }
 
-    /** Use converted to token to verify it */
-    return super.verify(signedToken, options);
+
+  public extractFromRequest(request: Request): string | null {
+    return request.query.refresh_token?.toString() ?? null;
   }
 }

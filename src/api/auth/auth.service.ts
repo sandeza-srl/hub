@@ -41,8 +41,8 @@ export class AuthService {
    */
   public createAuthData(userData: IUserData): IAuthData {
     return {
-      accessToken : this.accessTokenService.signToken(userData),
-      refreshToken: this.refreshTokenService.signToken(userData),
+      accessToken : this.accessTokenService.sign(userData),
+      refreshToken: this.refreshTokenService.sign(userData),
       userData
     };
   }
