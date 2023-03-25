@@ -1,7 +1,7 @@
 import { JwtService } from '@nestjs/jwt';
 import type { JwtSignOptions, JwtVerifyOptions } from '@nestjs/jwt';
 
-import type { ITokenPayload } from '../interfaces/TokenPayload';
+import type { ITokenPayload } from '../../interfaces/TokenPayload';
 
 
 export default function AbstractedTokenService(secret: string, validity: string | number | undefined) {

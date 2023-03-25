@@ -3,7 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 
 import { getRequiredEnv } from '../../utils';
 
-import AbstractedTokenService from '../abstractions/abstracted-token.service';
+import AbstractedTokenService from './abstractions/abstracted-token.service';
 
 
 @Injectable()
