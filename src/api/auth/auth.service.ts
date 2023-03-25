@@ -103,7 +103,7 @@ export class AuthService {
 
 
   // TODO: Use login data to check credentials in Societa collection
-  private async verifyLoginFromSocietaAsync(loginDto: UserLoginDto): Promise<TIndirizziRubricaDocument | null> {
+  private async verifyLoginFromSocietaAsync(loginDto: UserLoginDto): Promise<unknown | null> {
     throw new NotImplementedException();
   }
 
