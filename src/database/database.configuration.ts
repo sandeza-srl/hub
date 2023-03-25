@@ -45,6 +45,10 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
     if (hasValidAdminKey(this.request)) {
       db = (this.request.query[MONGO_DB_SELECTOR]?.toString()) ?? null;
     }
+    /** For auth request, extract the db id from body */
+    else if (this.request.url.match(/auth\/(login|refresh)/)) {
+      db = this.request.body?.[MONGO_DB_SELECTOR] ?? this.request.query[MONGO_DB_SELECTOR];
+    }
 
     /** TODO: If database connection is null, extract from AuthToken */
 
