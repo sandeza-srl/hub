@@ -18,7 +18,7 @@ const mainLogger = new Logger('Bootstrap');
 async function bootstrap() {
 
   /** Get the PORT from the current environment */
-  const { PORT = 26799 } = process.env;
+  const { PORT = 3000 } = process.env;
 
   /** Create the App */
   mainLogger.verbose('Creating the App');
