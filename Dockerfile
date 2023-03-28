@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the Port used by Api Gateway
-EXPOSE 26799
+EXPOSE 3000
 
 # Run the serve
 CMD ["node", "dist/main"]
