@@ -1,4 +1,4 @@
-# Create a primary Node Image to build the Production App
+# Create a Node Image to build the Production App
 FROM node:18.12
 
 # Set the Working Directory
