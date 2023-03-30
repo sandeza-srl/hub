@@ -17,8 +17,10 @@ export default class DateConverter {
     if (value === '') {
       return value;
     }
-
-    if (typeof value === 'string') {
+    else if (value === '?') {
+      return '';
+    }
+    else if (typeof value === 'string') {
       return dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Dublin').toDate();
     }
 
@@ -32,8 +34,10 @@ export default class DateConverter {
     if (value === '') {
       return value;
     }
-
-    if (typeof value === 'string') {
+    else if (value === '?') {
+      return '';
+    }
+    else if (typeof value === 'string') {
       return dayjs.tz(value, 'DD-MM-YYYY HH:mm:ss', 'Europe/Dublin').toDate();
     }
 
