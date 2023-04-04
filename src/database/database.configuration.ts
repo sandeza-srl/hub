@@ -9,7 +9,7 @@ import { MongooseOptionsFactory, MongooseModuleOptions } from '@nestjs/mongoose'
 
 import { hasValidAdminKey } from '../api/auth/utils';
 
-import { MONGO_DB_SELECTOR } from './constants';
+import { MONGO_DB_CUSTOM_SELECTOR, MONGO_DB_SELECTOR } from './constants';
 import { MONGOOSE_TO_OBJECT_DEFAULTS } from './database.options';
 
 import { AccessTokenService } from '../token/services/access-token.service';
@@ -45,6 +45,7 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
   public createMongooseOptions(): Promise<MongooseModuleOptions> | MongooseModuleOptions {
     /** Initialize the db name container */
     let db: string | null;
+    let customdb: string | null;
 
     /** If the user is connecting as admin, get the db from the query params */
     if (hasValidAdminKey(this.request)) {
@@ -61,6 +62,28 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
     }
 
     /** TODO: If database connection is null, extract from AuthToken */
+
+
+    /** This is for custom request, extract custom DB from query params */
+    if (this.request.query?.[MONGO_DB_CUSTOM_SELECTOR]?.toString !== undefined) {
+      customdb = this.request.query[MONGO_DB_CUSTOM_SELECTOR]?.toString();
+
+      /** Depending on customdb, return the correct MongoDB Connection Parameters */
+      if (customdb !== null && customdb !== undefined && customdb === 'machieraldo') {
+
+        // Return Machieraldo MongoDB configuration
+        return {
+          uri       : `mongodb://139.144.154.55:27017/${db}`,
+          authSource: 'users',
+          auth      : {
+            username: 'sandeza-user',
+            password: 'm0ng0dbs4nd3z4'
+          }
+        };
+
+      }
+
+    }
 
     /** Assert the right db has been selected */
     if (db == null) {

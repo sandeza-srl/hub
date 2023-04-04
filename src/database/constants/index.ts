@@ -4,3 +4,5 @@
  * using the ADMIN_KEY authorization
  */
 export const MONGO_DB_SELECTOR = 'db';
+
+export const MONGO_DB_CUSTOM_SELECTOR = 'customdb';
