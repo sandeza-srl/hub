@@ -39,7 +39,6 @@ export class SystemController {
     @Body() source: any
   ) {
 
-    /** Write something wonderful down here */
     return this.systemService.upsertDocumentInCollection(this.routeModel, id, source);
 
   }

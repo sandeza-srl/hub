@@ -62,8 +62,29 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
         ?? this.refreshTokenService.getMongoDatabaseName(this.request);
     }
 
-    /** TODO: If database connection is null, extract from AuthToken */
 
+    /** Assert the right db has been selected */
+    if (db == null) {
+      throw new BadRequestException(
+        'Could not find a valid database to connect for this request',
+        'system/invalid-database'
+      );
+    }
+
+    /** Check if a custom db connection has been provided */
+    const customDb = this.request.query[MONGO_DB_CUSTOM_SELECTOR]?.toString();
+
+    /** Return defaults without customDb query param */
+    if (customDb == null || !isAdmin) {
+      return {
+        uri       : `mongodb://${process.env.DB_URL}:${process.env.DB_PORT}/${db}`,
+        authSource: process.env.DB_AUTH_SOURCE,
+        auth      : {
+          username: process.env.DB_USER,
+          password: process.env.DB_PASSWORD
+        }
+      };
+    }
 
     /** This is for custom request, extract custom DB from query params */
     switch (customDb) {
