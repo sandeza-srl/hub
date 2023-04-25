@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { InternalServerErrorException } from '@nestjs/common';
+import * as process from 'process';
 
 import { isValidString } from '../strings';
 
@@ -16,7 +17,15 @@ type EnvToken =
   | 'ACCESS_TOKEN_SECRET'
   | 'ACCESS_TOKEN_VALIDITY'
   | 'REFRESH_TOKEN_SECRET'
-  | 'REFRESH_TOKEN_VALIDITY';
+  | 'REFRESH_TOKEN_VALIDITY'
+  | 'FM_STANDARD_DATABASE'
+  | 'API_VERSION'
+  | 'FM_STANDARD_LAYOUT'
+  | 'FM_STANDARD_SCRIPT'
+  | 'FM_TOKEN_EXP_TIME_MIN'
+  | 'FM_ADMIN_USER'
+  | 'FM_ADMIN_PASSWORD'
+  | 'FM_SYSTEM_ID';
 
 
 export function getRequiredEnv(token: EnvToken): string {
@@ -29,4 +38,9 @@ export function getRequiredEnv(token: EnvToken): string {
   }
 
   return value;
+}
+
+
+export function getOptionalEnv(token: EnvToken, fallback: string): string {
+  return process.env[token] || fallback;
 }

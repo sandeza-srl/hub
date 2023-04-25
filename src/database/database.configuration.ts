@@ -44,11 +44,12 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
 
   public createMongooseOptions(): Promise<MongooseModuleOptions> | MongooseModuleOptions {
     /** Initialize the db name container */
+    const isAdmin = hasValidAdminKey(this.request);
     let db: string | null;
-    let customdb: string | null;
+
 
     /** If the user is connecting as admin, get the db from the query params */
-    if (hasValidAdminKey(this.request)) {
+    if (isAdmin) {
       db = (this.request.query[MONGO_DB_SELECTOR]?.toString()) ?? null;
     }
     /** For auth request, extract the db id from body */
@@ -65,13 +66,8 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
 
 
     /** This is for custom request, extract custom DB from query params */
-    if (this.request.query?.[MONGO_DB_CUSTOM_SELECTOR]?.toString !== undefined) {
-      customdb = this.request.query[MONGO_DB_CUSTOM_SELECTOR]?.toString();
-
-      /** Depending on customdb, return the correct MongoDB Connection Parameters */
-      if (customdb !== null && customdb !== undefined && customdb === 'machieraldo') {
-
-        // Return Machieraldo MongoDB configuration
+    switch (customDb) {
+      case 'machieraldo':
         return {
           uri       : `mongodb://139.144.154.55:27017/${db}`,
           authSource: 'users',
@@ -81,27 +77,12 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
           }
         };
 
-      }
-
+      default:
+        throw new BadRequestException(
+          'Could not find a valid database to connect for this request',
+          'system/invalid-database'
+        );
     }
-
-    /** Assert the right db has been selected */
-    if (db == null) {
-      throw new BadRequestException(
-        'Could not find a valid database to connect for this request',
-        'system/invalid-database'
-      );
-    }
-
-    /** Return database connection options */
-    return {
-      uri       : `mongodb://${process.env.DB_URL}:${process.env.DB_PORT}/${db}`,
-      authSource: process.env.DB_AUTH_SOURCE,
-      auth      : {
-        username: process.env.DB_USER,
-        password: process.env.DB_PASSWORD
-      }
-    };
 
   }
 

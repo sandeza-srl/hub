@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { JwtModule } from '@nestjs/jwt';
+import { JwtModule, JwtService } from '@nestjs/jwt';
 
 import { AccessTokenService } from './services/access-token.service';
 import { RefreshTokenService } from './services/refresh-token.service';
@@ -10,9 +10,9 @@ import { RefreshTokenService } from './services/refresh-token.service';
 
   imports: [ JwtModule ],
 
-  providers: [ AccessTokenService, RefreshTokenService ],
+  providers: [ AccessTokenService, RefreshTokenService, JwtService ],
 
-  exports: [ AccessTokenService, RefreshTokenService ]
+  exports: [ AccessTokenService, RefreshTokenService, JwtService ]
 
 })
 export class TokenModule {
