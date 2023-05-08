@@ -5,4 +5,4 @@
  */
 export const MONGO_DB_SELECTOR = 'db';
 
-export const MONGO_DB_CUSTOM_SELECTOR = 'customdb';
+export const MONGO_DB_CUSTOM_SELECTOR = 'customDb';
