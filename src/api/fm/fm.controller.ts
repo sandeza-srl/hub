@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Post, Query, UseGuards } from '@nestjs/common';
-import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { Body, Controller, Post, Query, UseGuards } from '@nestjs/common';
+import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { AccessTokenGuard } from '../auth/guards/AccessTokenGuard';
 import { ManageRecordDto } from './dto/insertRecordDto';
 import { FmService } from './fm.service';
@@ -10,13 +10,6 @@ import { FmService } from './fm.service';
 export class FmController {
 
   constructor(private readonly fmService: FmService) {
-  }
-
-
-  @Get('insert/:host')
-  @ApiOkResponse({ status: '2XX', description: 'Server is Alive' })
-  public pong(): string {
-    return 'pong';
   }
 
 
