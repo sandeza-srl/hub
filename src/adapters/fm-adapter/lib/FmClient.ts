@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { Axios, AxiosRequestConfig } from 'axios';
 import { encodeToBase64, getRequiredEnv, getOptionalEnv } from '../../../utils';
 import { FmSessionResponse } from '../interfaces/Auth';
 import { FmCreateRecordResponse } from '../interfaces/generics';
@@ -62,6 +62,8 @@ export default class FmClient {
 
   private _layout: string | undefined;
 
+  private _script: string | undefined;
+
   private _limit: number | undefined;
 
   private _version: string = FmClient.API_VERSION;
@@ -108,11 +110,27 @@ export default class FmClient {
   }
 
 
+  public get scriptUrl(): string {
+    /** Check if layout has been defined */
+    if (!this._layout) {
+      throw new Error('Layout for FmClient is undefined');
+    }
+
+    return `${this.layoutUrl}/script/${this._script}`;
+  }
+
+
   /* --------
    * Public Modifiers
    * -------- */
   public layout(name: string): FmClient {
     this._layout = name;
+    return this;
+  }
+
+
+  public script(name: string): FmClient {
+    this._script = name;
     return this;
   }
 
@@ -164,10 +182,34 @@ export default class FmClient {
         }
       });
 
+      // TODO: Add the response if it's a creation without a script execution
       return response.data as Response;
     }
     catch (error) {
       // TODO: Errors Interceptor
+      throw error;
+    }
+  }
+
+
+  // TODO: Add a function to execute FileMaker API to call a script, method: GET
+  private async scriptRequest<Response>(config: AxiosRequestConfig): Promise<Response> {
+    try {
+      const response = await axios({
+        baseURL: this.layoutUrl,
+        method : 'GET',
+        timeout: 600000,
+        ...config,
+        headers: {
+          Authorization: `Bearer ${await this.getAuthToken()}`,
+          ContentType  : 'application/json',
+          ...config.headers
+        }
+      });
+
+      return response.data as Response;
+    }
+    catch (error) {
       throw error;
     }
   }
@@ -181,6 +223,19 @@ export default class FmClient {
     return this.request<FmCreateRecordResponse>({
       ...config,
       url: '/records'
+    });
+  }
+
+
+  /**
+   * Execute FileMaker Script Request Method
+   * @param script
+   * @param scriptParam
+   */
+  // TODO: Create the interface for the script response to substitute <FmCreateRecordResponse>
+  public runScript(script: string, scriptParam: string): Promise<FmCreateRecordResponse> {
+    return this.scriptRequest<FmCreateRecordResponse>({
+      url: `/script/${script}?script.param=${scriptParam}`
     });
   }
 

@@ -18,32 +18,44 @@ export class FmService {
   private static readonly FM_SYSTEM_ID: string = getRequiredEnv('FM_SYSTEM_ID');
 
 
-  public async insertRecord<D extends ManageRecordDto>(host: string, body: D): Promise<string> {
+  public async insertRecord<D extends ManageRecordDto>(host: string, body: D): Promise<string>;
+  public async insertRecord<D extends ManageRecordDto>(host: string, body: D[]): Promise<string>;
+  public async insertRecord<D extends ManageRecordDto>(host: string, body: D | D[]): Promise<string> {
 
     /** Create FM Client */
     const client = FmClient.forHost(host).layout(FmService.FM_STANDARD_LAYOUT);
 
+    /** Assert data to send is always an array of elements */
     /** Generate IdSessione */
-    const IdSessione = uuid.v4();
+    const sessionId = uuid.v4();
 
-    const newRecord = await client.insert({
-      data: {
-        fieldData     : {
-          ...body,
-          IdSessione      : IdSessione,
-          IdSistemaEsterno: FmService.FM_SYSTEM_ID
-        },
-        script        : FmService.FM_STANDARD_SCRIPT,
-        'script.param': IdSessione
-      }
-    });
+    const insertsPromises = (Array.isArray(body) ? body : [ body ])
+      .map((element, index) => new Promise(async (resolve) => {
+        const newRecord = await client.insert({
+          data: {
+            fieldData: {
+              ...element,
+              IdSessione      : sessionId,
+              IdSistemaEsterno: FmService.FM_SYSTEM_ID
+            }
+          }
+        });
+
+        return resolve(newRecord.response);
+      }));
+
+    await Promise.all(insertsPromises);
+
+
+    //TODO: API Call to execute a filemaker script. Need to create the function in the fm Client
+    // TODO: Convert the result, that is always a string, into a JSON
+    const scriptResult = await client.runScript(FmService.FM_STANDARD_SCRIPT, sessionId);
 
     /** If no data, throw */
-    if (!newRecord.response) {
+    if (!scriptResult.response) {
       throw new Error('No record has been created');
     }
-
-    return newRecord.response.scriptResult;
+    return scriptResult.response.scriptResult;
 
   }
 

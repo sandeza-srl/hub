@@ -18,7 +18,7 @@ export class FmController {
   @ApiCreatedResponse()
   public async insert(
     @Query('host') host: string,
-    @Body() body: ManageRecordDto
+    @Body() body: ManageRecordDto[]
   ) {
 
     /** Call standard Fm Request to insert record into DataHub */
