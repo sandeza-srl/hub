@@ -19,10 +19,12 @@ export default VariazioniListino;
 
 export { VariazioniListinoSchema };
 
-export type TVariazioniListinoModel = typeof VariazioniListino;
+export type TVariazioniListinoModel = Omit<typeof VariazioniListino, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVariazioniListino>): any
+};
 
-export type TVariazioniListinoDocument = 
-& mongoose.Document<any, {}, IVariazioniListino>
-& IVariazioniListino;
+export type TVariazioniListinoDocument =
+  & mongoose.Document<any, {}, IVariazioniListino>
+  & IVariazioniListino;
 
 export { IVariazioniListino };

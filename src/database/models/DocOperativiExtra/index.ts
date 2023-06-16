@@ -19,10 +19,12 @@ export default DocOperativiExtra;
 
 export { DocOperativiExtraSchema };
 
-export type TDocOperativiExtraModel = typeof DocOperativiExtra;
+export type TDocOperativiExtraModel = Omit<typeof DocOperativiExtra, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDocOperativiExtra>): any
+};
 
-export type TDocOperativiExtraDocument = 
-& mongoose.Document<any, {}, IDocOperativiExtra>
-& IDocOperativiExtra;
+export type TDocOperativiExtraDocument =
+  & mongoose.Document<any, {}, IDocOperativiExtra>
+  & IDocOperativiExtra;
 
 export { IDocOperativiExtra };

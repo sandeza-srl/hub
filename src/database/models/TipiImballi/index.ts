@@ -19,10 +19,12 @@ export default TipiImballi;
 
 export { TipiImballiSchema };
 
-export type TTipiImballiModel = typeof TipiImballi;
+export type TTipiImballiModel = Omit<typeof TipiImballi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiImballi>): any
+};
 
-export type TTipiImballiDocument = 
-& mongoose.Document<any, {}, ITipiImballi>
-& ITipiImballi;
+export type TTipiImballiDocument =
+  & mongoose.Document<any, {}, ITipiImballi>
+  & ITipiImballi;
 
 export { ITipiImballi };

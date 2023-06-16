@@ -1,163 +1,243 @@
 export interface ISottoFamiglieItemsPrivate {
   _id: string;
-  /** Reflected: IdFamigliaItem*/ 
+
+  /** Reflected: IdFamigliaItem*/
   __Dati_Testo001: string;
-  /** Reflected: Uno*/ 
+
+  /** Reflected: Uno*/
   __Dati_Numero001: number;
-  /** Reflected: TxtSottoFamigliaItem*/ 
+
+  /** Reflected: TxtSottoFamigliaItem*/
   __Dati_Testo002: string;
-  /** Reflected: IdSottoFamigliaItem*/ 
+
+  /** Reflected: IdSottoFamigliaItem*/
   __Dati_Testo003: string;
-  /** Reflected: FlagTipoBene*/ 
+
+  /** Reflected: FlagTipoBene*/
   __Dati_Numero002: number;
-  /** Reflected: FlagMagazzino*/ 
+
+  /** Reflected: FlagMagazzino*/
   __Dati_Numero003: number;
-  /** Reflected: FlagVendita*/ 
+
+  /** Reflected: FlagVendita*/
   __Dati_Numero004: number;
-  /** Reflected: FlagTipoAzione*/ 
+
+  /** Reflected: FlagTipoAzione*/
   __Dati_Numero005: number;
-  /** Reflected: FlagTipoContratto*/ 
+
+  /** Reflected: FlagTipoContratto*/
   __Dati_Numero006: number;
-  /** Reflected: FlagProduzione*/ 
+
+  /** Reflected: FlagProduzione*/
   __Dati_Numero007: number;
-  /** Reflected: FlagAcquisto*/ 
+
+  /** Reflected: FlagAcquisto*/
   __Dati_Numero008: number;
-  /** Reflected: FlagTipoLavorazione*/ 
+
+  /** Reflected: FlagTipoLavorazione*/
   __Dati_Numero009: number;
-  /** Reflected: FlagTipoOraLavoro*/ 
+
+  /** Reflected: FlagTipoOraLavoro*/
   __Dati_Numero010: number;
-  /** Reflected: FlagRegistraLotto*/ 
+
+  /** Reflected: FlagRegistraLotto*/
   __Dati_Numero011: number;
-  /** Reflected: FlagRegistraScadenza*/ 
+
+  /** Reflected: FlagRegistraScadenza*/
   __Dati_Numero012: number;
-  /** Reflected: FlagRegistraNumeroSerie*/ 
+
+  /** Reflected: FlagRegistraNumeroSerie*/
   __Dati_Numero013: number;
-  /** Reflected: FlagMagaCespite*/ 
+
+  /** Reflected: FlagMagaCespite*/
   __Dati_Numero014: number;
-  /** Reflected: IdAccountCompagnia*/ 
+
+  /** Reflected: IdAccountCompagnia*/
   __Dati_Testo004: string;
-  /** Reflected: CodiceSottoFamigliaItem*/ 
+
+  /** Reflected: CodiceSottoFamigliaItem*/
   __Dati_Testo005: string;
-  /** Reflected: CodiceFamigliaItem*/ 
+
+  /** Reflected: CodiceFamigliaItem*/
   __Dati_Testo006: string;
-  /** Reflected: TxtFamigliaItem*/ 
+
+  /** Reflected: TxtFamigliaItem*/
   __Dati_Testo007: string;
-  /** Reflected: FlagMagaMateriaPrima*/ 
+
+  /** Reflected: FlagMagaMateriaPrima*/
   __Dati_Numero015: number;
-  /** Reflected: FlagMagaProdottoFinito*/ 
+
+  /** Reflected: FlagMagaProdottoFinito*/
   __Dati_Numero016: number;
-  /** Reflected: FlagMagaSemilavorato*/ 
+
+  /** Reflected: FlagMagaSemilavorato*/
   __Dati_Numero017: number;
-  /** Reflected: FlagMagaValorizzaCosto*/ 
+
+  /** Reflected: FlagMagaValorizzaCosto*/
   __Dati_Numero018: number;
-  /** Reflected: FlagMagaValorizzaPrezzo*/ 
+
+  /** Reflected: FlagMagaValorizzaPrezzo*/
   __Dati_Numero019: number;
-  /** Reflected: FlagGeneraPacchi*/ 
+
+  /** Reflected: FlagGeneraPacchi*/
   __Dati_Numero020: number;
-  /** Reflected: DataOraCreazione*/ 
+
+  /** Reflected: DataOraCreazione*/
   __Dati_DataOra001: Date;
-  /** Reflected: DataOraUltimaModifica*/ 
+
+  /** Reflected: DataOraUltimaModifica*/
   __Dati_DataOra002: Date;
-  /** Reflected: Zero*/ 
+
+  /** Reflected: Zero*/
   __Dati_Numero021: number;
-  /** Reflected: FlagWeb*/ 
+
+  /** Reflected: FlagWeb*/
   __Dati_Numero022: number;
-  /** Reflected: FlagGestisciPosizioneMagazzino*/ 
+
+  /** Reflected: FlagGestisciPosizioneMagazzino*/
   __Dati_Numero023: number;
-  /** Reflected: FlagRegistraTaglia*/ 
+
+  /** Reflected: FlagRegistraTaglia*/
   __Dati_Numero024: number;
-  /** Reflected: FlagRegistraColore*/ 
+
+  /** Reflected: FlagRegistraColore*/
   __Dati_Numero025: number;
-  /** Reflected: FlagRegistraInfoExtra*/ 
+
+  /** Reflected: FlagRegistraInfoExtra*/
   __Dati_Numero026: number;
-  /** Reflected: UnitaDiMisura*/ 
+
+  /** Reflected: UnitaDiMisura*/
   __Dati_Testo008: string;
-  /** Reflected: IdSottoFamigliaItemOrigine*/ 
+
+  /** Reflected: IdSottoFamigliaItemOrigine*/
   __Dati_Testo009: string;
-  /** Reflected: IdFamigliaItemOrigine*/ 
+
+  /** Reflected: IdFamigliaItemOrigine*/
   __Dati_Testo010: string;
-  /** Reflected: NumeroDecimaliQuantita*/ 
+
+  /** Reflected: NumeroDecimaliQuantita*/
   __Dati_Numero027: number;
-  /** Reflected: NumeroDecimaliValori*/ 
+
+  /** Reflected: NumeroDecimaliValori*/
   __Dati_Numero028: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_AltraSottoFamigliaPerCodice*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_AltraSottoFamigliaPerCodice*/
   __Dati_Testo011: string;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_CodiceTest*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_CodiceTest*/
   __Dati_Testo012: string;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_FlagUsaCodiceAltro*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_FlagUsaCodiceAltro*/
   __Dati_Numero029: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_NumeroCifre*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_NumeroCifre*/
   __Dati_Numero030: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_OrdineProgressivo*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_OrdineProgressivo*/
   __Dati_Numero031: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_OrdineTesto*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_OrdineTesto*/
   __Dati_Numero032: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Progressivo*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Progressivo*/
   __Dati_Numero033: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Testo*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Testo*/
   __Dati_Testo013: string;
-  /** Reflected: FlagScaricoProduzione_DeduzioneAutomatica*/ 
+
+  /** Reflected: FlagScaricoProduzione_DeduzioneAutomatica*/
   __Dati_Numero034: number;
-  /** Reflected: FlagScaricoProduzione_QtProposta*/ 
+
+  /** Reflected: FlagScaricoProduzione_QtProposta*/
   __Dati_Numero035: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_OrdineAnno*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_OrdineAnno*/
   __Dati_Numero036: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Anno*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Anno*/
   __Dati_Numero037: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_StringaControlloCodice*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_StringaControlloCodice*/
   __Dati_Testo014: string;
-  /** Reflected: IdInstallazione*/ 
+
+  /** Reflected: IdInstallazione*/
   __Dati_Testo015: string;
-  /** Reflected: GeneraCodiceSeriale_FlagUsaSerialeLotto*/ 
+
+  /** Reflected: GeneraCodiceSeriale_FlagUsaSerialeLotto*/
   __Dati_Numero038: number;
-  /** Reflected: GeneraCodiceItem_CodiceEsempio*/ 
+
+  /** Reflected: GeneraCodiceItem_CodiceEsempio*/
   __Dati_Testo016: string;
-  /** Reflected: GeneraCodiceItem_Espressione*/ 
+
+  /** Reflected: GeneraCodiceItem_Espressione*/
   __Dati_Testo017: string;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_HelpIdFamigliaItemPerCodice*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_HelpIdFamigliaItemPerCodice*/
   __Dati_Testo018: string;
-  /** Reflected: GeneraCodiceItem_FlagTipoCodice_AltraSottofamiglia*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagTipoCodice_AltraSottofamiglia*/
   __Dati_Numero039: number;
-  /** Reflected: GeneraCodiceItem_FlagTipoCodice_Standard*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagTipoCodice_Standard*/
   __Dati_Numero040: number;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_CodiceEsempio*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_CodiceEsempio*/
   __Dati_Testo019: string;
-  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Espressione*/ 
+
+  /** Reflected: GeneraCodiceTracciabilitaAutomatico_Espressione*/
   __Dati_Testo020: string;
-  /** Reflected: GeneraCodiceItem_AltroIdSottoFamigliaItemPerCodice*/ 
+
+  /** Reflected: GeneraCodiceItem_AltroIdSottoFamigliaItemPerCodice*/
   __Dati_Testo021: string;
-  /** Reflected: GeneraCodiceItem_FlagCodiceValidato*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagCodiceValidato*/
   __Dati_Numero041: number;
-  /** Reflected: GeneraCodiceItem_FlagTipoCodice_Proprio*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagTipoCodice_Proprio*/
   __Dati_Numero042: number;
-  /** Reflected: GeneraCodiceItem_FlagModificaCodicePermessa*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagModificaCodicePermessa*/
   __Dati_Numero043: number;
-  /** Reflected: GeneraCodiceItem_FlagProgressivoAnnuale*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagProgressivoAnnuale*/
   __Dati_Numero044: number;
-  /** Reflected: GeneraCodiceItem_FlagProgressivoContinuo*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagProgressivoContinuo*/
   __Dati_Numero045: number;
-  /** Reflected: GeneraCodiceItem_FlagProgressivoMensile*/ 
+
+  /** Reflected: GeneraCodiceItem_FlagProgressivoMensile*/
   __Dati_Numero046: number;
-  /** Reflected: FlagControlloImpostazioni_TipiRicaviSpese*/ 
+
+  /** Reflected: FlagControlloImpostazioni_TipiRicaviSpese*/
   __Dati_Numero047: number;
-  /** Reflected: FlagControlloImpostazioni_Aggiorna*/ 
+
+  /** Reflected: FlagControlloImpostazioni_Aggiorna*/
   __Dati_Numero048: number;
-  /** Reflected: FlagControlloImpostazioni_TipiInformazioniItems*/ 
+
+  /** Reflected: FlagControlloImpostazioni_TipiInformazioniItems*/
   __Dati_Numero049: number;
-  /** Reflected: FlagControlloImpostazioni_DatiGenerali*/ 
+
+  /** Reflected: FlagControlloImpostazioni_DatiGenerali*/
   __Dati_Numero050: number;
-  /** Reflected: FlagControlloImpostazioni_Valorizzazione*/ 
+
+  /** Reflected: FlagControlloImpostazioni_Valorizzazione*/
   __Dati_Numero051: number;
-  /** Reflected: FlagTracciabilitaNecessaria*/ 
+
+  /** Reflected: FlagTracciabilitaNecessaria*/
   __Dati_Numero052: number;
-  /** Reflected: GeneraCodiceItem_TxtTipoCodice*/ 
+
+  /** Reflected: GeneraCodiceItem_TxtTipoCodice*/
   __Dati_Testo022: string;
-  /** Reflected: ClassePosizioneMagazzino*/ 
+
+  /** Reflected: ClassePosizioneMagazzino*/
   __Dati_Testo023: string;
-  /** Reflected: FlagEliminaCodificheClienteConRevPermessa*/ 
+
+  /** Reflected: FlagEliminaCodificheClienteConRevPermessa*/
   __Dati_Numero053: number;
-  /** Reflected: JSON_ImpostazioniSottofamiglia*/ 
+
+  /** Reflected: JSON_ImpostazioniSottofamiglia*/
   __Dati_Testo024: string;
-  /** Reflected: Cruscotto_FlagEscludi*/ 
-  __Dati_Numero054: number
+
+  /** Reflected: Cruscotto_FlagEscludi*/
+  __Dati_Numero054: number;
 }

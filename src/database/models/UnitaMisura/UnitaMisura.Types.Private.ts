@@ -1,19 +1,27 @@
 export interface IUnitaMisuraPrivate {
   _id: string;
-  /** Reflected: Uno*/ 
+
+  /** Reflected: Uno*/
   __Dati_Numero001: number;
-  /** Reflected: UM*/ 
+
+  /** Reflected: UM*/
   __Dati_Testo001: string;
-  /** Reflected: IdAccountCompagnia*/ 
+
+  /** Reflected: IdAccountCompagnia*/
   __Dati_Testo002: string;
-  /** Reflected: DataOraCreazione*/ 
+
+  /** Reflected: DataOraCreazione*/
   __Dati_DataOra001: Date;
-  /** Reflected: DataOraUltimaModifica*/ 
+
+  /** Reflected: DataOraUltimaModifica*/
   __Dati_DataOra002: Date;
-  /** Reflected: Zero*/ 
+
+  /** Reflected: Zero*/
   __Dati_Numero002: number;
-  /** Reflected: IdInstallazione*/ 
+
+  /** Reflected: IdInstallazione*/
   __Dati_Testo003: string;
-  /** Reflected: IdUnitaMisura*/ 
-  __Dati_Testo004: string
+
+  /** Reflected: IdUnitaMisura*/
+  __Dati_Testo004: string;
 }

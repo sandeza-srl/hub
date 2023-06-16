@@ -1,33 +1,57 @@
 export interface IItemsUnitaMisuraAlternativePrivate {
   _id: string;
-  /** Reflected: CodiceItem*/ 
+
+  /** Reflected: CodiceItem*/
   __Dati_Testo001: string;
-  /** Reflected: CodiceTxtItemAutomatico*/ 
+
+  /** Reflected: CodiceTxtItemAutomatico*/
   __Dati_Testo002: string;
-  /** Reflected: DataOraUltimaModifica*/ 
+
+  /** Reflected: DataOraUltimaModifica*/
   __Dati_DataOra001: Date;
-  /** Reflected: IdAccountCompagnia*/ 
+
+  /** Reflected: IdAccountCompagnia*/
   __Dati_Testo003: string;
-  /** Reflected: IdItem*/ 
+
+  /** Reflected: IdItem*/
   __Dati_Testo004: string;
-  /** Reflected: TxtItem*/ 
+
+  /** Reflected: TxtItem*/
   __Dati_Testo005: string;
-  /** Reflected: Uno*/ 
+
+  /** Reflected: Uno*/
   __Dati_Numero001: number;
-  /** Reflected: UnitaMisura*/ 
+
+  /** Reflected: UnitaMisura*/
   __Dati_Testo006: string;
-  /** Reflected: ConversioneUmItemUmAlternativa*/ 
+
+  /** Reflected: ConversioneUmItemUmAlternativa*/
   __Dati_Numero002: number;
-  /** Reflected: ConversioneUmAlternativaUmItem*/ 
+
+  /** Reflected: ConversioneUmAlternativaUmItem*/
   __Dati_Numero003: number;
-  /** Reflected: Zero*/ 
+
+  /** Reflected: Zero*/
   __Dati_Numero004: number;
-  /** Reflected: DataOraCreazione*/ 
+
+  /** Reflected: DataOraCreazione*/
   __Dati_DataOra002: Date;
-  /** Reflected: IdInstallazione*/ 
+
+  /** Reflected: IdInstallazione*/
   __Dati_Testo007: string;
-  /** Reflected: FlagAggiornaContenutiDaItems*/ 
+
+  /** Reflected: FlagAggiornaContenutiDaItems*/
   __Dati_Numero005: number;
-  /** Reflected: IdItemsUnitaMisuraAlternativa*/ 
-  __Dati_Testo008: string
+
+  /** Reflected: IdItemsUnitaMisuraAlternativa*/
+  __Dati_Testo008: string;
+
+  /** Reflected: Vincoli_FlagDocOperativo*/
+  __Dati_Numero006: number;
+
+  /** Reflected: Vincoli_IdTipoDocOperativo*/
+  __Dati_Testo009: string;
+
+  /** Reflected: NDecimali*/
+  __Dati_Numero007: number;
 }

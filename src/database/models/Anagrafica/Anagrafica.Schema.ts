@@ -647,6 +647,26 @@ const AnagraficaSchema = new mongoose.Schema<IAnagraficaPrivate>({
     type : String,
     alias: 'CodiceEsterno'
 
+  },
+  __Dati_Numero055     : {
+    type : Number,
+    alias: 'FlagClientePremium'
+
+  },
+  __Dati_Testo064      : {
+    type : String,
+    alias: 'VincoliTipoListino_IdTipiListino'
+
+  },
+  __Dati_Testo066      : {
+    type : String,
+    alias: 'VincoliTipoListino_TxtTipiListino'
+
+  },
+  __Dati_Numero056     : {
+    type : Number,
+    alias: 'VincoliTipoListino_FlagAttivo'
+
   }
 }, {
   timestamps: true

@@ -19,10 +19,12 @@ export default VociDocOperativi;
 
 export { VociDocOperativiSchema };
 
-export type TVociDocOperativiModel = typeof VociDocOperativi;
+export type TVociDocOperativiModel = Omit<typeof VociDocOperativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociDocOperativi>): any
+};
 
-export type TVociDocOperativiDocument = 
-& mongoose.Document<any, {}, IVociDocOperativi>
-& IVociDocOperativi;
+export type TVociDocOperativiDocument =
+  & mongoose.Document<any, {}, IVociDocOperativi>
+  & IVociDocOperativi;
 
 export { IVociDocOperativi };

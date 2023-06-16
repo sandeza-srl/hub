@@ -19,10 +19,12 @@ export default IndirizziRubrica;
 
 export { IndirizziRubricaSchema };
 
-export type TIndirizziRubricaModel = typeof IndirizziRubrica;
+export type TIndirizziRubricaModel = Omit<typeof IndirizziRubrica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IIndirizziRubrica>): any
+};
 
-export type TIndirizziRubricaDocument = 
-& mongoose.Document<any, {}, IIndirizziRubrica>
-& IIndirizziRubrica;
+export type TIndirizziRubricaDocument =
+  & mongoose.Document<any, {}, IIndirizziRubrica>
+  & IIndirizziRubrica;
 
 export { IIndirizziRubrica };

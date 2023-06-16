@@ -1,4 +1,4 @@
-import { IsDefined, IsEmail, IsString, IsUUID } from 'class-validator';
+import { IsDefined, IsEmail, IsString } from 'class-validator';
 
 import { MONGO_DB_SELECTOR } from '../../../database/constants';
 

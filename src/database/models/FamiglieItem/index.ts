@@ -19,10 +19,12 @@ export default FamiglieItem;
 
 export { FamiglieItemSchema };
 
-export type TFamiglieItemModel = typeof FamiglieItem;
+export type TFamiglieItemModel = Omit<typeof FamiglieItem, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFamiglieItem>): any
+};
 
-export type TFamiglieItemDocument = 
-& mongoose.Document<any, {}, IFamiglieItem>
-& IFamiglieItem;
+export type TFamiglieItemDocument =
+  & mongoose.Document<any, {}, IFamiglieItem>
+  & IFamiglieItem;
 
 export { IFamiglieItem };

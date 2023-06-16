@@ -19,10 +19,12 @@ export default Items;
 
 export { ItemsSchema };
 
-export type TItemsModel = typeof Items;
+export type TItemsModel = Omit<typeof Items, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IItems>): any
+};
 
-export type TItemsDocument = 
-& mongoose.Document<any, {}, IItems>
-& IItems;
+export type TItemsDocument =
+  & mongoose.Document<any, {}, IItems>
+  & IItems;
 
 export { IItems };
