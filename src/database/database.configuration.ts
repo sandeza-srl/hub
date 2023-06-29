@@ -74,6 +74,8 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
     /** Check if a custom db connection has been provided */
     const customDb = this.request.query[MONGO_DB_CUSTOM_SELECTOR]?.toString();
 
+    //TODO: Make a separate service to recycle (with disconnect() function the conn stay in the array)
+
     /** Return defaults without customDb query param */
     if (customDb == null || !isAdmin) {
       return {

@@ -31,6 +31,14 @@ export class SystemService {
       );
     });
 
+    /**Close the connection */
+    await mongoose.disconnect();
+
+    /** Return a JSON with ID and message */
+    return {
+      recordID: id,
+      message : 'Record created/updated successfully'
+    };
 
   }
 
@@ -48,6 +56,15 @@ export class SystemService {
     /** Call mongoose method to delete document */
     await Model.findByIdAndDelete(id);
 
+    /**Close the connection */
+    await mongoose.disconnect();
+
+    /** Return a JSON with ID and message */
+    return {
+      recordID: id,
+      message : 'Record deleted successfully'
+    };
+
   }
 
 
@@ -60,6 +77,9 @@ export class SystemService {
     const records = await Model.find(Model.translateAliases(filter))
       .limit(limit)
       .sort(Model.translateAliases(sort));
+
+    /**Close the connection */
+    await mongoose.disconnect();
 
     /*const records = await Model.find({ 'TxtAccount': { $regex: 'test' } });*/
     return records;
