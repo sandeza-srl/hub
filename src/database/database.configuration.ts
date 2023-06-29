@@ -77,12 +77,14 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
     /** Return defaults without customDb query param */
     if (customDb == null || !isAdmin) {
       return {
-        uri       : `mongodb://${process.env.DB_URL}:${process.env.DB_PORT}/${db}`,
-        authSource: process.env.DB_AUTH_SOURCE,
-        auth      : {
+        uri            : `mongodb://${process.env.DB_URL}:${process.env.DB_PORT}/${db}`,
+        authSource     : process.env.DB_AUTH_SOURCE,
+        auth           : {
           username: process.env.DB_USER,
           password: process.env.DB_PASSWORD
-        }
+        },
+        maxPoolSize    : 1,
+        socketTimeoutMS: 3000
       };
     }
 
