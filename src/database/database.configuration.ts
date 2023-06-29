@@ -92,12 +92,14 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
     switch (customDb) {
       case 'machieraldo':
         return {
-          uri       : `mongodb://139.144.154.55:27017/${db}`,
-          authSource: 'users',
-          auth      : {
+          uri            : `mongodb://139.144.154.55:27017/${db}`,
+          authSource     : 'users',
+          auth           : {
             username: 'sandeza-user',
             password: 'm0ng0dbs4nd3z4'
-          }
+          },
+          maxPoolSize    : 1,
+          socketTimeoutMS: 3000
         };
 
       default:
