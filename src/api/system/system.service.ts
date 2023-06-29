@@ -1,6 +1,7 @@
 import * as mongoose from 'mongoose';
 
 import { BadRequestException, Injectable } from '@nestjs/common';
+import setTimeout = jest.setTimeout;
 
 
 @Injectable()
@@ -47,6 +48,21 @@ export class SystemService {
     /** Call mongoose method to delete document */
     await Model.findByIdAndDelete(id);
 
+  }
+
+
+  public async getDocumentsInCollection(Model: mongoose.Model<any>, body: any) {
+
+    const filter = body.filter;
+    const limit = body.limit;
+    const sort = body.sort;
+
+    const records = await Model.find(Model.translateAliases(filter))
+      .limit(limit)
+      .sort(Model.translateAliases(sort));
+
+    /*const records = await Model.find({ 'TxtAccount': { $regex: 'test' } });*/
+    return records;
   }
 
 }

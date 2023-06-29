@@ -1,10 +1,18 @@
 import * as mongoose from 'mongoose';
 
 import { Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
-import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import {
+  ApiBody,
+  ApiCreatedResponse,
+  ApiOkResponse,
+  ApiOperation,
+  ApiProperty,
+  ApiResponse,
+  ApiTags
+} from '@nestjs/swagger';
 import { InjectModel } from '@nestjs/mongoose';
 
-import { AdminGuard } from '../auth/guards/AdminGuard';
+import { AccessTokenGuard, AdminGuard } from '../auth/guards';
 
 import { DatabaseService } from '../../database/database.service';
 import { SystemService } from './system.service';
@@ -30,9 +38,21 @@ export class SystemController {
   }
 
 
+  /**
+   * Endpoint to insert or replace a record in mongoDB Database
+   *
+   * @returns the recordID
+   *
+   * @param collection @description 'Anagrafica'
+   * @param id
+   * @param source
+   */
   @UseGuards(AdminGuard)
   @Post('insert/:collection/:id')
-  @ApiCreatedResponse()
+  @ApiBody({ description: 'JSON of the record' })
+  @ApiOperation({ description: 'Endpoint to insert or replace a record in mongoDB Database' })
+  @ApiCreatedResponse({ description: 'ID of the record created/updated' })
+  @ApiResponse({ description: 'Could not find a valid database to connect for this request', status: 400 })
   public async insert(
     @Param('collection') collection: string,
     @Param('id') id: string,
@@ -44,9 +64,14 @@ export class SystemController {
   }
 
 
+  /**
+   * <desc> Endpoint to delete a record in mongoDB Database
+   * @param collection
+   * @param id
+   */
   @UseGuards(AdminGuard)
   @Delete('delete/:collection/:id')
-  @ApiCreatedResponse()
+  @ApiCreatedResponse({ description: 'ID of the record created/updated' })
   public async delete(
     @Param('collection') collection: string,
     @Param('id') id: string
@@ -56,4 +81,17 @@ export class SystemController {
 
   }
 
+
+  @UseGuards(AccessTokenGuard)
+  @Get('get/:collection')
+  @ApiCreatedResponse()
+  public async get(
+    @Param('collection') collection: string,
+    // TODO: create the body query Dto
+    @Body() body: any
+  ) {
+
+    /** Call the system service to perform dynamic query over MongoDB */
+    return this.systemService.getDocumentsInCollection(this.routeModel, body);
+  }
 }

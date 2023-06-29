@@ -7,6 +7,7 @@ import { Request } from 'express';
 import { REQUEST } from '@nestjs/core';
 
 import { DatabaseService } from '../../database/database.service';
+import { AuthModule } from '../auth/auth.module';
 
 import { SystemController } from './system.controller';
 import { SystemService } from './system.service';
@@ -37,7 +38,8 @@ import * as databaseModels from '../../database/models';
           return undefined;
         }
       }
-    ])
+    ]),
+    AuthModule
   ]
 })
 export class SystemModule {

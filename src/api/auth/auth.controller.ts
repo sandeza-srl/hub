@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import { ApiCreatedResponse, ApiForbiddenResponse, ApiResponse, ApiTags } from '@nestjs/swagger';
 
 import { AuthService } from './auth.service';
 
@@ -9,6 +10,7 @@ import { AccessTokenGuard, RefreshTokenGuard } from './guards';
 import { IUserData } from './interfaces/UserData';
 
 
+@ApiTags('Authentication')
 @Controller('auth')
 export class AuthController {
 
@@ -18,6 +20,14 @@ export class AuthController {
   }
 
 
+  /**
+   * Endpoint for Login to generate Access and Refresh Token
+   *
+   * @param loginDto
+   */
+
+  @ApiCreatedResponse({ description: 'JSON Object with: accessToken, refreshToken and userData' })
+  @ApiResponse({ description: 'Could not find a valid user with provided email', status: 401 })
   @Post('login')
   public async login(
     @Body() loginDto: UserLoginDto

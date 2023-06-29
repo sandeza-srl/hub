@@ -26,8 +26,8 @@ async function bootstrap() {
 
   /** Setup Swagger to automatically generate ApiDocumentation */
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('Sandeza Hub')
-    .setDescription('API to communicate with internal DataHub')
+    .setTitle('Sandeza Api Gateway')
+    .setDescription('API to communicate with Sandeza DataHub')
     .setVersion('1.0')
     .build();
 
