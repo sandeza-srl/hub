@@ -85,7 +85,7 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
           username: process.env.DB_USER,
           password: process.env.DB_PASSWORD
         },
-        maxPoolSize    : 1,
+        maxPoolSize    : 25,
         socketTimeoutMS: 3000
       };
     }
@@ -100,7 +100,7 @@ export class DatabaseConfigurationService implements MongooseOptionsFactory {
             username: 'sandeza-user',
             password: 'm0ng0dbs4nd3z4'
           },
-          maxPoolSize    : 1,
+          maxPoolSize    : 25,
           socketTimeoutMS: 3000
         };
 

@@ -1,6 +1,6 @@
 import * as crypto from 'crypto';
 
-import { Injectable, InternalServerErrorException, NotImplementedException } from '@nestjs/common';
+import { Injectable, Inject, InternalServerErrorException, NotImplementedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 
 import { isValidString } from '../../utils';
@@ -27,7 +27,7 @@ import { IAuthData } from './interfaces/AuthData';
 export class AuthService {
 
   constructor(
-    @InjectModel(IndirizziRubricaModel.collection.name)
+    @Inject(IndirizziRubricaModel.collection.name)
     private readonly IndirizziRubrica: TIndirizziRubricaModel,
     private readonly accessTokenService: AccessTokenService,
     private readonly refreshTokenService: RefreshTokenService
