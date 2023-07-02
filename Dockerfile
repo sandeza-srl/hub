@@ -1,6 +1,12 @@
 # Create a Node Image to build the Production App
 FROM node:18.12
 
+# Setting the correct TimeZone (Europe/Rome)
+RUN apt-get update && \
+    apt-get install -yq tzdata && \
+    ln -fs /usr/share/zoneinfo/Europe/Rome /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
+
 # Set the Working Directory
 WORKDIR /src/app
 
