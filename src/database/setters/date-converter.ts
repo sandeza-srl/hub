@@ -21,7 +21,7 @@ export default class DateConverter {
       return '';
     }
     else if (typeof value === 'string') {
-      return dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Dublin').toDate();
+      return dayjs.tz(value, 'DD-MM-YYYY', 'Europe/Rome').toDate();
     }
 
     return value;
