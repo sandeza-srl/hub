@@ -1,20 +1,17 @@
 import * as mongoose from 'mongoose';
 
-import { Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
+import { Inject, Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
 import {
   ApiBody,
   ApiCreatedResponse,
   ApiOkResponse,
   ApiOperation,
-  ApiProperty,
   ApiResponse,
   ApiTags
 } from '@nestjs/swagger';
-import { InjectModel } from '@nestjs/mongoose';
 
 import { AccessTokenGuard, AdminGuard } from '../auth/guards';
 
-import { DatabaseService } from '../../database/database.service';
 import { SystemService } from './system.service';
 
 
@@ -23,9 +20,8 @@ import { SystemService } from './system.service';
 export class SystemController {
 
   constructor(
-    @InjectModel('RouteModel')
+    @Inject('RouteModel')
     private readonly routeModel: mongoose.Model<any>,
-    private readonly databaseService: DatabaseService,
     private systemService: SystemService
   ) {
   }

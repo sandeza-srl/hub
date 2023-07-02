@@ -1,7 +1,6 @@
 import * as crypto from 'crypto';
 
-import { Injectable, InternalServerErrorException, NotImplementedException } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
+import { Injectable, Inject, InternalServerErrorException, NotImplementedException } from '@nestjs/common';
 
 import { isValidString } from '../../utils';
 
@@ -27,7 +26,7 @@ import { IAuthData } from './interfaces/AuthData';
 export class AuthService {
 
   constructor(
-    @InjectModel(IndirizziRubricaModel.collection.name)
+    @Inject(IndirizziRubricaModel.collection.name)
     private readonly IndirizziRubrica: TIndirizziRubricaModel,
     private readonly accessTokenService: AccessTokenService,
     private readonly refreshTokenService: RefreshTokenService
@@ -112,9 +111,9 @@ export class AuthService {
 
 
   // TODO: Use login data to check credentials in Societa collection
-  private async verifyLoginFromSocietaAsync(loginDto: UserLoginDto): Promise<unknown | null> {
+  /*private async verifyLoginFromSocietaAsync(loginDto: UserLoginDto): Promise<unknown | null> {
     throw new NotImplementedException();
-  }
+  }*/
 
 
   /**
@@ -147,9 +146,9 @@ export class AuthService {
 
 
   // TODO: Use id to get doc in Societa collection
-  private async getByIdFromSocietaAsync(id: string): Promise<unknown | null> {
+  /*private async getByIdFromSocietaAsync(id: string): Promise<unknown | null> {
     throw new NotImplementedException();
-  }
+  }*/
 
 
   /**
