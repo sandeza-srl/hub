@@ -1,5 +1,3 @@
-import * as mongoose from 'mongoose';
-
 import { BadRequestException, Inject, Injectable, Scope } from '@nestjs/common';
 import { Request } from 'express';
 
@@ -10,7 +8,6 @@ import { MongooseOptionsFactory, MongooseModuleOptions } from '@nestjs/mongoose'
 import { hasValidAdminKey } from '../api/auth/utils';
 
 import { MONGO_DB_CUSTOM_SELECTOR, MONGO_DB_SELECTOR } from './constants';
-import { MONGOOSE_TO_OBJECT_DEFAULTS } from './database.options';
 
 import { AccessTokenService } from '../token/services/access-token.service';
 import { RefreshTokenService } from '../token/services/refresh-token.service';

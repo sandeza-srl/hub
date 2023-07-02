@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 import { Connection } from 'mongoose';
 
 import { AccessTokenGuard } from './guards';
@@ -29,9 +28,6 @@ import { AccessTokenService } from '../../token/services/access-token.service';
   ],
 
   imports: [
-    /*MongooseModule.forFeature([
-      { name: IndirizziRubrica.collection.name, schema: IndirizziRubricaSchema }
-    ]),*/
     DatabaseModule,
     TokenModule
   ],

@@ -4,11 +4,8 @@ import { AugmentedMap } from '@proedis/utils';
 
 import { REQUEST } from '@nestjs/core';
 import { BadRequestException, Module, Scope } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 
 import type { Request } from 'express';
-import { AccessTokenService } from '../token/services/access-token.service';
-import { RefreshTokenService } from '../token/services/refresh-token.service';
 import { DatabaseService } from './database.service';
 
 import { MONGO_DB_CUSTOM_SELECTOR, MONGO_DB_SELECTOR } from './constants';

@@ -4,13 +4,11 @@ import * as mongoose from 'mongoose';
 import { AugmentedMap } from '@proedis/utils';
 
 import { BadRequestException, Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 import { Request } from 'express';
 
 import { REQUEST } from '@nestjs/core';
 
 import { DatabaseModule } from '../../database/database.module';
-import { MONGOOSE_TO_OBJECT_DEFAULTS } from '../../database/database.options';
 import { AuthModule } from '../auth/auth.module';
 
 import { SystemController } from './system.controller';
