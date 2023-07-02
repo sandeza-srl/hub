@@ -1,7 +1,6 @@
 import * as mongoose from 'mongoose';
 
 import { BadRequestException, Injectable } from '@nestjs/common';
-import setTimeout = jest.setTimeout;
 
 
 @Injectable()
@@ -32,7 +31,15 @@ export class SystemService {
     });
 
     /**Close the connection */
-    await mongoose.disconnect();
+    // await mongoose.disconnect();
+
+    /** 2nd Method to close a connection (with destroy it will also be removed by connections array) */
+    /*mongoose.connections.map((connection) => {
+      connection.destroy(() => {
+        console.log(` Connessioni: ${mongoose.connections.length}`);
+      });
+    });*/
+    /*mongoose.connections.map(() => console.log(` Connessioni: ${mongoose.connections.length}`));*/
 
     /** Return a JSON with ID and message */
     return {
@@ -79,7 +86,7 @@ export class SystemService {
       .sort(Model.translateAliases(sort));
 
     /**Close the connection */
-    await mongoose.disconnect();
+    mongoose.disconnect();
 
     /*const records = await Model.find({ 'TxtAccount': { $regex: 'test' } });*/
     return records;
