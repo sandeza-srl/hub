@@ -8,6 +8,10 @@ import { BadRequestException, Module, Scope } from '@nestjs/common';
 import type { Request } from 'express';
 import { DatabaseService } from './database.service';
 
+import { TokenModule } from '../token/token.module';
+import { AccessTokenService } from '../token/services/access-token.service';
+import { RefreshTokenService } from '../token/services/refresh-token.service';
+
 import { MONGO_DB_CUSTOM_SELECTOR, MONGO_DB_SELECTOR } from './constants';
 
 import { hasValidAdminKey } from '../api/auth/utils';
@@ -28,15 +32,19 @@ const mongooseConnectionsPool = new AugmentedMap<string, mongoose.Connection>();
     {
       provide   : 'DATABASE_CONNECTION',
       scope     : Scope.REQUEST,
-      inject    : [ REQUEST ],
+      inject    : [ REQUEST, AccessTokenService, RefreshTokenService ],
       useFactory: (
-        request: Request
+        request: Request,
+        accessTokenService: AccessTokenService,
+        refreshTokenService: RefreshTokenService
       ): mongoose.Connection => {
 
         const mongooseModuleOptions: mongoose.ConnectOptions & { uri: string } = (() => {
           /** Initialize the db name container */
-          const isAdmin = hasValidAdminKey(request);
           let db: string | null;
+
+          /** Check if the current request has been made with the AdminKey header */
+          const isAdmin = hasValidAdminKey(request);
 
 
           /** If the user is connecting as admin, get the db from the query params */
@@ -49,7 +57,7 @@ const mongooseConnectionsPool = new AugmentedMap<string, mongoose.Connection>();
           }
           /** Else, try to load the database from access token */
           else {
-            throw new BadRequestException();
+            db = accessTokenService.getMongoDatabaseName(request) ?? refreshTokenService.getMongoDatabaseName(request);
           }
 
 
@@ -106,6 +114,7 @@ const mongooseConnectionsPool = new AugmentedMap<string, mongoose.Connection>();
       }
     }
   ],
+  imports  : [ TokenModule ],
   exports  : [ 'DATABASE_CONNECTION' ]
 })
 export class DatabaseModule {
