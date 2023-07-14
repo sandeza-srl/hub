@@ -30,17 +30,6 @@ export class SystemService {
       );
     });
 
-    /**Close the connection */
-    // await mongoose.disconnect();
-
-    /** 2nd Method to close a connection (with destroy it will also be removed by connections array) */
-    /*mongoose.connections.map((connection) => {
-      connection.destroy(() => {
-        console.log(` Connessioni: ${mongoose.connections.length}`);
-      });
-    });*/
-    /*mongoose.connections.map(() => console.log(` Connessioni: ${mongoose.connections.length}`));*/
-
     /** Return a JSON with ID and message */
     return {
       recordID: id,
@@ -63,9 +52,6 @@ export class SystemService {
     /** Call mongoose method to delete document */
     await Model.findByIdAndDelete(id);
 
-    /**Close the connection */
-    await mongoose.disconnect();
-
     /** Return a JSON with ID and message */
     return {
       recordID: id,
@@ -84,9 +70,6 @@ export class SystemService {
     const records = await Model.find(Model.translateAliases(filter))
       .limit(limit)
       .sort(Model.translateAliases(sort));
-
-    /**Close the connection */
-    mongoose.disconnect();
 
     /*const records = await Model.find({ 'TxtAccount': { $regex: 'test' } });*/
     return records;
