@@ -14,11 +14,15 @@ import { AppModule } from './app.module';
 const mainLogger = new Logger('Bootstrap');
 
 
+/** Settings Default Host Options */
+const DEFAULT_PORT = 3000;
+
+
 /** Create the function to Bootstrap API Server */
 async function bootstrap() {
 
   /** Get the PORT from the current environment */
-  const { PORT = 3000 } = process.env;
+  const { PORT = DEFAULT_PORT } = process.env;
 
   /** Create the App */
   mainLogger.verbose('Creating the App');
@@ -61,7 +65,7 @@ async function bootstrap() {
 /** Launch the Server */
 bootstrap()
   .then(() => {
-    mainLogger.verbose(`Server successfully started: Listening on Port ${process.env.PORT}`);
+    mainLogger.verbose(`Server successfully started: Listening on Port ${process.env.PORT || DEFAULT_PORT}`);
   })
   .catch((error) => {
     mainLogger.error('An error occurred while bootstrapping the API Server');

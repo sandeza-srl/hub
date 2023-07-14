@@ -9,7 +9,7 @@
     "build": "nest build",
     "start": "nest start",
     "start:dev": "NODE_ENV=development nest start --watch",
-    "start:debug": "nest start --debug --watch",
+    "start:debug": "nest start --debug 9993 --watch",
     "start:prod": "node dist/main",
     "lint:models": "eslint ./src/database/models --fix",
     "test": "jest",
