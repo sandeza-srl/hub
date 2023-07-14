@@ -9,7 +9,7 @@
     "build": "nest build",
     "start": "nest start",
     "start:dev": "NODE_ENV=development nest start --watch",
-    "start:debug": "nest start --debug 9993 --watch",
+    "start:debug": "NODE_ENV=development nest start --debug 9993 --watch",
     "start:prod": "node dist/main",
     "lint:models": "eslint ./src/database/models --fix",
     "test": "jest",
@@ -34,6 +34,7 @@
     "dotenv": "^16.3.1",
     "helmet": "^7.0.0",
     "mongoose": "^7.3.4",
+    "mongoose-query-parser": "^1.3.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "uuid": "^9.0.0"
