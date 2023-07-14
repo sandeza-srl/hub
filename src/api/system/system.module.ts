@@ -34,7 +34,7 @@ const connectionModelsPool = new AugmentedMap<mongoose.Connection, AugmentedMap<
       provide   : 'RouteModel',
       inject    : [ 'DATABASE_CONNECTION', REQUEST ],
       useFactory: (connection: Connection, request: Request) => {
-        /** Check params collection has been defined */
+        /** Check if a params collection has been defined */
         if (!('collection' in request.params) || !request.params.collection) {
           return undefined;
         }
@@ -53,7 +53,7 @@ const connectionModelsPool = new AugmentedMap<mongoose.Connection, AugmentedMap<
 
           if (Schema && Model && Model.prototype instanceof mongoose.Model) {
             Schema.set('collection', Model.collection.name);
-            return connection.model(Model.collection.name, Schema, request.params.collection);
+            return connection.model(Model.collection.name, Schema);
           }
 
           throw new BadRequestException(

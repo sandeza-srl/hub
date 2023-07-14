@@ -9,20 +9,8 @@ import type { Request } from 'express';
 import { DatabaseService } from './database.service';
 
 import { MONGO_DB_CUSTOM_SELECTOR, MONGO_DB_SELECTOR } from './constants';
-import { MONGOOSE_TO_OBJECT_DEFAULTS } from './database.options';
 
 import { hasValidAdminKey } from '../api/auth/utils';
-
-
-/* --------
- * Define default properties for Mongoose connection
- * -------- */
-mongoose.set('debug', process.env.NODE_ENV === 'development');
-mongoose.set('toJSON', MONGOOSE_TO_OBJECT_DEFAULTS);
-mongoose.set('toObject', MONGOOSE_TO_OBJECT_DEFAULTS);
-mongoose.set('id', false);
-mongoose.set('strict', true);
-mongoose.pluralize(null);
 
 
 /* --------
