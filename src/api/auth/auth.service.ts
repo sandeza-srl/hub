@@ -51,8 +51,9 @@ export class AuthService {
    * Sign a new AccessToken
    * @param userData
    */
-  public grantAccessToken(userData: IUserData): string {
-    return this.accessTokenService.sign(userData);
+  public grantAccessToken(userData: IUserData): { accessToken: string } {
+    const accessToken = this.accessTokenService.sign(userData);
+    return { accessToken: accessToken };
   }
 
 
