@@ -47,11 +47,22 @@ export default class DateConverter {
 
     /** Parse from string */
     const [ datePart, hourPart = '00:00:00' ] = value.replace(/s+/g, ' ').split(' ');
-    const [ hours = 0, minutes = 0, seconds = 0 ] = hourPart.split(':').map(n => Number(n || 0));
+
+    let separator = ':';
+
+    if (hourPart.includes('.')) {
+      separator = '.';
+    }
+
+    /** TEST MATTEO - Check if hourPart is with : or . */
+    const [ hours = 0, minutes = 0, seconds = 0 ] = hourPart.split(separator).map(n => Number(n || 0));
+
 
     return dayjs(datePart, 'DD/MM/YYYY')
       .startOf('day')
       .add((hours * 60 * 60) + (minutes * 60) + seconds, 's');
+
+
   }
 
 
