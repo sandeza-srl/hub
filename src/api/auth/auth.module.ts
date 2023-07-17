@@ -13,6 +13,8 @@ import { AuthController } from './auth.controller';
 
 import { AccessTokenService } from '../../token/services/access-token.service';
 
+import { DATABASE_CONNECTION } from '../../database/database.providers';
+
 
 @Module({
 
@@ -22,7 +24,7 @@ import { AccessTokenService } from '../../token/services/access-token.service';
     AccessTokenService,
     {
       provide   : IndirizziRubrica.collection.name,
-      inject    : [ 'DATABASE_CONNECTION' ],
+      inject    : [ DATABASE_CONNECTION ],
       useFactory: (connection: Connection) => connection.model(IndirizziRubrica.collection.name, IndirizziRubricaSchema)
     }
   ],

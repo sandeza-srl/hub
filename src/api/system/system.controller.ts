@@ -1,6 +1,4 @@
-import * as mongoose from 'mongoose';
-
-import { Inject, Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
 import {
   ApiBody,
   ApiCreatedResponse,
@@ -10,7 +8,7 @@ import {
   ApiTags
 } from '@nestjs/swagger';
 
-import { AccessTokenGuard, AdminGuard } from '../auth/guards';
+import { AdminGuard } from '../auth/guards';
 
 import { SystemService } from './system.service';
 
@@ -20,8 +18,6 @@ import { SystemService } from './system.service';
 export class SystemController {
 
   constructor(
-    @Inject('RouteModel')
-    private readonly routeModel: mongoose.Model<any>,
     private systemService: SystemService
   ) {
   }
@@ -55,7 +51,7 @@ export class SystemController {
     @Body() source: any
   ) {
 
-    return this.systemService.upsertDocumentInCollection(this.routeModel, id, source);
+    return this.systemService.upsertDocumentInCollection(id, source);
 
   }
 
@@ -73,21 +69,7 @@ export class SystemController {
     @Param('id') id: string
   ) {
 
-    return this.systemService.deleteDocumentInCollection(this.routeModel, id);
+    return this.systemService.deleteDocumentInCollection(id);
 
-  }
-
-
-  @UseGuards(AccessTokenGuard)
-  @Get('get/:collection')
-  @ApiCreatedResponse()
-  public async get(
-    @Param('collection') collection: string,
-    // TODO: create the body query Dto
-    @Body() body: any
-  ) {
-
-    /** Call the system service to perform dynamic query over MongoDB */
-    return this.systemService.getDocumentsInCollection(this.routeModel, body);
   }
 }

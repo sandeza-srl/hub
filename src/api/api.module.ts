@@ -5,6 +5,7 @@ import { DatabaseModule } from '../database/database.module';
 import { AuthModule } from './auth/auth.module';
 import { FmModule } from './fm/fm.module';
 import { SystemModule } from './system/system.module';
+import { DataAccessorModule } from './data-accessor/data-accessor.module';
 
 
 @Module({
@@ -13,7 +14,8 @@ import { SystemModule } from './system/system.module';
     DatabaseModule,
     AuthModule,
     SystemModule,
-    FmModule
+    FmModule,
+    DataAccessorModule
   ]
 
 })
