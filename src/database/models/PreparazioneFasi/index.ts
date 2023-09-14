@@ -19,7 +19,9 @@ export default PreparazioneFasi;
 
 export { PreparazioneFasiSchema };
 
-export type TPreparazioneFasiModel = typeof PreparazioneFasi;
+export type TPreparazioneFasiModel = Omit<typeof PreparazioneFasi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPreparazioneFasi>): any
+};
 
 export type TPreparazioneFasiDocument = 
 & mongoose.Document<any, {}, IPreparazioneFasi>

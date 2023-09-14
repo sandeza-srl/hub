@@ -19,7 +19,9 @@ export default LottiProduzione;
 
 export { LottiProduzioneSchema };
 
-export type TLottiProduzioneModel = typeof LottiProduzione;
+export type TLottiProduzioneModel = Omit<typeof LottiProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILottiProduzione>): any
+};
 
 export type TLottiProduzioneDocument = 
 & mongoose.Document<any, {}, ILottiProduzione>

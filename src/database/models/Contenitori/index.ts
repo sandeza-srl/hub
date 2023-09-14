@@ -19,7 +19,9 @@ export default Contenitori;
 
 export { ContenitoriSchema };
 
-export type TContenitoriModel = typeof Contenitori;
+export type TContenitoriModel = Omit<typeof Contenitori, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IContenitori>): any
+};
 
 export type TContenitoriDocument = 
 & mongoose.Document<any, {}, IContenitori>

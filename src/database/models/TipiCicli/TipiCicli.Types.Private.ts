@@ -12,7 +12,7 @@ export interface ITipiCicliPrivate {
   __Dati_Testo003: string;
   /** Reflected: IdAccountCompagnia*/ 
   __Dati_Testo004: string;
-  /** Reflected: FlagRilavorazione*/ 
+  /** Reflected: TipoCiclo_FlagRilavorazione*/ 
   __Dati_Numero003: number;
   /** Reflected: PercScartoPrevista*/ 
   __Dati_Numero004: number;
@@ -39,5 +39,15 @@ export interface ITipiCicliPrivate {
   /** Reflected: TxtUtente*/ 
   __Dati_Testo010: string;
   /** Reflected: IdRicorrenzaRecord*/ 
-  __Dati_Testo011: string
+  __Dati_Testo011: string;
+  /** Reflected: TipoCiclo_FlagSmontaggio*/ 
+  __Dati_Numero006: number;
+  /** Reflected: Abilitazioni_FlagCreaFaseAbilitato*/ 
+  __Dati_Numero007: number;
+  /** Reflected: Abilitazioni_FlagEliminaFaseAbilitato*/ 
+  __Dati_Numero008: number;
+  /** Reflected: Note*/ 
+  __Dati_Testo012: string;
+  /** Reflected: IdTipiFaseAbilitati*/ 
+  __Dati_Testo013: string
 }

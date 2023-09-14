@@ -19,7 +19,9 @@ export default TipiUtensili;
 
 export { TipiUtensiliSchema };
 
-export type TTipiUtensiliModel = typeof TipiUtensili;
+export type TTipiUtensiliModel = Omit<typeof TipiUtensili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiUtensili>): any
+};
 
 export type TTipiUtensiliDocument = 
 & mongoose.Document<any, {}, ITipiUtensili>

@@ -19,7 +19,9 @@ export default ItemsPerVerificaFabbisogni;
 
 export { ItemsPerVerificaFabbisogniSchema };
 
-export type TItemsPerVerificaFabbisogniModel = typeof ItemsPerVerificaFabbisogni;
+export type TItemsPerVerificaFabbisogniModel = Omit<typeof ItemsPerVerificaFabbisogni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IItemsPerVerificaFabbisogni>): any
+};
 
 export type TItemsPerVerificaFabbisogniDocument = 
 & mongoose.Document<any, {}, IItemsPerVerificaFabbisogni>

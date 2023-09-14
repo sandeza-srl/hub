@@ -163,5 +163,7 @@ export interface IProcessi {
   /** Reflected: __Dati_Testo047*/ 
   IdVoceDocOperativo: string;
   /** Reflected: __Dati_Testo048*/ 
-  IdInstallazione: string
+  IdInstallazione: string;
+  /** Reflected: __Dati_Testo049*/ 
+  IdDocumentoPrincipaleProcesso: string
 }

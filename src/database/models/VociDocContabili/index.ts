@@ -19,7 +19,9 @@ export default VociDocContabili;
 
 export { VociDocContabiliSchema };
 
-export type TVociDocContabiliModel = typeof VociDocContabili;
+export type TVociDocContabiliModel = Omit<typeof VociDocContabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociDocContabili>): any
+};
 
 export type TVociDocContabiliDocument = 
 & mongoose.Document<any, {}, IVociDocContabili>

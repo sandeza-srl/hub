@@ -1407,7 +1407,7 @@ const LottiProduzioneSchema = new mongoose.Schema<ILottiProduzionePrivate>({
   },
   __Dati_Data009: {
     type: Date,
-    alias: 'DataStampaCartellinoProduzione',
+    alias: 'StampaCartellinoProduzione_DataStampa',
     set: (value: any) => {
       return DateConverter.convertDate(value);
     }
@@ -1419,7 +1419,7 @@ const LottiProduzioneSchema = new mongoose.Schema<ILottiProduzionePrivate>({
   },
   __Dati_Testo061: {
     type: String,
-    alias: 'TxtUtenteStampaCartellinoProduzione',
+    alias: 'StampaCartellinoProduzione_TxtUtente',
 
   },
   __Dati_Numero209: {
@@ -1519,6 +1519,30 @@ const LottiProduzioneSchema = new mongoose.Schema<ILottiProduzionePrivate>({
   __Dati_Numero219: {
     type: Number,
     alias: 'FlagDocumentiProgrammiMacchinaCopiati',
+
+  },
+  __Dati_DataOra003: {
+    type: Date,
+    alias: 'StampaCartellinoProduzione_DataOraStampa',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
+  },
+  __Dati_Testo068: {
+    type: String,
+    alias: 'StampaCartellinoProduzione_IdUtente',
+
+  },
+  __Dati_Data010: {
+    type: Date,
+    alias: 'Pianificazione_DataMinimaInizioPianificazione',
+    set: (value: any) => {
+      return DateConverter.convertDate(value);
+    }
+  },
+  __Dati_Testo069: {
+    type: String,
+    alias: 'IdTipoCiclo',
 
   }
 }, {

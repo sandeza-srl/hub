@@ -19,7 +19,9 @@ export default TipiUtensiliPerOpzioneProd;
 
 export { TipiUtensiliPerOpzioneProdSchema };
 
-export type TTipiUtensiliPerOpzioneProdModel = typeof TipiUtensiliPerOpzioneProd;
+export type TTipiUtensiliPerOpzioneProdModel = Omit<typeof TipiUtensiliPerOpzioneProd, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiUtensiliPerOpzioneProd>): any
+};
 
 export type TTipiUtensiliPerOpzioneProdDocument = 
 & mongoose.Document<any, {}, ITipiUtensiliPerOpzioneProd>

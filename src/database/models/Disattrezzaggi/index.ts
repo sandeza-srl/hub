@@ -19,7 +19,9 @@ export default Disattrezzaggi;
 
 export { DisattrezzaggiSchema };
 
-export type TDisattrezzaggiModel = typeof Disattrezzaggi;
+export type TDisattrezzaggiModel = Omit<typeof Disattrezzaggi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDisattrezzaggi>): any
+};
 
 export type TDisattrezzaggiDocument = 
 & mongoose.Document<any, {}, IDisattrezzaggi>

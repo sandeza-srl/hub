@@ -19,7 +19,9 @@ export default RevisioniArticoloCiclo;
 
 export { RevisioniArticoloCicloSchema };
 
-export type TRevisioniArticoloCicloModel = typeof RevisioniArticoloCiclo;
+export type TRevisioniArticoloCicloModel = Omit<typeof RevisioniArticoloCiclo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRevisioniArticoloCiclo>): any
+};
 
 export type TRevisioniArticoloCicloDocument = 
 & mongoose.Document<any, {}, IRevisioniArticoloCiclo>

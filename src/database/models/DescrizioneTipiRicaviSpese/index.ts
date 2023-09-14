@@ -19,7 +19,9 @@ export default DescrizioneTipiRicaviSpese;
 
 export { DescrizioneTipiRicaviSpeseSchema };
 
-export type TDescrizioneTipiRicaviSpeseModel = typeof DescrizioneTipiRicaviSpese;
+export type TDescrizioneTipiRicaviSpeseModel = Omit<typeof DescrizioneTipiRicaviSpese, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneTipiRicaviSpese>): any
+};
 
 export type TDescrizioneTipiRicaviSpeseDocument = 
 & mongoose.Document<any, {}, IDescrizioneTipiRicaviSpese>

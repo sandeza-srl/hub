@@ -113,5 +113,9 @@ export interface ITipiFasi {
   /** Reflected: __Dati_Testo026*/ 
   IdUtente: string;
   /** Reflected: __Dati_Testo027*/ 
-  TxtUtente: string
+  TxtUtente: string;
+  /** Reflected: __Dati_Numero024*/ 
+  CambioRisorsa_FaseProduzione_FlagAttivo: number;
+  /** Reflected: __Dati_Numero025*/ 
+  CambioRisorsa_Registrazione_FlagAttivo: number
 }

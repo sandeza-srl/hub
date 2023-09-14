@@ -125,5 +125,11 @@ export interface IControlliOpzionePrivate {
   /** Reflected: TxtUtente*/ 
   __Dati_Testo037: string;
   /** Reflected: IdRicorrenzaRecord*/ 
-  __Dati_Testo038: string
+  __Dati_Testo038: string;
+  /** Reflected: CodiceTipoContenitore*/ 
+  __Dati_Testo039: string;
+  /** Reflected: IdTipoContenitore*/ 
+  __Dati_Testo040: string;
+  /** Reflected: TxtTipoContenitore*/ 
+  __Dati_Testo041: string
 }

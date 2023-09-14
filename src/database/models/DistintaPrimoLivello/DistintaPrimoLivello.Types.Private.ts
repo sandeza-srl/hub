@@ -69,5 +69,7 @@ export interface IDistintaPrimoLivelloPrivate {
   /** Reflected: TxtSottoFamigliaItem*/ 
   __Dati_Testo021: string;
   /** Reflected: UnitaMisuraItemPadre*/ 
-  __Dati_Testo022: string
+  __Dati_Testo022: string;
+  /** Reflected: Note*/ 
+  __Dati_Testo023: string
 }

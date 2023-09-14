@@ -113,6 +113,11 @@ const TipologiaAnagraficaSchema = new mongoose.Schema<ITipologiaAnagraficaPrivat
     type: Number,
     alias: 'FlagPubblicaAmministrazione',
 
+  },
+  __Dati_Testo008: {
+    type: String,
+    alias: 'PinMappa_Colore',
+
   }
 }, {
   timestamps: true

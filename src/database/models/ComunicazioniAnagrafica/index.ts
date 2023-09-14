@@ -19,7 +19,9 @@ export default ComunicazioniAnagrafica;
 
 export { ComunicazioniAnagraficaSchema };
 
-export type TComunicazioniAnagraficaModel = typeof ComunicazioniAnagrafica;
+export type TComunicazioniAnagraficaModel = Omit<typeof ComunicazioniAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IComunicazioniAnagrafica>): any
+};
 
 export type TComunicazioniAnagraficaDocument = 
 & mongoose.Document<any, {}, IComunicazioniAnagrafica>

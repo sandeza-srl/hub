@@ -19,7 +19,9 @@ export default Cap;
 
 export { CapSchema };
 
-export type TCapModel = typeof Cap;
+export type TCapModel = Omit<typeof Cap, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICap>): any
+};
 
 export type TCapDocument = 
 & mongoose.Document<any, {}, ICap>

@@ -19,7 +19,9 @@ export default Log;
 
 export { LogSchema };
 
-export type TLogModel = typeof Log;
+export type TLogModel = Omit<typeof Log, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILog>): any
+};
 
 export type TLogDocument = 
 & mongoose.Document<any, {}, ILog>

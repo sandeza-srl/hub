@@ -19,7 +19,9 @@ export default TipiRegimiFiscali;
 
 export { TipiRegimiFiscaliSchema };
 
-export type TTipiRegimiFiscaliModel = typeof TipiRegimiFiscali;
+export type TTipiRegimiFiscaliModel = Omit<typeof TipiRegimiFiscali, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiRegimiFiscali>): any
+};
 
 export type TTipiRegimiFiscaliDocument = 
 & mongoose.Document<any, {}, ITipiRegimiFiscali>

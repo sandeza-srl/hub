@@ -19,7 +19,9 @@ export default TipiRicaviSpeseSottofamiglie;
 
 export { TipiRicaviSpeseSottofamiglieSchema };
 
-export type TTipiRicaviSpeseSottofamiglieModel = typeof TipiRicaviSpeseSottofamiglie;
+export type TTipiRicaviSpeseSottofamiglieModel = Omit<typeof TipiRicaviSpeseSottofamiglie, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiRicaviSpeseSottofamiglie>): any
+};
 
 export type TTipiRicaviSpeseSottofamiglieDocument = 
 & mongoose.Document<any, {}, ITipiRicaviSpeseSottofamiglie>

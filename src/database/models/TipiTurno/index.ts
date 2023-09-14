@@ -19,7 +19,9 @@ export default TipiTurno;
 
 export { TipiTurnoSchema };
 
-export type TTipiTurnoModel = typeof TipiTurno;
+export type TTipiTurnoModel = Omit<typeof TipiTurno, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiTurno>): any
+};
 
 export type TTipiTurnoDocument = 
 & mongoose.Document<any, {}, ITipiTurno>

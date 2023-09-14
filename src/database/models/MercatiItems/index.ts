@@ -19,7 +19,9 @@ export default MercatiItems;
 
 export { MercatiItemsSchema };
 
-export type TMercatiItemsModel = typeof MercatiItems;
+export type TMercatiItemsModel = Omit<typeof MercatiItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMercatiItems>): any
+};
 
 export type TMercatiItemsDocument = 
 & mongoose.Document<any, {}, IMercatiItems>

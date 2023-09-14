@@ -19,7 +19,9 @@ export default Reparti;
 
 export { RepartiSchema };
 
-export type TRepartiModel = typeof Reparti;
+export type TRepartiModel = Omit<typeof Reparti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IReparti>): any
+};
 
 export type TRepartiDocument = 
 & mongoose.Document<any, {}, IReparti>

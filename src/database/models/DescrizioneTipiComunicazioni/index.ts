@@ -19,7 +19,9 @@ export default DescrizioneTipiComunicazioni;
 
 export { DescrizioneTipiComunicazioniSchema };
 
-export type TDescrizioneTipiComunicazioniModel = typeof DescrizioneTipiComunicazioni;
+export type TDescrizioneTipiComunicazioniModel = Omit<typeof DescrizioneTipiComunicazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneTipiComunicazioni>): any
+};
 
 export type TDescrizioneTipiComunicazioniDocument = 
 & mongoose.Document<any, {}, IDescrizioneTipiComunicazioni>

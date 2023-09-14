@@ -19,7 +19,9 @@ export default RicaviSpesePeriodoDocOperativi;
 
 export { RicaviSpesePeriodoDocOperativiSchema };
 
-export type TRicaviSpesePeriodoDocOperativiModel = typeof RicaviSpesePeriodoDocOperativi;
+export type TRicaviSpesePeriodoDocOperativiModel = Omit<typeof RicaviSpesePeriodoDocOperativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRicaviSpesePeriodoDocOperativi>): any
+};
 
 export type TRicaviSpesePeriodoDocOperativiDocument = 
 & mongoose.Document<any, {}, IRicaviSpesePeriodoDocOperativi>

@@ -23,8 +23,8 @@ export type TItemsUnitaMisuraAlternativeModel = Omit<typeof ItemsUnitaMisuraAlte
   translateAliases(raw: Partial<IItemsUnitaMisuraAlternative>): any
 };
 
-export type TItemsUnitaMisuraAlternativeDocument =
-  & mongoose.Document<any, {}, IItemsUnitaMisuraAlternative>
-  & IItemsUnitaMisuraAlternative;
+export type TItemsUnitaMisuraAlternativeDocument = 
+& mongoose.Document<any, {}, IItemsUnitaMisuraAlternative>
+& IItemsUnitaMisuraAlternative;
 
 export { IItemsUnitaMisuraAlternative };

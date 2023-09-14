@@ -19,7 +19,9 @@ export default TipiRuoliTipiGruppoLavoro;
 
 export { TipiRuoliTipiGruppoLavoroSchema };
 
-export type TTipiRuoliTipiGruppoLavoroModel = typeof TipiRuoliTipiGruppoLavoro;
+export type TTipiRuoliTipiGruppoLavoroModel = Omit<typeof TipiRuoliTipiGruppoLavoro, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiRuoliTipiGruppoLavoro>): any
+};
 
 export type TTipiRuoliTipiGruppoLavoroDocument = 
 & mongoose.Document<any, {}, ITipiRuoliTipiGruppoLavoro>

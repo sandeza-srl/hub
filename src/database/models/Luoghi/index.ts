@@ -19,7 +19,9 @@ export default Luoghi;
 
 export { LuoghiSchema };
 
-export type TLuoghiModel = typeof Luoghi;
+export type TLuoghiModel = Omit<typeof Luoghi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILuoghi>): any
+};
 
 export type TLuoghiDocument = 
 & mongoose.Document<any, {}, ILuoghi>

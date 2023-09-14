@@ -19,7 +19,9 @@ export default DistintaLotti;
 
 export { DistintaLottiSchema };
 
-export type TDistintaLottiModel = typeof DistintaLotti;
+export type TDistintaLottiModel = Omit<typeof DistintaLotti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDistintaLotti>): any
+};
 
 export type TDistintaLottiDocument = 
 & mongoose.Document<any, {}, IDistintaLotti>

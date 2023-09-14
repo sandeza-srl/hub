@@ -50,16 +50,18 @@ export interface ITipiContenitoriPrivate {
   __Dati_Testo013: string;
   /** Reflected: NumeroContenitoriDisponibili*/ 
   __Dati_Numero009: number;
+  /** Reflected: NumeroContenitoriInVerifica*/ 
+  __Dati_Numero010: number;
+  /** Reflected: FlagPrimario*/ 
+  __Dati_Numero011: number;
   /** Reflected: CodiceTxtTipoContenitoreAutomatico*/ 
   __Dati_Testo014: string;
   /** Reflected: IdInstallazione*/ 
   __Dati_Testo015: string;
   /** Reflected: FlagAggiornaContenutiDaItems*/ 
-  __Dati_Numero010: number;
+  __Dati_Numero012: number;
   /** Reflected: UnitaMisura*/ 
   __Dati_Testo016: string;
   /** Reflected: IdDocumentoPrincipale*/ 
-  __Dati_Testo017: string;
-  /** Reflected: NumeroContenitoriInVerifica*/ 
-  __Dati_Numero011: number
+  __Dati_Testo017: string
 }

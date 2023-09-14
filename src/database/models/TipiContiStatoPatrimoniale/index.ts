@@ -19,7 +19,9 @@ export default TipiContiStatoPatrimoniale;
 
 export { TipiContiStatoPatrimonialeSchema };
 
-export type TTipiContiStatoPatrimonialeModel = typeof TipiContiStatoPatrimoniale;
+export type TTipiContiStatoPatrimonialeModel = Omit<typeof TipiContiStatoPatrimoniale, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiContiStatoPatrimoniale>): any
+};
 
 export type TTipiContiStatoPatrimonialeDocument = 
 & mongoose.Document<any, {}, ITipiContiStatoPatrimoniale>

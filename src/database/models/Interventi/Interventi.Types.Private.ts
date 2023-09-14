@@ -379,5 +379,13 @@ export interface IInterventiPrivate {
   /** Reflected: IdClasseIntervento*/ 
   __Dati_Testo096: string;
   /** Reflected: TxtClasseIntervento*/ 
-  __Dati_Testo097: string
+  __Dati_Testo097: string;
+  /** Reflected: IdPeriodoContabile*/ 
+  __Dati_Testo098: string;
+  /** Reflected: FlagRispettaProgressivo*/ 
+  __Dati_Numero069: number;
+  /** Reflected: IdTipoInterventoPerCodice*/ 
+  __Dati_Testo099: string;
+  /** Reflected: TxtPeriodoContabile*/ 
+  __Dati_Testo100: string
 }

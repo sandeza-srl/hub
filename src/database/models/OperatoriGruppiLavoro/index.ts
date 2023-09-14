@@ -19,7 +19,9 @@ export default OperatoriGruppiLavoro;
 
 export { OperatoriGruppiLavoroSchema };
 
-export type TOperatoriGruppiLavoroModel = typeof OperatoriGruppiLavoro;
+export type TOperatoriGruppiLavoroModel = Omit<typeof OperatoriGruppiLavoro, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOperatoriGruppiLavoro>): any
+};
 
 export type TOperatoriGruppiLavoroDocument = 
 & mongoose.Document<any, {}, IOperatoriGruppiLavoro>

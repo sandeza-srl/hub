@@ -19,7 +19,9 @@ export default CodificheMetodiPagamento;
 
 export { CodificheMetodiPagamentoSchema };
 
-export type TCodificheMetodiPagamentoModel = typeof CodificheMetodiPagamento;
+export type TCodificheMetodiPagamentoModel = Omit<typeof CodificheMetodiPagamento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICodificheMetodiPagamento>): any
+};
 
 export type TCodificheMetodiPagamentoDocument = 
 & mongoose.Document<any, {}, ICodificheMetodiPagamento>

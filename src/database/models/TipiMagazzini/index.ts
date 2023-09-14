@@ -19,7 +19,9 @@ export default TipiMagazzini;
 
 export { TipiMagazziniSchema };
 
-export type TTipiMagazziniModel = typeof TipiMagazzini;
+export type TTipiMagazziniModel = Omit<typeof TipiMagazzini, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiMagazzini>): any
+};
 
 export type TTipiMagazziniDocument = 
 & mongoose.Document<any, {}, ITipiMagazzini>

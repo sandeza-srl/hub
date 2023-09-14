@@ -19,7 +19,9 @@ export default TipiCicli;
 
 export { TipiCicliSchema };
 
-export type TTipiCicliModel = typeof TipiCicli;
+export type TTipiCicliModel = Omit<typeof TipiCicli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiCicli>): any
+};
 
 export type TTipiCicliDocument = 
 & mongoose.Document<any, {}, ITipiCicli>

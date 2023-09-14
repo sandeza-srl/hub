@@ -19,7 +19,9 @@ export default ItemsComplementari;
 
 export { ItemsComplementariSchema };
 
-export type TItemsComplementariModel = typeof ItemsComplementari;
+export type TItemsComplementariModel = Omit<typeof ItemsComplementari, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IItemsComplementari>): any
+};
 
 export type TItemsComplementariDocument = 
 & mongoose.Document<any, {}, IItemsComplementari>

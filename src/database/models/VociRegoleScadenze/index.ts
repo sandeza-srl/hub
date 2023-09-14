@@ -19,7 +19,9 @@ export default VociRegoleScadenze;
 
 export { VociRegoleScadenzeSchema };
 
-export type TVociRegoleScadenzeModel = typeof VociRegoleScadenze;
+export type TVociRegoleScadenzeModel = Omit<typeof VociRegoleScadenze, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociRegoleScadenze>): any
+};
 
 export type TVociRegoleScadenzeDocument = 
 & mongoose.Document<any, {}, IVociRegoleScadenze>

@@ -23,8 +23,8 @@ export type TAnagraficaModel = Omit<typeof Anagrafica, 'traslateAliases'> & {
   translateAliases(raw: Partial<IAnagrafica>): any
 };
 
-export type TAnagraficaDocument =
-  & mongoose.Document<any, {}, IAnagrafica>
-  & IAnagrafica;
+export type TAnagraficaDocument = 
+& mongoose.Document<any, {}, IAnagrafica>
+& IAnagrafica;
 
 export { IAnagrafica };

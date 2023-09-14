@@ -19,7 +19,9 @@ export default StoricoTipoAnagrafica;
 
 export { StoricoTipoAnagraficaSchema };
 
-export type TStoricoTipoAnagraficaModel = typeof StoricoTipoAnagrafica;
+export type TStoricoTipoAnagraficaModel = Omit<typeof StoricoTipoAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoTipoAnagrafica>): any
+};
 
 export type TStoricoTipoAnagraficaDocument = 
 & mongoose.Document<any, {}, IStoricoTipoAnagrafica>

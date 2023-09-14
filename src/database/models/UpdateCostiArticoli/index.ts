@@ -19,7 +19,9 @@ export default UpdateCostiArticoli;
 
 export { UpdateCostiArticoliSchema };
 
-export type TUpdateCostiArticoliModel = typeof UpdateCostiArticoli;
+export type TUpdateCostiArticoliModel = Omit<typeof UpdateCostiArticoli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IUpdateCostiArticoli>): any
+};
 
 export type TUpdateCostiArticoliDocument = 
 & mongoose.Document<any, {}, IUpdateCostiArticoli>

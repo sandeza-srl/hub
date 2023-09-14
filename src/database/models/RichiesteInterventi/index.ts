@@ -19,7 +19,9 @@ export default RichiesteInterventi;
 
 export { RichiesteInterventiSchema };
 
-export type TRichiesteInterventiModel = typeof RichiesteInterventi;
+export type TRichiesteInterventiModel = Omit<typeof RichiesteInterventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRichiesteInterventi>): any
+};
 
 export type TRichiesteInterventiDocument = 
 & mongoose.Document<any, {}, IRichiesteInterventi>

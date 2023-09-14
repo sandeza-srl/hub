@@ -151,5 +151,9 @@ export interface ISelezioniItemsPrivate {
   /** Reflected: FlagControlloMultimagazzino*/ 
   __Dati_Numero021: number;
   /** Reflected: Multimagazzino_QuantitaPacco*/ 
-  __Dati_Numero022: number
+  __Dati_Numero022: number;
+  /** Reflected: IdItemInizialeDistinta*/ 
+  __Dati_Testo049: string;
+  /** Reflected: QtInizialeDistinta*/ 
+  __Dati_Numero023: number
 }

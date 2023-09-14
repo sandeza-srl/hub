@@ -19,7 +19,9 @@ export default TipiCriticita;
 
 export { TipiCriticitaSchema };
 
-export type TTipiCriticitaModel = typeof TipiCriticita;
+export type TTipiCriticitaModel = Omit<typeof TipiCriticita, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiCriticita>): any
+};
 
 export type TTipiCriticitaDocument = 
 & mongoose.Document<any, {}, ITipiCriticita>

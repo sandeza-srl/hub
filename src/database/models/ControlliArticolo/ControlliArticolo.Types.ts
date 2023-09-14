@@ -111,5 +111,13 @@ export interface IControlliArticolo {
   /** Reflected: __Dati_Testo034*/ 
   TxtUtente: string;
   /** Reflected: __Dati_Testo035*/ 
-  IdRicorrenzaRecord: string
+  IdRicorrenzaRecord: string;
+  /** Reflected: __Dati_Testo036*/ 
+  IdTipoContenitore: string;
+  /** Reflected: __Dati_Testo037*/ 
+  CodiceTipoContenitore: string;
+  /** Reflected: __Dati_Testo038*/ 
+  CodiceTxtTipoContenitoreAutomatico: string;
+  /** Reflected: __Dati_Testo039*/ 
+  TxtTipoContenitore: string
 }

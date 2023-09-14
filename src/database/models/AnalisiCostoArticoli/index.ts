@@ -19,7 +19,9 @@ export default AnalisiCostoArticoli;
 
 export { AnalisiCostoArticoliSchema };
 
-export type TAnalisiCostoArticoliModel = typeof AnalisiCostoArticoli;
+export type TAnalisiCostoArticoliModel = Omit<typeof AnalisiCostoArticoli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IAnalisiCostoArticoli>): any
+};
 
 export type TAnalisiCostoArticoliDocument = 
 & mongoose.Document<any, {}, IAnalisiCostoArticoli>

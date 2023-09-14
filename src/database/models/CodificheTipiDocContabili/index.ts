@@ -19,7 +19,9 @@ export default CodificheTipiDocContabili;
 
 export { CodificheTipiDocContabiliSchema };
 
-export type TCodificheTipiDocContabiliModel = typeof CodificheTipiDocContabili;
+export type TCodificheTipiDocContabiliModel = Omit<typeof CodificheTipiDocContabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICodificheTipiDocContabili>): any
+};
 
 export type TCodificheTipiDocContabiliDocument = 
 & mongoose.Document<any, {}, ICodificheTipiDocContabili>

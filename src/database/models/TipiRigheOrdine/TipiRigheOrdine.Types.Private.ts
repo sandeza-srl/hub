@@ -46,7 +46,7 @@ export interface ITipiRigheOrdinePrivate {
   __Dati_Testo010: string;
   /** Reflected: GeneraCodiceLotto_Codice*/ 
   __Dati_Testo011: string;
-  /** Reflected: NomeFormatoStampa*/ 
+  /** Reflected: CartellinoProduzione_NomeFormato*/ 
   __Dati_Testo012: string;
   /** Reflected: DataBenestareAutomatico*/ 
   __Dati_Data001: Date;
@@ -92,11 +92,11 @@ export interface ITipiRigheOrdinePrivate {
   __Dati_Testo028: string;
   /** Reflected: IdTipoDocOperativoOrdineFornitoreTrasporto*/ 
   __Dati_Testo029: string;
-  /** Reflected: FormatoCartellinoProduzione*/ 
+  /** Reflected: ReportProduzione_Formato*/ 
   __Dati_Testo030: string;
-  /** Reflected: IdTipoDocumentoCartellinoProduzione*/ 
+  /** Reflected: CartellinoProduzione_IdTipoDocumento*/ 
   __Dati_Testo031: string;
-  /** Reflected: IdSottoTipoDocumentoCartellinoProduzione*/ 
+  /** Reflected: CartellinoProduzione_IdSottoTipoDocumento*/ 
   __Dati_Testo032: string;
   /** Reflected: GeneraCodiceLotto_Anno*/ 
   __Dati_Numero017: number;
@@ -273,5 +273,47 @@ export interface ITipiRigheOrdinePrivate {
   /** Reflected: LancioProduzione_FlagUsaFornitura*/ 
   __Dati_Numero086: number;
   /** Reflected: ValorizzazioneMagazzino_FlagEscludiDaWip*/ 
-  __Dati_Numero087: number
+  __Dati_Numero087: number;
+  /** Reflected: CartellinoProduzione_NomeScriptStampa*/ 
+  __Dati_Testo048: string;
+  /** Reflected: ReportProduzione_IdSottoTipoDocumento*/ 
+  __Dati_Testo049: string;
+  /** Reflected: ReportProduzione_IdTipoDocumento*/ 
+  __Dati_Testo050: string;
+  /** Reflected: ReportProduzione_NomeScriptStampa*/ 
+  __Dati_Testo051: string;
+  /** Reflected: ReportQualita_Formato*/ 
+  __Dati_Testo052: string;
+  /** Reflected: ReportQualita_IdSottoTipoDocumento*/ 
+  __Dati_Testo053: string;
+  /** Reflected: ReportQualita_IdTipoDocumento*/ 
+  __Dati_Testo054: string;
+  /** Reflected: ReportQualita_NomeScriptStampa*/ 
+  __Dati_Testo055: string;
+  /** Reflected: ReportCosti_Formato*/ 
+  __Dati_Testo056: string;
+  /** Reflected: ReportCosti_IdSottoTipoDocumento*/ 
+  __Dati_Testo057: string;
+  /** Reflected: ReportCosti_IdTipoDocumento*/ 
+  __Dati_Testo058: string;
+  /** Reflected: ReportCosti_NomeScriptStampa*/ 
+  __Dati_Testo059: string;
+  /** Reflected: CartellinoProduzione_FlagSalvaDocumento*/ 
+  __Dati_Numero088: number;
+  /** Reflected: ReportCosti_FlagSalvaDocumento*/ 
+  __Dati_Numero089: number;
+  /** Reflected: ReportProduzione_FlagSalvaDocumento*/ 
+  __Dati_Numero090: number;
+  /** Reflected: ReportQualita_FlagSalvaDocumento*/ 
+  __Dati_Numero091: number;
+  /** Reflected: Temporaneo202307_FlagDefaultNuovaScheda*/ 
+  __Dati_Numero092: number;
+  /** Reflected: AbilitazioniModificheLotto_QuantitaLotto*/ 
+  __Dati_Numero093: number;
+  /** Reflected: AbilitazioniModificheLotto_CreazioneFaseProduzione*/ 
+  __Dati_Numero094: number;
+  /** Reflected: AbilitazioniModificheLotto_EliminazioneFaseProduzione*/ 
+  __Dati_Numero095: number;
+  /** Reflected: AbilitazioniModificheLotto_QuantitaLotto_AncheFasiInCorso*/ 
+  __Dati_Numero096: number
 }

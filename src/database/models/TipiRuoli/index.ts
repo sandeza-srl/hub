@@ -19,7 +19,9 @@ export default TipiRuoli;
 
 export { TipiRuoliSchema };
 
-export type TTipiRuoliModel = typeof TipiRuoli;
+export type TTipiRuoliModel = Omit<typeof TipiRuoli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiRuoli>): any
+};
 
 export type TTipiRuoliDocument = 
 & mongoose.Document<any, {}, ITipiRuoli>

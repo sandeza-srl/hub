@@ -19,7 +19,9 @@ export default TipiControlli;
 
 export { TipiControlliSchema };
 
-export type TTipiControlliModel = typeof TipiControlli;
+export type TTipiControlliModel = Omit<typeof TipiControlli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiControlli>): any
+};
 
 export type TTipiControlliDocument = 
 & mongoose.Document<any, {}, ITipiControlli>

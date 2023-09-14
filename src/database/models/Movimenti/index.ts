@@ -19,7 +19,9 @@ export default Movimenti;
 
 export { MovimentiSchema };
 
-export type TMovimentiModel = typeof Movimenti;
+export type TMovimentiModel = Omit<typeof Movimenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMovimenti>): any
+};
 
 export type TMovimentiDocument = 
 & mongoose.Document<any, {}, IMovimenti>

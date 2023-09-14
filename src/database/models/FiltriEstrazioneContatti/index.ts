@@ -19,7 +19,9 @@ export default FiltriEstrazioneContatti;
 
 export { FiltriEstrazioneContattiSchema };
 
-export type TFiltriEstrazioneContattiModel = typeof FiltriEstrazioneContatti;
+export type TFiltriEstrazioneContattiModel = Omit<typeof FiltriEstrazioneContatti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFiltriEstrazioneContatti>): any
+};
 
 export type TFiltriEstrazioneContattiDocument = 
 & mongoose.Document<any, {}, IFiltriEstrazioneContatti>

@@ -19,7 +19,9 @@ export default TipiPosizioni;
 
 export { TipiPosizioniSchema };
 
-export type TTipiPosizioniModel = typeof TipiPosizioni;
+export type TTipiPosizioniModel = Omit<typeof TipiPosizioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiPosizioni>): any
+};
 
 export type TTipiPosizioniDocument = 
 & mongoose.Document<any, {}, ITipiPosizioni>

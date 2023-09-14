@@ -23,8 +23,8 @@ export type TUnitaMisuraModel = Omit<typeof UnitaMisura, 'traslateAliases'> & {
   translateAliases(raw: Partial<IUnitaMisura>): any
 };
 
-export type TUnitaMisuraDocument =
-  & mongoose.Document<any, {}, IUnitaMisura>
-  & IUnitaMisura;
+export type TUnitaMisuraDocument = 
+& mongoose.Document<any, {}, IUnitaMisura>
+& IUnitaMisura;
 
 export { IUnitaMisura };

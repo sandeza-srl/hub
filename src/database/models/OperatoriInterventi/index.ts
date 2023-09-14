@@ -19,7 +19,9 @@ export default OperatoriInterventi;
 
 export { OperatoriInterventiSchema };
 
-export type TOperatoriInterventiModel = typeof OperatoriInterventi;
+export type TOperatoriInterventiModel = Omit<typeof OperatoriInterventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOperatoriInterventi>): any
+};
 
 export type TOperatoriInterventiDocument = 
 & mongoose.Document<any, {}, IOperatoriInterventi>

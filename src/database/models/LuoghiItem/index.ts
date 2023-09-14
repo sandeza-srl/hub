@@ -19,7 +19,9 @@ export default LuoghiItem;
 
 export { LuoghiItemSchema };
 
-export type TLuoghiItemModel = typeof LuoghiItem;
+export type TLuoghiItemModel = Omit<typeof LuoghiItem, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILuoghiItem>): any
+};
 
 export type TLuoghiItemDocument = 
 & mongoose.Document<any, {}, ILuoghiItem>

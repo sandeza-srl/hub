@@ -19,7 +19,9 @@ export default TipiNormativeTipiControlli;
 
 export { TipiNormativeTipiControlliSchema };
 
-export type TTipiNormativeTipiControlliModel = typeof TipiNormativeTipiControlli;
+export type TTipiNormativeTipiControlliModel = Omit<typeof TipiNormativeTipiControlli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiNormativeTipiControlli>): any
+};
 
 export type TTipiNormativeTipiControlliDocument = 
 & mongoose.Document<any, {}, ITipiNormativeTipiControlli>

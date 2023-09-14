@@ -19,7 +19,9 @@ export default Dispositivi;
 
 export { DispositiviSchema };
 
-export type TDispositiviModel = typeof Dispositivi;
+export type TDispositiviModel = Omit<typeof Dispositivi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDispositivi>): any
+};
 
 export type TDispositiviDocument = 
 & mongoose.Document<any, {}, IDispositivi>

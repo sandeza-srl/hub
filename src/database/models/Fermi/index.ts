@@ -19,7 +19,9 @@ export default Fermi;
 
 export { FermiSchema };
 
-export type TFermiModel = typeof Fermi;
+export type TFermiModel = Omit<typeof Fermi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFermi>): any
+};
 
 export type TFermiDocument = 
 & mongoose.Document<any, {}, IFermi>

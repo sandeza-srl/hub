@@ -23,8 +23,8 @@ export type TInformazioniItemsModel = Omit<typeof InformazioniItems, 'traslateAl
   translateAliases(raw: Partial<IInformazioniItems>): any
 };
 
-export type TInformazioniItemsDocument =
-  & mongoose.Document<any, {}, IInformazioniItems>
-  & IInformazioniItems;
+export type TInformazioniItemsDocument = 
+& mongoose.Document<any, {}, IInformazioniItems>
+& IInformazioniItems;
 
 export { IInformazioniItems };

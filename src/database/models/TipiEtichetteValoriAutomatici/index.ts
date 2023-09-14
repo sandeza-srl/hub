@@ -19,7 +19,9 @@ export default TipiEtichetteValoriAutomatici;
 
 export { TipiEtichetteValoriAutomaticiSchema };
 
-export type TTipiEtichetteValoriAutomaticiModel = typeof TipiEtichetteValoriAutomatici;
+export type TTipiEtichetteValoriAutomaticiModel = Omit<typeof TipiEtichetteValoriAutomatici, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiEtichetteValoriAutomatici>): any
+};
 
 export type TTipiEtichetteValoriAutomaticiDocument = 
 & mongoose.Document<any, {}, ITipiEtichetteValoriAutomatici>

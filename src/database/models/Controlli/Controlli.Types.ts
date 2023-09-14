@@ -233,5 +233,21 @@ export interface IControlli {
   /** Reflected: __Dati_Testo084*/ 
   TxtTipoControlloPosizione: string;
   /** Reflected: __Dati_Testo085*/ 
-  IdControllo: string
+  IdControllo: string;
+  /** Reflected: __Dati_Testo086*/ 
+  IdTipoContenitore: string;
+  /** Reflected: __Dati_Testo087*/ 
+  IdContenitore: string;
+  /** Reflected: __Dati_Testo088*/ 
+  TxtTipoContenitore: string;
+  /** Reflected: __Dati_Testo089*/ 
+  CodiceContenitore: string;
+  /** Reflected: __Dati_Testo090*/ 
+  CodiceTipoContenitore: string;
+  /** Reflected: __Dati_Testo091*/ 
+  CodiceTxtContenitoreNumeroSerie: string;
+  /** Reflected: __Dati_Testo092*/ 
+  CodiceTxtTipoContenitoreAutomatico: string;
+  /** Reflected: __Dati_Testo093*/ 
+  NumeroSerieContenitore: string
 }

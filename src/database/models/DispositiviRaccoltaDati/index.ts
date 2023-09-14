@@ -19,7 +19,9 @@ export default DispositiviRaccoltaDati;
 
 export { DispositiviRaccoltaDatiSchema };
 
-export type TDispositiviRaccoltaDatiModel = typeof DispositiviRaccoltaDati;
+export type TDispositiviRaccoltaDatiModel = Omit<typeof DispositiviRaccoltaDati, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDispositiviRaccoltaDati>): any
+};
 
 export type TDispositiviRaccoltaDatiDocument = 
 & mongoose.Document<any, {}, IDispositiviRaccoltaDati>

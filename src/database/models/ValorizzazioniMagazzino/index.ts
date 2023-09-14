@@ -19,7 +19,9 @@ export default ValorizzazioniMagazzino;
 
 export { ValorizzazioniMagazzinoSchema };
 
-export type TValorizzazioniMagazzinoModel = typeof ValorizzazioniMagazzino;
+export type TValorizzazioniMagazzinoModel = Omit<typeof ValorizzazioniMagazzino, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IValorizzazioniMagazzino>): any
+};
 
 export type TValorizzazioniMagazzinoDocument = 
 & mongoose.Document<any, {}, IValorizzazioniMagazzino>

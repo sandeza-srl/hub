@@ -19,7 +19,9 @@ export default TipiDocOperativi;
 
 export { TipiDocOperativiSchema };
 
-export type TTipiDocOperativiModel = typeof TipiDocOperativi;
+export type TTipiDocOperativiModel = Omit<typeof TipiDocOperativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiDocOperativi>): any
+};
 
 export type TTipiDocOperativiDocument = 
 & mongoose.Document<any, {}, ITipiDocOperativi>

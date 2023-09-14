@@ -19,7 +19,9 @@ export default ValoriValute;
 
 export { ValoriValuteSchema };
 
-export type TValoriValuteModel = typeof ValoriValute;
+export type TValoriValuteModel = Omit<typeof ValoriValute, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IValoriValute>): any
+};
 
 export type TValoriValuteDocument = 
 & mongoose.Document<any, {}, IValoriValute>

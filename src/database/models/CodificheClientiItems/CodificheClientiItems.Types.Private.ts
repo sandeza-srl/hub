@@ -41,5 +41,15 @@ export interface ICodificheClientiItemsPrivate {
   /** Reflected: FlagAggiornaContenutiDaItems*/ 
   __Dati_Numero003: number;
   /** Reflected: FlagCodificaPrincipale*/ 
-  __Dati_Numero004: number
+  __Dati_Numero004: number;
+  /** Reflected: Note*/ 
+  __Dati_Testo015: string;
+  /** Reflected: CodiceUnivocoCodificaClienteItem*/ 
+  __Dati_Testo016: string;
+  /** Reflected: IdImgIdentificativa*/ 
+  __Dati_Testo017: string;
+  /** Reflected: FlagAggiornaDaRevisioniItem*/ 
+  __Dati_Numero005: number;
+  /** Reflected: TxtUtenteCreazione*/ 
+  __Dati_Testo018: string
 }

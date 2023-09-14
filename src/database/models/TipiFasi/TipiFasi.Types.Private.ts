@@ -113,5 +113,9 @@ export interface ITipiFasiPrivate {
   /** Reflected: IdUtente*/ 
   __Dati_Testo026: string;
   /** Reflected: TxtUtente*/ 
-  __Dati_Testo027: string
+  __Dati_Testo027: string;
+  /** Reflected: CambioRisorsa_FaseProduzione_FlagAttivo*/ 
+  __Dati_Numero024: number;
+  /** Reflected: CambioRisorsa_Registrazione_FlagAttivo*/ 
+  __Dati_Numero025: number
 }

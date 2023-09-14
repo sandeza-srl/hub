@@ -19,7 +19,9 @@ export default TipiPrimoContatto;
 
 export { TipiPrimoContattoSchema };
 
-export type TTipiPrimoContattoModel = typeof TipiPrimoContatto;
+export type TTipiPrimoContattoModel = Omit<typeof TipiPrimoContatto, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiPrimoContatto>): any
+};
 
 export type TTipiPrimoContattoDocument = 
 & mongoose.Document<any, {}, ITipiPrimoContatto>

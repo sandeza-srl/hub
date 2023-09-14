@@ -19,7 +19,9 @@ export default TipiInfoAggiuntive;
 
 export { TipiInfoAggiuntiveSchema };
 
-export type TTipiInfoAggiuntiveModel = typeof TipiInfoAggiuntive;
+export type TTipiInfoAggiuntiveModel = Omit<typeof TipiInfoAggiuntive, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiInfoAggiuntive>): any
+};
 
 export type TTipiInfoAggiuntiveDocument = 
 & mongoose.Document<any, {}, ITipiInfoAggiuntive>

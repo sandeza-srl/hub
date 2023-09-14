@@ -111,5 +111,13 @@ export interface IControlliArticoloPrivate {
   /** Reflected: TxtUtente*/ 
   __Dati_Testo034: string;
   /** Reflected: IdRicorrenzaRecord*/ 
-  __Dati_Testo035: string
+  __Dati_Testo035: string;
+  /** Reflected: IdTipoContenitore*/ 
+  __Dati_Testo036: string;
+  /** Reflected: CodiceTipoContenitore*/ 
+  __Dati_Testo037: string;
+  /** Reflected: CodiceTxtTipoContenitoreAutomatico*/ 
+  __Dati_Testo038: string;
+  /** Reflected: TxtTipoContenitore*/ 
+  __Dati_Testo039: string
 }

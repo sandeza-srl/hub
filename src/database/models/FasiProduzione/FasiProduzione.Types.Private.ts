@@ -977,5 +977,17 @@ export interface IFasiProduzionePrivate {
   /** Reflected: ControlliQualita_TxtAvvisoFisso*/ 
   __Dati_Testo103: string;
   /** Reflected: ControlliQualita_FlagAvvisoFisso*/ 
-  __Dati_Numero338: number
+  __Dati_Numero338: number;
+  /** Reflected: NUmFinColpo_T*/ 
+  __Dati_Numero339: number;
+  /** Reflected: NUmOpzColpo_T*/ 
+  __Dati_Numero340: number;
+  /** Reflected: CreazionePosteriori_FlagFaseCreataPosteriori*/ 
+  __Dati_Numero341: number;
+  /** Reflected: CreazionePosteriori_IdUtenteCreazione*/ 
+  __Dati_Testo104: string;
+  /** Reflected: CreazionePosteriori_TxtUtenteCreazione*/ 
+  __Dati_Testo105: string;
+  /** Reflected: CreazionePosteriori_DataOraCreazione*/ 
+  __Dati_DataOra007: Date
 }

@@ -19,7 +19,9 @@ export default ValoriControlliMultipli;
 
 export { ValoriControlliMultipliSchema };
 
-export type TValoriControlliMultipliModel = typeof ValoriControlliMultipli;
+export type TValoriControlliMultipliModel = Omit<typeof ValoriControlliMultipli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IValoriControlliMultipli>): any
+};
 
 export type TValoriControlliMultipliDocument = 
 & mongoose.Document<any, {}, IValoriControlliMultipli>

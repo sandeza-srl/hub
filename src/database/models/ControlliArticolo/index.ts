@@ -19,7 +19,9 @@ export default ControlliArticolo;
 
 export { ControlliArticoloSchema };
 
-export type TControlliArticoloModel = typeof ControlliArticolo;
+export type TControlliArticoloModel = Omit<typeof ControlliArticolo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IControlliArticolo>): any
+};
 
 export type TControlliArticoloDocument = 
 & mongoose.Document<any, {}, IControlliArticolo>

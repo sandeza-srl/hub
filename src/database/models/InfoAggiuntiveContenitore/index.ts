@@ -19,7 +19,9 @@ export default InfoAggiuntiveContenitore;
 
 export { InfoAggiuntiveContenitoreSchema };
 
-export type TInfoAggiuntiveContenitoreModel = typeof InfoAggiuntiveContenitore;
+export type TInfoAggiuntiveContenitoreModel = Omit<typeof InfoAggiuntiveContenitore, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoAggiuntiveContenitore>): any
+};
 
 export type TInfoAggiuntiveContenitoreDocument = 
 & mongoose.Document<any, {}, IInfoAggiuntiveContenitore>

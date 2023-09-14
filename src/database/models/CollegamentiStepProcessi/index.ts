@@ -19,7 +19,9 @@ export default CollegamentiStepProcessi;
 
 export { CollegamentiStepProcessiSchema };
 
-export type TCollegamentiStepProcessiModel = typeof CollegamentiStepProcessi;
+export type TCollegamentiStepProcessiModel = Omit<typeof CollegamentiStepProcessi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICollegamentiStepProcessi>): any
+};
 
 export type TCollegamentiStepProcessiDocument = 
 & mongoose.Document<any, {}, ICollegamentiStepProcessi>

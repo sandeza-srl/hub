@@ -19,7 +19,9 @@ export default PeriodiChiusura;
 
 export { PeriodiChiusuraSchema };
 
-export type TPeriodiChiusuraModel = typeof PeriodiChiusura;
+export type TPeriodiChiusuraModel = Omit<typeof PeriodiChiusura, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPeriodiChiusura>): any
+};
 
 export type TPeriodiChiusuraDocument = 
 & mongoose.Document<any, {}, IPeriodiChiusura>

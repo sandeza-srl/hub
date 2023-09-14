@@ -19,7 +19,9 @@ export default RegistrazioniOreStepProcesso;
 
 export { RegistrazioniOreStepProcessoSchema };
 
-export type TRegistrazioniOreStepProcessoModel = typeof RegistrazioniOreStepProcesso;
+export type TRegistrazioniOreStepProcessoModel = Omit<typeof RegistrazioniOreStepProcesso, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRegistrazioniOreStepProcesso>): any
+};
 
 export type TRegistrazioniOreStepProcessoDocument = 
 & mongoose.Document<any, {}, IRegistrazioniOreStepProcesso>

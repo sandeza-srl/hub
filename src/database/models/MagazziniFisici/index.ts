@@ -19,7 +19,9 @@ export default MagazziniFisici;
 
 export { MagazziniFisiciSchema };
 
-export type TMagazziniFisiciModel = typeof MagazziniFisici;
+export type TMagazziniFisiciModel = Omit<typeof MagazziniFisici, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMagazziniFisici>): any
+};
 
 export type TMagazziniFisiciDocument = 
 & mongoose.Document<any, {}, IMagazziniFisici>

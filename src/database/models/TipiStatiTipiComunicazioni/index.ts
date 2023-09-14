@@ -19,7 +19,9 @@ export default TipiStatiTipiComunicazioni;
 
 export { TipiStatiTipiComunicazioniSchema };
 
-export type TTipiStatiTipiComunicazioniModel = typeof TipiStatiTipiComunicazioni;
+export type TTipiStatiTipiComunicazioniModel = Omit<typeof TipiStatiTipiComunicazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiStatiTipiComunicazioni>): any
+};
 
 export type TTipiStatiTipiComunicazioniDocument = 
 & mongoose.Document<any, {}, ITipiStatiTipiComunicazioni>

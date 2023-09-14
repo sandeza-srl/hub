@@ -19,7 +19,9 @@ export default DistintaCompleta;
 
 export { DistintaCompletaSchema };
 
-export type TDistintaCompletaModel = typeof DistintaCompleta;
+export type TDistintaCompletaModel = Omit<typeof DistintaCompleta, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDistintaCompleta>): any
+};
 
 export type TDistintaCompletaDocument = 
 & mongoose.Document<any, {}, IDistintaCompleta>

@@ -1,11 +1,4 @@
 export {
-  default as Articoli,
-  ArticoliSchema,
-  IArticoli,
-  TArticoliDocument,
-  TArticoliModel
-} from './Articoli';
-export {
   default as Aliquote,
   AliquoteSchema,
   IAliquote,
@@ -307,13 +300,6 @@ export {
   TImpiantiModel
 } from './Impianti';
 export {
-  default as IndirizziRubrica,
-  IndirizziRubricaSchema,
-  IIndirizziRubrica,
-  TIndirizziRubricaDocument,
-  TIndirizziRubricaModel
-} from './IndirizziRubrica';
-export {
   default as InfoAggiuntiveAnagrafica,
   InfoAggiuntiveAnagraficaSchema,
   IInfoAggiuntiveAnagrafica,
@@ -356,13 +342,6 @@ export {
   TInterventiModel
 } from './Interventi';
 export {
-  default as ItemRipartitori,
-  ItemRipartitoriSchema,
-  IItemRipartitori,
-  TItemRipartitoriDocument,
-  TItemRipartitoriModel
-} from './ItemRipartitori';
-export {
   default as Items,
   ItemsSchema,
   IItems,
@@ -390,13 +369,6 @@ export {
   TItemsProdottiDocument,
   TItemsProdottiModel
 } from './ItemsProdotti';
-export {
-  default as ListinoItem,
-  ListinoItemSchema,
-  IListinoItem,
-  TListinoItemDocument,
-  TListinoItemModel
-} from './ListinoItem';
 export {
   default as Luoghi,
   LuoghiSchema,
@@ -572,13 +544,6 @@ export {
   TTimbratureDocument,
   TTimbratureModel
 } from './Timbrature';
-export {
-  default as TipiArticoli,
-  TipiArticoliSchema,
-  ITipiArticoli,
-  TTipiArticoliDocument,
-  TTipiArticoliModel
-} from './TipiArticoli';
 export {
   default as TipiAttivitaControllo,
   TipiAttivitaControlloSchema,
@@ -831,13 +796,6 @@ export {
   TValuteDocument,
   TValuteModel
 } from './Valute';
-export {
-  default as VariazioniListino,
-  VariazioniListinoSchema,
-  IVariazioniListino,
-  TVariazioniListinoDocument,
-  TVariazioniListinoModel
-} from './VariazioniListino';
 export {
   default as Viaggi,
   ViaggiSchema,
@@ -2113,13 +2071,6 @@ export {
   TFasiProduzioneElaborateModel
 } from './FasiProduzioneElaborate';
 export {
-  default as GerarchiaOrder,
-  GerarchiaOrderSchema,
-  IGerarchiaOrder,
-  TGerarchiaOrderDocument,
-  TGerarchiaOrderModel
-} from './GerarchiaOrder';
-export {
   default as ImpostazioniVerificaFabbisogni,
   ImpostazioniVerificaFabbisogniSchema,
   IImpostazioniVerificaFabbisogni,
@@ -2252,3 +2203,759 @@ export {
   TzzzItemsProduzioneDocument,
   TzzzItemsProduzioneModel
 } from './zzzItemsProduzione';
+export {
+  default as Chat,
+  ChatSchema,
+  IChat,
+  TChatDocument,
+  TChatModel
+} from './Chat';
+export {
+  default as ContenutiInLingua,
+  ContenutiInLinguaSchema,
+  IContenutiInLingua,
+  TContenutiInLinguaDocument,
+  TContenutiInLinguaModel
+} from './ContenutiInLingua';
+export {
+  default as IntegrazioniOrigine,
+  IntegrazioniOrigineSchema,
+  IIntegrazioniOrigine,
+  TIntegrazioniOrigineDocument,
+  TIntegrazioniOrigineModel
+} from './IntegrazioniOrigine';
+export {
+  default as Lingue,
+  LingueSchema,
+  ILingue,
+  TLingueDocument,
+  TLingueModel
+} from './Lingue';
+export {
+  default as NoteRelease,
+  NoteReleaseSchema,
+  INoteRelease,
+  TNoteReleaseDocument,
+  TNoteReleaseModel
+} from './NoteRelease';
+export {
+  default as PostazioniOrigine,
+  PostazioniOrigineSchema,
+  IPostazioniOrigine,
+  TPostazioniOrigineDocument,
+  TPostazioniOrigineModel
+} from './PostazioniOrigine';
+export {
+  default as RichiesteHelp,
+  RichiesteHelpSchema,
+  IRichiesteHelp,
+  TRichiesteHelpDocument,
+  TRichiesteHelpModel
+} from './RichiesteHelp';
+export {
+  default as RichiesteHelp_Tag,
+  RichiesteHelp_TagSchema,
+  IRichiesteHelp_Tag,
+  TRichiesteHelp_TagDocument,
+  TRichiesteHelp_TagModel
+} from './RichiesteHelp_Tag';
+export {
+  default as TipiTag,
+  TipiTagSchema,
+  ITipiTag,
+  TTipiTagDocument,
+  TTipiTagModel
+} from './TipiTag';
+export {
+  default as TipiTagInLingua,
+  TipiTagInLinguaSchema,
+  ITipiTagInLingua,
+  TTipiTagInLinguaDocument,
+  TTipiTagInLinguaModel
+} from './TipiTagInLingua';
+export {
+  default as UpdatesContenutiInLingua,
+  UpdatesContenutiInLinguaSchema,
+  IUpdatesContenutiInLingua,
+  TUpdatesContenutiInLinguaDocument,
+  TUpdatesContenutiInLinguaModel
+} from './UpdatesContenutiInLingua';
+export {
+  default as UtenteIdentitaMail,
+  UtenteIdentitaMailSchema,
+  IUtenteIdentitaMail,
+  TUtenteIdentitaMailDocument,
+  TUtenteIdentitaMailModel
+} from './UtenteIdentitaMail';
+export {
+  default as UtentePulsanti,
+  UtentePulsantiSchema,
+  IUtentePulsanti,
+  TUtentePulsantiDocument,
+  TUtentePulsantiModel
+} from './UtentePulsanti';
+export {
+  default as UtenteSocieta,
+  UtenteSocietaSchema,
+  IUtenteSocieta,
+  TUtenteSocietaDocument,
+  TUtenteSocietaModel
+} from './UtenteSocieta';
+export {
+  default as UtenteSottoMenu,
+  UtenteSottoMenuSchema,
+  IUtenteSottoMenu,
+  TUtenteSottoMenuDocument,
+  TUtenteSottoMenuModel
+} from './UtenteSottoMenu';
+export {
+  default as Utenti,
+  UtentiSchema,
+  IUtenti,
+  TUtentiDocument,
+  TUtentiModel
+} from './Utenti';
+export {
+  default as VersioniProdotti,
+  VersioniProdottiSchema,
+  IVersioniProdotti,
+  TVersioniProdottiDocument,
+  TVersioniProdottiModel
+} from './VersioniProdotti';
+export {
+  default as Attivita,
+  AttivitaSchema,
+  IAttivita,
+  TAttivitaDocument,
+  TAttivitaModel
+} from './Attivita';
+export {
+  default as AttivitaStandard,
+  AttivitaStandardSchema,
+  IAttivitaStandard,
+  TAttivitaStandardDocument,
+  TAttivitaStandardModel
+} from './AttivitaStandard';
+export {
+  default as Campagne,
+  CampagneSchema,
+  ICampagne,
+  TCampagneDocument,
+  TCampagneModel
+} from './Campagne';
+export {
+  default as MailStandard,
+  MailStandardSchema,
+  IMailStandard,
+  TMailStandardDocument,
+  TMailStandardModel
+} from './MailStandard';
+export {
+  default as Prospect,
+  ProspectSchema,
+  IProspect,
+  TProspectDocument,
+  TProspectModel
+} from './Prospect';
+export {
+  default as PulsantiOrigine,
+  PulsantiOrigineSchema,
+  IPulsantiOrigine,
+  TPulsantiOrigineDocument,
+  TPulsantiOrigineModel
+} from './PulsantiOrigine';
+export {
+  default as PulsantiTesti,
+  PulsantiTestiSchema,
+  IPulsantiTesti,
+  TPulsantiTestiDocument,
+  TPulsantiTestiModel
+} from './PulsantiTesti';
+export {
+  default as RubricaProspect,
+  RubricaProspectSchema,
+  IRubricaProspect,
+  TRubricaProspectDocument,
+  TRubricaProspectModel
+} from './RubricaProspect';
+export {
+  default as SottoMenuOrigine,
+  SottoMenuOrigineSchema,
+  ISottoMenuOrigine,
+  TSottoMenuOrigineDocument,
+  TSottoMenuOrigineModel
+} from './SottoMenuOrigine';
+export {
+  default as SottoMenuTesti,
+  SottoMenuTestiSchema,
+  ISottoMenuTesti,
+  TSottoMenuTestiDocument,
+  TSottoMenuTestiModel
+} from './SottoMenuTesti';
+export {
+  default as TipiCampagne,
+  TipiCampagneSchema,
+  ITipiCampagne,
+  TTipiCampagneDocument,
+  TTipiCampagneModel
+} from './TipiCampagne';
+export {
+  default as TipologieAttivita,
+  TipologieAttivitaSchema,
+  ITipologieAttivita,
+  TTipologieAttivitaDocument,
+  TTipologieAttivitaModel
+} from './TipologieAttivita';
+export {
+  default as UtentiCampagne,
+  UtentiCampagneSchema,
+  IUtentiCampagne,
+  TUtentiCampagneDocument,
+  TUtentiCampagneModel
+} from './UtentiCampagne';
+export {
+  default as InfoAggiuntiveTipoContenitore,
+  InfoAggiuntiveTipoContenitoreSchema,
+  IInfoAggiuntiveTipoContenitore,
+  TInfoAggiuntiveTipoContenitoreDocument,
+  TInfoAggiuntiveTipoContenitoreModel
+} from './InfoAggiuntiveTipoContenitore';
+export {
+  default as CalendarioInterventi,
+  CalendarioInterventiSchema,
+  ICalendarioInterventi,
+  TCalendarioInterventiDocument,
+  TCalendarioInterventiModel
+} from './CalendarioInterventi';
+export {
+  default as ContatoreCalendarioInterventi,
+  ContatoreCalendarioInterventiSchema,
+  IContatoreCalendarioInterventi,
+  TContatoreCalendarioInterventiDocument,
+  TContatoreCalendarioInterventiModel
+} from './ContatoreCalendarioInterventi';
+export {
+  default as CruscottoAnalisi,
+  CruscottoAnalisiSchema,
+  ICruscottoAnalisi,
+  TCruscottoAnalisiDocument,
+  TCruscottoAnalisiModel
+} from './CruscottoAnalisi';
+export {
+  default as TipiClassiInterventi,
+  TipiClassiInterventiSchema,
+  ITipiClassiInterventi,
+  TTipiClassiInterventiDocument,
+  TTipiClassiInterventiModel
+} from './TipiClassiInterventi';
+export {
+  default as AreeRisorse,
+  AreeRisorseSchema,
+  IAreeRisorse,
+  TAreeRisorseDocument,
+  TAreeRisorseModel
+} from './AreeRisorse';
+export {
+  default as CalendarioStoricoRisorse,
+  CalendarioStoricoRisorseSchema,
+  ICalendarioStoricoRisorse,
+  TCalendarioStoricoRisorseDocument,
+  TCalendarioStoricoRisorseModel
+} from './CalendarioStoricoRisorse';
+export {
+  default as ElementiCostoRisorsa,
+  ElementiCostoRisorsaSchema,
+  IElementiCostoRisorsa,
+  TElementiCostoRisorsaDocument,
+  TElementiCostoRisorsaModel
+} from './ElementiCostoRisorsa';
+export {
+  default as FamiglieRisorse,
+  FamiglieRisorseSchema,
+  IFamiglieRisorse,
+  TFamiglieRisorseDocument,
+  TFamiglieRisorseModel
+} from './FamiglieRisorse';
+export {
+  default as ImpostazioneCostiRisorse,
+  ImpostazioneCostiRisorseSchema,
+  IImpostazioneCostiRisorse,
+  TImpostazioneCostiRisorseDocument,
+  TImpostazioneCostiRisorseModel
+} from './ImpostazioneCostiRisorse';
+export {
+  default as LogCostiRisorse,
+  LogCostiRisorseSchema,
+  ILogCostiRisorse,
+  TLogCostiRisorseDocument,
+  TLogCostiRisorseModel
+} from './LogCostiRisorse';
+export {
+  default as PosizioniUtensiliAttrezzaturaRisorsa,
+  PosizioniUtensiliAttrezzaturaRisorsaSchema,
+  IPosizioniUtensiliAttrezzaturaRisorsa,
+  TPosizioniUtensiliAttrezzaturaRisorsaDocument,
+  TPosizioniUtensiliAttrezzaturaRisorsaModel
+} from './PosizioniUtensiliAttrezzaturaRisorsa';
+export {
+  default as Protocolli,
+  ProtocolliSchema,
+  IProtocolli,
+  TProtocolliDocument,
+  TProtocolliModel
+} from './Protocolli';
+export {
+  default as Risorse,
+  RisorseSchema,
+  IRisorse,
+  TRisorseDocument,
+  TRisorseModel
+} from './Risorse';
+export {
+  default as TipiElementiCostoGenerali,
+  TipiElementiCostoGeneraliSchema,
+  ITipiElementiCostoGenerali,
+  TTipiElementiCostoGeneraliDocument,
+  TTipiElementiCostoGeneraliModel
+} from './TipiElementiCostoGenerali';
+export {
+  default as TipiProtocolli,
+  TipiProtocolliSchema,
+  ITipiProtocolli,
+  TTipiProtocolliDocument,
+  TTipiProtocolliModel
+} from './TipiProtocolli';
+export {
+  default as TraduzioniTipiProtocolli,
+  TraduzioniTipiProtocolliSchema,
+  ITraduzioniTipiProtocolli,
+  TTraduzioniTipiProtocolliDocument,
+  TTraduzioniTipiProtocolliModel
+} from './TraduzioniTipiProtocolli';
+export {
+  default as VociImpostazioneCosti,
+  VociImpostazioneCostiSchema,
+  IVociImpostazioneCosti,
+  TVociImpostazioneCostiDocument,
+  TVociImpostazioneCostiModel
+} from './VociImpostazioneCosti';
+export {
+  default as VociTipiElementiCostoGenerali,
+  VociTipiElementiCostoGeneraliSchema,
+  IVociTipiElementiCostoGenerali,
+  TVociTipiElementiCostoGeneraliDocument,
+  TVociTipiElementiCostoGeneraliModel
+} from './VociTipiElementiCostoGenerali';
+export {
+  default as AppoggioVisualizzazione,
+  AppoggioVisualizzazioneSchema,
+  IAppoggioVisualizzazione,
+  TAppoggioVisualizzazioneDocument,
+  TAppoggioVisualizzazioneModel
+} from './AppoggioVisualizzazione';
+export {
+  default as Appuntamenti,
+  AppuntamentiSchema,
+  IAppuntamenti,
+  TAppuntamentiDocument,
+  TAppuntamentiModel
+} from './Appuntamenti';
+export {
+  default as CalTemp,
+  CalTempSchema,
+  ICalTemp,
+  TCalTempDocument,
+  TCalTempModel
+} from './CalTemp';
+export {
+  default as DisponibilitaAppuntamenti,
+  DisponibilitaAppuntamentiSchema,
+  IDisponibilitaAppuntamenti,
+  TDisponibilitaAppuntamentiDocument,
+  TDisponibilitaAppuntamentiModel
+} from './DisponibilitaAppuntamenti';
+export {
+  default as DisponibilitaRisorse,
+  DisponibilitaRisorseSchema,
+  IDisponibilitaRisorse,
+  TDisponibilitaRisorseDocument,
+  TDisponibilitaRisorseModel
+} from './DisponibilitaRisorse';
+export {
+  default as FamiglieStrumenti,
+  FamiglieStrumentiSchema,
+  IFamiglieStrumenti,
+  TFamiglieStrumentiDocument,
+  TFamiglieStrumentiModel
+} from './FamiglieStrumenti';
+export {
+  default as InfoAggiuntiveStrumento,
+  InfoAggiuntiveStrumentoSchema,
+  IInfoAggiuntiveStrumento,
+  TInfoAggiuntiveStrumentoDocument,
+  TInfoAggiuntiveStrumentoModel
+} from './InfoAggiuntiveStrumento';
+export {
+  default as InfoAggiuntiveTipoStrumento,
+  InfoAggiuntiveTipoStrumentoSchema,
+  IInfoAggiuntiveTipoStrumento,
+  TInfoAggiuntiveTipoStrumentoDocument,
+  TInfoAggiuntiveTipoStrumentoModel
+} from './InfoAggiuntiveTipoStrumento';
+export {
+  default as LuoghiAperture,
+  LuoghiApertureSchema,
+  ILuoghiAperture,
+  TLuoghiApertureDocument,
+  TLuoghiApertureModel
+} from './LuoghiAperture';
+export {
+  default as NoteGiorni,
+  NoteGiorniSchema,
+  INoteGiorni,
+  TNoteGiorniDocument,
+  TNoteGiorniModel
+} from './NoteGiorni';
+export {
+  default as OperatoriAppuntamento,
+  OperatoriAppuntamentoSchema,
+  IOperatoriAppuntamento,
+  TOperatoriAppuntamentoDocument,
+  TOperatoriAppuntamentoModel
+} from './OperatoriAppuntamento';
+export {
+  default as OperatoriPresenze,
+  OperatoriPresenzeSchema,
+  IOperatoriPresenze,
+  TOperatoriPresenzeDocument,
+  TOperatoriPresenzeModel
+} from './OperatoriPresenze';
+export {
+  default as P_CalendarioSlot,
+  P_CalendarioSlotSchema,
+  IP_CalendarioSlot,
+  TP_CalendarioSlotDocument,
+  TP_CalendarioSlotModel
+} from './P_CalendarioSlot';
+export {
+  default as P_FasiProduzione,
+  P_FasiProduzioneSchema,
+  IP_FasiProduzione,
+  TP_FasiProduzioneDocument,
+  TP_FasiProduzioneModel
+} from './P_FasiProduzione';
+export {
+  default as P_ImpegniRisorse,
+  P_ImpegniRisorseSchema,
+  IP_ImpegniRisorse,
+  TP_ImpegniRisorseDocument,
+  TP_ImpegniRisorseModel
+} from './P_ImpegniRisorse';
+export {
+  default as P_Impostazioni,
+  P_ImpostazioniSchema,
+  IP_Impostazioni,
+  TP_ImpostazioniDocument,
+  TP_ImpostazioniModel
+} from './P_Impostazioni';
+export {
+  default as P_OrariSettimaneStandard,
+  P_OrariSettimaneStandardSchema,
+  IP_OrariSettimaneStandard,
+  TP_OrariSettimaneStandardDocument,
+  TP_OrariSettimaneStandardModel
+} from './P_OrariSettimaneStandard';
+export {
+  default as P_Risorse,
+  P_RisorseSchema,
+  IP_Risorse,
+  TP_RisorseDocument,
+  TP_RisorseModel
+} from './P_Risorse';
+export {
+  default as P_SettimaneStandard,
+  P_SettimaneStandardSchema,
+  IP_SettimaneStandard,
+  TP_SettimaneStandardDocument,
+  TP_SettimaneStandardModel
+} from './P_SettimaneStandard';
+export {
+  default as P_SlotSettimaneStandard,
+  P_SlotSettimaneStandardSchema,
+  IP_SlotSettimaneStandard,
+  TP_SlotSettimaneStandardDocument,
+  TP_SlotSettimaneStandardModel
+} from './P_SlotSettimaneStandard';
+export {
+  default as P_VL_CalendarioSlot,
+  P_VL_CalendarioSlotSchema,
+  IP_VL_CalendarioSlot,
+  TP_VL_CalendarioSlotDocument,
+  TP_VL_CalendarioSlotModel
+} from './P_VL_CalendarioSlot';
+export {
+  default as P_VL_SlotVariazioniCalendario,
+  P_VL_SlotVariazioniCalendarioSchema,
+  IP_VL_SlotVariazioniCalendario,
+  TP_VL_SlotVariazioniCalendarioDocument,
+  TP_VL_SlotVariazioniCalendarioModel
+} from './P_VL_SlotVariazioniCalendario';
+export {
+  default as P_VariazioniCalendario,
+  P_VariazioniCalendarioSchema,
+  IP_VariazioniCalendario,
+  TP_VariazioniCalendarioDocument,
+  TP_VariazioniCalendarioModel
+} from './P_VariazioniCalendario';
+export {
+  default as SessioniAppuntamenti,
+  SessioniAppuntamentiSchema,
+  ISessioniAppuntamenti,
+  TSessioniAppuntamentiDocument,
+  TSessioniAppuntamentiModel
+} from './SessioniAppuntamenti';
+export {
+  default as StoricoStatoStrumento,
+  StoricoStatoStrumentoSchema,
+  IStoricoStatoStrumento,
+  TStoricoStatoStrumentoDocument,
+  TStoricoStatoStrumentoModel
+} from './StoricoStatoStrumento';
+export {
+  default as Strumenti,
+  StrumentiSchema,
+  IStrumenti,
+  TStrumentiDocument,
+  TStrumentiModel
+} from './Strumenti';
+export {
+  default as TipiStatiStrumenti,
+  TipiStatiStrumentiSchema,
+  ITipiStatiStrumenti,
+  TTipiStatiStrumentiDocument,
+  TTipiStatiStrumentiModel
+} from './TipiStatiStrumenti';
+export {
+  default as TipiStrumenti,
+  TipiStrumentiSchema,
+  ITipiStrumenti,
+  TTipiStrumentiDocument,
+  TTipiStrumentiModel
+} from './TipiStrumenti';
+export {
+  default as SistemiEsterni,
+  SistemiEsterniSchema,
+  ISistemiEsterni,
+  TSistemiEsterniDocument,
+  TSistemiEsterniModel
+} from './SistemiEsterni';
+export {
+  default as VociSistemiEsterni,
+  VociSistemiEsterniSchema,
+  IVociSistemiEsterni,
+  TVociSistemiEsterniDocument,
+  TVociSistemiEsterniModel
+} from './VociSistemiEsterni';
+export {
+  default as FileZProduction,
+  FileZProductionSchema,
+  IFileZProduction,
+  TFileZProductionDocument,
+  TFileZProductionModel
+} from './FileZProduction';
+export {
+  default as Articoli,
+  ArticoliSchema,
+  IArticoli,
+  TArticoliDocument,
+  TArticoliModel
+} from './Articoli';
+export {
+  default as TipiArticoli,
+  TipiArticoliSchema,
+  ITipiArticoli,
+  TTipiArticoliDocument,
+  TTipiArticoliModel
+} from './TipiArticoli';
+export {
+  default as IndirizziRubrica,
+  IndirizziRubricaSchema,
+  IIndirizziRubrica,
+  TIndirizziRubricaDocument,
+  TIndirizziRubricaModel
+} from './IndirizziRubrica';
+export {
+  default as ListinoItem,
+  ListinoItemSchema,
+  IListinoItem,
+  TListinoItemDocument,
+  TListinoItemModel
+} from './ListinoItem';
+export {
+  default as VariazioniListino,
+  VariazioniListinoSchema,
+  IVariazioniListino,
+  TVariazioniListinoDocument,
+  TVariazioniListinoModel
+} from './VariazioniListino';
+export {
+  default as IntegrazioniMagazzini_StoricoVoci,
+  IntegrazioniMagazzini_StoricoVociSchema,
+  IIntegrazioniMagazzini_StoricoVoci,
+  TIntegrazioniMagazzini_StoricoVociDocument,
+  TIntegrazioniMagazzini_StoricoVociModel
+} from './IntegrazioniMagazzini_StoricoVoci';
+export {
+  default as Capitoli,
+  CapitoliSchema,
+  ICapitoli,
+  TCapitoliDocument,
+  TCapitoliModel
+} from './Capitoli';
+export {
+  default as CapitoliAppoggio,
+  CapitoliAppoggioSchema,
+  ICapitoliAppoggio,
+  TCapitoliAppoggioDocument,
+  TCapitoliAppoggioModel
+} from './CapitoliAppoggio';
+export {
+  default as CapitoliRevisioni,
+  CapitoliRevisioniSchema,
+  ICapitoliRevisioni,
+  TCapitoliRevisioniDocument,
+  TCapitoliRevisioniModel
+} from './CapitoliRevisioni';
+export {
+  default as CostBreakdownVociOfferte,
+  CostBreakdownVociOfferteSchema,
+  ICostBreakdownVociOfferte,
+  TCostBreakdownVociOfferteDocument,
+  TCostBreakdownVociOfferteModel
+} from './CostBreakdownVociOfferte';
+export {
+  default as InformazioniOfferte,
+  InformazioniOfferteSchema,
+  IInformazioniOfferte,
+  TInformazioniOfferteDocument,
+  TInformazioniOfferteModel
+} from './InformazioniOfferte';
+export {
+  default as InformazioniOfferteRevisioni,
+  InformazioniOfferteRevisioniSchema,
+  IInformazioniOfferteRevisioni,
+  TInformazioniOfferteRevisioniDocument,
+  TInformazioniOfferteRevisioniModel
+} from './InformazioniOfferteRevisioni';
+export {
+  default as Offerte,
+  OfferteSchema,
+  IOfferte,
+  TOfferteDocument,
+  TOfferteModel
+} from './Offerte';
+export {
+  default as OfferteAppoggio,
+  OfferteAppoggioSchema,
+  IOfferteAppoggio,
+  TOfferteAppoggioDocument,
+  TOfferteAppoggioModel
+} from './OfferteAppoggio';
+export {
+  default as OfferteTestateRevisioni,
+  OfferteTestateRevisioniSchema,
+  IOfferteTestateRevisioni,
+  TOfferteTestateRevisioniDocument,
+  TOfferteTestateRevisioniModel
+} from './OfferteTestateRevisioni';
+export {
+  default as RevisioniOfferte,
+  RevisioniOfferteSchema,
+  IRevisioniOfferte,
+  TRevisioniOfferteDocument,
+  TRevisioniOfferteModel
+} from './RevisioniOfferte';
+export {
+  default as Stati,
+  StatiSchema,
+  IStati,
+  TStatiDocument,
+  TStatiModel
+} from './Stati';
+export {
+  default as StatiOfferte,
+  StatiOfferteSchema,
+  IStatiOfferte,
+  TStatiOfferteDocument,
+  TStatiOfferteModel
+} from './StatiOfferte';
+export {
+  default as StatiOfferteRevisioni,
+  StatiOfferteRevisioniSchema,
+  IStatiOfferteRevisioni,
+  TStatiOfferteRevisioniDocument,
+  TStatiOfferteRevisioniModel
+} from './StatiOfferteRevisioni';
+export {
+  default as TipiAttivitaStato,
+  TipiAttivitaStatoSchema,
+  ITipiAttivitaStato,
+  TTipiAttivitaStatoDocument,
+  TTipiAttivitaStatoModel
+} from './TipiAttivitaStato';
+export {
+  default as TipiInformazioniOfferte,
+  TipiInformazioniOfferteSchema,
+  ITipiInformazioniOfferte,
+  TTipiInformazioniOfferteDocument,
+  TTipiInformazioniOfferteModel
+} from './TipiInformazioniOfferte';
+export {
+  default as TipiOfferte,
+  TipiOfferteSchema,
+  ITipiOfferte,
+  TTipiOfferteDocument,
+  TTipiOfferteModel
+} from './TipiOfferte';
+export {
+  default as VociOfferte,
+  VociOfferteSchema,
+  IVociOfferte,
+  TVociOfferteDocument,
+  TVociOfferteModel
+} from './VociOfferte';
+export {
+  default as VociOfferteAppoggio,
+  VociOfferteAppoggioSchema,
+  IVociOfferteAppoggio,
+  TVociOfferteAppoggioDocument,
+  TVociOfferteAppoggioModel
+} from './VociOfferteAppoggio';
+export {
+  default as VociOfferteRevisioni,
+  VociOfferteRevisioniSchema,
+  IVociOfferteRevisioni,
+  TVociOfferteRevisioniDocument,
+  TVociOfferteRevisioniModel
+} from './VociOfferteRevisioni';
+export {
+  default as StatiItems,
+  StatiItemsSchema,
+  IStatiItems,
+  TStatiItemsDocument,
+  TStatiItemsModel
+} from './StatiItems';
+export {
+  default as StoricoStatiItems,
+  StoricoStatiItemsSchema,
+  IStoricoStatiItems,
+  TStoricoStatiItemsDocument,
+  TStoricoStatiItemsModel
+} from './StoricoStatiItems';
+export {
+  default as Festivita,
+  FestivitaSchema,
+  IFestivita,
+  TFestivitaDocument,
+  TFestivitaModel
+} from './Festivita';

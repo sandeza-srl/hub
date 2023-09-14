@@ -112,6 +112,11 @@ const OperatoriDipendentiSchema = new mongoose.Schema<IOperatoriDipendentiPrivat
     set: (value: any) => {
       return DateConverter.convertDateHour(value);
     }
+  },
+  __Dati_Testo010: {
+    type: String,
+    alias: 'IdOperatoriDipendenti',
+
   }
 }, {
   timestamps: true

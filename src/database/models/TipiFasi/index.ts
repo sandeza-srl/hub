@@ -19,7 +19,9 @@ export default TipiFasi;
 
 export { TipiFasiSchema };
 
-export type TTipiFasiModel = typeof TipiFasi;
+export type TTipiFasiModel = Omit<typeof TipiFasi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiFasi>): any
+};
 
 export type TTipiFasiDocument = 
 & mongoose.Document<any, {}, ITipiFasi>

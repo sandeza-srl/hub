@@ -19,7 +19,9 @@ export default FamiglieContenitori;
 
 export { FamiglieContenitoriSchema };
 
-export type TFamiglieContenitoriModel = typeof FamiglieContenitori;
+export type TFamiglieContenitoriModel = Omit<typeof FamiglieContenitori, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFamiglieContenitori>): any
+};
 
 export type TFamiglieContenitoriDocument = 
 & mongoose.Document<any, {}, IFamiglieContenitori>

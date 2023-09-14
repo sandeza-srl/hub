@@ -180,8 +180,6 @@ export interface IInstallazioneOriginePrivate {
   __Dati_Testo033: string;
   /** Reflected: Redbooth_API_Client_Secret*/ 
   __Dati_Testo034: string;
-  /** Reflected: Field114*/ 
-  __Dati_Testo035: string;
   /** Reflected: CollegamentoMacchine_FlagCamngo*/ 
   __Dati_Numero041: number;
   /** Reflected: FlagAbilitaCardNoteRelease*/ 
@@ -196,6 +194,6 @@ export interface IInstallazioneOriginePrivate {
   __Dati_Testo037: string;
   /** Reflected: PrintNode_APIKey*/ 
   __Dati_Testo038: string;
-  /** Reflected: ApiGateway_DB_Mongo*/ 
-  __Dati_Testo039: string
+  /** Reflected: FlagMongoDB*/ 
+  __Dati_Numero045: number
 }

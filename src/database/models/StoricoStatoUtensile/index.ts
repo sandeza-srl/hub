@@ -19,7 +19,9 @@ export default StoricoStatoUtensile;
 
 export { StoricoStatoUtensileSchema };
 
-export type TStoricoStatoUtensileModel = typeof StoricoStatoUtensile;
+export type TStoricoStatoUtensileModel = Omit<typeof StoricoStatoUtensile, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoStatoUtensile>): any
+};
 
 export type TStoricoStatoUtensileDocument = 
 & mongoose.Document<any, {}, IStoricoStatoUtensile>

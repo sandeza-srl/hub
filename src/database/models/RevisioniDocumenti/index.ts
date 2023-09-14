@@ -19,7 +19,9 @@ export default RevisioniDocumenti;
 
 export { RevisioniDocumentiSchema };
 
-export type TRevisioniDocumentiModel = typeof RevisioniDocumenti;
+export type TRevisioniDocumentiModel = Omit<typeof RevisioniDocumenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRevisioniDocumenti>): any
+};
 
 export type TRevisioniDocumentiDocument = 
 & mongoose.Document<any, {}, IRevisioniDocumenti>

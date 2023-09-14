@@ -19,7 +19,9 @@ export default CodiciCatastali;
 
 export { CodiciCatastaliSchema };
 
-export type TCodiciCatastaliModel = typeof CodiciCatastali;
+export type TCodiciCatastaliModel = Omit<typeof CodiciCatastali, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICodiciCatastali>): any
+};
 
 export type TCodiciCatastaliDocument = 
 & mongoose.Document<any, {}, ICodiciCatastali>

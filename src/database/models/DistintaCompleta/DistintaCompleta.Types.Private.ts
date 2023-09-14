@@ -69,5 +69,9 @@ export interface IDistintaCompletaPrivate {
   /** Reflected: DataOraCreazione*/ 
   __Dati_DataOra002: Date;
   /** Reflected: DataOraUltimaModifica*/ 
-  __Dati_DataOra003: Date
+  __Dati_DataOra003: Date;
+  /** Reflected: FlagAggiornaValori*/ 
+  __Dati_Numero014: number;
+  /** Reflected: Note*/ 
+  __Dati_Testo020: string
 }

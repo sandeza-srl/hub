@@ -19,7 +19,9 @@ export default StoricoStatoContenitore;
 
 export { StoricoStatoContenitoreSchema };
 
-export type TStoricoStatoContenitoreModel = typeof StoricoStatoContenitore;
+export type TStoricoStatoContenitoreModel = Omit<typeof StoricoStatoContenitore, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoStatoContenitore>): any
+};
 
 export type TStoricoStatoContenitoreDocument = 
 & mongoose.Document<any, {}, IStoricoStatoContenitore>

@@ -112,6 +112,16 @@ const MontaggioUtensiliFaseProduzioneSchema = new mongoose.Schema<IMontaggioUten
     type: Number,
     alias: 'Zero',
 
+  },
+  __Dati_Testo014: {
+    type: String,
+    alias: 'IdLottoProduzione',
+
+  },
+  __Dati_Testo015: {
+    type: String,
+    alias: 'IdRigaOrdine',
+
   }
 }, {
   timestamps: true

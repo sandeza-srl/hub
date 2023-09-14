@@ -122,6 +122,41 @@ const TipiEtichetteItemsSchema = new mongoose.Schema<ITipiEtichetteItemsPrivate>
     type: Number,
     alias: 'FlagUtilizzataOfferte',
 
+  },
+  __Dati_Numero014: {
+    type: Number,
+    alias: 'FlagTipoCalcolo',
+
+  },
+  __Dati_Numero015: {
+    type: Number,
+    alias: 'FlagSottoTipoCalcolo_DaEtichette',
+
+  },
+  __Dati_Numero016: {
+    type: Number,
+    alias: 'FlagSottoTipoCalcolo_DaEtichetteMaster',
+
+  },
+  __Dati_Numero017: {
+    type: Number,
+    alias: 'FlagSottoTipoCalcolo_DaUM_Alt',
+
+  },
+  __Dati_Numero018: {
+    type: Number,
+    alias: 'FlagCalcoloValido',
+
+  },
+  __Dati_Testo007: {
+    type: String,
+    alias: 'Formula_Calcolo',
+
+  },
+  __Dati_Testo008: {
+    type: String,
+    alias: 'IdTipiEtichettePerCalcolo',
+
   }
 }, {
   timestamps: true

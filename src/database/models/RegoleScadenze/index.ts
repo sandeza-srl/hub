@@ -19,7 +19,9 @@ export default RegoleScadenze;
 
 export { RegoleScadenzeSchema };
 
-export type TRegoleScadenzeModel = typeof RegoleScadenze;
+export type TRegoleScadenzeModel = Omit<typeof RegoleScadenze, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRegoleScadenze>): any
+};
 
 export type TRegoleScadenzeDocument = 
 & mongoose.Document<any, {}, IRegoleScadenze>

@@ -2484,6 +2484,38 @@ const FasiProduzioneSchema = new mongoose.Schema<IFasiProduzionePrivate>({
     type: Number,
     alias: 'ControlliQualita_FlagAvvisoFisso',
 
+  },
+  __Dati_Numero339: {
+    type: Number,
+    alias: 'NUmFinColpo_T',
+
+  },
+  __Dati_Numero340: {
+    type: Number,
+    alias: 'NUmOpzColpo_T',
+
+  },
+  __Dati_Numero341: {
+    type: Number,
+    alias: 'CreazionePosteriori_FlagFaseCreataPosteriori',
+
+  },
+  __Dati_Testo104: {
+    type: String,
+    alias: 'CreazionePosteriori_IdUtenteCreazione',
+
+  },
+  __Dati_Testo105: {
+    type: String,
+    alias: 'CreazionePosteriori_TxtUtenteCreazione',
+
+  },
+  __Dati_DataOra007: {
+    type: Date,
+    alias: 'CreazionePosteriori_DataOraCreazione',
+    set: (value: any) => {
+      return DateConverter.convertDateHour(value);
+    }
   }
 }, {
   timestamps: true

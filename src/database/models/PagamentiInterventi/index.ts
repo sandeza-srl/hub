@@ -19,7 +19,9 @@ export default PagamentiInterventi;
 
 export { PagamentiInterventiSchema };
 
-export type TPagamentiInterventiModel = typeof PagamentiInterventi;
+export type TPagamentiInterventiModel = Omit<typeof PagamentiInterventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPagamentiInterventi>): any
+};
 
 export type TPagamentiInterventiDocument = 
 & mongoose.Document<any, {}, IPagamentiInterventi>

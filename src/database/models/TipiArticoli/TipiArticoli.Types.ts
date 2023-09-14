@@ -51,7 +51,7 @@ export interface ITipiArticoli {
   /** Reflected: __Dati_Numero008*/ 
   GeneraCodice_FlagUsaCodiceAltro: number;
   /** Reflected: __Dati_Numero009*/ 
-  FlagEsplodiDistinta: number;
+  EsplosioneDistinta_CreaLottiLivelliSottostanti: number;
   /** Reflected: __Dati_Numero010*/ 
   FlagUsaCodificaUnicaItem: number;
   /** Reflected: __Dati_Numero011*/ 

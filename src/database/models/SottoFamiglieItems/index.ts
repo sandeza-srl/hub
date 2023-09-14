@@ -23,8 +23,8 @@ export type TSottoFamiglieItemsModel = Omit<typeof SottoFamiglieItems, 'traslate
   translateAliases(raw: Partial<ISottoFamiglieItems>): any
 };
 
-export type TSottoFamiglieItemsDocument =
-  & mongoose.Document<any, {}, ISottoFamiglieItems>
-  & ISottoFamiglieItems;
+export type TSottoFamiglieItemsDocument = 
+& mongoose.Document<any, {}, ISottoFamiglieItems>
+& ISottoFamiglieItems;
 
 export { ISottoFamiglieItems };

@@ -997,6 +997,26 @@ const InterventiSchema = new mongoose.Schema<IInterventiPrivate>({
     type: String,
     alias: 'TxtClasseIntervento',
 
+  },
+  __Dati_Testo098: {
+    type: String,
+    alias: 'IdPeriodoContabile',
+
+  },
+  __Dati_Numero069: {
+    type: Number,
+    alias: 'FlagRispettaProgressivo',
+
+  },
+  __Dati_Testo099: {
+    type: String,
+    alias: 'IdTipoInterventoPerCodice',
+
+  },
+  __Dati_Testo100: {
+    type: String,
+    alias: 'TxtPeriodoContabile',
+
   }
 }, {
   timestamps: true

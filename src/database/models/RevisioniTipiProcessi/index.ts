@@ -19,7 +19,9 @@ export default RevisioniTipiProcessi;
 
 export { RevisioniTipiProcessiSchema };
 
-export type TRevisioniTipiProcessiModel = typeof RevisioniTipiProcessi;
+export type TRevisioniTipiProcessiModel = Omit<typeof RevisioniTipiProcessi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRevisioniTipiProcessi>): any
+};
 
 export type TRevisioniTipiProcessiDocument = 
 & mongoose.Document<any, {}, IRevisioniTipiProcessi>

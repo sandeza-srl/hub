@@ -19,7 +19,9 @@ export default TipiArticoli;
 
 export { TipiArticoliSchema };
 
-export type TTipiArticoliModel = typeof TipiArticoli;
+export type TTipiArticoliModel = Omit<typeof TipiArticoli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiArticoli>): any
+};
 
 export type TTipiArticoliDocument = 
 & mongoose.Document<any, {}, ITipiArticoli>

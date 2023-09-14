@@ -19,7 +19,9 @@ export default CodificheNaturaEsenzione;
 
 export { CodificheNaturaEsenzioneSchema };
 
-export type TCodificheNaturaEsenzioneModel = typeof CodificheNaturaEsenzione;
+export type TCodificheNaturaEsenzioneModel = Omit<typeof CodificheNaturaEsenzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICodificheNaturaEsenzione>): any
+};
 
 export type TCodificheNaturaEsenzioneDocument = 
 & mongoose.Document<any, {}, ICodificheNaturaEsenzione>

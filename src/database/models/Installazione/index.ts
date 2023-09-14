@@ -19,7 +19,9 @@ export default Installazione;
 
 export { InstallazioneSchema };
 
-export type TInstallazioneModel = typeof Installazione;
+export type TInstallazioneModel = Omit<typeof Installazione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInstallazione>): any
+};
 
 export type TInstallazioneDocument = 
 & mongoose.Document<any, {}, IInstallazione>

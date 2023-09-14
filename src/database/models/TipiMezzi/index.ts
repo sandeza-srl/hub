@@ -19,7 +19,9 @@ export default TipiMezzi;
 
 export { TipiMezziSchema };
 
-export type TTipiMezziModel = typeof TipiMezzi;
+export type TTipiMezziModel = Omit<typeof TipiMezzi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiMezzi>): any
+};
 
 export type TTipiMezziDocument = 
 & mongoose.Document<any, {}, ITipiMezzi>

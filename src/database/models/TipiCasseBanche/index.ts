@@ -19,7 +19,9 @@ export default TipiCasseBanche;
 
 export { TipiCasseBancheSchema };
 
-export type TTipiCasseBancheModel = typeof TipiCasseBanche;
+export type TTipiCasseBancheModel = Omit<typeof TipiCasseBanche, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiCasseBanche>): any
+};
 
 export type TTipiCasseBancheDocument = 
 & mongoose.Document<any, {}, ITipiCasseBanche>

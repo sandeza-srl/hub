@@ -19,7 +19,9 @@ export default Mezzi;
 
 export { MezziSchema };
 
-export type TMezziModel = typeof Mezzi;
+export type TMezziModel = Omit<typeof Mezzi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMezzi>): any
+};
 
 export type TMezziDocument = 
 & mongoose.Document<any, {}, IMezzi>

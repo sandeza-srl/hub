@@ -19,7 +19,9 @@ export default ScadenzeDocOperativi;
 
 export { ScadenzeDocOperativiSchema };
 
-export type TScadenzeDocOperativiModel = typeof ScadenzeDocOperativi;
+export type TScadenzeDocOperativiModel = Omit<typeof ScadenzeDocOperativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IScadenzeDocOperativi>): any
+};
 
 export type TScadenzeDocOperativiDocument = 
 & mongoose.Document<any, {}, IScadenzeDocOperativi>

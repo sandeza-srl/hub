@@ -19,7 +19,9 @@ export default ItemsAlternativi;
 
 export { ItemsAlternativiSchema };
 
-export type TItemsAlternativiModel = typeof ItemsAlternativi;
+export type TItemsAlternativiModel = Omit<typeof ItemsAlternativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IItemsAlternativi>): any
+};
 
 export type TItemsAlternativiDocument = 
 & mongoose.Document<any, {}, IItemsAlternativi>

@@ -19,7 +19,9 @@ export default SupportoCalendario;
 
 export { SupportoCalendarioSchema };
 
-export type TSupportoCalendarioModel = typeof SupportoCalendario;
+export type TSupportoCalendarioModel = Omit<typeof SupportoCalendario, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ISupportoCalendario>): any
+};
 
 export type TSupportoCalendarioDocument = 
 & mongoose.Document<any, {}, ISupportoCalendario>

@@ -19,7 +19,9 @@ export default MontaggioUtensiliFaseProduzione;
 
 export { MontaggioUtensiliFaseProduzioneSchema };
 
-export type TMontaggioUtensiliFaseProduzioneModel = typeof MontaggioUtensiliFaseProduzione;
+export type TMontaggioUtensiliFaseProduzioneModel = Omit<typeof MontaggioUtensiliFaseProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMontaggioUtensiliFaseProduzione>): any
+};
 
 export type TMontaggioUtensiliFaseProduzioneDocument = 
 & mongoose.Document<any, {}, IMontaggioUtensiliFaseProduzione>

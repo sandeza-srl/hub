@@ -297,6 +297,26 @@ const ControlliArticoloSchema = new mongoose.Schema<IControlliArticoloPrivate>({
     type: String,
     alias: 'IdRicorrenzaRecord',
 
+  },
+  __Dati_Testo036: {
+    type: String,
+    alias: 'IdTipoContenitore',
+
+  },
+  __Dati_Testo037: {
+    type: String,
+    alias: 'CodiceTipoContenitore',
+
+  },
+  __Dati_Testo038: {
+    type: String,
+    alias: 'CodiceTxtTipoContenitoreAutomatico',
+
+  },
+  __Dati_Testo039: {
+    type: String,
+    alias: 'TxtTipoContenitore',
+
   }
 }, {
   timestamps: true

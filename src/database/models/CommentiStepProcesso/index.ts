@@ -19,7 +19,9 @@ export default CommentiStepProcesso;
 
 export { CommentiStepProcessoSchema };
 
-export type TCommentiStepProcessoModel = typeof CommentiStepProcesso;
+export type TCommentiStepProcessoModel = Omit<typeof CommentiStepProcesso, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICommentiStepProcesso>): any
+};
 
 export type TCommentiStepProcessoDocument = 
 & mongoose.Document<any, {}, ICommentiStepProcesso>

@@ -19,7 +19,9 @@ export default TipologieDestinatariMail;
 
 export { TipologieDestinatariMailSchema };
 
-export type TTipologieDestinatariMailModel = typeof TipologieDestinatariMail;
+export type TTipologieDestinatariMailModel = Omit<typeof TipologieDestinatariMail, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipologieDestinatariMail>): any
+};
 
 export type TTipologieDestinatariMailDocument = 
 & mongoose.Document<any, {}, ITipologieDestinatariMail>

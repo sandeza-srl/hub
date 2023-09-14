@@ -19,7 +19,9 @@ export default AnalisiCostoArticoli_Commenti;
 
 export { AnalisiCostoArticoli_CommentiSchema };
 
-export type TAnalisiCostoArticoli_CommentiModel = typeof AnalisiCostoArticoli_Commenti;
+export type TAnalisiCostoArticoli_CommentiModel = Omit<typeof AnalisiCostoArticoli_Commenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IAnalisiCostoArticoli_Commenti>): any
+};
 
 export type TAnalisiCostoArticoli_CommentiDocument = 
 & mongoose.Document<any, {}, IAnalisiCostoArticoli_Commenti>

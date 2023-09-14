@@ -19,7 +19,9 @@ export default FamiglieUtensili;
 
 export { FamiglieUtensiliSchema };
 
-export type TFamiglieUtensiliModel = typeof FamiglieUtensili;
+export type TFamiglieUtensiliModel = Omit<typeof FamiglieUtensili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFamiglieUtensili>): any
+};
 
 export type TFamiglieUtensiliDocument = 
 & mongoose.Document<any, {}, IFamiglieUtensili>

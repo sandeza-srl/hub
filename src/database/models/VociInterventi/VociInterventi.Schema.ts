@@ -635,6 +635,16 @@ const VociInterventiSchema = new mongoose.Schema<IVociInterventiPrivate>({
     type: String,
     alias: 'IdInstallazione',
 
+  },
+  __Dati_Numero044: {
+    type: Number,
+    alias: 'GiornoSettimanaIntervento',
+
+  },
+  __Dati_Numero045: {
+    type: Number,
+    alias: 'AnnoProgrammata',
+
   }
 }, {
   timestamps: true

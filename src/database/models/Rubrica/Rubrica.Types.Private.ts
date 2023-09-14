@@ -1,141 +1,95 @@
 export interface IRubricaPrivate {
   _id: string;
-
-  /** Reflected: IdAccount*/
+  /** Reflected: IdAccount*/ 
   __Dati_Testo001: string;
-
-  /** Reflected: Uno*/
+  /** Reflected: Uno*/ 
   __Dati_Numero001: number;
-
-  /** Reflected: IdRubrica*/
+  /** Reflected: IdRubrica*/ 
   __Dati_Testo002: string;
-
-  /** Reflected: NomeRubrica*/
+  /** Reflected: NomeRubrica*/ 
   __Dati_Testo003: string;
-
-  /** Reflected: TxtTipoPosizione*/
+  /** Reflected: TxtTipoPosizione*/ 
   __Dati_Testo004: string;
-
-  /** Reflected: Note*/
+  /** Reflected: Note*/ 
   __Dati_Testo005: string;
-
-  /** Reflected: FlagVediClientiPrimari*/
+  /** Reflected: FlagVediClientiPrimari*/ 
   __Dati_Numero002: number;
-
-  /** Reflected: FlagVediCompagnie*/
+  /** Reflected: FlagVediCompagnie*/ 
   __Dati_Numero003: number;
-
-  /** Reflected: FlagVediDistributori*/
+  /** Reflected: FlagVediDistributori*/ 
   __Dati_Numero004: number;
-
-  /** Reflected: FlagVediClientiFinali*/
+  /** Reflected: FlagVediClientiFinali*/ 
   __Dati_Numero005: number;
-
-  /** Reflected: FlagVediOperatori*/
+  /** Reflected: FlagVediOperatori*/ 
   __Dati_Numero006: number;
-
-  /** Reflected: FlagVediTutti*/
+  /** Reflected: FlagVediTutti*/ 
   __Dati_Numero007: number;
-
-  /** Reflected: FlagVediFornitori*/
+  /** Reflected: FlagVediFornitori*/ 
   __Dati_Numero008: number;
-
-  /** Reflected: LetteraInizialeNome*/
+  /** Reflected: LetteraInizialeNome*/ 
   __Dati_Testo006: string;
-
-  /** Reflected: Appellativo*/
+  /** Reflected: Appellativo*/ 
   __Dati_Testo007: string;
-
-  /** Reflected: DescrizioneStampabile*/
+  /** Reflected: DescrizioneStampabile*/ 
   __Dati_Testo008: string;
-
-  /** Reflected: LettereNomeRubrica*/
+  /** Reflected: LettereNomeRubrica*/ 
   __Dati_Testo009: string;
-
-  /** Reflected: DataNascita*/
+  /** Reflected: DataNascita*/ 
   __Dati_Data001: Date;
-
-  /** Reflected: FlagMaschio*/
+  /** Reflected: FlagMaschio*/ 
   __Dati_Numero009: number;
-
-  /** Reflected: FlagFemmina*/
+  /** Reflected: FlagFemmina*/ 
   __Dati_Numero010: number;
-
-  /** Reflected: CittaNascita*/
+  /** Reflected: CittaNascita*/ 
   __Dati_Testo010: string;
-
-  /** Reflected: IdNazioneNascita*/
+  /** Reflected: IdNazioneNascita*/ 
   __Dati_Testo011: string;
-
-  /** Reflected: Nazionalita*/
+  /** Reflected: Nazionalita*/ 
   __Dati_Testo012: string;
-
-  /** Reflected: CodiceFiscale*/
+  /** Reflected: CodiceFiscale*/ 
   __Dati_Testo013: string;
-
-  /** Reflected: NomeNazioneNascitaIng*/
+  /** Reflected: NomeNazioneNascitaIng*/ 
   __Dati_Testo014: string;
-
-  /** Reflected: IdListeDiffusione*/
+  /** Reflected: IdListeDiffusione*/ 
   __Dati_Testo015: string;
-
-  /** Reflected: CodiceIdentificativo*/
+  /** Reflected: CodiceIdentificativo*/ 
   __Dati_Testo016: string;
-
-  /** Reflected: TxtAccountTutti*/
+  /** Reflected: TxtAccountTutti*/ 
   __Dati_Testo017: string;
-
-  /** Reflected: IdSede*/
+  /** Reflected: IdSede*/ 
   __Dati_Testo018: string;
-
-  /** Reflected: IdTipoPosizione*/
+  /** Reflected: IdTipoPosizione*/ 
   __Dati_Testo019: string;
-
-  /** Reflected: TxtSede*/
+  /** Reflected: TxtSede*/ 
   __Dati_Testo020: string;
-
-  /** Reflected: IdAccountCompagnia*/
+  /** Reflected: IdAccountCompagnia*/ 
   __Dati_Testo021: string;
-
-  /** Reflected: NomeRubricaPosizione*/
+  /** Reflected: NomeRubricaPosizione*/ 
   __Dati_Testo022: string;
-
-  /** Reflected: vCard*/
+  /** Reflected: vCard*/ 
   __Dati_Testo023: string;
-
-  /** Reflected: DataOraUltimaModifica*/
+  /** Reflected: DataOraUltimaModifica*/ 
   __Dati_DataOra001: Date;
-
-  /** Reflected: FlagInvioDocumentiContabili*/
+  /** Reflected: FlagInvioDocumentiContabili*/ 
   __Dati_Numero011: number;
-
-  /** Reflected: FlagInvioDocumentiOperativi*/
+  /** Reflected: FlagInvioDocumentiOperativi*/ 
   __Dati_Numero012: number;
-
-  /** Reflected: FlagInvioDocumentiCommerciali*/
+  /** Reflected: FlagInvioDocumentiCommerciali*/ 
   __Dati_Numero013: number;
-
-  /** Reflected: TxtNome*/
+  /** Reflected: TxtNome*/ 
   __Dati_Testo024: string;
-
-  /** Reflected: TxtCognome*/
+  /** Reflected: TxtCognome*/ 
   __Dati_Testo025: string;
-
-  /** Reflected: IdUtentiNoVisualizzazione*/
+  /** Reflected: IdUtentiNoVisualizzazione*/ 
   __Dati_Testo026: string;
-
-  /** Reflected: Zero*/
+  /** Reflected: Zero*/ 
   __Dati_Numero014: number;
-
-  /** Reflected: IdInstallazione*/
+  /** Reflected: IdInstallazione*/ 
   __Dati_Testo027: string;
-
-  /** Reflected: DataPrimoContatto*/
+  /** Reflected: DataPrimoContatto*/ 
   __Dati_Data002: Date;
-
-  /** Reflected: DataUltimoContatto*/
+  /** Reflected: DataUltimoContatto*/ 
   __Dati_Data003: Date;
-
-  /** Reflected: LingueParlate*/
-  __Dati_Testo028: string;
+  /** Reflected: LingueParlate*/ 
+  __Dati_Testo028: string
 }

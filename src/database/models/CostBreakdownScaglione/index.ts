@@ -19,7 +19,9 @@ export default CostBreakdownScaglione;
 
 export { CostBreakdownScaglioneSchema };
 
-export type TCostBreakdownScaglioneModel = typeof CostBreakdownScaglione;
+export type TCostBreakdownScaglioneModel = Omit<typeof CostBreakdownScaglione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICostBreakdownScaglione>): any
+};
 
 export type TCostBreakdownScaglioneDocument = 
 & mongoose.Document<any, {}, ICostBreakdownScaglione>

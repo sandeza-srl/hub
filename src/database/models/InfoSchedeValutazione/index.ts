@@ -19,7 +19,9 @@ export default InfoSchedeValutazione;
 
 export { InfoSchedeValutazioneSchema };
 
-export type TInfoSchedeValutazioneModel = typeof InfoSchedeValutazione;
+export type TInfoSchedeValutazioneModel = Omit<typeof InfoSchedeValutazione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoSchedeValutazione>): any
+};
 
 export type TInfoSchedeValutazioneDocument = 
 & mongoose.Document<any, {}, IInfoSchedeValutazione>

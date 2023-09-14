@@ -19,7 +19,9 @@ export default TIpiProblemi;
 
 export { TIpiProblemiSchema };
 
-export type TTIpiProblemiModel = typeof TIpiProblemi;
+export type TTIpiProblemiModel = Omit<typeof TIpiProblemi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITIpiProblemi>): any
+};
 
 export type TTIpiProblemiDocument = 
 & mongoose.Document<any, {}, ITIpiProblemi>

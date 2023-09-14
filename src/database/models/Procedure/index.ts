@@ -19,7 +19,9 @@ export default Procedure;
 
 export { ProcedureSchema };
 
-export type TProcedureModel = typeof Procedure;
+export type TProcedureModel = Omit<typeof Procedure, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IProcedure>): any
+};
 
 export type TProcedureDocument = 
 & mongoose.Document<any, {}, IProcedure>

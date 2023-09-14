@@ -143,6 +143,16 @@ const TipiContenitoriSchema = new mongoose.Schema<ITipiContenitoriPrivate>({
     alias: 'NumeroContenitoriDisponibili',
 
   },
+  __Dati_Numero010: {
+    type: Number,
+    alias: 'NumeroContenitoriInVerifica',
+
+  },
+  __Dati_Numero011: {
+    type: Number,
+    alias: 'FlagPrimario',
+
+  },
   __Dati_Testo014: {
     type: String,
     alias: 'CodiceTxtTipoContenitoreAutomatico',
@@ -153,7 +163,7 @@ const TipiContenitoriSchema = new mongoose.Schema<ITipiContenitoriPrivate>({
     alias: 'IdInstallazione',
 
   },
-  __Dati_Numero010: {
+  __Dati_Numero012: {
     type: Number,
     alias: 'FlagAggiornaContenutiDaItems',
 
@@ -166,11 +176,6 @@ const TipiContenitoriSchema = new mongoose.Schema<ITipiContenitoriPrivate>({
   __Dati_Testo017: {
     type: String,
     alias: 'IdDocumentoPrincipale',
-
-  },
-  __Dati_Numero011: {
-    type: Number,
-    alias: 'NumeroContenitoriInVerifica',
 
   }
 }, {

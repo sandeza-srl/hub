@@ -207,6 +207,81 @@ const TipiInterventiSchema = new mongoose.Schema<ITipiInterventiPrivate>({
     type: String,
     alias: 'IdClasseInterventi',
 
+  },
+  __Dati_Testo026: {
+    type: String,
+    alias: 'GeneraCodice_AltroIdTipoInterventoPerCodice',
+
+  },
+  __Dati_Numero012: {
+    type: Number,
+    alias: 'GeneraCodice_CifreProgressivo',
+
+  },
+  __Dati_Numero013: {
+    type: Number,
+    alias: 'GeneraCodice_FlagTxtPeriodoContabileVisibile',
+
+  },
+  __Dati_Numero014: {
+    type: Number,
+    alias: 'GeneraCodice_FlagUsaCodiceAltro',
+
+  },
+  __Dati_Testo027: {
+    type: String,
+    alias: 'GeneraCodice_IdPeriodoContabileTest',
+
+  },
+  __Dati_Testo028: {
+    type: String,
+    alias: 'GeneraCodice_IdTipoInterventoPerCodice',
+
+  },
+  __Dati_Numero015: {
+    type: Number,
+    alias: 'GeneraCodice_OrdineProgressivo',
+
+  },
+  __Dati_Numero016: {
+    type: Number,
+    alias: 'GeneraCodice_OrdineTesto',
+
+  },
+  __Dati_Numero017: {
+    type: Number,
+    alias: 'GeneraCodice_OrdineTxtPeriodoContabile',
+
+  },
+  __Dati_Numero018: {
+    type: Number,
+    alias: 'GeneraCodice_Progressivo',
+
+  },
+  __Dati_Testo029: {
+    type: String,
+    alias: 'GeneraCodice_ProssimoCodice',
+
+  },
+  __Dati_Testo030: {
+    type: String,
+    alias: 'GeneraCodice_Separatore',
+
+  },
+  __Dati_Testo031: {
+    type: String,
+    alias: 'GeneraCodice_Testo',
+
+  },
+  __Dati_Testo032: {
+    type: String,
+    alias: 'GeneraCodice_TxtPeriodoContabileTest',
+
+  },
+  __Dati_Numero019: {
+    type: Number,
+    alias: 'FlagRispettaProgressivo',
+
   }
 }, {
   timestamps: true

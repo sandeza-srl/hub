@@ -219,6 +219,46 @@ const TipiProcessiSchema = new mongoose.Schema<ITipiProcessiPrivate>({
     type: Number,
     alias: 'FlagVisualizzazioneOffline',
 
+  },
+  __Dati_Numero020: {
+    type: Number,
+    alias: 'FlagPersonalizzaGiorni',
+
+  },
+  __Dati_Numero021: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaLunedi',
+
+  },
+  __Dati_Numero022: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaMartedi',
+
+  },
+  __Dati_Numero023: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaMercoledi',
+
+  },
+  __Dati_Numero024: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaGiovedi',
+
+  },
+  __Dati_Numero025: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaVenerdi',
+
+  },
+  __Dati_Numero026: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaSabato',
+
+  },
+  __Dati_Numero027: {
+    type: Number,
+    alias: 'PersonalizzaGiorni_FlagContaDomenica',
+
   }
 }, {
   timestamps: true

@@ -243,5 +243,9 @@ export interface IVociInterventi {
   /** Reflected: __Dati_Testo072*/ 
   IdTipoIntervento: string;
   /** Reflected: __Dati_Testo073*/ 
-  IdInstallazione: string
+  IdInstallazione: string;
+  /** Reflected: __Dati_Numero044*/ 
+  GiornoSettimanaIntervento: number;
+  /** Reflected: __Dati_Numero045*/ 
+  AnnoProgrammata: number
 }

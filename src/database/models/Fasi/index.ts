@@ -19,7 +19,9 @@ export default Fasi;
 
 export { FasiSchema };
 
-export type TFasiModel = typeof Fasi;
+export type TFasiModel = Omit<typeof Fasi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFasi>): any
+};
 
 export type TFasiDocument = 
 & mongoose.Document<any, {}, IFasi>

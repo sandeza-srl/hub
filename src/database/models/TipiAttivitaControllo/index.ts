@@ -19,7 +19,9 @@ export default TipiAttivitaControllo;
 
 export { TipiAttivitaControlloSchema };
 
-export type TTipiAttivitaControlloModel = typeof TipiAttivitaControllo;
+export type TTipiAttivitaControlloModel = Omit<typeof TipiAttivitaControllo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiAttivitaControllo>): any
+};
 
 export type TTipiAttivitaControlloDocument = 
 & mongoose.Document<any, {}, ITipiAttivitaControllo>

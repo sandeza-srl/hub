@@ -19,7 +19,9 @@ export default FornitureScaglioniCicli;
 
 export { FornitureScaglioniCicliSchema };
 
-export type TFornitureScaglioniCicliModel = typeof FornitureScaglioniCicli;
+export type TFornitureScaglioniCicliModel = Omit<typeof FornitureScaglioniCicli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFornitureScaglioniCicli>): any
+};
 
 export type TFornitureScaglioniCicliDocument = 
 & mongoose.Document<any, {}, IFornitureScaglioniCicli>

@@ -192,42 +192,12 @@ const ContenitoriSchema = new mongoose.Schema<IContenitoriPrivate>({
     alias: 'NumeroSerie',
 
   },
-  __Dati_Testo023: {
-    type: String,
-    alias: 'iBeacon_Id',
-
-  },
-  __Dati_Testo024: {
-    type: String,
-    alias: 'iBeacon_Major',
-
-  },
-  __Dati_Testo025: {
-    type: String,
-    alias: 'iBeacon_Minor',
-
-  },
-  __Dati_Testo026: {
-    type: String,
-    alias: 'CodiceTxtContenitoreAutomatico',
-
-  },
-  __Dati_Testo027: {
-    type: String,
-    alias: 'TxtTipoStatoPosizioneContenitoreAutomatico',
-
-  },
-  __Dati_Testo028: {
-    type: String,
-    alias: 'IdInstallazione',
-
-  },
   __Dati_Numero009: {
     type: Number,
     alias: 'FlagInVerifica',
 
   },
-  __Dati_Testo029: {
+  __Dati_Testo024: {
     type: String,
     alias: 'CodiceReparto',
 
@@ -238,6 +208,16 @@ const ContenitoriSchema = new mongoose.Schema<IContenitoriPrivate>({
     set: (value: any) => {
       return DateConverter.convertDate(value);
     }
+  },
+  __Dati_Testo025: {
+    type: String,
+    alias: 'IdInstallazione',
+
+  },
+  __Dati_Testo026: {
+    type: String,
+    alias: 'IdDocumentoPrincipale',
+
   },
   __Dati_Data004: {
     type: Date,
@@ -251,34 +231,49 @@ const ContenitoriSchema = new mongoose.Schema<IContenitoriPrivate>({
     alias: 'GiorniEsercizio',
 
   },
+  __Dati_Testo027: {
+    type: String,
+    alias: 'iBeacon_Id',
+
+  },
+  __Dati_Testo028: {
+    type: String,
+    alias: 'iBeacon_Major',
+
+  },
+  __Dati_Testo029: {
+    type: String,
+    alias: 'iBeacon_Minor',
+
+  },
   __Dati_Testo030: {
     type: String,
-    alias: 'IdAccountOperatore',
+    alias: 'CodiceTxtContenitore',
 
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'IdRisorsa',
+    alias: 'IdAccountOperatore',
 
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'IdOperatoreProduzione',
+    alias: 'IdRisorsa',
 
   },
   __Dati_Testo033: {
     type: String,
-    alias: 'CodiceTxtContenitoreNumeroSerie',
+    alias: 'IdOperatoreProduzione',
 
   },
   __Dati_Testo034: {
     type: String,
-    alias: 'TxtAccountOperatore',
+    alias: 'CodiceTxtContenitoreNumeroSerie',
 
   },
   __Dati_Testo035: {
     type: String,
-    alias: 'IdDocumentoPrincipale',
+    alias: 'TxtAccountOperatore',
 
   }
 }, {

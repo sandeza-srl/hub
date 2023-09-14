@@ -19,7 +19,9 @@ export default Aliquote;
 
 export { AliquoteSchema };
 
-export type TAliquoteModel = typeof Aliquote;
+export type TAliquoteModel = Omit<typeof Aliquote, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IAliquote>): any
+};
 
 export type TAliquoteDocument = 
 & mongoose.Document<any, {}, IAliquote>

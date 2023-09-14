@@ -19,7 +19,9 @@ export default ImpostazioniEtichette;
 
 export { ImpostazioniEtichetteSchema };
 
-export type TImpostazioniEtichetteModel = typeof ImpostazioniEtichette;
+export type TImpostazioniEtichetteModel = Omit<typeof ImpostazioniEtichette, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IImpostazioniEtichette>): any
+};
 
 export type TImpostazioniEtichetteDocument = 
 & mongoose.Document<any, {}, IImpostazioniEtichette>

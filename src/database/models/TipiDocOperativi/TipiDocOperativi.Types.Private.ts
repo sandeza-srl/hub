@@ -335,5 +335,9 @@ export interface ITipiDocOperativiPrivate {
   /** Reflected: LucchettoDocumento_EsclusiBlocco_CodiceEsterno*/ 
   __Dati_Numero118: number;
   /** Reflected: LucchettoDocumento_EsclusiBlocco_Descrizione*/ 
-  __Dati_Numero119: number
+  __Dati_Numero119: number;
+  /** Reflected: FlagItemMovimentaContenitori*/ 
+  __Dati_Numero120: number;
+  /** Reflected: InterconnessioneMagazzino_FlagAttivo*/ 
+  __Dati_Numero121: number
 }

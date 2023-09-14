@@ -19,7 +19,9 @@ export default zzzItemsProduzione;
 
 export { zzzItemsProduzioneSchema };
 
-export type TzzzItemsProduzioneModel = typeof zzzItemsProduzione;
+export type TzzzItemsProduzioneModel = Omit<typeof zzzItemsProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IzzzItemsProduzione>): any
+};
 
 export type TzzzItemsProduzioneDocument = 
 & mongoose.Document<any, {}, IzzzItemsProduzione>

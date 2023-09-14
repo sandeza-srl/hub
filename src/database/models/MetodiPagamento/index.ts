@@ -19,7 +19,9 @@ export default MetodiPagamento;
 
 export { MetodiPagamentoSchema };
 
-export type TMetodiPagamentoModel = typeof MetodiPagamento;
+export type TMetodiPagamentoModel = Omit<typeof MetodiPagamento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMetodiPagamento>): any
+};
 
 export type TMetodiPagamentoDocument = 
 & mongoose.Document<any, {}, IMetodiPagamento>

@@ -19,7 +19,9 @@ export default ContiStatoPatrimoniale;
 
 export { ContiStatoPatrimonialeSchema };
 
-export type TContiStatoPatrimonialeModel = typeof ContiStatoPatrimoniale;
+export type TContiStatoPatrimonialeModel = Omit<typeof ContiStatoPatrimoniale, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IContiStatoPatrimoniale>): any
+};
 
 export type TContiStatoPatrimonialeDocument = 
 & mongoose.Document<any, {}, IContiStatoPatrimoniale>

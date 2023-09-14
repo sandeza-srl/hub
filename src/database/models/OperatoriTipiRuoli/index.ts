@@ -19,7 +19,9 @@ export default OperatoriTipiRuoli;
 
 export { OperatoriTipiRuoliSchema };
 
-export type TOperatoriTipiRuoliModel = typeof OperatoriTipiRuoli;
+export type TOperatoriTipiRuoliModel = Omit<typeof OperatoriTipiRuoli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOperatoriTipiRuoli>): any
+};
 
 export type TOperatoriTipiRuoliDocument = 
 & mongoose.Document<any, {}, IOperatoriTipiRuoli>

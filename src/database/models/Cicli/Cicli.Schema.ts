@@ -93,7 +93,7 @@ const CicliSchema = new mongoose.Schema<ICicliPrivate>({
   },
   __Dati_Numero005: {
     type: Number,
-    alias: 'FlagRilavorazione',
+    alias: 'TipoCiclo_FlagRilavorazione',
 
   },
   __Dati_Data002: {
@@ -254,6 +254,16 @@ const CicliSchema = new mongoose.Schema<ICicliPrivate>({
   __Dati_Testo027: {
     type: String,
     alias: 'IdRicorrenzaRecord',
+
+  },
+  __Dati_Numero014: {
+    type: Number,
+    alias: 'TipoCiclo_FlagSmontaggio',
+
+  },
+  __Dati_Numero015: {
+    type: Number,
+    alias: 'FlagAggiornaDaTipiCicli',
 
   }
 }, {

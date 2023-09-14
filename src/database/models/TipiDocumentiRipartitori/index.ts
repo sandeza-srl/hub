@@ -19,7 +19,9 @@ export default TipiDocumentiRipartitori;
 
 export { TipiDocumentiRipartitoriSchema };
 
-export type TTipiDocumentiRipartitoriModel = typeof TipiDocumentiRipartitori;
+export type TTipiDocumentiRipartitoriModel = Omit<typeof TipiDocumentiRipartitori, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiDocumentiRipartitori>): any
+};
 
 export type TTipiDocumentiRipartitoriDocument = 
 & mongoose.Document<any, {}, ITipiDocumentiRipartitori>

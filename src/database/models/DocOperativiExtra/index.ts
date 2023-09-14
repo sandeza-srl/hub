@@ -23,8 +23,8 @@ export type TDocOperativiExtraModel = Omit<typeof DocOperativiExtra, 'traslateAl
   translateAliases(raw: Partial<IDocOperativiExtra>): any
 };
 
-export type TDocOperativiExtraDocument =
-  & mongoose.Document<any, {}, IDocOperativiExtra>
-  & IDocOperativiExtra;
+export type TDocOperativiExtraDocument = 
+& mongoose.Document<any, {}, IDocOperativiExtra>
+& IDocOperativiExtra;
 
 export { IDocOperativiExtra };

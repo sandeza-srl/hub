@@ -41,5 +41,19 @@ export interface ITipiEtichetteItemsPrivate {
   /** Reflected: FlagUtilizzataItems*/ 
   __Dati_Numero012: number;
   /** Reflected: FlagUtilizzataOfferte*/ 
-  __Dati_Numero013: number
+  __Dati_Numero013: number;
+  /** Reflected: FlagTipoCalcolo*/ 
+  __Dati_Numero014: number;
+  /** Reflected: FlagSottoTipoCalcolo_DaEtichette*/ 
+  __Dati_Numero015: number;
+  /** Reflected: FlagSottoTipoCalcolo_DaEtichetteMaster*/ 
+  __Dati_Numero016: number;
+  /** Reflected: FlagSottoTipoCalcolo_DaUM_Alt*/ 
+  __Dati_Numero017: number;
+  /** Reflected: FlagCalcoloValido*/ 
+  __Dati_Numero018: number;
+  /** Reflected: Formula_Calcolo*/ 
+  __Dati_Testo007: string;
+  /** Reflected: IdTipiEtichettePerCalcolo*/ 
+  __Dati_Testo008: string
 }

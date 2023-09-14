@@ -68,38 +68,36 @@ export interface IContenitori {
   TxtTipoStatoContenitoreAutomatico: string;
   /** Reflected: __Dati_Testo022*/ 
   NumeroSerie: string;
-  /** Reflected: __Dati_Testo023*/ 
-  iBeacon_Id: string;
-  /** Reflected: __Dati_Testo024*/ 
-  iBeacon_Major: string;
-  /** Reflected: __Dati_Testo025*/ 
-  iBeacon_Minor: string;
-  /** Reflected: __Dati_Testo026*/ 
-  CodiceTxtContenitoreAutomatico: string;
-  /** Reflected: __Dati_Testo027*/ 
-  TxtTipoStatoPosizioneContenitoreAutomatico: string;
-  /** Reflected: __Dati_Testo028*/ 
-  IdInstallazione: string;
   /** Reflected: __Dati_Numero009*/ 
   FlagInVerifica: number;
-  /** Reflected: __Dati_Testo029*/ 
+  /** Reflected: __Dati_Testo024*/ 
   CodiceReparto: string;
   /** Reflected: __Dati_Data003*/ 
   DataInstallazione: Date;
+  /** Reflected: __Dati_Testo025*/ 
+  IdInstallazione: string;
+  /** Reflected: __Dati_Testo026*/ 
+  IdDocumentoPrincipale: string;
   /** Reflected: __Dati_Data004*/ 
   DataInizioAttivita: Date;
   /** Reflected: __Dati_Numero010*/ 
   GiorniEsercizio: number;
+  /** Reflected: __Dati_Testo027*/ 
+  iBeacon_Id: string;
+  /** Reflected: __Dati_Testo028*/ 
+  iBeacon_Major: string;
+  /** Reflected: __Dati_Testo029*/ 
+  iBeacon_Minor: string;
   /** Reflected: __Dati_Testo030*/ 
-  IdAccountOperatore: string;
+  CodiceTxtContenitore: string;
   /** Reflected: __Dati_Testo031*/ 
-  IdRisorsa: string;
+  IdAccountOperatore: string;
   /** Reflected: __Dati_Testo032*/ 
-  IdOperatoreProduzione: string;
+  IdRisorsa: string;
   /** Reflected: __Dati_Testo033*/ 
-  CodiceTxtContenitoreNumeroSerie: string;
+  IdOperatoreProduzione: string;
   /** Reflected: __Dati_Testo034*/ 
-  TxtAccountOperatore: string;
+  CodiceTxtContenitoreNumeroSerie: string;
   /** Reflected: __Dati_Testo035*/ 
-  IdDocumentoPrincipale: string
+  TxtAccountOperatore: string
 }

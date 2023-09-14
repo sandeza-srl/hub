@@ -19,7 +19,9 @@ export default Timbrature;
 
 export { TimbratureSchema };
 
-export type TTimbratureModel = typeof Timbrature;
+export type TTimbratureModel = Omit<typeof Timbrature, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITimbrature>): any
+};
 
 export type TTimbratureDocument = 
 & mongoose.Document<any, {}, ITimbrature>

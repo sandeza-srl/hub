@@ -19,7 +19,9 @@ export default TipologiaAnagrafica;
 
 export { TipologiaAnagraficaSchema };
 
-export type TTipologiaAnagraficaModel = typeof TipologiaAnagrafica;
+export type TTipologiaAnagraficaModel = Omit<typeof TipologiaAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipologiaAnagrafica>): any
+};
 
 export type TTipologiaAnagraficaDocument = 
 & mongoose.Document<any, {}, ITipologiaAnagrafica>

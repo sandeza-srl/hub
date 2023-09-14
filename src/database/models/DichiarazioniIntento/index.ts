@@ -19,7 +19,9 @@ export default DichiarazioniIntento;
 
 export { DichiarazioniIntentoSchema };
 
-export type TDichiarazioniIntentoModel = typeof DichiarazioniIntento;
+export type TDichiarazioniIntentoModel = Omit<typeof DichiarazioniIntento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDichiarazioniIntento>): any
+};
 
 export type TDichiarazioniIntentoDocument = 
 & mongoose.Document<any, {}, IDichiarazioniIntento>

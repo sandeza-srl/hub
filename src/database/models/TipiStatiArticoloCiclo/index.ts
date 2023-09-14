@@ -19,7 +19,9 @@ export default TipiStatiArticoloCiclo;
 
 export { TipiStatiArticoloCicloSchema };
 
-export type TTipiStatiArticoloCicloModel = typeof TipiStatiArticoloCiclo;
+export type TTipiStatiArticoloCicloModel = Omit<typeof TipiStatiArticoloCiclo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiStatiArticoloCiclo>): any
+};
 
 export type TTipiStatiArticoloCicloDocument = 
 & mongoose.Document<any, {}, ITipiStatiArticoloCiclo>

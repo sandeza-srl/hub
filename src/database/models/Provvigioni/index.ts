@@ -19,7 +19,9 @@ export default Provvigioni;
 
 export { ProvvigioniSchema };
 
-export type TProvvigioniModel = typeof Provvigioni;
+export type TProvvigioniModel = Omit<typeof Provvigioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IProvvigioni>): any
+};
 
 export type TProvvigioniDocument = 
 & mongoose.Document<any, {}, IProvvigioni>

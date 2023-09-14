@@ -19,7 +19,9 @@ export default TipiEtichetteRegistries;
 
 export { TipiEtichetteRegistriesSchema };
 
-export type TTipiEtichetteRegistriesModel = typeof TipiEtichetteRegistries;
+export type TTipiEtichetteRegistriesModel = Omit<typeof TipiEtichetteRegistries, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiEtichetteRegistries>): any
+};
 
 export type TTipiEtichetteRegistriesDocument = 
 & mongoose.Document<any, {}, ITipiEtichetteRegistries>

@@ -124,6 +124,31 @@ const CodificheClientiItemsSchema = new mongoose.Schema<ICodificheClientiItemsPr
     type: Number,
     alias: 'FlagCodificaPrincipale',
 
+  },
+  __Dati_Testo015: {
+    type: String,
+    alias: 'Note',
+
+  },
+  __Dati_Testo016: {
+    type: String,
+    alias: 'CodiceUnivocoCodificaClienteItem',
+
+  },
+  __Dati_Testo017: {
+    type: String,
+    alias: 'IdImgIdentificativa',
+
+  },
+  __Dati_Numero005: {
+    type: Number,
+    alias: 'FlagAggiornaDaRevisioniItem',
+
+  },
+  __Dati_Testo018: {
+    type: String,
+    alias: 'TxtUtenteCreazione',
+
   }
 }, {
   timestamps: true

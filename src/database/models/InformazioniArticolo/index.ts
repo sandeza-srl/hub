@@ -19,7 +19,9 @@ export default InformazioniArticolo;
 
 export { InformazioniArticoloSchema };
 
-export type TInformazioniArticoloModel = typeof InformazioniArticolo;
+export type TInformazioniArticoloModel = Omit<typeof InformazioniArticolo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInformazioniArticolo>): any
+};
 
 export type TInformazioniArticoloDocument = 
 & mongoose.Document<any, {}, IInformazioniArticolo>

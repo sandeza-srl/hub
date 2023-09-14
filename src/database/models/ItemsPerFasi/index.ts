@@ -19,7 +19,9 @@ export default ItemsPerFasi;
 
 export { ItemsPerFasiSchema };
 
-export type TItemsPerFasiModel = typeof ItemsPerFasi;
+export type TItemsPerFasiModel = Omit<typeof ItemsPerFasi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IItemsPerFasi>): any
+};
 
 export type TItemsPerFasiDocument = 
 & mongoose.Document<any, {}, IItemsPerFasi>

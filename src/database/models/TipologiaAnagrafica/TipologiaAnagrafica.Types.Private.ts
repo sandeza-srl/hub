@@ -39,5 +39,7 @@ export interface ITipologiaAnagraficaPrivate {
   /** Reflected: FlagPersonaGiuridica*/ 
   __Dati_Numero012: number;
   /** Reflected: FlagPubblicaAmministrazione*/ 
-  __Dati_Numero013: number
+  __Dati_Numero013: number;
+  /** Reflected: PinMappa_Colore*/ 
+  __Dati_Testo008: string
 }

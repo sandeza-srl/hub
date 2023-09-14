@@ -19,7 +19,9 @@ export default CodificheClientiItems;
 
 export { CodificheClientiItemsSchema };
 
-export type TCodificheClientiItemsModel = typeof CodificheClientiItems;
+export type TCodificheClientiItemsModel = Omit<typeof CodificheClientiItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICodificheClientiItems>): any
+};
 
 export type TCodificheClientiItemsDocument = 
 & mongoose.Document<any, {}, ICodificheClientiItems>

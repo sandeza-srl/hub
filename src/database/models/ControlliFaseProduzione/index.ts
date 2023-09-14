@@ -19,7 +19,9 @@ export default ControlliFaseProduzione;
 
 export { ControlliFaseProduzioneSchema };
 
-export type TControlliFaseProduzioneModel = typeof ControlliFaseProduzione;
+export type TControlliFaseProduzioneModel = Omit<typeof ControlliFaseProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IControlliFaseProduzione>): any
+};
 
 export type TControlliFaseProduzioneDocument = 
 & mongoose.Document<any, {}, IControlliFaseProduzione>

@@ -19,7 +19,9 @@ export default DescrizioneSottoFamiglieItems;
 
 export { DescrizioneSottoFamiglieItemsSchema };
 
-export type TDescrizioneSottoFamiglieItemsModel = typeof DescrizioneSottoFamiglieItems;
+export type TDescrizioneSottoFamiglieItemsModel = Omit<typeof DescrizioneSottoFamiglieItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneSottoFamiglieItems>): any
+};
 
 export type TDescrizioneSottoFamiglieItemsDocument = 
 & mongoose.Document<any, {}, IDescrizioneSottoFamiglieItems>

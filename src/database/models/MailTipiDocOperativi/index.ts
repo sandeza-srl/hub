@@ -19,7 +19,9 @@ export default MailTipiDocOperativi;
 
 export { MailTipiDocOperativiSchema };
 
-export type TMailTipiDocOperativiModel = typeof MailTipiDocOperativi;
+export type TMailTipiDocOperativiModel = Omit<typeof MailTipiDocOperativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMailTipiDocOperativi>): any
+};
 
 export type TMailTipiDocOperativiDocument = 
 & mongoose.Document<any, {}, IMailTipiDocOperativi>

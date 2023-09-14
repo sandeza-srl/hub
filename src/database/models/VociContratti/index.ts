@@ -19,7 +19,9 @@ export default VociContratti;
 
 export { VociContrattiSchema };
 
-export type TVociContrattiModel = typeof VociContratti;
+export type TVociContrattiModel = Omit<typeof VociContratti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociContratti>): any
+};
 
 export type TVociContrattiDocument = 
 & mongoose.Document<any, {}, IVociContratti>

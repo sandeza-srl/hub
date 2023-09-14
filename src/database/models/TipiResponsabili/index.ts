@@ -19,7 +19,9 @@ export default TipiResponsabili;
 
 export { TipiResponsabiliSchema };
 
-export type TTipiResponsabiliModel = typeof TipiResponsabili;
+export type TTipiResponsabiliModel = Omit<typeof TipiResponsabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiResponsabili>): any
+};
 
 export type TTipiResponsabiliDocument = 
 & mongoose.Document<any, {}, ITipiResponsabili>

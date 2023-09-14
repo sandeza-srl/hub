@@ -23,8 +23,8 @@ export type TIndirizziRubricaModel = Omit<typeof IndirizziRubrica, 'traslateAlia
   translateAliases(raw: Partial<IIndirizziRubrica>): any
 };
 
-export type TIndirizziRubricaDocument =
-  & mongoose.Document<any, {}, IIndirizziRubrica>
-  & IIndirizziRubrica;
+export type TIndirizziRubricaDocument = 
+& mongoose.Document<any, {}, IIndirizziRubrica>
+& IIndirizziRubrica;
 
 export { IIndirizziRubrica };

@@ -19,7 +19,9 @@ export default AllegatiComunicazioni;
 
 export { AllegatiComunicazioniSchema };
 
-export type TAllegatiComunicazioniModel = typeof AllegatiComunicazioni;
+export type TAllegatiComunicazioniModel = Omit<typeof AllegatiComunicazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IAllegatiComunicazioni>): any
+};
 
 export type TAllegatiComunicazioniDocument = 
 & mongoose.Document<any, {}, IAllegatiComunicazioni>

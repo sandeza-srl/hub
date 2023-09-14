@@ -19,7 +19,9 @@ export default RegistrazioniRisorse;
 
 export { RegistrazioniRisorseSchema };
 
-export type TRegistrazioniRisorseModel = typeof RegistrazioniRisorse;
+export type TRegistrazioniRisorseModel = Omit<typeof RegistrazioniRisorse, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRegistrazioniRisorse>): any
+};
 
 export type TRegistrazioniRisorseDocument = 
 & mongoose.Document<any, {}, IRegistrazioniRisorse>

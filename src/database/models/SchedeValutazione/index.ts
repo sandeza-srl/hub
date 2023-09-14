@@ -19,7 +19,9 @@ export default SchedeValutazione;
 
 export { SchedeValutazioneSchema };
 
-export type TSchedeValutazioneModel = typeof SchedeValutazione;
+export type TSchedeValutazioneModel = Omit<typeof SchedeValutazione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ISchedeValutazione>): any
+};
 
 export type TSchedeValutazioneDocument = 
 & mongoose.Document<any, {}, ISchedeValutazione>

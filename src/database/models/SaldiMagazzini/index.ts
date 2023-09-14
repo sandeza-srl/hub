@@ -19,7 +19,9 @@ export default SaldiMagazzini;
 
 export { SaldiMagazziniSchema };
 
-export type TSaldiMagazziniModel = typeof SaldiMagazzini;
+export type TSaldiMagazziniModel = Omit<typeof SaldiMagazzini, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ISaldiMagazzini>): any
+};
 
 export type TSaldiMagazziniDocument = 
 & mongoose.Document<any, {}, ISaldiMagazzini>

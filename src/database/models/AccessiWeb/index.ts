@@ -19,7 +19,9 @@ export default AccessiWeb;
 
 export { AccessiWebSchema };
 
-export type TAccessiWebModel = typeof AccessiWeb;
+export type TAccessiWebModel = Omit<typeof AccessiWeb, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IAccessiWeb>): any
+};
 
 export type TAccessiWebDocument = 
 & mongoose.Document<any, {}, IAccessiWeb>

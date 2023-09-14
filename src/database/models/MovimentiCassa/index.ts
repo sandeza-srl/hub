@@ -19,7 +19,9 @@ export default MovimentiCassa;
 
 export { MovimentiCassaSchema };
 
-export type TMovimentiCassaModel = typeof MovimentiCassa;
+export type TMovimentiCassaModel = Omit<typeof MovimentiCassa, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMovimentiCassa>): any
+};
 
 export type TMovimentiCassaDocument = 
 & mongoose.Document<any, {}, IMovimentiCassa>

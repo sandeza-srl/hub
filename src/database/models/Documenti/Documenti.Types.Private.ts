@@ -319,5 +319,9 @@ export interface IDocumentiPrivate {
   /** Reflected: FlagCreatoControlliFaseProduzione*/ 
   __Dati_Numero075: number;
   /** Reflected: IdControlloFaseProduzione*/ 
-  __Dati_Testo075: string
+  __Dati_Testo075: string;
+  /** Reflected: FlagCreatoProcessi*/ 
+  __Dati_Numero076: number;
+  /** Reflected: IdProcesso*/ 
+  __Dati_Testo076: string
 }

@@ -19,7 +19,9 @@ export default UpdateCosti_VariazioniLotti;
 
 export { UpdateCosti_VariazioniLottiSchema };
 
-export type TUpdateCosti_VariazioniLottiModel = typeof UpdateCosti_VariazioniLotti;
+export type TUpdateCosti_VariazioniLottiModel = Omit<typeof UpdateCosti_VariazioniLotti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IUpdateCosti_VariazioniLotti>): any
+};
 
 export type TUpdateCosti_VariazioniLottiDocument = 
 & mongoose.Document<any, {}, IUpdateCosti_VariazioniLotti>

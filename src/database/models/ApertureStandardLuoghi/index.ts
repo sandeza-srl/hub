@@ -19,7 +19,9 @@ export default ApertureStandardLuoghi;
 
 export { ApertureStandardLuoghiSchema };
 
-export type TApertureStandardLuoghiModel = typeof ApertureStandardLuoghi;
+export type TApertureStandardLuoghiModel = Omit<typeof ApertureStandardLuoghi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IApertureStandardLuoghi>): any
+};
 
 export type TApertureStandardLuoghiDocument = 
 & mongoose.Document<any, {}, IApertureStandardLuoghi>

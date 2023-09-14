@@ -19,7 +19,9 @@ export default RegistrazioniFasiProduzione;
 
 export { RegistrazioniFasiProduzioneSchema };
 
-export type TRegistrazioniFasiProduzioneModel = typeof RegistrazioniFasiProduzione;
+export type TRegistrazioniFasiProduzioneModel = Omit<typeof RegistrazioniFasiProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRegistrazioniFasiProduzione>): any
+};
 
 export type TRegistrazioniFasiProduzioneDocument = 
 & mongoose.Document<any, {}, IRegistrazioniFasiProduzione>

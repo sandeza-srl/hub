@@ -131,7 +131,7 @@ const TipiRigheOrdineSchema = new mongoose.Schema<ITipiRigheOrdinePrivate>({
   },
   __Dati_Testo012: {
     type: String,
-    alias: 'NomeFormatoStampa',
+    alias: 'CartellinoProduzione_NomeFormato',
 
   },
   __Dati_Data001: {
@@ -248,17 +248,17 @@ const TipiRigheOrdineSchema = new mongoose.Schema<ITipiRigheOrdinePrivate>({
   },
   __Dati_Testo030: {
     type: String,
-    alias: 'FormatoCartellinoProduzione',
+    alias: 'ReportProduzione_Formato',
 
   },
   __Dati_Testo031: {
     type: String,
-    alias: 'IdTipoDocumentoCartellinoProduzione',
+    alias: 'CartellinoProduzione_IdTipoDocumento',
 
   },
   __Dati_Testo032: {
     type: String,
-    alias: 'IdSottoTipoDocumentoCartellinoProduzione',
+    alias: 'CartellinoProduzione_IdSottoTipoDocumento',
 
   },
   __Dati_Numero017: {
@@ -703,6 +703,111 @@ const TipiRigheOrdineSchema = new mongoose.Schema<ITipiRigheOrdinePrivate>({
   __Dati_Numero087: {
     type: Number,
     alias: 'ValorizzazioneMagazzino_FlagEscludiDaWip',
+
+  },
+  __Dati_Testo048: {
+    type: String,
+    alias: 'CartellinoProduzione_NomeScriptStampa',
+
+  },
+  __Dati_Testo049: {
+    type: String,
+    alias: 'ReportProduzione_IdSottoTipoDocumento',
+
+  },
+  __Dati_Testo050: {
+    type: String,
+    alias: 'ReportProduzione_IdTipoDocumento',
+
+  },
+  __Dati_Testo051: {
+    type: String,
+    alias: 'ReportProduzione_NomeScriptStampa',
+
+  },
+  __Dati_Testo052: {
+    type: String,
+    alias: 'ReportQualita_Formato',
+
+  },
+  __Dati_Testo053: {
+    type: String,
+    alias: 'ReportQualita_IdSottoTipoDocumento',
+
+  },
+  __Dati_Testo054: {
+    type: String,
+    alias: 'ReportQualita_IdTipoDocumento',
+
+  },
+  __Dati_Testo055: {
+    type: String,
+    alias: 'ReportQualita_NomeScriptStampa',
+
+  },
+  __Dati_Testo056: {
+    type: String,
+    alias: 'ReportCosti_Formato',
+
+  },
+  __Dati_Testo057: {
+    type: String,
+    alias: 'ReportCosti_IdSottoTipoDocumento',
+
+  },
+  __Dati_Testo058: {
+    type: String,
+    alias: 'ReportCosti_IdTipoDocumento',
+
+  },
+  __Dati_Testo059: {
+    type: String,
+    alias: 'ReportCosti_NomeScriptStampa',
+
+  },
+  __Dati_Numero088: {
+    type: Number,
+    alias: 'CartellinoProduzione_FlagSalvaDocumento',
+
+  },
+  __Dati_Numero089: {
+    type: Number,
+    alias: 'ReportCosti_FlagSalvaDocumento',
+
+  },
+  __Dati_Numero090: {
+    type: Number,
+    alias: 'ReportProduzione_FlagSalvaDocumento',
+
+  },
+  __Dati_Numero091: {
+    type: Number,
+    alias: 'ReportQualita_FlagSalvaDocumento',
+
+  },
+  __Dati_Numero092: {
+    type: Number,
+    alias: 'Temporaneo202307_FlagDefaultNuovaScheda',
+
+  },
+  __Dati_Numero093: {
+    type: Number,
+    alias: 'AbilitazioniModificheLotto_QuantitaLotto',
+
+  },
+  __Dati_Numero094: {
+    type: Number,
+    alias: 'AbilitazioniModificheLotto_CreazioneFaseProduzione',
+
+  },
+  __Dati_Numero095: {
+    type: Number,
+    alias: 'AbilitazioniModificheLotto_EliminazioneFaseProduzione',
+
+  },
+  __Dati_Numero096: {
+    type: Number,
+    alias: 'AbilitazioniModificheLotto_QuantitaLotto_AncheFasiInCorso',
 
   }
 }, {

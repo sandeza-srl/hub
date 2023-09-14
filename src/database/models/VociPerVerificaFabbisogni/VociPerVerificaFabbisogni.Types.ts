@@ -6,8 +6,8 @@ export interface IVociPerVerificaFabbisogni {
   DataOraUltimaModifica: Date;
   /** Reflected: __Dati_Testo001*/ 
   IdVociPerVerificaFabbisogni: string;
-  /** Reflected: __Dati_Numero001*/ 
-  IdItem: number;
+  /** Reflected: __Dati_Testo006*/ 
+  IdItem: string;
   /** Reflected: __Dati_Numero002*/ 
   FlagAggiornaValori: number;
   /** Reflected: __Dati_Testo002*/ 

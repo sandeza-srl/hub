@@ -19,7 +19,9 @@ export default TipiFermi;
 
 export { TipiFermiSchema };
 
-export type TTipiFermiModel = typeof TipiFermi;
+export type TTipiFermiModel = Omit<typeof TipiFermi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiFermi>): any
+};
 
 export type TTipiFermiDocument = 
 & mongoose.Document<any, {}, ITipiFermi>

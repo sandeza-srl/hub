@@ -19,7 +19,9 @@ export default StatiPosizioni;
 
 export { StatiPosizioniSchema };
 
-export type TStatiPosizioniModel = typeof StatiPosizioni;
+export type TStatiPosizioniModel = Omit<typeof StatiPosizioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStatiPosizioni>): any
+};
 
 export type TStatiPosizioniDocument = 
 & mongoose.Document<any, {}, IStatiPosizioni>

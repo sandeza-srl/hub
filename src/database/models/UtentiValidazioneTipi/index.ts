@@ -19,7 +19,9 @@ export default UtentiValidazioneTipi;
 
 export { UtentiValidazioneTipiSchema };
 
-export type TUtentiValidazioneTipiModel = typeof UtentiValidazioneTipi;
+export type TUtentiValidazioneTipiModel = Omit<typeof UtentiValidazioneTipi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IUtentiValidazioneTipi>): any
+};
 
 export type TUtentiValidazioneTipiDocument = 
 & mongoose.Document<any, {}, IUtentiValidazioneTipi>

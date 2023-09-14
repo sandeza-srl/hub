@@ -19,7 +19,9 @@ export default DescrizioneRegoleScadenze;
 
 export { DescrizioneRegoleScadenzeSchema };
 
-export type TDescrizioneRegoleScadenzeModel = typeof DescrizioneRegoleScadenze;
+export type TDescrizioneRegoleScadenzeModel = Omit<typeof DescrizioneRegoleScadenze, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneRegoleScadenze>): any
+};
 
 export type TDescrizioneRegoleScadenzeDocument = 
 & mongoose.Document<any, {}, IDescrizioneRegoleScadenze>

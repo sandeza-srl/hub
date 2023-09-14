@@ -19,7 +19,9 @@ export default ValoriTipiEtichetteLavorazioni;
 
 export { ValoriTipiEtichetteLavorazioniSchema };
 
-export type TValoriTipiEtichetteLavorazioniModel = typeof ValoriTipiEtichetteLavorazioni;
+export type TValoriTipiEtichetteLavorazioniModel = Omit<typeof ValoriTipiEtichetteLavorazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IValoriTipiEtichetteLavorazioni>): any
+};
 
 export type TValoriTipiEtichetteLavorazioniDocument = 
 & mongoose.Document<any, {}, IValoriTipiEtichetteLavorazioni>

@@ -622,6 +622,11 @@ const StepProcessoSchema = new mongoose.Schema<IStepProcessoPrivate>({
     type: String,
     alias: 'IdDocumentoAssociato',
 
+  },
+  __Dati_Numero019: {
+    type: Number,
+    alias: 'FlagStepProcessoUrgente',
+
   }
 }, {
   timestamps: true

@@ -19,7 +19,9 @@ export default VociInterventi;
 
 export { VociInterventiSchema };
 
-export type TVociInterventiModel = typeof VociInterventi;
+export type TVociInterventiModel = Omit<typeof VociInterventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociInterventi>): any
+};
 
 export type TVociInterventiDocument = 
 & mongoose.Document<any, {}, IVociInterventi>

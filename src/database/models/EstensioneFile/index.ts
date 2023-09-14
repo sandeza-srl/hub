@@ -19,7 +19,9 @@ export default EstensioneFile;
 
 export { EstensioneFileSchema };
 
-export type TEstensioneFileModel = typeof EstensioneFile;
+export type TEstensioneFileModel = Omit<typeof EstensioneFile, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IEstensioneFile>): any
+};
 
 export type TEstensioneFileDocument = 
 & mongoose.Document<any, {}, IEstensioneFile>
