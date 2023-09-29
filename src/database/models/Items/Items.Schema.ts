@@ -2282,13 +2282,24 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
  * Indexing
  */
 ItemsSchema.index({
-  _id             : 1,
-  __Dati_Testo002 : 1,
-  __Dati_Testo034 : 1,
-  __Dati_Testo003 : 1,
-  __Dati_Testo026 : 1,
-  __Dati_Testo005 : 1,
-  __Dati_Numero116: 1,
+  __Dati_Testo002: 1
+});
+ItemsSchema.index({
+  __Dati_Testo034: 1
+});
+ItemsSchema.index({
+  __Dati_Testo003: 1
+});
+ItemsSchema.index({
+  __Dati_Testo026: 1
+});
+ItemsSchema.index({
+  __Dati_Testo005: 1
+});
+ItemsSchema.index({
+  __Dati_Numero116: 1
+});
+ItemsSchema.index({
   __Dati_Numero046: 1
 });
 
