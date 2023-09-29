@@ -481,7 +481,9 @@ const FornitureItemsSchema = new mongoose.Schema<IFornitureItemsPrivate>({
  * Indexing
  */
 FornitureItemsSchema.index({
-  __Dati_Testo001: 1,
+  __Dati_Testo001: 1
+});
+FornitureItemsSchema.index({
   __Dati_Testo006: 1
 });
 
