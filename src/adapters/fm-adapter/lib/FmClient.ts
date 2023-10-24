@@ -1,4 +1,4 @@
-import axios, { Axios, AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 import { encodeToBase64, getRequiredEnv, getOptionalEnv } from '../../../utils';
 import { FmSessionResponse } from '../interfaces/Auth';
 import { FmCreateRecordResponse } from '../interfaces/generics';
@@ -58,7 +58,7 @@ export default class FmClient {
 
   private readonly _password: string;
 
-  private readonly _database: string;
+  private _database: string;
 
   private _layout: string | undefined;
 
@@ -131,6 +131,12 @@ export default class FmClient {
 
   public script(name: string): FmClient {
     this._script = name;
+    return this;
+  }
+
+
+  public database(name: string): FmClient {
+    this._database = name;
     return this;
   }
 

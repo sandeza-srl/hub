@@ -20,6 +20,11 @@ export class FmService {
 
   public async insertRecord<D extends ManageRecordDto>(host: string, body: D): Promise<string>;
   public async insertRecord<D extends ManageRecordDto>(host: string, body: D[]): Promise<string>;
+  /**
+   * Function to request Fm Server API
+   * @param host
+   * @param body
+   */
   public async insertRecord<D extends ManageRecordDto>(host: string, body: D | D[]): Promise<string> {
 
     /** Create FM Client */
@@ -55,6 +60,28 @@ export class FmService {
     if (!scriptResult.response) {
       throw new Error('No record has been created');
     }
+    return scriptResult.response.scriptResult;
+
+  }
+
+
+  /**
+   * Run FileMaker Custom Script, passing a body as script parameters
+   * @param host
+   * @param database
+   * @param layout
+   * @param script
+   * @param body
+   */
+  public async executeFmScript(host: string, database: string, layout: string, script: string, body: any) {
+
+    /** Create FM Client */
+    const client = FmClient.forHost(host).database(database).layout(layout);
+
+    /** Run the script using parameters */
+    const scriptResult = await client.runScript(script, JSON.stringify(body));
+
+    /** Return the response of the FM script */
     return scriptResult.response.scriptResult;
 
   }
