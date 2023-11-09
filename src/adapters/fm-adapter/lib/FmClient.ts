@@ -1,4 +1,5 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosError, AxiosRequestConfig } from 'axios';
+import { response } from 'express';
 import { encodeToBase64, getRequiredEnv, getOptionalEnv } from '../../../utils';
 import { FmSessionResponse } from '../interfaces/Auth';
 import { FmCreateRecordResponse } from '../interfaces/generics';
@@ -157,9 +158,9 @@ export default class FmClient {
         this.authToken = response.data.response.token;
         this.tokenExpired = false;
       }
-      catch (error) {
+      catch (error: any) {
         // TODO: Errors Interceptor
-        throw error;
+        throw error.response;
       }
     }
 
@@ -215,7 +216,14 @@ export default class FmClient {
 
       return response.data as Response;
     }
-    catch (error) {
+    catch (error: any) {
+
+      /** If error status code is 401 Unauthorized, clear token and execute try again */
+      if (error.response.status === 401) {
+        this.tokenExpired = true;
+        return this.scriptRequest(config);
+      }
+
       throw error;
     }
   }
