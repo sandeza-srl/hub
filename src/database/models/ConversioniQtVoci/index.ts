@@ -19,7 +19,9 @@ export default ConversioniQtVoci;
 
 export { ConversioniQtVociSchema };
 
-export type TConversioniQtVociModel = typeof ConversioniQtVoci;
+export type TConversioniQtVociModel = Omit<typeof ConversioniQtVoci, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IConversioniQtVoci>): any
+};
 
 export type TConversioniQtVociDocument = 
 & mongoose.Document<any, {}, IConversioniQtVoci>

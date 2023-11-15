@@ -19,7 +19,9 @@ export default Comunicazioni;
 
 export { ComunicazioniSchema };
 
-export type TComunicazioniModel = typeof Comunicazioni;
+export type TComunicazioniModel = Omit<typeof Comunicazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IComunicazioni>): any
+};
 
 export type TComunicazioniDocument = 
 & mongoose.Document<any, {}, IComunicazioni>

@@ -19,7 +19,9 @@ export default RicaviSpeseMese;
 
 export { RicaviSpeseMeseSchema };
 
-export type TRicaviSpeseMeseModel = typeof RicaviSpeseMese;
+export type TRicaviSpeseMeseModel = Omit<typeof RicaviSpeseMese, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRicaviSpeseMese>): any
+};
 
 export type TRicaviSpeseMeseDocument = 
 & mongoose.Document<any, {}, IRicaviSpeseMese>

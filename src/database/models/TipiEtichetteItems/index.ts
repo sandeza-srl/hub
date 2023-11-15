@@ -19,7 +19,9 @@ export default TipiEtichetteItems;
 
 export { TipiEtichetteItemsSchema };
 
-export type TTipiEtichetteItemsModel = typeof TipiEtichetteItems;
+export type TTipiEtichetteItemsModel = Omit<typeof TipiEtichetteItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiEtichetteItems>): any
+};
 
 export type TTipiEtichetteItemsDocument = 
 & mongoose.Document<any, {}, ITipiEtichetteItems>

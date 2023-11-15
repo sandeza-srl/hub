@@ -19,7 +19,9 @@ export default TipiDocContabili;
 
 export { TipiDocContabiliSchema };
 
-export type TTipiDocContabiliModel = typeof TipiDocContabili;
+export type TTipiDocContabiliModel = Omit<typeof TipiDocContabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiDocContabili>): any
+};
 
 export type TTipiDocContabiliDocument = 
 & mongoose.Document<any, {}, ITipiDocContabili>

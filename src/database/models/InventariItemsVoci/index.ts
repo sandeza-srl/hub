@@ -19,7 +19,9 @@ export default InventariItemsVoci;
 
 export { InventariItemsVociSchema };
 
-export type TInventariItemsVociModel = typeof InventariItemsVoci;
+export type TInventariItemsVociModel = Omit<typeof InventariItemsVoci, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInventariItemsVoci>): any
+};
 
 export type TInventariItemsVociDocument = 
 & mongoose.Document<any, {}, IInventariItemsVoci>

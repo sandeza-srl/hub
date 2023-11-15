@@ -19,7 +19,9 @@ export default TipoPotenziale;
 
 export { TipoPotenzialeSchema };
 
-export type TTipoPotenzialeModel = typeof TipoPotenziale;
+export type TTipoPotenzialeModel = Omit<typeof TipoPotenziale, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipoPotenziale>): any
+};
 
 export type TTipoPotenzialeDocument = 
 & mongoose.Document<any, {}, ITipoPotenziale>

@@ -37,5 +37,9 @@ export interface IMontaggioUtensiliFaseProduzionePrivate {
   /** Reflected: Uno*/ 
   __Dati_Numero003: number;
   /** Reflected: Zero*/ 
-  __Dati_Numero004: number
+  __Dati_Numero004: number;
+  /** Reflected: IdLottoProduzione*/ 
+  __Dati_Testo014: string;
+  /** Reflected: IdRigaOrdine*/ 
+  __Dati_Testo015: string
 }

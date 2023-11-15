@@ -19,7 +19,9 @@ export default Interventi;
 
 export { InterventiSchema };
 
-export type TInterventiModel = typeof Interventi;
+export type TInterventiModel = Omit<typeof Interventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInterventi>): any
+};
 
 export type TInterventiDocument = 
 & mongoose.Document<any, {}, IInterventi>

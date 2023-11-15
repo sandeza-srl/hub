@@ -19,7 +19,9 @@ export default ImpostazioniValorizzazione;
 
 export { ImpostazioniValorizzazioneSchema };
 
-export type TImpostazioniValorizzazioneModel = typeof ImpostazioniValorizzazione;
+export type TImpostazioniValorizzazioneModel = Omit<typeof ImpostazioniValorizzazione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IImpostazioniValorizzazione>): any
+};
 
 export type TImpostazioniValorizzazioneDocument = 
 & mongoose.Document<any, {}, IImpostazioniValorizzazione>

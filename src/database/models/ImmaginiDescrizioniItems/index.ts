@@ -19,7 +19,9 @@ export default ImmaginiDescrizioniItems;
 
 export { ImmaginiDescrizioniItemsSchema };
 
-export type TImmaginiDescrizioniItemsModel = typeof ImmaginiDescrizioniItems;
+export type TImmaginiDescrizioniItemsModel = Omit<typeof ImmaginiDescrizioniItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IImmaginiDescrizioniItems>): any
+};
 
 export type TImmaginiDescrizioniItemsDocument = 
 & mongoose.Document<any, {}, IImmaginiDescrizioniItems>

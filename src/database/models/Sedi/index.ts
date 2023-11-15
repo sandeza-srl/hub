@@ -23,8 +23,8 @@ export type TSediModel = Omit<typeof Sedi, 'traslateAliases'> & {
   translateAliases(raw: Partial<ISedi>): any
 };
 
-export type TSediDocument =
-  & mongoose.Document<any, {}, ISedi>
-  & ISedi;
+export type TSediDocument = 
+& mongoose.Document<any, {}, ISedi>
+& ISedi;
 
 export { ISedi };

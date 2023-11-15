@@ -19,7 +19,9 @@ export default TipiRicaviSpese;
 
 export { TipiRicaviSpeseSchema };
 
-export type TTipiRicaviSpeseModel = typeof TipiRicaviSpese;
+export type TTipiRicaviSpeseModel = Omit<typeof TipiRicaviSpese, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiRicaviSpese>): any
+};
 
 export type TTipiRicaviSpeseDocument = 
 & mongoose.Document<any, {}, ITipiRicaviSpese>

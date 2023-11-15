@@ -379,5 +379,13 @@ export interface IInterventi {
   /** Reflected: __Dati_Testo096*/ 
   IdClasseIntervento: string;
   /** Reflected: __Dati_Testo097*/ 
-  TxtClasseIntervento: string
+  TxtClasseIntervento: string;
+  /** Reflected: __Dati_Testo098*/ 
+  IdPeriodoContabile: string;
+  /** Reflected: __Dati_Numero069*/ 
+  FlagRispettaProgressivo: number;
+  /** Reflected: __Dati_Testo099*/ 
+  IdTipoInterventoPerCodice: string;
+  /** Reflected: __Dati_Testo100*/ 
+  TxtPeriodoContabile: string
 }

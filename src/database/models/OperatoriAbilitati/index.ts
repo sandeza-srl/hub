@@ -19,7 +19,9 @@ export default OperatoriAbilitati;
 
 export { OperatoriAbilitatiSchema };
 
-export type TOperatoriAbilitatiModel = typeof OperatoriAbilitati;
+export type TOperatoriAbilitatiModel = Omit<typeof OperatoriAbilitati, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOperatoriAbilitati>): any
+};
 
 export type TOperatoriAbilitatiDocument = 
 & mongoose.Document<any, {}, IOperatoriAbilitati>

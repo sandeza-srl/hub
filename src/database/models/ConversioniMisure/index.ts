@@ -19,7 +19,9 @@ export default ConversioniMisure;
 
 export { ConversioniMisureSchema };
 
-export type TConversioniMisureModel = typeof ConversioniMisure;
+export type TConversioniMisureModel = Omit<typeof ConversioniMisure, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IConversioniMisure>): any
+};
 
 export type TConversioniMisureDocument = 
 & mongoose.Document<any, {}, IConversioniMisure>

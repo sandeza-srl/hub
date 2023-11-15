@@ -19,7 +19,9 @@ export default Cicli;
 
 export { CicliSchema };
 
-export type TCicliModel = typeof Cicli;
+export type TCicliModel = Omit<typeof Cicli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICicli>): any
+};
 
 export type TCicliDocument = 
 & mongoose.Document<any, {}, ICicli>

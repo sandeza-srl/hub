@@ -19,7 +19,9 @@ export default FirmeAlloggio;
 
 export { FirmeAlloggioSchema };
 
-export type TFirmeAlloggioModel = typeof FirmeAlloggio;
+export type TFirmeAlloggioModel = Omit<typeof FirmeAlloggio, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFirmeAlloggio>): any
+};
 
 export type TFirmeAlloggioDocument = 
 & mongoose.Document<any, {}, IFirmeAlloggio>

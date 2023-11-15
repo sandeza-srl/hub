@@ -19,7 +19,9 @@ export default TipiUtensiliPerFaseProduzione;
 
 export { TipiUtensiliPerFaseProduzioneSchema };
 
-export type TTipiUtensiliPerFaseProduzioneModel = typeof TipiUtensiliPerFaseProduzione;
+export type TTipiUtensiliPerFaseProduzioneModel = Omit<typeof TipiUtensiliPerFaseProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiUtensiliPerFaseProduzione>): any
+};
 
 export type TTipiUtensiliPerFaseProduzioneDocument = 
 & mongoose.Document<any, {}, ITipiUtensiliPerFaseProduzione>

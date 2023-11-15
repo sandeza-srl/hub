@@ -31,7 +31,7 @@ export interface ICicli {
   /** Reflected: __Dati_Data001*/ 
   DataCalcoloCiclo: Date;
   /** Reflected: __Dati_Numero005*/ 
-  FlagRilavorazione: number;
+  TipoCiclo_FlagRilavorazione: number;
   /** Reflected: __Dati_Data002*/ 
   DataCreazione: Date;
   /** Reflected: __Dati_Data003*/ 
@@ -91,5 +91,9 @@ export interface ICicli {
   /** Reflected: __Dati_Testo026*/ 
   TxtUtente: string;
   /** Reflected: __Dati_Testo027*/ 
-  IdRicorrenzaRecord: string
+  IdRicorrenzaRecord: string;
+  /** Reflected: __Dati_Numero014*/ 
+  TipoCiclo_FlagSmontaggio: number;
+  /** Reflected: __Dati_Numero015*/ 
+  FlagAggiornaDaTipiCicli: number
 }

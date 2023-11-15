@@ -19,7 +19,9 @@ export default CampagneMailing;
 
 export { CampagneMailingSchema };
 
-export type TCampagneMailingModel = typeof CampagneMailing;
+export type TCampagneMailingModel = Omit<typeof CampagneMailing, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICampagneMailing>): any
+};
 
 export type TCampagneMailingDocument = 
 & mongoose.Document<any, {}, ICampagneMailing>

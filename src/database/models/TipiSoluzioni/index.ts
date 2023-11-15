@@ -19,7 +19,9 @@ export default TipiSoluzioni;
 
 export { TipiSoluzioniSchema };
 
-export type TTipiSoluzioniModel = typeof TipiSoluzioni;
+export type TTipiSoluzioniModel = Omit<typeof TipiSoluzioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiSoluzioni>): any
+};
 
 export type TTipiSoluzioniDocument = 
 & mongoose.Document<any, {}, ITipiSoluzioni>

@@ -19,7 +19,9 @@ export default InfoAggiuntiveImpianti;
 
 export { InfoAggiuntiveImpiantiSchema };
 
-export type TInfoAggiuntiveImpiantiModel = typeof InfoAggiuntiveImpianti;
+export type TInfoAggiuntiveImpiantiModel = Omit<typeof InfoAggiuntiveImpianti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoAggiuntiveImpianti>): any
+};
 
 export type TInfoAggiuntiveImpiantiDocument = 
 & mongoose.Document<any, {}, IInfoAggiuntiveImpianti>

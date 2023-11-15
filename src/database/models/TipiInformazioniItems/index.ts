@@ -19,7 +19,9 @@ export default TipiInformazioniItems;
 
 export { TipiInformazioniItemsSchema };
 
-export type TTipiInformazioniItemsModel = typeof TipiInformazioniItems;
+export type TTipiInformazioniItemsModel = Omit<typeof TipiInformazioniItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiInformazioniItems>): any
+};
 
 export type TTipiInformazioniItemsDocument = 
 & mongoose.Document<any, {}, ITipiInformazioniItems>

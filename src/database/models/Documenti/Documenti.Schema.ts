@@ -825,6 +825,16 @@ const DocumentiSchema = new mongoose.Schema<IDocumentiPrivate>({
     type: String,
     alias: 'IdControlloFaseProduzione',
 
+  },
+  __Dati_Numero076: {
+    type: Number,
+    alias: 'FlagCreatoProcessi',
+
+  },
+  __Dati_Testo076: {
+    type: String,
+    alias: 'IdProcesso',
+
   }
 }, {
   timestamps: true

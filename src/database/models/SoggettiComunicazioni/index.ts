@@ -19,7 +19,9 @@ export default SoggettiComunicazioni;
 
 export { SoggettiComunicazioniSchema };
 
-export type TSoggettiComunicazioniModel = typeof SoggettiComunicazioni;
+export type TSoggettiComunicazioniModel = Omit<typeof SoggettiComunicazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ISoggettiComunicazioni>): any
+};
 
 export type TSoggettiComunicazioniDocument = 
 & mongoose.Document<any, {}, ISoggettiComunicazioni>

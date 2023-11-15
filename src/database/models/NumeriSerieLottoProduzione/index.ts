@@ -19,7 +19,9 @@ export default NumeriSerieLottoProduzione;
 
 export { NumeriSerieLottoProduzioneSchema };
 
-export type TNumeriSerieLottoProduzioneModel = typeof NumeriSerieLottoProduzione;
+export type TNumeriSerieLottoProduzioneModel = Omit<typeof NumeriSerieLottoProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<INumeriSerieLottoProduzione>): any
+};
 
 export type TNumeriSerieLottoProduzioneDocument = 
 & mongoose.Document<any, {}, INumeriSerieLottoProduzione>

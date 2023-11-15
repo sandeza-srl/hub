@@ -19,7 +19,9 @@ export default MontaggioUtensiliAttrezzature;
 
 export { MontaggioUtensiliAttrezzatureSchema };
 
-export type TMontaggioUtensiliAttrezzatureModel = typeof MontaggioUtensiliAttrezzature;
+export type TMontaggioUtensiliAttrezzatureModel = Omit<typeof MontaggioUtensiliAttrezzature, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMontaggioUtensiliAttrezzature>): any
+};
 
 export type TMontaggioUtensiliAttrezzatureDocument = 
 & mongoose.Document<any, {}, IMontaggioUtensiliAttrezzature>

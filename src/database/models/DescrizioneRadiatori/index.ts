@@ -19,7 +19,9 @@ export default DescrizioneRadiatori;
 
 export { DescrizioneRadiatoriSchema };
 
-export type TDescrizioneRadiatoriModel = typeof DescrizioneRadiatori;
+export type TDescrizioneRadiatoriModel = Omit<typeof DescrizioneRadiatori, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneRadiatori>): any
+};
 
 export type TDescrizioneRadiatoriDocument = 
 & mongoose.Document<any, {}, IDescrizioneRadiatori>

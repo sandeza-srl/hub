@@ -19,7 +19,9 @@ export default InfoAggiuntiveDistintaImpianto;
 
 export { InfoAggiuntiveDistintaImpiantoSchema };
 
-export type TInfoAggiuntiveDistintaImpiantoModel = typeof InfoAggiuntiveDistintaImpianto;
+export type TInfoAggiuntiveDistintaImpiantoModel = Omit<typeof InfoAggiuntiveDistintaImpianto, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoAggiuntiveDistintaImpianto>): any
+};
 
 export type TInfoAggiuntiveDistintaImpiantoDocument = 
 & mongoose.Document<any, {}, IInfoAggiuntiveDistintaImpianto>

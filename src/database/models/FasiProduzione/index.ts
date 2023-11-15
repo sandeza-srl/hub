@@ -19,7 +19,9 @@ export default FasiProduzione;
 
 export { FasiProduzioneSchema };
 
-export type TFasiProduzioneModel = typeof FasiProduzione;
+export type TFasiProduzioneModel = Omit<typeof FasiProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFasiProduzione>): any
+};
 
 export type TFasiProduzioneDocument = 
 & mongoose.Document<any, {}, IFasiProduzione>

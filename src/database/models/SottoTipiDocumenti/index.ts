@@ -19,7 +19,9 @@ export default SottoTipiDocumenti;
 
 export { SottoTipiDocumentiSchema };
 
-export type TSottoTipiDocumentiModel = typeof SottoTipiDocumenti;
+export type TSottoTipiDocumentiModel = Omit<typeof SottoTipiDocumenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ISottoTipiDocumenti>): any
+};
 
 export type TSottoTipiDocumentiDocument = 
 & mongoose.Document<any, {}, ISottoTipiDocumenti>

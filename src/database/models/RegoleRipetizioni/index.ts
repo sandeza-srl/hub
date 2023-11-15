@@ -19,7 +19,9 @@ export default RegoleRipetizioni;
 
 export { RegoleRipetizioniSchema };
 
-export type TRegoleRipetizioniModel = typeof RegoleRipetizioni;
+export type TRegoleRipetizioniModel = Omit<typeof RegoleRipetizioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRegoleRipetizioni>): any
+};
 
 export type TRegoleRipetizioniDocument = 
 & mongoose.Document<any, {}, IRegoleRipetizioni>

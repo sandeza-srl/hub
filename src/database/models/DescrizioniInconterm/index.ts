@@ -19,7 +19,9 @@ export default DescrizioniInconterm;
 
 export { DescrizioniIncontermSchema };
 
-export type TDescrizioniIncontermModel = typeof DescrizioniInconterm;
+export type TDescrizioniIncontermModel = Omit<typeof DescrizioniInconterm, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioniInconterm>): any
+};
 
 export type TDescrizioniIncontermDocument = 
 & mongoose.Document<any, {}, IDescrizioniInconterm>

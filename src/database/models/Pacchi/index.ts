@@ -19,7 +19,9 @@ export default Pacchi;
 
 export { PacchiSchema };
 
-export type TPacchiModel = typeof Pacchi;
+export type TPacchiModel = Omit<typeof Pacchi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPacchi>): any
+};
 
 export type TPacchiDocument = 
 & mongoose.Document<any, {}, IPacchi>

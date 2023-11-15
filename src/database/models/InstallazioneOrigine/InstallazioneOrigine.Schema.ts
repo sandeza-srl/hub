@@ -482,11 +482,6 @@ const InstallazioneOrigineSchema = new mongoose.Schema<IInstallazioneOriginePriv
     alias: 'Redbooth_API_Client_Secret',
 
   },
-  __Dati_Testo035: {
-    type: String,
-    alias: 'Field114',
-
-  },
   __Dati_Numero041: {
     type: Number,
     alias: 'CollegamentoMacchine_FlagCamngo',
@@ -522,9 +517,9 @@ const InstallazioneOrigineSchema = new mongoose.Schema<IInstallazioneOriginePriv
     alias: 'PrintNode_APIKey',
 
   },
-  __Dati_Testo039: {
-    type: String,
-    alias: 'ApiGateway_DB_Mongo',
+  __Dati_Numero045: {
+    type: Number,
+    alias: 'FlagMongoDB',
 
   }
 }, {

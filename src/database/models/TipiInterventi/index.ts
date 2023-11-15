@@ -19,7 +19,9 @@ export default TipiInterventi;
 
 export { TipiInterventiSchema };
 
-export type TTipiInterventiModel = typeof TipiInterventi;
+export type TTipiInterventiModel = Omit<typeof TipiInterventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiInterventi>): any
+};
 
 export type TTipiInterventiDocument = 
 & mongoose.Document<any, {}, ITipiInterventi>

@@ -33,8 +33,8 @@ const VociPerVerificaFabbisogniSchema = new mongoose.Schema<IVociPerVerificaFabb
     alias: 'IdVociPerVerificaFabbisogni',
 
   },
-  __Dati_Numero001: {
-    type: Number,
+  __Dati_Testo006: {
+    type: String,
     alias: 'IdItem',
 
   },

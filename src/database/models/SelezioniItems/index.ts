@@ -19,7 +19,9 @@ export default SelezioniItems;
 
 export { SelezioniItemsSchema };
 
-export type TSelezioniItemsModel = typeof SelezioniItems;
+export type TSelezioniItemsModel = Omit<typeof SelezioniItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ISelezioniItems>): any
+};
 
 export type TSelezioniItemsDocument = 
 & mongoose.Document<any, {}, ISelezioniItems>

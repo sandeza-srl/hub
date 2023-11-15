@@ -19,7 +19,9 @@ export default Scarti;
 
 export { ScartiSchema };
 
-export type TScartiModel = typeof Scarti;
+export type TScartiModel = Omit<typeof Scarti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IScarti>): any
+};
 
 export type TScartiDocument = 
 & mongoose.Document<any, {}, IScarti>

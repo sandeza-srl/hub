@@ -19,7 +19,9 @@ export default StoricoStatoImpianto;
 
 export { StoricoStatoImpiantoSchema };
 
-export type TStoricoStatoImpiantoModel = typeof StoricoStatoImpianto;
+export type TStoricoStatoImpiantoModel = Omit<typeof StoricoStatoImpianto, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoStatoImpianto>): any
+};
 
 export type TStoricoStatoImpiantoDocument = 
 & mongoose.Document<any, {}, IStoricoStatoImpianto>

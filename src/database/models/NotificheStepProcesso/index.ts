@@ -19,7 +19,9 @@ export default NotificheStepProcesso;
 
 export { NotificheStepProcessoSchema };
 
-export type TNotificheStepProcessoModel = typeof NotificheStepProcesso;
+export type TNotificheStepProcessoModel = Omit<typeof NotificheStepProcesso, 'traslateAliases'> & {
+  translateAliases(raw: Partial<INotificheStepProcesso>): any
+};
 
 export type TNotificheStepProcessoDocument = 
 & mongoose.Document<any, {}, INotificheStepProcesso>

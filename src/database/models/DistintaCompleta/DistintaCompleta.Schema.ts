@@ -194,6 +194,16 @@ const DistintaCompletaSchema = new mongoose.Schema<IDistintaCompletaPrivate>({
     set: (value: any) => {
       return DateConverter.convertDateHour(value);
     }
+  },
+  __Dati_Numero014: {
+    type: Number,
+    alias: 'FlagAggiornaValori',
+
+  },
+  __Dati_Testo020: {
+    type: String,
+    alias: 'Note',
+
   }
 }, {
   timestamps: true

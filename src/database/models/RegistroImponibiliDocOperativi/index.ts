@@ -19,7 +19,9 @@ export default RegistroImponibiliDocOperativi;
 
 export { RegistroImponibiliDocOperativiSchema };
 
-export type TRegistroImponibiliDocOperativiModel = typeof RegistroImponibiliDocOperativi;
+export type TRegistroImponibiliDocOperativiModel = Omit<typeof RegistroImponibiliDocOperativi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRegistroImponibiliDocOperativi>): any
+};
 
 export type TRegistroImponibiliDocOperativiDocument = 
 & mongoose.Document<any, {}, IRegistroImponibiliDocOperativi>

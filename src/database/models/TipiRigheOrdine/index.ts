@@ -19,7 +19,9 @@ export default TipiRigheOrdine;
 
 export { TipiRigheOrdineSchema };
 
-export type TTipiRigheOrdineModel = typeof TipiRigheOrdine;
+export type TTipiRigheOrdineModel = Omit<typeof TipiRigheOrdine, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiRigheOrdine>): any
+};
 
 export type TTipiRigheOrdineDocument = 
 & mongoose.Document<any, {}, ITipiRigheOrdine>

@@ -19,7 +19,9 @@ export default RisorseTipiFasi;
 
 export { RisorseTipiFasiSchema };
 
-export type TRisorseTipiFasiModel = typeof RisorseTipiFasi;
+export type TRisorseTipiFasiModel = Omit<typeof RisorseTipiFasi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRisorseTipiFasi>): any
+};
 
 export type TRisorseTipiFasiDocument = 
 & mongoose.Document<any, {}, IRisorseTipiFasi>

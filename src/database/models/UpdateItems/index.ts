@@ -19,7 +19,9 @@ export default UpdateItems;
 
 export { UpdateItemsSchema };
 
-export type TUpdateItemsModel = typeof UpdateItems;
+export type TUpdateItemsModel = Omit<typeof UpdateItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IUpdateItems>): any
+};
 
 export type TUpdateItemsDocument = 
 & mongoose.Document<any, {}, IUpdateItems>

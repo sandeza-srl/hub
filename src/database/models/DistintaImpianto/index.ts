@@ -19,7 +19,9 @@ export default DistintaImpianto;
 
 export { DistintaImpiantoSchema };
 
-export type TDistintaImpiantoModel = typeof DistintaImpianto;
+export type TDistintaImpiantoModel = Omit<typeof DistintaImpianto, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDistintaImpianto>): any
+};
 
 export type TDistintaImpiantoDocument = 
 & mongoose.Document<any, {}, IDistintaImpianto>

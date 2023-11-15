@@ -19,7 +19,9 @@ export default InfoAggiuntiveAnagrafica;
 
 export { InfoAggiuntiveAnagraficaSchema };
 
-export type TInfoAggiuntiveAnagraficaModel = typeof InfoAggiuntiveAnagrafica;
+export type TInfoAggiuntiveAnagraficaModel = Omit<typeof InfoAggiuntiveAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoAggiuntiveAnagrafica>): any
+};
 
 export type TInfoAggiuntiveAnagraficaDocument = 
 & mongoose.Document<any, {}, IInfoAggiuntiveAnagrafica>

@@ -233,5 +233,7 @@ export interface IStepProcesso {
   /** Reflected: __Dati_Testo079*/ 
   IdRubricaAnagrafica: string;
   /** Reflected: __Dati_Testo080*/ 
-  IdDocumentoAssociato: string
+  IdDocumentoAssociato: string;
+  /** Reflected: __Dati_Numero019*/ 
+  FlagStepProcessoUrgente: number
 }

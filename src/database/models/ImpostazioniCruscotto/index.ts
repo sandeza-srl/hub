@@ -19,7 +19,9 @@ export default ImpostazioniCruscotto;
 
 export { ImpostazioniCruscottoSchema };
 
-export type TImpostazioniCruscottoModel = typeof ImpostazioniCruscotto;
+export type TImpostazioniCruscottoModel = Omit<typeof ImpostazioniCruscotto, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IImpostazioniCruscotto>): any
+};
 
 export type TImpostazioniCruscottoDocument = 
 & mongoose.Document<any, {}, IImpostazioniCruscotto>

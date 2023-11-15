@@ -19,7 +19,9 @@ export default LogGiacenzeItem;
 
 export { LogGiacenzeItemSchema };
 
-export type TLogGiacenzeItemModel = typeof LogGiacenzeItem;
+export type TLogGiacenzeItemModel = Omit<typeof LogGiacenzeItem, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILogGiacenzeItem>): any
+};
 
 export type TLogGiacenzeItemDocument = 
 & mongoose.Document<any, {}, ILogGiacenzeItem>

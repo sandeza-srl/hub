@@ -186,7 +186,7 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
   },
   __Dati_Testo014      : {
     type : String,
-    alias: 'IdItemMaster'
+    alias: 'Master_IdItemMaster'
 
   },
   __Dati_Numero021     : {
@@ -2124,9 +2124,183 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
     type : String,
     alias: 'CodiceTipoImballo'
 
+  },
+  __Dati_Testo083      : {
+    type : String,
+    alias: 'IdStatoItems'
+
+  },
+  __Dati_Numero328     : {
+    type : Number,
+    alias: 'FlagItemOrdinato'
+
+  },
+  __Dati_Numero329     : {
+    type : Number,
+    alias: 'FlagItemFabbisogno'
+
+  },
+  __Dati_Numero330     : {
+    type : Number,
+    alias: 'FlagItemEntrata'
+
+  },
+  __Dati_Numero331     : {
+    type : Number,
+    alias: 'FlagItemUscita'
+
+  },
+  __Dati_Numero332     : {
+    type : Number,
+    alias: 'FlagItemRichiestoOrdineApprovvigionamento'
+
+  },
+  __Dati_Numero333     : {
+    type : Number,
+    alias: 'FlagNovita'
+
+  },
+  __Dati_Numero334     : {
+    type : Number,
+    alias: 'FlagRevisione'
+
+  },
+  __Dati_Data007       : {
+    type : Date,
+    alias: 'StatiItems_DataCambioStatoSucccessivoAutomatico',
+    set  : (value: any) => {
+      return DateConverter.convertDate(value);
+    }
+  },
+  __Dati_Numero335     : {
+    type : Number,
+    alias: 'FlagAggiornaDaStatoItems'
+
+  },
+  __Dati_Testo084      : {
+    type : String,
+    alias: 'IdStatoItemsSuccessivo'
+
+  },
+  __Dati_Testo085      : {
+    type : String,
+    alias: 'StatiItems_IdStatoItemsESuccessivo'
+
+  },
+  __Dati_Numero336     : {
+    type : Number,
+    alias: 'Master_FlagPossibileItemMaster'
+
+  },
+  __Dati_Numero337     : {
+    type : Number,
+    alias: 'Master_FlagQuestoItemMaster'
+
+  },
+  __Dati_Numero338     : {
+    type : Number,
+    alias: 'Master_FlagItemCorrelatoAMaster'
+
+  },
+  __Dati_Numero339     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_ImpostazioniGenerali'
+
+  },
+  __Dati_Numero340     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_FlagTipo'
+
+  },
+  __Dati_Numero341     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_Multimaga'
+
+  },
+  __Dati_Numero342     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_ScaricoProduzione'
+
+  },
+  __Dati_Numero343     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_TipiInfoAggiuntive'
+
+  },
+  __Dati_Numero344     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_Tracciabilita'
+
+  },
+  __Dati_Numero345     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_Controlli'
+
+  },
+  __Dati_Numero346     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_Valorizzazione'
+
+  },
+  __Dati_Numero347     : {
+    type : Number,
+    alias: 'BloccoImpostazioni_TipiRicaviSpese'
+
+  },
+  __Dati_Numero348     : {
+    type : Number,
+    alias: 'FlagDescrizioneDaInfoAggiuntive'
+
+  },
+  __Dati_Numero349     : {
+    type : Number,
+    alias: 'FlagDescrizioneNonModificabile'
+
+  },
+  __Dati_Data008       : {
+    type : Date,
+    alias: 'WIP_DataValorizzazione',
+    set  : (value: any) => {
+      return DateConverter.convertDate(value);
+    }
+  },
+  __Dati_Numero350     : {
+    type : Number,
+    alias: 'WIP_Valore'
+
+  },
+  __Dati_Numero351     : {
+    type : Number,
+    alias: 'FlagAggiornaWIP'
+
   }
 }, {
   timestamps: true
+});
+
+/**
+ * Indexing
+ */
+ItemsSchema.index({
+  __Dati_Testo002: 1
+});
+ItemsSchema.index({
+  __Dati_Testo034: 1
+});
+ItemsSchema.index({
+  __Dati_Testo003: 1
+});
+ItemsSchema.index({
+  __Dati_Testo026: 1
+});
+ItemsSchema.index({
+  __Dati_Testo005: 1
+});
+ItemsSchema.index({
+  __Dati_Numero116: 1
+});
+ItemsSchema.index({
+  __Dati_Numero046: 1
 });
 
 /* --------

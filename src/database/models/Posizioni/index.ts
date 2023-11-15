@@ -19,7 +19,9 @@ export default Posizioni;
 
 export { PosizioniSchema };
 
-export type TPosizioniModel = typeof Posizioni;
+export type TPosizioniModel = Omit<typeof Posizioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPosizioni>): any
+};
 
 export type TPosizioniDocument = 
 & mongoose.Document<any, {}, IPosizioni>

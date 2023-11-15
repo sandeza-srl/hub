@@ -19,7 +19,9 @@ export default TipiCave;
 
 export { TipiCaveSchema };
 
-export type TTipiCaveModel = typeof TipiCave;
+export type TTipiCaveModel = Omit<typeof TipiCave, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiCave>): any
+};
 
 export type TTipiCaveDocument = 
 & mongoose.Document<any, {}, ITipiCave>

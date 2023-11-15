@@ -19,7 +19,9 @@ export default ProblemiImpianti;
 
 export { ProblemiImpiantiSchema };
 
-export type TProblemiImpiantiModel = typeof ProblemiImpianti;
+export type TProblemiImpiantiModel = Omit<typeof ProblemiImpianti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IProblemiImpianti>): any
+};
 
 export type TProblemiImpiantiDocument = 
 & mongoose.Document<any, {}, IProblemiImpianti>

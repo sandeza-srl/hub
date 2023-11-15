@@ -19,7 +19,9 @@ export default MagazziniGestiti;
 
 export { MagazziniGestitiSchema };
 
-export type TMagazziniGestitiModel = typeof MagazziniGestiti;
+export type TMagazziniGestitiModel = Omit<typeof MagazziniGestiti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMagazziniGestiti>): any
+};
 
 export type TMagazziniGestitiDocument = 
 & mongoose.Document<any, {}, IMagazziniGestiti>

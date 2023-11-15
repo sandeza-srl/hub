@@ -19,7 +19,9 @@ export default LogModificheListini;
 
 export { LogModificheListiniSchema };
 
-export type TLogModificheListiniModel = typeof LogModificheListini;
+export type TLogModificheListiniModel = Omit<typeof LogModificheListini, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILogModificheListini>): any
+};
 
 export type TLogModificheListiniDocument = 
 & mongoose.Document<any, {}, ILogModificheListini>

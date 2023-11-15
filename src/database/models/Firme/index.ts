@@ -19,7 +19,9 @@ export default Firme;
 
 export { FirmeSchema };
 
-export type TFirmeModel = typeof Firme;
+export type TFirmeModel = Omit<typeof Firme, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFirme>): any
+};
 
 export type TFirmeDocument = 
 & mongoose.Document<any, {}, IFirme>

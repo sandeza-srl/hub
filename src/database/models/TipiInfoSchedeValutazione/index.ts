@@ -19,7 +19,9 @@ export default TipiInfoSchedeValutazione;
 
 export { TipiInfoSchedeValutazioneSchema };
 
-export type TTipiInfoSchedeValutazioneModel = typeof TipiInfoSchedeValutazione;
+export type TTipiInfoSchedeValutazioneModel = Omit<typeof TipiInfoSchedeValutazione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiInfoSchedeValutazione>): any
+};
 
 export type TTipiInfoSchedeValutazioneDocument = 
 & mongoose.Document<any, {}, ITipiInfoSchedeValutazione>

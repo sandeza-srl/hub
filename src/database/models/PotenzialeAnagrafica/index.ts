@@ -19,7 +19,9 @@ export default PotenzialeAnagrafica;
 
 export { PotenzialeAnagraficaSchema };
 
-export type TPotenzialeAnagraficaModel = typeof PotenzialeAnagrafica;
+export type TPotenzialeAnagraficaModel = Omit<typeof PotenzialeAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPotenzialeAnagrafica>): any
+};
 
 export type TPotenzialeAnagraficaDocument = 
 & mongoose.Document<any, {}, IPotenzialeAnagrafica>

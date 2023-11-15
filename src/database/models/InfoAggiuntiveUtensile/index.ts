@@ -19,7 +19,9 @@ export default InfoAggiuntiveUtensile;
 
 export { InfoAggiuntiveUtensileSchema };
 
-export type TInfoAggiuntiveUtensileModel = typeof InfoAggiuntiveUtensile;
+export type TInfoAggiuntiveUtensileModel = Omit<typeof InfoAggiuntiveUtensile, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoAggiuntiveUtensile>): any
+};
 
 export type TInfoAggiuntiveUtensileDocument = 
 & mongoose.Document<any, {}, IInfoAggiuntiveUtensile>

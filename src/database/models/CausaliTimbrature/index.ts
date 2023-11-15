@@ -19,7 +19,9 @@ export default CausaliTimbrature;
 
 export { CausaliTimbratureSchema };
 
-export type TCausaliTimbratureModel = typeof CausaliTimbrature;
+export type TCausaliTimbratureModel = Omit<typeof CausaliTimbrature, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICausaliTimbrature>): any
+};
 
 export type TCausaliTimbratureDocument = 
 & mongoose.Document<any, {}, ICausaliTimbrature>

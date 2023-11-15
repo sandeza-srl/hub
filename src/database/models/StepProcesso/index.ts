@@ -19,7 +19,9 @@ export default StepProcesso;
 
 export { StepProcessoSchema };
 
-export type TStepProcessoModel = typeof StepProcesso;
+export type TStepProcessoModel = Omit<typeof StepProcesso, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStepProcesso>): any
+};
 
 export type TStepProcessoDocument = 
 & mongoose.Document<any, {}, IStepProcesso>

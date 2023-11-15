@@ -19,7 +19,9 @@ export default PauseTurno;
 
 export { PauseTurnoSchema };
 
-export type TPauseTurnoModel = typeof PauseTurno;
+export type TPauseTurnoModel = Omit<typeof PauseTurno, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPauseTurno>): any
+};
 
 export type TPauseTurnoDocument = 
 & mongoose.Document<any, {}, IPauseTurno>

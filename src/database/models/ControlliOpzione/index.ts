@@ -19,7 +19,9 @@ export default ControlliOpzione;
 
 export { ControlliOpzioneSchema };
 
-export type TControlliOpzioneModel = typeof ControlliOpzione;
+export type TControlliOpzioneModel = Omit<typeof ControlliOpzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IControlliOpzione>): any
+};
 
 export type TControlliOpzioneDocument = 
 & mongoose.Document<any, {}, IControlliOpzione>

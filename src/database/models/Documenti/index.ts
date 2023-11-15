@@ -19,7 +19,9 @@ export default Documenti;
 
 export { DocumentiSchema };
 
-export type TDocumentiModel = typeof Documenti;
+export type TDocumentiModel = Omit<typeof Documenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDocumenti>): any
+};
 
 export type TDocumentiDocument = 
 & mongoose.Document<any, {}, IDocumenti>

@@ -19,7 +19,9 @@ export default ScaglioniCicli;
 
 export { ScaglioniCicliSchema };
 
-export type TScaglioniCicliModel = typeof ScaglioniCicli;
+export type TScaglioniCicliModel = Omit<typeof ScaglioniCicli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IScaglioniCicli>): any
+};
 
 export type TScaglioniCicliDocument = 
 & mongoose.Document<any, {}, IScaglioniCicli>

@@ -288,7 +288,7 @@ const ArticoliSchema = new mongoose.Schema<IArticoliPrivate>({
   },
   __Dati_Numero017: {
     type: Number,
-    alias: 'FlagEsplodiDistinta',
+    alias: 'EsplosioneDistinta_CreaLottiLivelliSottostanti',
 
   },
   __Dati_Numero018: {
@@ -334,6 +334,11 @@ const ArticoliSchema = new mongoose.Schema<IArticoliPrivate>({
   __Dati_Testo033: {
     type: String,
     alias: 'IdRicorrenzaRecord',
+
+  },
+  __Dati_Numero022: {
+    type: Number,
+    alias: 'EsplosioneDistinta_SeInDistintaCreaLotto',
 
   }
 }, {

@@ -1,162 +1,109 @@
 export interface IVariazioniListino {
   _id: string;
-
-  /** Reflected: __Dati_Testo001*/
+  /** Reflected: __Dati_Testo001*/ 
   IdAccount: string;
-
-  /** Reflected: __Dati_Testo002*/
+  /** Reflected: __Dati_Testo002*/ 
   FlagCosaIncludeVedi: string;
-
-  /** Reflected: __Dati_Numero001*/
+  /** Reflected: __Dati_Numero001*/ 
   FlagPercentuale: number;
-
-  /** Reflected: __Dati_Numero002*/
+  /** Reflected: __Dati_Numero002*/ 
   FlagSoloItem: number;
-
-  /** Reflected: __Dati_Numero003*/
+  /** Reflected: __Dati_Numero003*/ 
   FlagTuttaFamiglia: number;
-
-  /** Reflected: __Dati_Numero004*/
+  /** Reflected: __Dati_Numero004*/ 
   FlagTuttaSottoFamiglia: number;
-
-  /** Reflected: __Dati_Numero005*/
+  /** Reflected: __Dati_Numero005*/ 
   FlagTutto: number;
-
-  /** Reflected: __Dati_Testo003*/
+  /** Reflected: __Dati_Testo003*/ 
   IdFamigliaItem: string;
-
-  /** Reflected: __Dati_Testo004*/
+  /** Reflected: __Dati_Testo004*/ 
   IdItem: string;
-
-  /** Reflected: __Dati_Testo005*/
+  /** Reflected: __Dati_Testo005*/ 
   IdSottoFamigliaItem: string;
-
-  /** Reflected: __Dati_Testo006*/
+  /** Reflected: __Dati_Testo006*/ 
   IdVariazioneListino: string;
-
-  /** Reflected: __Dati_Numero006*/
+  /** Reflected: __Dati_Numero006*/ 
   PrezzoFisso: number;
-
-  /** Reflected: __Dati_Numero007*/
+  /** Reflected: __Dati_Numero007*/ 
   Uno: number;
-
-  /** Reflected: __Dati_Numero008*/
+  /** Reflected: __Dati_Numero008*/ 
   VariazionePrezzoDiretta: number;
-
-  /** Reflected: __Dati_Numero009*/
+  /** Reflected: __Dati_Numero009*/ 
   VariazionePrezzoPercentuale: number;
-
-  /** Reflected: __Dati_Numero010*/
+  /** Reflected: __Dati_Numero010*/ 
   FlagVendita: number;
-
-  /** Reflected: __Dati_Numero011*/
+  /** Reflected: __Dati_Numero011*/ 
   FlagAcquisto: number;
-
-  /** Reflected: __Dati_Testo007*/
+  /** Reflected: __Dati_Testo007*/ 
   TxtVenditaAcquisto: string;
-
-  /** Reflected: __Dati_Testo008*/
+  /** Reflected: __Dati_Testo008*/ 
   IdAccountClientePrimario: string;
-
-  /** Reflected: __Dati_Numero012*/
+  /** Reflected: __Dati_Numero012*/ 
   FlagProduttore: number;
-
-  /** Reflected: __Dati_Testo009*/
+  /** Reflected: __Dati_Testo009*/ 
   TxtAccountProduttore: string;
-
-  /** Reflected: __Dati_Testo010*/
+  /** Reflected: __Dati_Testo010*/ 
   CodiceTxtItemAutomatico: string;
-
-  /** Reflected: __Dati_Testo011*/
+  /** Reflected: __Dati_Testo011*/ 
   TxtSottoFamigliaItem: string;
-
-  /** Reflected: __Dati_Testo012*/
+  /** Reflected: __Dati_Testo012*/ 
   TxtFamigliaItem: string;
-
-  /** Reflected: __Dati_DataOra001*/
+  /** Reflected: __Dati_DataOra001*/ 
   DataOraUltimaModifica: Date;
-
-  /** Reflected: __Dati_Testo013*/
+  /** Reflected: __Dati_Testo013*/ 
   IdAccountCompagnia: string;
-
-  /** Reflected: __Dati_Numero013*/
+  /** Reflected: __Dati_Numero013*/ 
   Zero: number;
-
-  /** Reflected: __Dati_Testo014*/
+  /** Reflected: __Dati_Testo014*/ 
   IdInstallazione: string;
-
-  /** Reflected: __Dati_Data001*/
+  /** Reflected: __Dati_Data001*/ 
   DataInizio: Date;
-
-  /** Reflected: __Dati_Data002*/
+  /** Reflected: __Dati_Data002*/ 
   DataFine: Date;
-
-  /** Reflected: __Dati_Data003*/
+  /** Reflected: __Dati_Data003*/ 
   DataCorrente: Date;
-
-  /** Reflected: __Dati_Numero014*/
+  /** Reflected: __Dati_Numero014*/ 
   FlagScaduto: number;
-
-  /** Reflected: __Dati_Testo015*/
+  /** Reflected: __Dati_Testo015*/ 
   Note: string;
-
-  /** Reflected: __Dati_Numero015*/
+  /** Reflected: __Dati_Numero015*/ 
   FlagAttivo: number;
-
-  /** Reflected: __Dati_Numero016*/
+  /** Reflected: __Dati_Numero016*/ 
   FlagAggiornaContenutiDaItems: number;
-
-  /** Reflected: __Dati_Testo016*/
+  /** Reflected: __Dati_Testo016*/ 
   CodiceItem: string;
-
-  /** Reflected: __Dati_Testo017*/
+  /** Reflected: __Dati_Testo017*/ 
   TxtItem: string;
-
-  /** Reflected: __Dati_Numero017*/
+  /** Reflected: __Dati_Numero017*/ 
   QuantitaMinima: number;
-
-  /** Reflected: __Dati_Numero018*/
+  /** Reflected: __Dati_Numero018*/ 
   QuantitaMassima: number;
-
-  /** Reflected: __Dati_Numero019*/
+  /** Reflected: __Dati_Numero019*/ 
   FlagVincoloQuantita: number;
-
-  /** Reflected: __Dati_DataOra002*/
+  /** Reflected: __Dati_DataOra002*/ 
   DataOraCreazione: Date;
-
-  /** Reflected: __Dati_Numero020*/
+  /** Reflected: __Dati_Numero020*/ 
   VariazioneQtaPercentuale: number;
-
-  /** Reflected: __Dati_Numero021*/
+  /** Reflected: __Dati_Numero021*/ 
   FlagPrezzoFissoComeValoreDiPartenza: number;
-
-  /** Reflected: __Dati_Numero022*/
+  /** Reflected: __Dati_Numero022*/ 
   VariazionePercentuale_Sconto1: number;
-
-  /** Reflected: __Dati_Numero023*/
+  /** Reflected: __Dati_Numero023*/ 
   VariazionePercentuale_Sconto2: number;
-
-  /** Reflected: __Dati_Numero024*/
+  /** Reflected: __Dati_Numero024*/ 
   VariazionePercentuale_Sconto3: number;
-
-  /** Reflected: __Dati_Testo018*/
+  /** Reflected: __Dati_Testo018*/ 
   IdTipoEtichetta: string;
-
-  /** Reflected: __Dati_Testo019*/
+  /** Reflected: __Dati_Testo019*/ 
   ValoreEtichetta: string;
-
-  /** Reflected: __Dati_Testo020*/
+  /** Reflected: __Dati_Testo020*/ 
   IdTipiListino: string;
-
-  /** Reflected: __Dati_Numero025*/
+  /** Reflected: __Dati_Numero025*/ 
   FlagAggiornaIdTipiListino: number;
-
-  /** Reflected: __Dati_Numero026*/
+  /** Reflected: __Dati_Numero026*/ 
   FlagVariazionePercentuale: number;
-
-  /** Reflected: __Dati_Numero027*/
+  /** Reflected: __Dati_Numero027*/ 
   FlagVariazioneDiretta: number;
-
-  /** Reflected: __Dati_Testo021*/
-  TxtVariazioneListino: string;
+  /** Reflected: __Dati_Testo021*/ 
+  TxtVariazioneListino: string
 }

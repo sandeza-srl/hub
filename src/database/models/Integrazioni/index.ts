@@ -19,7 +19,9 @@ export default Integrazioni;
 
 export { IntegrazioniSchema };
 
-export type TIntegrazioniModel = typeof Integrazioni;
+export type TIntegrazioniModel = Omit<typeof Integrazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IIntegrazioni>): any
+};
 
 export type TIntegrazioniDocument = 
 & mongoose.Document<any, {}, IIntegrazioni>

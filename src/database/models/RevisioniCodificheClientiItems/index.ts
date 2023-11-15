@@ -19,7 +19,9 @@ export default RevisioniCodificheClientiItems;
 
 export { RevisioniCodificheClientiItemsSchema };
 
-export type TRevisioniCodificheClientiItemsModel = typeof RevisioniCodificheClientiItems;
+export type TRevisioniCodificheClientiItemsModel = Omit<typeof RevisioniCodificheClientiItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRevisioniCodificheClientiItems>): any
+};
 
 export type TRevisioniCodificheClientiItemsDocument = 
 & mongoose.Document<any, {}, IRevisioniCodificheClientiItems>

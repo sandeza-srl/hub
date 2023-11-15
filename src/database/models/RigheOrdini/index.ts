@@ -19,7 +19,9 @@ export default RigheOrdini;
 
 export { RigheOrdiniSchema };
 
-export type TRigheOrdiniModel = typeof RigheOrdini;
+export type TRigheOrdiniModel = Omit<typeof RigheOrdini, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRigheOrdini>): any
+};
 
 export type TRigheOrdiniDocument = 
 & mongoose.Document<any, {}, IRigheOrdini>

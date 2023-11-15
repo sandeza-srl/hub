@@ -19,7 +19,9 @@ export default VociPerVerificaFabbisogni;
 
 export { VociPerVerificaFabbisogniSchema };
 
-export type TVociPerVerificaFabbisogniModel = typeof VociPerVerificaFabbisogni;
+export type TVociPerVerificaFabbisogniModel = Omit<typeof VociPerVerificaFabbisogni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociPerVerificaFabbisogni>): any
+};
 
 export type TVociPerVerificaFabbisogniDocument = 
 & mongoose.Document<any, {}, IVociPerVerificaFabbisogni>

@@ -19,7 +19,9 @@ export default TipiCicli_Fasi;
 
 export { TipiCicli_FasiSchema };
 
-export type TTipiCicli_FasiModel = typeof TipiCicli_Fasi;
+export type TTipiCicli_FasiModel = Omit<typeof TipiCicli_Fasi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiCicli_Fasi>): any
+};
 
 export type TTipiCicli_FasiDocument = 
 & mongoose.Document<any, {}, ITipiCicli_Fasi>

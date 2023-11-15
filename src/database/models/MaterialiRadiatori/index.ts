@@ -19,7 +19,9 @@ export default MaterialiRadiatori;
 
 export { MaterialiRadiatoriSchema };
 
-export type TMaterialiRadiatoriModel = typeof MaterialiRadiatori;
+export type TMaterialiRadiatoriModel = Omit<typeof MaterialiRadiatori, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMaterialiRadiatori>): any
+};
 
 export type TMaterialiRadiatoriDocument = 
 & mongoose.Document<any, {}, IMaterialiRadiatori>

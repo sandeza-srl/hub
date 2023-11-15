@@ -19,7 +19,9 @@ export default Impianti;
 
 export { ImpiantiSchema };
 
-export type TImpiantiModel = typeof Impianti;
+export type TImpiantiModel = Omit<typeof Impianti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IImpianti>): any
+};
 
 export type TImpiantiDocument = 
 & mongoose.Document<any, {}, IImpianti>

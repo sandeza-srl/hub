@@ -233,5 +233,21 @@ export interface IControlliPrivate {
   /** Reflected: TxtTipoControlloPosizione*/ 
   __Dati_Testo084: string;
   /** Reflected: IdControllo*/ 
-  __Dati_Testo085: string
+  __Dati_Testo085: string;
+  /** Reflected: IdTipoContenitore*/ 
+  __Dati_Testo086: string;
+  /** Reflected: IdContenitore*/ 
+  __Dati_Testo087: string;
+  /** Reflected: TxtTipoContenitore*/ 
+  __Dati_Testo088: string;
+  /** Reflected: CodiceContenitore*/ 
+  __Dati_Testo089: string;
+  /** Reflected: CodiceTipoContenitore*/ 
+  __Dati_Testo090: string;
+  /** Reflected: CodiceTxtContenitoreNumeroSerie*/ 
+  __Dati_Testo091: string;
+  /** Reflected: CodiceTxtTipoContenitoreAutomatico*/ 
+  __Dati_Testo092: string;
+  /** Reflected: NumeroSerieContenitore*/ 
+  __Dati_Testo093: string
 }

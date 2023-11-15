@@ -23,8 +23,8 @@ export type TTipiListinoModel = Omit<typeof TipiListino, 'traslateAliases'> & {
   translateAliases(raw: Partial<ITipiListino>): any
 };
 
-export type TTipiListinoDocument =
-  & mongoose.Document<any, {}, ITipiListino>
-  & ITipiListino;
+export type TTipiListinoDocument = 
+& mongoose.Document<any, {}, ITipiListino>
+& ITipiListino;
 
 export { ITipiListino };

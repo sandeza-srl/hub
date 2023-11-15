@@ -19,7 +19,9 @@ export default StoricoVariazioniListino;
 
 export { StoricoVariazioniListinoSchema };
 
-export type TStoricoVariazioniListinoModel = typeof StoricoVariazioniListino;
+export type TStoricoVariazioniListinoModel = Omit<typeof StoricoVariazioniListino, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoVariazioniListino>): any
+};
 
 export type TStoricoVariazioniListinoDocument = 
 & mongoose.Document<any, {}, IStoricoVariazioniListino>

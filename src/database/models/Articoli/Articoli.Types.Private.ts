@@ -104,7 +104,7 @@ export interface IArticoliPrivate {
   __Dati_Numero015: number;
   /** Reflected: VCIng_CostoOrario*/ 
   __Dati_Numero016: number;
-  /** Reflected: FlagEsplodiDistinta*/ 
+  /** Reflected: EsplosioneDistinta_CreaLottiLivelliSottostanti*/ 
   __Dati_Numero017: number;
   /** Reflected: FlagAlertRevisioneArticolo*/ 
   __Dati_Numero018: number;
@@ -123,5 +123,7 @@ export interface IArticoliPrivate {
   /** Reflected: TxtUtente*/ 
   __Dati_Testo032: string;
   /** Reflected: IdRicorrenzaRecord*/ 
-  __Dati_Testo033: string
+  __Dati_Testo033: string;
+  /** Reflected: EsplosioneDistinta_SeInDistintaCreaLotto*/ 
+  __Dati_Numero022: number
 }

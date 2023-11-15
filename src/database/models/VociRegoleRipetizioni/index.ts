@@ -19,7 +19,9 @@ export default VociRegoleRipetizioni;
 
 export { VociRegoleRipetizioniSchema };
 
-export type TVociRegoleRipetizioniModel = typeof VociRegoleRipetizioni;
+export type TVociRegoleRipetizioniModel = Omit<typeof VociRegoleRipetizioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociRegoleRipetizioni>): any
+};
 
 export type TVociRegoleRipetizioniDocument = 
 & mongoose.Document<any, {}, IVociRegoleRipetizioni>

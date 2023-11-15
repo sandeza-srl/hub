@@ -192,6 +192,11 @@ const DistintaPrimoLivelloSchema = new mongoose.Schema<IDistintaPrimoLivelloPriv
     type: String,
     alias: 'UnitaMisuraItemPadre',
 
+  },
+  __Dati_Testo023: {
+    type: String,
+    alias: 'Note',
+
   }
 }, {
   timestamps: true

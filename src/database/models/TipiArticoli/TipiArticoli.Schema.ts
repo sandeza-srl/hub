@@ -149,7 +149,7 @@ const TipiArticoliSchema = new mongoose.Schema<ITipiArticoliPrivate>({
   },
   __Dati_Numero009: {
     type: Number,
-    alias: 'FlagEsplodiDistinta',
+    alias: 'EsplosioneDistinta_CreaLottiLivelliSottostanti',
 
   },
   __Dati_Numero010: {

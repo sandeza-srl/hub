@@ -551,11 +551,11 @@ export interface ILottiProduzione {
   /** Reflected: __Dati_Data008*/ 
   DataBenestare: Date;
   /** Reflected: __Dati_Data009*/ 
-  DataStampaCartellinoProduzione: Date;
+  StampaCartellinoProduzione_DataStampa: Date;
   /** Reflected: __Dati_Testo060*/ 
   TxtUtenteBenestare: string;
   /** Reflected: __Dati_Testo061*/ 
-  TxtUtenteStampaCartellinoProduzione: string;
+  StampaCartellinoProduzione_TxtUtente: string;
   /** Reflected: __Dati_Numero209*/ 
   FlagBenestare: number;
   /** Reflected: __Dati_DataOra001*/ 
@@ -593,5 +593,13 @@ export interface ILottiProduzione {
   /** Reflected: __Dati_Numero218*/ 
   FlagDocumentiQualitaCopiati: number;
   /** Reflected: __Dati_Numero219*/ 
-  FlagDocumentiProgrammiMacchinaCopiati: number
+  FlagDocumentiProgrammiMacchinaCopiati: number;
+  /** Reflected: __Dati_DataOra003*/ 
+  StampaCartellinoProduzione_DataOraStampa: Date;
+  /** Reflected: __Dati_Testo068*/ 
+  StampaCartellinoProduzione_IdUtente: string;
+  /** Reflected: __Dati_Data010*/ 
+  Pianificazione_DataMinimaInizioPianificazione: Date;
+  /** Reflected: __Dati_Testo069*/ 
+  IdTipoCiclo: string
 }

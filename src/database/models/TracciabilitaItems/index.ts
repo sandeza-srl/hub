@@ -19,7 +19,9 @@ export default TracciabilitaItems;
 
 export { TracciabilitaItemsSchema };
 
-export type TTracciabilitaItemsModel = typeof TracciabilitaItems;
+export type TTracciabilitaItemsModel = Omit<typeof TracciabilitaItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITracciabilitaItems>): any
+};
 
 export type TTracciabilitaItemsDocument = 
 & mongoose.Document<any, {}, ITracciabilitaItems>

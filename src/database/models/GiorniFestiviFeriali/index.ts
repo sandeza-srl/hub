@@ -19,7 +19,9 @@ export default GiorniFestiviFeriali;
 
 export { GiorniFestiviFerialiSchema };
 
-export type TGiorniFestiviFerialiModel = typeof GiorniFestiviFeriali;
+export type TGiorniFestiviFerialiModel = Omit<typeof GiorniFestiviFeriali, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IGiorniFestiviFeriali>): any
+};
 
 export type TGiorniFestiviFerialiDocument = 
 & mongoose.Document<any, {}, IGiorniFestiviFeriali>

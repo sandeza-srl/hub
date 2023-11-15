@@ -449,6 +449,11 @@ const ProcessiSchema = new mongoose.Schema<IProcessiPrivate>({
     type: String,
     alias: 'IdInstallazione',
 
+  },
+  __Dati_Testo049: {
+    type: String,
+    alias: 'IdDocumentoPrincipaleProcesso',
+
   }
 }, {
   timestamps: true

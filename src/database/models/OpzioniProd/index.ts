@@ -19,7 +19,9 @@ export default OpzioniProd;
 
 export { OpzioniProdSchema };
 
-export type TOpzioniProdModel = typeof OpzioniProd;
+export type TOpzioniProdModel = Omit<typeof OpzioniProd, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOpzioniProd>): any
+};
 
 export type TOpzioniProdDocument = 
 & mongoose.Document<any, {}, IOpzioniProd>

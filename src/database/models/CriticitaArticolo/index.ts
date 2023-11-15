@@ -19,7 +19,9 @@ export default CriticitaArticolo;
 
 export { CriticitaArticoloSchema };
 
-export type TCriticitaArticoloModel = typeof CriticitaArticolo;
+export type TCriticitaArticoloModel = Omit<typeof CriticitaArticolo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICriticitaArticolo>): any
+};
 
 export type TCriticitaArticoloDocument = 
 & mongoose.Document<any, {}, ICriticitaArticolo>

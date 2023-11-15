@@ -19,7 +19,9 @@ export default TipiProcessi;
 
 export { TipiProcessiSchema };
 
-export type TTipiProcessiModel = typeof TipiProcessi;
+export type TTipiProcessiModel = Omit<typeof TipiProcessi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiProcessi>): any
+};
 
 export type TTipiProcessiDocument = 
 & mongoose.Document<any, {}, ITipiProcessi>

@@ -332,6 +332,21 @@ const ControlliOpzioneSchema = new mongoose.Schema<IControlliOpzionePrivate>({
     type: String,
     alias: 'IdRicorrenzaRecord',
 
+  },
+  __Dati_Testo039: {
+    type: String,
+    alias: 'CodiceTipoContenitore',
+
+  },
+  __Dati_Testo040: {
+    type: String,
+    alias: 'IdTipoContenitore',
+
+  },
+  __Dati_Testo041: {
+    type: String,
+    alias: 'TxtTipoContenitore',
+
   }
 }, {
   timestamps: true

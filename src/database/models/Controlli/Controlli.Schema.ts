@@ -612,6 +612,46 @@ const ControlliSchema = new mongoose.Schema<IControlliPrivate>({
     type: String,
     alias: 'IdControllo',
 
+  },
+  __Dati_Testo086: {
+    type: String,
+    alias: 'IdTipoContenitore',
+
+  },
+  __Dati_Testo087: {
+    type: String,
+    alias: 'IdContenitore',
+
+  },
+  __Dati_Testo088: {
+    type: String,
+    alias: 'TxtTipoContenitore',
+
+  },
+  __Dati_Testo089: {
+    type: String,
+    alias: 'CodiceContenitore',
+
+  },
+  __Dati_Testo090: {
+    type: String,
+    alias: 'CodiceTipoContenitore',
+
+  },
+  __Dati_Testo091: {
+    type: String,
+    alias: 'CodiceTxtContenitoreNumeroSerie',
+
+  },
+  __Dati_Testo092: {
+    type: String,
+    alias: 'CodiceTxtTipoContenitoreAutomatico',
+
+  },
+  __Dati_Testo093: {
+    type: String,
+    alias: 'NumeroSerieContenitore',
+
   }
 }, {
   timestamps: true

@@ -19,7 +19,9 @@ export default StoricoStatiArticoloCiclo;
 
 export { StoricoStatiArticoloCicloSchema };
 
-export type TStoricoStatiArticoloCicloModel = typeof StoricoStatiArticoloCiclo;
+export type TStoricoStatiArticoloCicloModel = Omit<typeof StoricoStatiArticoloCiclo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoStatiArticoloCiclo>): any
+};
 
 export type TStoricoStatiArticoloCicloDocument = 
 & mongoose.Document<any, {}, IStoricoStatiArticoloCiclo>

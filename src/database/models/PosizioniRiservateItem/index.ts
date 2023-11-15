@@ -19,7 +19,9 @@ export default PosizioniRiservateItem;
 
 export { PosizioniRiservateItemSchema };
 
-export type TPosizioniRiservateItemModel = typeof PosizioniRiservateItem;
+export type TPosizioniRiservateItemModel = Omit<typeof PosizioniRiservateItem, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPosizioniRiservateItem>): any
+};
 
 export type TPosizioniRiservateItemDocument = 
 & mongoose.Document<any, {}, IPosizioniRiservateItem>

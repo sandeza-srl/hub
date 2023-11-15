@@ -19,7 +19,9 @@ export default PeriodoContabile;
 
 export { PeriodoContabileSchema };
 
-export type TPeriodoContabileModel = typeof PeriodoContabile;
+export type TPeriodoContabileModel = Omit<typeof PeriodoContabile, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPeriodoContabile>): any
+};
 
 export type TPeriodoContabileDocument = 
 & mongoose.Document<any, {}, IPeriodoContabile>

@@ -163,5 +163,7 @@ export interface IProcessiPrivate {
   /** Reflected: IdVoceDocOperativo*/ 
   __Dati_Testo047: string;
   /** Reflected: IdInstallazione*/ 
-  __Dati_Testo048: string
+  __Dati_Testo048: string;
+  /** Reflected: IdDocumentoPrincipaleProcesso*/ 
+  __Dati_Testo049: string
 }

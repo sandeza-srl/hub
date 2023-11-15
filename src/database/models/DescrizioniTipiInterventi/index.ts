@@ -19,7 +19,9 @@ export default DescrizioniTipiInterventi;
 
 export { DescrizioniTipiInterventiSchema };
 
-export type TDescrizioniTipiInterventiModel = typeof DescrizioniTipiInterventi;
+export type TDescrizioniTipiInterventiModel = Omit<typeof DescrizioniTipiInterventi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioniTipiInterventi>): any
+};
 
 export type TDescrizioniTipiInterventiDocument = 
 & mongoose.Document<any, {}, IDescrizioniTipiInterventi>

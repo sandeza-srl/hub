@@ -19,7 +19,9 @@ export default UpdateCosti_SessioniAggiornamento;
 
 export { UpdateCosti_SessioniAggiornamentoSchema };
 
-export type TUpdateCosti_SessioniAggiornamentoModel = typeof UpdateCosti_SessioniAggiornamento;
+export type TUpdateCosti_SessioniAggiornamentoModel = Omit<typeof UpdateCosti_SessioniAggiornamento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IUpdateCosti_SessioniAggiornamento>): any
+};
 
 export type TUpdateCosti_SessioniAggiornamentoDocument = 
 & mongoose.Document<any, {}, IUpdateCosti_SessioniAggiornamento>

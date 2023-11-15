@@ -19,7 +19,9 @@ export default DescrizioneAliquote;
 
 export { DescrizioneAliquoteSchema };
 
-export type TDescrizioneAliquoteModel = typeof DescrizioneAliquote;
+export type TDescrizioneAliquoteModel = Omit<typeof DescrizioneAliquote, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneAliquote>): any
+};
 
 export type TDescrizioneAliquoteDocument = 
 & mongoose.Document<any, {}, IDescrizioneAliquote>

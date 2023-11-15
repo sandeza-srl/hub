@@ -23,8 +23,8 @@ export type TVociDocOperativiModel = Omit<typeof VociDocOperativi, 'traslateAlia
   translateAliases(raw: Partial<IVociDocOperativi>): any
 };
 
-export type TVociDocOperativiDocument =
-  & mongoose.Document<any, {}, IVociDocOperativi>
-  & IVociDocOperativi;
+export type TVociDocOperativiDocument = 
+& mongoose.Document<any, {}, IVociDocOperativi>
+& IVociDocOperativi;
 
 export { IVociDocOperativi };

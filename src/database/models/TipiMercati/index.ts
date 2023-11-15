@@ -19,7 +19,9 @@ export default TipiMercati;
 
 export { TipiMercatiSchema };
 
-export type TTipiMercatiModel = typeof TipiMercati;
+export type TTipiMercatiModel = Omit<typeof TipiMercati, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiMercati>): any
+};
 
 export type TTipiMercatiDocument = 
 & mongoose.Document<any, {}, ITipiMercati>

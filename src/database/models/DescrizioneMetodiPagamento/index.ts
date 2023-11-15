@@ -19,7 +19,9 @@ export default DescrizioneMetodiPagamento;
 
 export { DescrizioneMetodiPagamentoSchema };
 
-export type TDescrizioneMetodiPagamentoModel = typeof DescrizioneMetodiPagamento;
+export type TDescrizioneMetodiPagamentoModel = Omit<typeof DescrizioneMetodiPagamento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneMetodiPagamento>): any
+};
 
 export type TDescrizioneMetodiPagamentoDocument = 
 & mongoose.Document<any, {}, IDescrizioneMetodiPagamento>

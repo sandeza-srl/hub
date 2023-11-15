@@ -19,7 +19,9 @@ export default TipiZone;
 
 export { TipiZoneSchema };
 
-export type TTipiZoneModel = typeof TipiZone;
+export type TTipiZoneModel = Omit<typeof TipiZone, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiZone>): any
+};
 
 export type TTipiZoneDocument = 
 & mongoose.Document<any, {}, ITipiZone>

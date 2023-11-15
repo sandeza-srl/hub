@@ -83,14 +83,14 @@ const TipiStatiContenitoriSchema = new mongoose.Schema<ITipiStatiContenitoriPriv
     alias: 'TxtTipoStatoContenitoreAutomatico',
 
   },
-  __Dati_Testo005: {
-    type: String,
-    alias: 'IdInstallazione',
-
-  },
   __Dati_Numero008: {
     type: Number,
     alias: 'FlagInVerifica',
+
+  },
+  __Dati_Testo005: {
+    type: String,
+    alias: 'IdInstallazione',
 
   }
 }, {

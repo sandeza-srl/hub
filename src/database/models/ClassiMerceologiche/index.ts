@@ -19,7 +19,9 @@ export default ClassiMerceologiche;
 
 export { ClassiMerceologicheSchema };
 
-export type TClassiMerceologicheModel = typeof ClassiMerceologiche;
+export type TClassiMerceologicheModel = Omit<typeof ClassiMerceologiche, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IClassiMerceologiche>): any
+};
 
 export type TClassiMerceologicheDocument = 
 & mongoose.Document<any, {}, IClassiMerceologiche>

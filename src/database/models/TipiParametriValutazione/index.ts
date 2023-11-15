@@ -19,7 +19,9 @@ export default TipiParametriValutazione;
 
 export { TipiParametriValutazioneSchema };
 
-export type TTipiParametriValutazioneModel = typeof TipiParametriValutazione;
+export type TTipiParametriValutazioneModel = Omit<typeof TipiParametriValutazione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiParametriValutazione>): any
+};
 
 export type TTipiParametriValutazioneDocument = 
 & mongoose.Document<any, {}, ITipiParametriValutazione>

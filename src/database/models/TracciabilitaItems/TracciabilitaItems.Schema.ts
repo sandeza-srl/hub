@@ -255,6 +255,11 @@ const TracciabilitaItemsSchema = new mongoose.Schema<ITracciabilitaItemsPrivate>
     type: Number,
     alias: 'FlagAggiornaContenutiDaItems',
 
+  },
+  __Dati_Testo022: {
+    type: String,
+    alias: 'IdDocumentoRiferimento',
+
   }
 }, {
   timestamps: true

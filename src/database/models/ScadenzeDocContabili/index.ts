@@ -19,7 +19,9 @@ export default ScadenzeDocContabili;
 
 export { ScadenzeDocContabiliSchema };
 
-export type TScadenzeDocContabiliModel = typeof ScadenzeDocContabili;
+export type TScadenzeDocContabiliModel = Omit<typeof ScadenzeDocContabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IScadenzeDocContabili>): any
+};
 
 export type TScadenzeDocContabiliDocument = 
 & mongoose.Document<any, {}, IScadenzeDocContabili>

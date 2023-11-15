@@ -75,5 +75,35 @@ export interface ITipiInterventiPrivate {
   /** Reflected: FlagTipo_TipoLista*/ 
   __Dati_Testo024: string;
   /** Reflected: IdClasseInterventi*/ 
-  __Dati_Testo025: string
+  __Dati_Testo025: string;
+  /** Reflected: GeneraCodice_AltroIdTipoInterventoPerCodice*/ 
+  __Dati_Testo026: string;
+  /** Reflected: GeneraCodice_CifreProgressivo*/ 
+  __Dati_Numero012: number;
+  /** Reflected: GeneraCodice_FlagTxtPeriodoContabileVisibile*/ 
+  __Dati_Numero013: number;
+  /** Reflected: GeneraCodice_FlagUsaCodiceAltro*/ 
+  __Dati_Numero014: number;
+  /** Reflected: GeneraCodice_IdPeriodoContabileTest*/ 
+  __Dati_Testo027: string;
+  /** Reflected: GeneraCodice_IdTipoInterventoPerCodice*/ 
+  __Dati_Testo028: string;
+  /** Reflected: GeneraCodice_OrdineProgressivo*/ 
+  __Dati_Numero015: number;
+  /** Reflected: GeneraCodice_OrdineTesto*/ 
+  __Dati_Numero016: number;
+  /** Reflected: GeneraCodice_OrdineTxtPeriodoContabile*/ 
+  __Dati_Numero017: number;
+  /** Reflected: GeneraCodice_Progressivo*/ 
+  __Dati_Numero018: number;
+  /** Reflected: GeneraCodice_ProssimoCodice*/ 
+  __Dati_Testo029: string;
+  /** Reflected: GeneraCodice_Separatore*/ 
+  __Dati_Testo030: string;
+  /** Reflected: GeneraCodice_Testo*/ 
+  __Dati_Testo031: string;
+  /** Reflected: GeneraCodice_TxtPeriodoContabileTest*/ 
+  __Dati_Testo032: string;
+  /** Reflected: FlagRispettaProgressivo*/ 
+  __Dati_Numero019: number
 }

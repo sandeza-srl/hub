@@ -7,7 +7,7 @@ export interface IVociPerVerificaFabbisogniPrivate {
   /** Reflected: IdVociPerVerificaFabbisogni*/ 
   __Dati_Testo001: string;
   /** Reflected: IdItem*/ 
-  __Dati_Numero001: number;
+  __Dati_Testo006: string;
   /** Reflected: FlagAggiornaValori*/ 
   __Dati_Numero002: number;
   /** Reflected: IdVoceDocOperativo*/ 

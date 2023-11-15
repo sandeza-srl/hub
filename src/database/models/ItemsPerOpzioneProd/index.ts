@@ -19,7 +19,9 @@ export default ItemsPerOpzioneProd;
 
 export { ItemsPerOpzioneProdSchema };
 
-export type TItemsPerOpzioneProdModel = typeof ItemsPerOpzioneProd;
+export type TItemsPerOpzioneProdModel = Omit<typeof ItemsPerOpzioneProd, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IItemsPerOpzioneProd>): any
+};
 
 export type TItemsPerOpzioneProdDocument = 
 & mongoose.Document<any, {}, IItemsPerOpzioneProd>

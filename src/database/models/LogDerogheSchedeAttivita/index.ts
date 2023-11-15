@@ -19,7 +19,9 @@ export default LogDerogheSchedeAttivita;
 
 export { LogDerogheSchedeAttivitaSchema };
 
-export type TLogDerogheSchedeAttivitaModel = typeof LogDerogheSchedeAttivita;
+export type TLogDerogheSchedeAttivitaModel = Omit<typeof LogDerogheSchedeAttivita, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILogDerogheSchedeAttivita>): any
+};
 
 export type TLogDerogheSchedeAttivitaDocument = 
 & mongoose.Document<any, {}, ILogDerogheSchedeAttivita>

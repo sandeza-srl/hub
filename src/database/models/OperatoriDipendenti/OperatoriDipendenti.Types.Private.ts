@@ -37,5 +37,7 @@ export interface IOperatoriDipendentiPrivate {
   /** Reflected: DataOraCreazione*/ 
   __Dati_DataOra001: Date;
   /** Reflected: DataOraUltimaModifica*/ 
-  __Dati_DataOra002: Date
+  __Dati_DataOra002: Date;
+  /** Reflected: IdOperatoriDipendenti*/ 
+  __Dati_Testo010: string
 }

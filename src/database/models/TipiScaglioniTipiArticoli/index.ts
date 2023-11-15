@@ -19,7 +19,9 @@ export default TipiScaglioniTipiArticoli;
 
 export { TipiScaglioniTipiArticoliSchema };
 
-export type TTipiScaglioniTipiArticoliModel = typeof TipiScaglioniTipiArticoli;
+export type TTipiScaglioniTipiArticoliModel = Omit<typeof TipiScaglioniTipiArticoli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiScaglioniTipiArticoli>): any
+};
 
 export type TTipiScaglioniTipiArticoliDocument = 
 & mongoose.Document<any, {}, ITipiScaglioniTipiArticoli>

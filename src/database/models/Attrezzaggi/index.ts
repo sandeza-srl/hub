@@ -19,7 +19,9 @@ export default Attrezzaggi;
 
 export { AttrezzaggiSchema };
 
-export type TAttrezzaggiModel = typeof Attrezzaggi;
+export type TAttrezzaggiModel = Omit<typeof Attrezzaggi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IAttrezzaggi>): any
+};
 
 export type TAttrezzaggiDocument = 
 & mongoose.Document<any, {}, IAttrezzaggi>

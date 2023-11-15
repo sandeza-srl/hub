@@ -19,7 +19,9 @@ export default Presenze;
 
 export { PresenzeSchema };
 
-export type TPresenzeModel = typeof Presenze;
+export type TPresenzeModel = Omit<typeof Presenze, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IPresenze>): any
+};
 
 export type TPresenzeDocument = 
 & mongoose.Document<any, {}, IPresenze>

@@ -19,7 +19,9 @@ export default ApiGateway_Endpoint;
 
 export { ApiGateway_EndpointSchema };
 
-export type TApiGateway_EndpointModel = typeof ApiGateway_Endpoint;
+export type TApiGateway_EndpointModel = Omit<typeof ApiGateway_Endpoint, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IApiGateway_Endpoint>): any
+};
 
 export type TApiGateway_EndpointDocument = 
 & mongoose.Document<any, {}, IApiGateway_Endpoint>

@@ -50,7 +50,7 @@ export interface ITipiArticoliPrivate {
   __Dati_Testo013: string;
   /** Reflected: GeneraCodice_FlagUsaCodiceAltro*/ 
   __Dati_Numero008: number;
-  /** Reflected: FlagEsplodiDistinta*/ 
+  /** Reflected: EsplosioneDistinta_CreaLottiLivelliSottostanti*/ 
   __Dati_Numero009: number;
   /** Reflected: FlagUsaCodificaUnicaItem*/ 
   __Dati_Numero010: number;

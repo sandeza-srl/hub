@@ -19,7 +19,9 @@ export default LogInvioRiba;
 
 export { LogInvioRibaSchema };
 
-export type TLogInvioRibaModel = typeof LogInvioRiba;
+export type TLogInvioRibaModel = Omit<typeof LogInvioRiba, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ILogInvioRiba>): any
+};
 
 export type TLogInvioRibaDocument = 
 & mongoose.Document<any, {}, ILogInvioRiba>

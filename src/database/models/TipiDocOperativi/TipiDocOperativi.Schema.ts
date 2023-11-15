@@ -857,6 +857,16 @@ const TipiDocOperativiSchema = new mongoose.Schema<ITipiDocOperativiPrivate>({
     type: Number,
     alias: 'LucchettoDocumento_EsclusiBlocco_Descrizione',
 
+  },
+  __Dati_Numero120: {
+    type: Number,
+    alias: 'FlagItemMovimentaContenitori',
+
+  },
+  __Dati_Numero121: {
+    type: Number,
+    alias: 'InterconnessioneMagazzino_FlagAttivo',
+
   }
 }, {
   timestamps: true

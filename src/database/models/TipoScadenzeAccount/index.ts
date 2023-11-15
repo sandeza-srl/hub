@@ -19,7 +19,9 @@ export default TipoScadenzeAccount;
 
 export { TipoScadenzeAccountSchema };
 
-export type TTipoScadenzeAccountModel = typeof TipoScadenzeAccount;
+export type TTipoScadenzeAccountModel = Omit<typeof TipoScadenzeAccount, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipoScadenzeAccount>): any
+};
 
 export type TTipoScadenzeAccountDocument = 
 & mongoose.Document<any, {}, ITipoScadenzeAccount>

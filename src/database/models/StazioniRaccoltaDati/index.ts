@@ -19,7 +19,9 @@ export default StazioniRaccoltaDati;
 
 export { StazioniRaccoltaDatiSchema };
 
-export type TStazioniRaccoltaDatiModel = typeof StazioniRaccoltaDati;
+export type TStazioniRaccoltaDatiModel = Omit<typeof StazioniRaccoltaDati, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStazioniRaccoltaDati>): any
+};
 
 export type TStazioniRaccoltaDatiDocument = 
 & mongoose.Document<any, {}, IStazioniRaccoltaDati>

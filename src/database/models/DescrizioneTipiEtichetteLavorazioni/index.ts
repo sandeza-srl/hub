@@ -19,7 +19,9 @@ export default DescrizioneTipiEtichetteLavorazioni;
 
 export { DescrizioneTipiEtichetteLavorazioniSchema };
 
-export type TDescrizioneTipiEtichetteLavorazioniModel = typeof DescrizioneTipiEtichetteLavorazioni;
+export type TDescrizioneTipiEtichetteLavorazioniModel = Omit<typeof DescrizioneTipiEtichetteLavorazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneTipiEtichetteLavorazioni>): any
+};
 
 export type TDescrizioneTipiEtichetteLavorazioniDocument = 
 & mongoose.Document<any, {}, IDescrizioneTipiEtichetteLavorazioni>

@@ -19,7 +19,9 @@ export default OperatoriProduzione;
 
 export { OperatoriProduzioneSchema };
 
-export type TOperatoriProduzioneModel = typeof OperatoriProduzione;
+export type TOperatoriProduzioneModel = Omit<typeof OperatoriProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOperatoriProduzione>): any
+};
 
 export type TOperatoriProduzioneDocument = 
 & mongoose.Document<any, {}, IOperatoriProduzione>

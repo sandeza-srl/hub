@@ -19,7 +19,9 @@ export default TipiPianiCampionamento;
 
 export { TipiPianiCampionamentoSchema };
 
-export type TTipiPianiCampionamentoModel = typeof TipiPianiCampionamento;
+export type TTipiPianiCampionamentoModel = Omit<typeof TipiPianiCampionamento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiPianiCampionamento>): any
+};
 
 export type TTipiPianiCampionamentoDocument = 
 & mongoose.Document<any, {}, ITipiPianiCampionamento>

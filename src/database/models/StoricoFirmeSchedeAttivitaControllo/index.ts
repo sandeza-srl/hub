@@ -19,7 +19,9 @@ export default StoricoFirmeSchedeAttivitaControllo;
 
 export { StoricoFirmeSchedeAttivitaControlloSchema };
 
-export type TStoricoFirmeSchedeAttivitaControlloModel = typeof StoricoFirmeSchedeAttivitaControllo;
+export type TStoricoFirmeSchedeAttivitaControlloModel = Omit<typeof StoricoFirmeSchedeAttivitaControllo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IStoricoFirmeSchedeAttivitaControllo>): any
+};
 
 export type TStoricoFirmeSchedeAttivitaControlloDocument = 
 & mongoose.Document<any, {}, IStoricoFirmeSchedeAttivitaControllo>

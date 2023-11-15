@@ -306,6 +306,16 @@ const TipiFasiSchema = new mongoose.Schema<ITipiFasiPrivate>({
     type: String,
     alias: 'TxtUtente',
 
+  },
+  __Dati_Numero024: {
+    type: Number,
+    alias: 'CambioRisorsa_FaseProduzione_FlagAttivo',
+
+  },
+  __Dati_Numero025: {
+    type: Number,
+    alias: 'CambioRisorsa_Registrazione_FlagAttivo',
+
   }
 }, {
   timestamps: true

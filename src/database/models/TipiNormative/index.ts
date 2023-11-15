@@ -19,7 +19,9 @@ export default TipiNormative;
 
 export { TipiNormativeSchema };
 
-export type TTipiNormativeModel = typeof TipiNormative;
+export type TTipiNormativeModel = Omit<typeof TipiNormative, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiNormative>): any
+};
 
 export type TTipiNormativeDocument = 
 & mongoose.Document<any, {}, ITipiNormative>

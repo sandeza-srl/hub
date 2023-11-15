@@ -19,7 +19,9 @@ export default EccezioniRegoleScadenze;
 
 export { EccezioniRegoleScadenzeSchema };
 
-export type TEccezioniRegoleScadenzeModel = typeof EccezioniRegoleScadenze;
+export type TEccezioniRegoleScadenzeModel = Omit<typeof EccezioniRegoleScadenze, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IEccezioniRegoleScadenze>): any
+};
 
 export type TEccezioniRegoleScadenzeDocument = 
 & mongoose.Document<any, {}, IEccezioniRegoleScadenze>

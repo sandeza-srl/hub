@@ -23,8 +23,8 @@ export type TVariazioniListinoModel = Omit<typeof VariazioniListino, 'traslateAl
   translateAliases(raw: Partial<IVariazioniListino>): any
 };
 
-export type TVariazioniListinoDocument =
-  & mongoose.Document<any, {}, IVariazioniListino>
-  & IVariazioniListino;
+export type TVariazioniListinoDocument = 
+& mongoose.Document<any, {}, IVariazioniListino>
+& IVariazioniListino;
 
 export { IVariazioniListino };

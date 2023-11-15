@@ -19,7 +19,9 @@ export default CasseBanche;
 
 export { CasseBancheSchema };
 
-export type TCasseBancheModel = typeof CasseBanche;
+export type TCasseBancheModel = Omit<typeof CasseBanche, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICasseBanche>): any
+};
 
 export type TCasseBancheDocument = 
 & mongoose.Document<any, {}, ICasseBanche>

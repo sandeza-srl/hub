@@ -19,7 +19,9 @@ export default Viaggi;
 
 export { ViaggiSchema };
 
-export type TViaggiModel = typeof Viaggi;
+export type TViaggiModel = Omit<typeof Viaggi, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IViaggi>): any
+};
 
 export type TViaggiDocument = 
 & mongoose.Document<any, {}, IViaggi>

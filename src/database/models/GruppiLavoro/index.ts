@@ -19,7 +19,9 @@ export default GruppiLavoro;
 
 export { GruppiLavoroSchema };
 
-export type TGruppiLavoroModel = typeof GruppiLavoro;
+export type TGruppiLavoroModel = Omit<typeof GruppiLavoro, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IGruppiLavoro>): any
+};
 
 export type TGruppiLavoroDocument = 
 & mongoose.Document<any, {}, IGruppiLavoro>

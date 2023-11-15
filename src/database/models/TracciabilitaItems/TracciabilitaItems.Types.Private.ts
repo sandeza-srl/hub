@@ -91,5 +91,7 @@ export interface ITracciabilitaItemsPrivate {
   /** Reflected: Tracciabilita_CodiceTxtAutomatico*/ 
   __Dati_Testo021: string;
   /** Reflected: FlagAggiornaContenutiDaItems*/ 
-  __Dati_Numero019: number
+  __Dati_Numero019: number;
+  /** Reflected: IdDocumentoRiferimento*/ 
+  __Dati_Testo022: string
 }

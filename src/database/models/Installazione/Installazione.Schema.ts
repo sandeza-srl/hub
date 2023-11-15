@@ -14,7 +14,11 @@ const InstallazioneSchema = new mongoose.Schema<IInstallazionePrivate>({
     type: String,
     default: uuid.v4
   },
+  __Dati_Numero001: {
+    type: Number,
+    alias: 'FlagMongoDB',
 
+  }
 }, {
   timestamps: true
 });

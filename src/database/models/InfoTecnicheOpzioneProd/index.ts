@@ -19,7 +19,9 @@ export default InfoTecnicheOpzioneProd;
 
 export { InfoTecnicheOpzioneProdSchema };
 
-export type TInfoTecnicheOpzioneProdModel = typeof InfoTecnicheOpzioneProd;
+export type TInfoTecnicheOpzioneProdModel = Omit<typeof InfoTecnicheOpzioneProd, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInfoTecnicheOpzioneProd>): any
+};
 
 export type TInfoTecnicheOpzioneProdDocument = 
 & mongoose.Document<any, {}, IInfoTecnicheOpzioneProd>

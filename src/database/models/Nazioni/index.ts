@@ -19,7 +19,9 @@ export default Nazioni;
 
 export { NazioniSchema };
 
-export type TNazioniModel = typeof Nazioni;
+export type TNazioniModel = Omit<typeof Nazioni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<INazioni>): any
+};
 
 export type TNazioniDocument = 
 & mongoose.Document<any, {}, INazioni>

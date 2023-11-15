@@ -19,7 +19,9 @@ export default VociTipiZone;
 
 export { VociTipiZoneSchema };
 
-export type TVociTipiZoneModel = typeof VociTipiZone;
+export type TVociTipiZoneModel = Omit<typeof VociTipiZone, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociTipiZone>): any
+};
 
 export type TVociTipiZoneDocument = 
 & mongoose.Document<any, {}, IVociTipiZone>

@@ -19,7 +19,9 @@ export default CodificheSocieta;
 
 export { CodificheSocietaSchema };
 
-export type TCodificheSocietaModel = typeof CodificheSocieta;
+export type TCodificheSocietaModel = Omit<typeof CodificheSocieta, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICodificheSocieta>): any
+};
 
 export type TCodificheSocietaDocument = 
 & mongoose.Document<any, {}, ICodificheSocieta>

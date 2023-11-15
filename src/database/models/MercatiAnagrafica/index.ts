@@ -19,7 +19,9 @@ export default MercatiAnagrafica;
 
 export { MercatiAnagraficaSchema };
 
-export type TMercatiAnagraficaModel = typeof MercatiAnagrafica;
+export type TMercatiAnagraficaModel = Omit<typeof MercatiAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IMercatiAnagrafica>): any
+};
 
 export type TMercatiAnagraficaDocument = 
 & mongoose.Document<any, {}, IMercatiAnagrafica>

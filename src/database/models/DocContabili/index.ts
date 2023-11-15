@@ -19,7 +19,9 @@ export default DocContabili;
 
 export { DocContabiliSchema };
 
-export type TDocContabiliModel = typeof DocContabili;
+export type TDocContabiliModel = Omit<typeof DocContabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDocContabili>): any
+};
 
 export type TDocContabiliDocument = 
 & mongoose.Document<any, {}, IDocContabili>

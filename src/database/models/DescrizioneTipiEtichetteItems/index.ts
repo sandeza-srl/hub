@@ -19,7 +19,9 @@ export default DescrizioneTipiEtichetteItems;
 
 export { DescrizioneTipiEtichetteItemsSchema };
 
-export type TDescrizioneTipiEtichetteItemsModel = typeof DescrizioneTipiEtichetteItems;
+export type TDescrizioneTipiEtichetteItemsModel = Omit<typeof DescrizioneTipiEtichetteItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneTipiEtichetteItems>): any
+};
 
 export type TDescrizioneTipiEtichetteItemsDocument = 
 & mongoose.Document<any, {}, IDescrizioneTipiEtichetteItems>

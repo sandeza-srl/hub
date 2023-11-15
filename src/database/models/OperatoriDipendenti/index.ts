@@ -19,7 +19,9 @@ export default OperatoriDipendenti;
 
 export { OperatoriDipendentiSchema };
 
-export type TOperatoriDipendentiModel = typeof OperatoriDipendenti;
+export type TOperatoriDipendentiModel = Omit<typeof OperatoriDipendenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IOperatoriDipendenti>): any
+};
 
 export type TOperatoriDipendentiDocument = 
 & mongoose.Document<any, {}, IOperatoriDipendenti>

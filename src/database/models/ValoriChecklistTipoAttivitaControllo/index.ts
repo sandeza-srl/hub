@@ -19,7 +19,9 @@ export default ValoriChecklistTipoAttivitaControllo;
 
 export { ValoriChecklistTipoAttivitaControlloSchema };
 
-export type TValoriChecklistTipoAttivitaControlloModel = typeof ValoriChecklistTipoAttivitaControllo;
+export type TValoriChecklistTipoAttivitaControlloModel = Omit<typeof ValoriChecklistTipoAttivitaControllo, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IValoriChecklistTipoAttivitaControllo>): any
+};
 
 export type TValoriChecklistTipoAttivitaControlloDocument = 
 & mongoose.Document<any, {}, IValoriChecklistTipoAttivitaControllo>

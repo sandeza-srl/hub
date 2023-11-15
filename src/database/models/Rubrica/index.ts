@@ -23,8 +23,8 @@ export type TRubricaModel = Omit<typeof Rubrica, 'traslateAliases'> & {
   translateAliases(raw: Partial<IRubrica>): any
 };
 
-export type TRubricaDocument =
-  & mongoose.Document<any, {}, IRubrica>
-  & IRubrica;
+export type TRubricaDocument = 
+& mongoose.Document<any, {}, IRubrica>
+& IRubrica;
 
 export { IRubrica };

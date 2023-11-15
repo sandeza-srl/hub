@@ -19,7 +19,9 @@ export default Incoterm;
 
 export { IncotermSchema };
 
-export type TIncotermModel = typeof Incoterm;
+export type TIncotermModel = Omit<typeof Incoterm, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IIncoterm>): any
+};
 
 export type TIncotermDocument = 
 & mongoose.Document<any, {}, IIncoterm>

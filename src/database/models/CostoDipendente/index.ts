@@ -19,7 +19,9 @@ export default CostoDipendente;
 
 export { CostoDipendenteSchema };
 
-export type TCostoDipendenteModel = typeof CostoDipendente;
+export type TCostoDipendenteModel = Omit<typeof CostoDipendente, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ICostoDipendente>): any
+};
 
 export type TCostoDipendenteDocument = 
 & mongoose.Document<any, {}, ICostoDipendente>

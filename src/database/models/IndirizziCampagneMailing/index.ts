@@ -19,7 +19,9 @@ export default IndirizziCampagneMailing;
 
 export { IndirizziCampagneMailingSchema };
 
-export type TIndirizziCampagneMailingModel = typeof IndirizziCampagneMailing;
+export type TIndirizziCampagneMailingModel = Omit<typeof IndirizziCampagneMailing, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IIndirizziCampagneMailing>): any
+};
 
 export type TIndirizziCampagneMailingDocument = 
 & mongoose.Document<any, {}, IIndirizziCampagneMailing>

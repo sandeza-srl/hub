@@ -19,7 +19,9 @@ export default DettagliDocOperativiAnagrafica;
 
 export { DettagliDocOperativiAnagraficaSchema };
 
-export type TDettagliDocOperativiAnagraficaModel = typeof DettagliDocOperativiAnagrafica;
+export type TDettagliDocOperativiAnagraficaModel = Omit<typeof DettagliDocOperativiAnagrafica, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDettagliDocOperativiAnagrafica>): any
+};
 
 export type TDettagliDocOperativiAnagraficaDocument = 
 & mongoose.Document<any, {}, IDettagliDocOperativiAnagrafica>

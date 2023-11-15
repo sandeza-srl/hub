@@ -19,7 +19,9 @@ export default InventariItems;
 
 export { InventariItemsSchema };
 
-export type TInventariItemsModel = typeof InventariItems;
+export type TInventariItemsModel = Omit<typeof InventariItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IInventariItems>): any
+};
 
 export type TInventariItemsDocument = 
 & mongoose.Document<any, {}, IInventariItems>

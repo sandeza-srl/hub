@@ -79,5 +79,21 @@ export interface ITipiProcessiPrivate {
   /** Reflected: FlagChiediDataScadenza*/ 
   __Dati_Numero018: number;
   /** Reflected: FlagVisualizzazioneOffline*/ 
-  __Dati_Numero019: number
+  __Dati_Numero019: number;
+  /** Reflected: FlagPersonalizzaGiorni*/ 
+  __Dati_Numero020: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaLunedi*/ 
+  __Dati_Numero021: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaMartedi*/ 
+  __Dati_Numero022: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaMercoledi*/ 
+  __Dati_Numero023: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaGiovedi*/ 
+  __Dati_Numero024: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaVenerdi*/ 
+  __Dati_Numero025: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaSabato*/ 
+  __Dati_Numero026: number;
+  /** Reflected: PersonalizzaGiorni_FlagContaDomenica*/ 
+  __Dati_Numero027: number
 }

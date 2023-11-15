@@ -19,7 +19,9 @@ export default EstrazioneContatti;
 
 export { EstrazioneContattiSchema };
 
-export type TEstrazioneContattiModel = typeof EstrazioneContatti;
+export type TEstrazioneContattiModel = Omit<typeof EstrazioneContatti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IEstrazioneContatti>): any
+};
 
 export type TEstrazioneContattiDocument = 
 & mongoose.Document<any, {}, IEstrazioneContatti>

@@ -19,7 +19,9 @@ export default Controlli;
 
 export { ControlliSchema };
 
-export type TControlliModel = typeof Controlli;
+export type TControlliModel = Omit<typeof Controlli, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IControlli>): any
+};
 
 export type TControlliDocument = 
 & mongoose.Document<any, {}, IControlli>

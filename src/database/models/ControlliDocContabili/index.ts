@@ -19,7 +19,9 @@ export default ControlliDocContabili;
 
 export { ControlliDocContabiliSchema };
 
-export type TControlliDocContabiliModel = typeof ControlliDocContabili;
+export type TControlliDocContabiliModel = Omit<typeof ControlliDocContabili, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IControlliDocContabili>): any
+};
 
 export type TControlliDocContabiliDocument = 
 & mongoose.Document<any, {}, IControlliDocContabili>

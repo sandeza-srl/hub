@@ -19,7 +19,9 @@ export default ProgrammiMacchinaOpzioneProd;
 
 export { ProgrammiMacchinaOpzioneProdSchema };
 
-export type TProgrammiMacchinaOpzioneProdModel = typeof ProgrammiMacchinaOpzioneProd;
+export type TProgrammiMacchinaOpzioneProdModel = Omit<typeof ProgrammiMacchinaOpzioneProd, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IProgrammiMacchinaOpzioneProd>): any
+};
 
 export type TProgrammiMacchinaOpzioneProdDocument = 
 & mongoose.Document<any, {}, IProgrammiMacchinaOpzioneProd>

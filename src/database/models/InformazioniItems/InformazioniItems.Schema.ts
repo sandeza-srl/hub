@@ -152,9 +152,46 @@ const InformazioniItemsSchema = new mongoose.Schema<IInformazioniItemsPrivate>({
     type : String,
     alias: 'RiassuntoEtichetta_SoloContenuto'
 
+  },
+  __Dati_Testo018  : {
+    type : String,
+    alias: 'TxtTipoEtichetta'
+
+  },
+  __Dati_Testo019  : {
+    type : String,
+    alias: 'TxtValoreInformazioniItems'
+
+  },
+  __Dati_Testo020  : {
+    type : String,
+    alias: 'Formula_Calcolo'
+
+  },
+  __Dati_Testo021  : {
+    type : String,
+    alias: 'IdTipiEtichettePerCalcolo'
+
+  },
+  __Dati_Numero009 : {
+    type : Number,
+    alias: 'FlagAggiornaContenutiDaTipiEtichette'
+
+  },
+  __Dati_Testo022  : {
+    type : String,
+    alias: 'Master_IdItemMaster'
+
   }
 }, {
   timestamps: true
+});
+
+/**
+ * Indexing
+ */
+InformazioniItemsSchema.index({
+  __Dati_Testo001: 1
 });
 
 /* --------

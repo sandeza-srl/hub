@@ -19,7 +19,9 @@ export default ImpostazioniVerificaFabbisogni;
 
 export { ImpostazioniVerificaFabbisogniSchema };
 
-export type TImpostazioniVerificaFabbisogniModel = typeof ImpostazioniVerificaFabbisogni;
+export type TImpostazioniVerificaFabbisogniModel = Omit<typeof ImpostazioniVerificaFabbisogni, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IImpostazioniVerificaFabbisogni>): any
+};
 
 export type TImpostazioniVerificaFabbisogniDocument = 
 & mongoose.Document<any, {}, IImpostazioniVerificaFabbisogni>

@@ -19,7 +19,9 @@ export default TipiScartiProduzione;
 
 export { TipiScartiProduzioneSchema };
 
-export type TTipiScartiProduzioneModel = typeof TipiScartiProduzione;
+export type TTipiScartiProduzioneModel = Omit<typeof TipiScartiProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiScartiProduzione>): any
+};
 
 export type TTipiScartiProduzioneDocument = 
 & mongoose.Document<any, {}, ITipiScartiProduzione>

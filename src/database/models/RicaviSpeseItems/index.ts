@@ -19,7 +19,9 @@ export default RicaviSpeseItems;
 
 export { RicaviSpeseItemsSchema };
 
-export type TRicaviSpeseItemsModel = typeof RicaviSpeseItems;
+export type TRicaviSpeseItemsModel = Omit<typeof RicaviSpeseItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IRicaviSpeseItems>): any
+};
 
 export type TRicaviSpeseItemsDocument = 
 & mongoose.Document<any, {}, IRicaviSpeseItems>

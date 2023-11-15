@@ -19,7 +19,9 @@ export default VociTipiPianiCampionamento;
 
 export { VociTipiPianiCampionamentoSchema };
 
-export type TVociTipiPianiCampionamentoModel = typeof VociTipiPianiCampionamento;
+export type TVociTipiPianiCampionamentoModel = Omit<typeof VociTipiPianiCampionamento, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IVociTipiPianiCampionamento>): any
+};
 
 export type TVociTipiPianiCampionamentoDocument = 
 & mongoose.Document<any, {}, IVociTipiPianiCampionamento>

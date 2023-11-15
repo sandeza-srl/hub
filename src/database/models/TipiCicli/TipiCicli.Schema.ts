@@ -46,7 +46,7 @@ const TipiCicliSchema = new mongoose.Schema<ITipiCicliPrivate>({
   },
   __Dati_Numero003: {
     type: Number,
-    alias: 'FlagRilavorazione',
+    alias: 'TipoCiclo_FlagRilavorazione',
 
   },
   __Dati_Numero004: {
@@ -120,6 +120,31 @@ const TipiCicliSchema = new mongoose.Schema<ITipiCicliPrivate>({
   __Dati_Testo011: {
     type: String,
     alias: 'IdRicorrenzaRecord',
+
+  },
+  __Dati_Numero006: {
+    type: Number,
+    alias: 'TipoCiclo_FlagSmontaggio',
+
+  },
+  __Dati_Numero007: {
+    type: Number,
+    alias: 'Abilitazioni_FlagCreaFaseAbilitato',
+
+  },
+  __Dati_Numero008: {
+    type: Number,
+    alias: 'Abilitazioni_FlagEliminaFaseAbilitato',
+
+  },
+  __Dati_Testo012: {
+    type: String,
+    alias: 'Note',
+
+  },
+  __Dati_Testo013: {
+    type: String,
+    alias: 'IdTipiFaseAbilitati',
 
   }
 }, {

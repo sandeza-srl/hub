@@ -305,6 +305,13 @@ const ListinoItemSchema = new mongoose.Schema<IListinoItemPrivate>({
   timestamps: true
 });
 
+/**
+ * Indexing
+ */
+ListinoItemSchema.index({
+  __Dati_Testo005: 1
+});
+
 /* --------
 * Module Exports
 * -------- */

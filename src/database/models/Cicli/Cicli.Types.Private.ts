@@ -30,7 +30,7 @@ export interface ICicliPrivate {
   __Dati_Testo010: string;
   /** Reflected: DataCalcoloCiclo*/ 
   __Dati_Data001: Date;
-  /** Reflected: FlagRilavorazione*/ 
+  /** Reflected: TipoCiclo_FlagRilavorazione*/ 
   __Dati_Numero005: number;
   /** Reflected: DataCreazione*/ 
   __Dati_Data002: Date;
@@ -91,5 +91,9 @@ export interface ICicliPrivate {
   /** Reflected: TxtUtente*/ 
   __Dati_Testo026: string;
   /** Reflected: IdRicorrenzaRecord*/ 
-  __Dati_Testo027: string
+  __Dati_Testo027: string;
+  /** Reflected: TipoCiclo_FlagSmontaggio*/ 
+  __Dati_Numero014: number;
+  /** Reflected: FlagAggiornaDaTipiCicli*/ 
+  __Dati_Numero015: number
 }

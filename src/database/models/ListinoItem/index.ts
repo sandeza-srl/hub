@@ -23,8 +23,8 @@ export type TListinoItemModel = Omit<typeof ListinoItem, 'traslateAliases'> & {
   translateAliases(raw: Partial<IListinoItem>): any
 };
 
-export type TListinoItemDocument =
-  & mongoose.Document<any, {}, IListinoItem>
-  & IListinoItem;
+export type TListinoItemDocument = 
+& mongoose.Document<any, {}, IListinoItem>
+& IListinoItem;
 
 export { IListinoItem };

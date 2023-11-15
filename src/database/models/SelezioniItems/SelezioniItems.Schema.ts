@@ -405,6 +405,16 @@ const SelezioniItemsSchema = new mongoose.Schema<ISelezioniItemsPrivate>({
     type: Number,
     alias: 'Multimagazzino_QuantitaPacco',
 
+  },
+  __Dati_Testo049: {
+    type: String,
+    alias: 'IdItemInizialeDistinta',
+
+  },
+  __Dati_Numero023: {
+    type: Number,
+    alias: 'QtInizialeDistinta',
+
   }
 }, {
   timestamps: true

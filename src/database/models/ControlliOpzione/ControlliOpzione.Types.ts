@@ -125,5 +125,11 @@ export interface IControlliOpzione {
   /** Reflected: __Dati_Testo037*/ 
   TxtUtente: string;
   /** Reflected: __Dati_Testo038*/ 
-  IdRicorrenzaRecord: string
+  IdRicorrenzaRecord: string;
+  /** Reflected: __Dati_Testo039*/ 
+  CodiceTipoContenitore: string;
+  /** Reflected: __Dati_Testo040*/ 
+  IdTipoContenitore: string;
+  /** Reflected: __Dati_Testo041*/ 
+  TxtTipoContenitore: string
 }

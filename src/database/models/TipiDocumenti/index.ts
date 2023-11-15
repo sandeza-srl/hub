@@ -19,7 +19,9 @@ export default TipiDocumenti;
 
 export { TipiDocumentiSchema };
 
-export type TTipiDocumentiModel = typeof TipiDocumenti;
+export type TTipiDocumentiModel = Omit<typeof TipiDocumenti, 'traslateAliases'> & {
+  translateAliases(raw: Partial<ITipiDocumenti>): any
+};
 
 export type TTipiDocumentiDocument = 
 & mongoose.Document<any, {}, ITipiDocumenti>

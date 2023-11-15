@@ -19,7 +19,9 @@ export default FornitureItems;
 
 export { FornitureItemsSchema };
 
-export type TFornitureItemsModel = typeof FornitureItems;
+export type TFornitureItemsModel = Omit<typeof FornitureItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IFornitureItems>): any
+};
 
 export type TFornitureItemsDocument = 
 & mongoose.Document<any, {}, IFornitureItems>

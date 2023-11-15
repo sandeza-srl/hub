@@ -19,7 +19,9 @@ export default ComunicazioniProduzione;
 
 export { ComunicazioniProduzioneSchema };
 
-export type TComunicazioniProduzioneModel = typeof ComunicazioniProduzione;
+export type TComunicazioniProduzioneModel = Omit<typeof ComunicazioniProduzione, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IComunicazioniProduzione>): any
+};
 
 export type TComunicazioniProduzioneDocument = 
 & mongoose.Document<any, {}, IComunicazioniProduzione>

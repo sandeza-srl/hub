@@ -19,7 +19,9 @@ export default DistintaPrimoLivello;
 
 export { DistintaPrimoLivelloSchema };
 
-export type TDistintaPrimoLivelloModel = typeof DistintaPrimoLivello;
+export type TDistintaPrimoLivelloModel = Omit<typeof DistintaPrimoLivello, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDistintaPrimoLivello>): any
+};
 
 export type TDistintaPrimoLivelloDocument = 
 & mongoose.Document<any, {}, IDistintaPrimoLivello>

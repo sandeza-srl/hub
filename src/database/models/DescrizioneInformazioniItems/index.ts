@@ -19,7 +19,9 @@ export default DescrizioneInformazioniItems;
 
 export { DescrizioneInformazioniItemsSchema };
 
-export type TDescrizioneInformazioniItemsModel = typeof DescrizioneInformazioniItems;
+export type TDescrizioneInformazioniItemsModel = Omit<typeof DescrizioneInformazioniItems, 'traslateAliases'> & {
+  translateAliases(raw: Partial<IDescrizioneInformazioniItems>): any
+};
 
 export type TDescrizioneInformazioniItemsDocument = 
 & mongoose.Document<any, {}, IDescrizioneInformazioniItems>
