@@ -477,16 +477,6 @@ const FornitureItemsSchema = new mongoose.Schema<IFornitureItemsPrivate>({
   timestamps: true
 });
 
-/**
- * Indexing
- */
-FornitureItemsSchema.index({
-  __Dati_Testo001: 1
-});
-FornitureItemsSchema.index({
-  __Dati_Testo006: 1
-});
-
 /* --------
 * Module Exports
 * -------- */
