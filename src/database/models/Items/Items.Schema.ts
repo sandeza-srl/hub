@@ -2273,6 +2273,11 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
     type : Number,
     alias: 'FlagAggiornaWIP'
 
+  },
+  __Dati_Testo088      : {
+    type : String,
+    alias: 'Catalogo_Gamma'
+
   }
 }, {
   timestamps: true
