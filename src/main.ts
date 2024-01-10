@@ -5,6 +5,7 @@ import './app.setup';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { json, urlencoded } from 'express';
 
 import helmet from 'helmet';
 import compression from 'compression';
@@ -49,6 +50,10 @@ async function bootstrap() {
       enableImplicitConversion: true
     }
   }));
+
+  /** Increase max size of the body */
+  app.use(json({ limit: '50mb' }));
+  app.use(urlencoded({ extended: true, limit: '50mb' }));
 
   /** Enable base CORS Options */
   mainLogger.verbose('Enabling CORS');
