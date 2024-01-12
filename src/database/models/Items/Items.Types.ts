@@ -61,9 +61,6 @@ export interface IItems {
   /** Reflected: __Dati_Testo008*/
   IdFamigliaItem: string;
 
-  /** Reflected: __Dati_Testo009*/
-  TxtTipoProdotto: string;
-
   /** Reflected: __Dati_Numero012*/
   FlagDistintaBase: number;
 
@@ -1347,4 +1344,7 @@ export interface IItems {
 
   /** Reflected: __Dati_Testo088*/
   Catalogo_Gamma: string;
+
+  /** Reflected: __Dati_Testo089*/
+  TxtTipoProdotto: string;
 }

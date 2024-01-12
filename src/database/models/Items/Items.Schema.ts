@@ -2278,6 +2278,11 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
     type : String,
     alias: 'Catalogo_Gamma'
 
+  },
+  __Dati_Testo089      : {
+    type : String,
+    alias: 'TxtTipoProdotto'
+
   }
 }, {
   timestamps: true
