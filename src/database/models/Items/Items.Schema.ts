@@ -2283,6 +2283,11 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
     type : String,
     alias: 'TxtTipoProdotto'
 
+  },
+  __Dati_Testo090      : {
+    type : String,
+    alias: 'LettereTxtItem'
+
   }
 }, {
   timestamps: true

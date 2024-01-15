@@ -1350,4 +1350,7 @@ export interface IItemsPrivate {
 
   /** Reflected: TxtTipoProdotto*/
   __Dati_Testo089: string;
+
+  /** Reflected: LettereTxtItem*/
+  __Dati_Testo090: string;
 }

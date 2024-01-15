@@ -76,9 +76,6 @@ export interface IItems {
   /** Reflected: __Dati_Testo011*/
   IdDocumentoImgItem: string;
 
-  /** Reflected: __Dati_Testo012*/
-  LettereTxtItem: string;
-
   /** Reflected: __Dati_Numero015*/
   QtGiacenzaNonDisponibile_Maga: number;
 
@@ -1347,4 +1344,7 @@ export interface IItems {
 
   /** Reflected: __Dati_Testo089*/
   TxtTipoProdotto: string;
+
+  /** Reflected: __Dati_Testo090*/
+  LettereTxtItem: string;
 }
