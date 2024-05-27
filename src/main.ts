@@ -11,6 +11,7 @@ import helmet from 'helmet';
 import compression from 'compression';
 
 import { AppModule } from './app.module';
+import { AllExceptionsFilter } from './common/filters';
 
 
 /** Create a Logger for Bootstrap */
@@ -63,6 +64,9 @@ async function bootstrap() {
   mainLogger.verbose('Enabling Compression and Helmet Protection');
   app.use(helmet());
   app.use(compression());
+
+  /** Implement global filters */
+  app.useGlobalFilters(new AllExceptionsFilter());
 
   /** Listen */
   await app.listen(PORT);

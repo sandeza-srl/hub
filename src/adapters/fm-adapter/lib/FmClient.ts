@@ -1,5 +1,5 @@
-import axios, { AxiosError, AxiosRequestConfig } from 'axios';
-import { response } from 'express';
+import { HttpException } from '@nestjs/common';
+import axios, { AxiosRequestConfig } from 'axios';
 import { encodeToBase64, getRequiredEnv, getOptionalEnv } from '../../../utils';
 import { FmSessionResponse } from '../interfaces/Auth';
 import { FmCreateRecordResponse } from '../interfaces/generics';
@@ -192,9 +192,8 @@ export default class FmClient {
       // TODO: Add the response if it's a creation without a script execution
       return response.data as Response;
     }
-    catch (error) {
-      // TODO: Errors Interceptor
-      throw error;
+    catch (error: any) {
+      throw new HttpException(error.response, error.status, error);
     }
   }
 
@@ -224,7 +223,7 @@ export default class FmClient {
         return this.scriptRequest(config);
       }
 
-      throw error;
+      throw new HttpException(error.response.status, error);
     }
   }
 
