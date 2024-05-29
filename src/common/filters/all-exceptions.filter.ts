@@ -12,11 +12,14 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
     const status = exception instanceof HttpException ? exception.getStatus() : HttpStatus.INTERNAL_SERVER_ERROR;
+    const clientIp = request.headers['x-forwarded-for'] || request.connection.remoteAddress;
 
     const errorResponse = {
       statusCode: status,
       timestamp : new Date().toISOString(),
       path      : request.url,
+      body      : request.body,
+      clientIp  : clientIp,
       message   : (exception instanceof HttpException) ? exception.message : 'Internal server error'
     };
 
