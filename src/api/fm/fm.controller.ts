@@ -33,6 +33,29 @@ export class FmController {
   }
 
 
+  /**
+   * Inserts multiple records into DataHub using the provided host and body.
+   * @UseGuards(AccessTokenGuard)
+   * @Post('insert-multiple')
+   * @ApiCreatedResponse()
+   * @param {string} host - The host to insert records into.
+   * @param {ManageRecordDto[]} body - The array of records to be inserted.
+   * @return {Promise<void>} - A promise representing the completion of the insertion operation.
+   */
+  @UseGuards(AccessTokenGuard)
+  @Post('insert-multiple')
+  @ApiCreatedResponse()
+  public async insertMultiple(
+    @Query('host') host: string,
+    @Body() body: ManageRecordDto[]
+  ) {
+
+    /** Call standard Fm Request to insert record into DataHub */
+    return this.fmService.insertMultipleRecords(host, body);
+
+  }
+
+
   @UseGuards(AdminGuard)
   @Post('execute-script')
   @ApiCreatedResponse()

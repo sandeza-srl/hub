@@ -198,7 +198,9 @@ export default class FmClient {
   }
 
 
-  // TODO: Add a function to execute FileMaker API to call a script, method: GET
+  /* --------
+ * Scripts Methods
+ * -------- */
   private async scriptRequest<Response>(config: AxiosRequestConfig): Promise<Response> {
     try {
       const response = await axios({
