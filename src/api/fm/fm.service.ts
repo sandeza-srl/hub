@@ -125,6 +125,47 @@ export class FmService {
 
 
   /**
+   * Function to request Fm Server API to insert a record with a parametrized request
+   * @param host
+   * @param database
+   * @param layout
+   * @param script
+   * @param body
+   */
+  public async insertRecordAndRunScriptParametrized(
+    host: string,
+    database: string,
+    layout: string,
+    script: string,
+    body: any
+  ): Promise<string> {
+
+    /** Create FM Client */
+    const client = FmClient.forHost(host).database(database).layout(layout);
+
+    /** Generate IdSessione */
+    const sessionId = uuid.v4();
+
+    /** Call insert function of the Fm Client */
+    const recordCreationResponse = await client.insert({
+      data: {
+        fieldData: {
+          IdSessione: sessionId,
+          body      : JSON.stringify(body)
+        }
+      }
+    });
+
+    /** Run FM script */
+    const scriptResult = await client.runScript(script, sessionId);
+
+    /** return fm script result */
+    return scriptResult.response.scriptResult;
+
+  }
+
+
+  /**
    * Run FileMaker Custom Script, passing a body as script parameters
    * @param host
    * @param database
