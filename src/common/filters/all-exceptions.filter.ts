@@ -19,6 +19,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
       timestamp : new Date().toISOString(),
       path      : request.url,
       body      : request.body,
+      headers   : request.headers,
       clientIp  : clientIp,
       message   : (exception instanceof HttpException) ? exception.message : 'Internal server error'
     };
