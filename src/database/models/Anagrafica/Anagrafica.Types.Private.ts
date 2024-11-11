@@ -1,259 +1,390 @@
 export interface IAnagraficaPrivate {
   _id: string;
-  /** Reflected: Uno*/ 
+
+  /** Reflected: Uno*/
   __Dati_Numero001: number;
-  /** Reflected: IdAccount*/ 
+
+  /** Reflected: IdAccount*/
   __Dati_Testo001: string;
-  /** Reflected: TxtAccount*/ 
+
+  /** Reflected: TxtAccount*/
   __Dati_Testo002: string;
-  /** Reflected: UtenteCreazione*/ 
+
+  /** Reflected: UtenteCreazione*/
   __Dati_Testo003: string;
-  /** Reflected: UtenteModifica*/ 
+
+  /** Reflected: UtenteModifica*/
   __Dati_Testo004: string;
-  /** Reflected: DataCreazione*/ 
+
+  /** Reflected: DataCreazione*/
   __Dati_Data001: Date;
-  /** Reflected: DataModifica*/ 
+
+  /** Reflected: DataModifica*/
   __Dati_Data002: Date;
-  /** Reflected: RagioneSociale*/ 
+
+  /** Reflected: RagioneSociale*/
   __Dati_Testo005: string;
-  /** Reflected: LogoSocieta*/ 
+
+  /** Reflected: LogoSocieta*/
   __Dati_Contenitore001: string;
-  /** Reflected: Web*/ 
+
+  /** Reflected: Web*/
   __Dati_Testo006: string;
-  /** Reflected: DescrizioneGenerica*/ 
+
+  /** Reflected: DescrizioneGenerica*/
   __Dati_Testo007: string;
-  /** Reflected: FlagCompagnia*/ 
+
+  /** Reflected: FlagCompagnia*/
   __Dati_Numero002: number;
-  /** Reflected: MailAziendale*/ 
+
+  /** Reflected: MailAziendale*/
   __Dati_Testo008: string;
-  /** Reflected: IdTipologiaAccount*/ 
+
+  /** Reflected: IdTipologiaAccount*/
   __Dati_Testo009: string;
-  /** Reflected: TxtTipologiaAccount*/ 
+
+  /** Reflected: TxtTipologiaAccount*/
   __Dati_Testo010: string;
-  /** Reflected: FlagClientePrimario*/ 
+
+  /** Reflected: FlagClientePrimario*/
   __Dati_Numero003: number;
-  /** Reflected: FlagFornitore*/ 
+
+  /** Reflected: FlagFornitore*/
   __Dati_Numero004: number;
-  /** Reflected: FlagDistributore*/ 
+
+  /** Reflected: FlagDistributore*/
   __Dati_Numero005: number;
-  /** Reflected: FlagClienteFinale*/ 
+
+  /** Reflected: FlagClienteFinale*/
   __Dati_Numero006: number;
-  /** Reflected: IdAccountDistributoriAbilitati*/ 
+
+  /** Reflected: IdAccountDistributoriAbilitati*/
   __Dati_Testo011: string;
-  /** Reflected: FlagVediDistributori*/ 
+
+  /** Reflected: FlagVediDistributori*/
   __Dati_Numero007: number;
-  /** Reflected: FlagOperatore*/ 
+
+  /** Reflected: FlagOperatore*/
   __Dati_Numero008: number;
-  /** Reflected: IdAccountAbilitatiTutti*/ 
+
+  /** Reflected: IdAccountAbilitatiTutti*/
   __Dati_Testo012: string;
-  /** Reflected: Note*/ 
+
+  /** Reflected: Note*/
   __Dati_Testo013: string;
-  /** Reflected: TxtAccountCompagnieAbilitati*/ 
+
+  /** Reflected: TxtAccountCompagnieAbilitati*/
   __Dati_Testo014: string;
-  /** Reflected: TxtAccountDistributoriAbilitati*/ 
+
+  /** Reflected: TxtAccountDistributoriAbilitati*/
   __Dati_Testo015: string;
-  /** Reflected: TxtAccountClientiPrimariAbilitati*/ 
+
+  /** Reflected: TxtAccountClientiPrimariAbilitati*/
   __Dati_Testo016: string;
-  /** Reflected: PartitaIva*/ 
+
+  /** Reflected: PartitaIva*/
   __Dati_Testo017: string;
-  /** Reflected: DescrizioneSpedizione*/ 
+
+  /** Reflected: DescrizioneSpedizione*/
   __Dati_Testo018: string;
-  /** Reflected: NumeroItems*/ 
+
+  /** Reflected: NumeroItems*/
   __Dati_Numero009: number;
-  /** Reflected: NumeroProgettiAperti*/ 
+
+  /** Reflected: NumeroProgettiAperti*/
   __Dati_Numero010: number;
-  /** Reflected: NumeroOfferteAccettate*/ 
+
+  /** Reflected: NumeroOfferteAccettate*/
   __Dati_Numero011: number;
-  /** Reflected: ProgAccount*/ 
+
+  /** Reflected: ProgAccount*/
   __Dati_Numero012: number;
-  /** Reflected: IdDocumentoLogo*/ 
+
+  /** Reflected: IdDocumentoLogo*/
   __Dati_Testo019: string;
-  /** Reflected: DataCorrente*/ 
+
+  /** Reflected: DataCorrente*/
   __Dati_Data003: Date;
-  /** Reflected: LettereTxtAccount*/ 
+
+  /** Reflected: LettereTxtAccount*/
   __Dati_Testo020: string;
-  /** Reflected: MessaggioCallCenter*/ 
+
+  /** Reflected: MessaggioCallCenter*/
   __Dati_Testo021: string;
-  /** Reflected: FlagAccountInteresse*/ 
+
+  /** Reflected: FlagAccountInteresse*/
   __Dati_Numero013: number;
-  /** Reflected: IdAccountApparenza*/ 
+
+  /** Reflected: IdAccountApparenza*/
   __Dati_Testo022: string;
-  /** Reflected: IdListaDiffusionePropria*/ 
+
+  /** Reflected: IdListaDiffusionePropria*/
   __Dati_Numero014: number;
-  /** Reflected: IdListaDiffusioneAltri*/ 
+
+  /** Reflected: IdListaDiffusioneAltri*/
   __Dati_Numero015: number;
-  /** Reflected: VScadenzeAperte*/ 
+
+  /** Reflected: VScadenzeAperte*/
   __Dati_Numero016: number;
-  /** Reflected: VOfferteRifiutate*/ 
+
+  /** Reflected: VOfferteRifiutate*/
   __Dati_Numero017: number;
-  /** Reflected: VOfferteAccettate*/ 
+
+  /** Reflected: VOfferteAccettate*/
   __Dati_Numero018: number;
-  /** Reflected: VOfferteAttive*/ 
+
+  /** Reflected: VOfferteAttive*/
   __Dati_Numero019: number;
-  /** Reflected: TxtClasseMerceologica*/ 
+
+  /** Reflected: TxtClasseMerceologica*/
   __Dati_Testo023: string;
-  /** Reflected: FlagPersonaFisica*/ 
+
+  /** Reflected: FlagPersonaFisica*/
   __Dati_Numero020: number;
-  /** Reflected: FlagPersonaGiuridica*/ 
+
+  /** Reflected: FlagPersonaGiuridica*/
   __Dati_Numero021: number;
-  /** Reflected: VMovimentiBanca*/ 
+
+  /** Reflected: VMovimentiBanca*/
   __Dati_Numero022: number;
-  /** Reflected: FlagAttivo*/ 
+
+  /** Reflected: FlagAttivo*/
   __Dati_Numero023: number;
-  /** Reflected: CodiceFiscale*/ 
+
+  /** Reflected: CodiceFiscale*/
   __Dati_Testo024: string;
-  /** Reflected: CodiceRiferimento*/ 
+
+  /** Reflected: CodiceRiferimento*/
   __Dati_Testo025: string;
-  /** Reflected: IdListeDiffusione*/ 
+
+  /** Reflected: IdListeDiffusione*/
   __Dati_Numero024: number;
-  /** Reflected: DescrizioneLegale*/ 
+
+  /** Reflected: DescrizioneLegale*/
   __Dati_Testo026: string;
-  /** Reflected: VEntrate*/ 
+
+  /** Reflected: VEntrate*/
   __Dati_Numero025: number;
-  /** Reflected: VUscite*/ 
+
+  /** Reflected: VUscite*/
   __Dati_Numero026: number;
-  /** Reflected: NumeroProgettiChiusi*/ 
+
+  /** Reflected: NumeroProgettiChiusi*/
   __Dati_Numero027: number;
-  /** Reflected: NumeroOfferteAperte*/ 
+
+  /** Reflected: NumeroOfferteAperte*/
   __Dati_Numero028: number;
-  /** Reflected: NumeroOfferteRifiutate*/ 
+
+  /** Reflected: NumeroOfferteRifiutate*/
   __Dati_Numero029: number;
-  /** Reflected: NumeroOre*/ 
+
+  /** Reflected: NumeroOre*/
   __Dati_Numero030: number;
-  /** Reflected: NumeroInterventi*/ 
+
+  /** Reflected: NumeroInterventi*/
   __Dati_Numero031: number;
-  /** Reflected: IdLinguaComunicazioni*/ 
+
+  /** Reflected: IdLinguaComunicazioni*/
   __Dati_Testo027: string;
-  /** Reflected: IdCassaBancaAppoggio*/ 
+
+  /** Reflected: IdCassaBancaAppoggio*/
   __Dati_Testo028: string;
-  /** Reflected: IdClasseMerceologica*/ 
+
+  /** Reflected: IdClasseMerceologica*/
   __Dati_Testo029: string;
-  /** Reflected: IdTipoPrimoContatto*/ 
+
+  /** Reflected: IdTipoPrimoContatto*/
   __Dati_Testo030: string;
-  /** Reflected: TxtTipoPrimoContatto*/ 
+
+  /** Reflected: TxtTipoPrimoContatto*/
   __Dati_Testo031: string;
-  /** Reflected: NumRitardoPagamenti*/ 
+
+  /** Reflected: NumRitardoPagamenti*/
   __Dati_Numero032: number;
-  /** Reflected: TxtCassaBancaAppoggio*/ 
+
+  /** Reflected: TxtCassaBancaAppoggio*/
   __Dati_Testo032: string;
-  /** Reflected: DataPrimoContatto*/ 
+
+  /** Reflected: DataPrimoContatto*/
   __Dati_Data004: Date;
-  /** Reflected: IdCassaBancaPrincipale*/ 
+
+  /** Reflected: IdCassaBancaPrincipale*/
   __Dati_Testo033: string;
-  /** Reflected: CodiceAccount*/ 
+
+  /** Reflected: CodiceAccount*/
   __Dati_Testo034: string;
-  /** Reflected: LinguaComunicazione*/ 
+
+  /** Reflected: LinguaComunicazione*/
   __Dati_Testo035: string;
-  /** Reflected: CodiceTipologiaAccount*/ 
+
+  /** Reflected: CodiceTipologiaAccount*/
   __Dati_Testo036: string;
-  /** Reflected: IdAccountCapoGruppo*/ 
+
+  /** Reflected: IdAccountCapoGruppo*/
   __Dati_Testo037: string;
-  /** Reflected: IdValuta*/ 
+
+  /** Reflected: IdValuta*/
   __Dati_Testo038: string;
-  /** Reflected: zT2*/ 
+
+  /** Reflected: zT2*/
   __Dati_Testo039: string;
-  /** Reflected: DataOraUltimaModifica*/ 
+
+  /** Reflected: DataOraUltimaModifica*/
   __Dati_DataOra001: Date;
-  /** Reflected: FlagPagamentiScaduti*/ 
+
+  /** Reflected: FlagPagamentiScaduti*/
   __Dati_Numero033: number;
-  /** Reflected: IdAliquotaIN*/ 
+
+  /** Reflected: IdAliquotaIN*/
   __Dati_Testo040: string;
-  /** Reflected: IdAliquotaOUT*/ 
+
+  /** Reflected: IdAliquotaOUT*/
   __Dati_Testo041: string;
-  /** Reflected: CodiceClienteContabile*/ 
+
+  /** Reflected: CodiceClienteContabile*/
   __Dati_Testo042: string;
-  /** Reflected: CodiceFornitoreContabile*/ 
+
+  /** Reflected: CodiceFornitoreContabile*/
   __Dati_Testo043: string;
-  /** Reflected: IdAccountCompagnieAbilitate*/ 
+
+  /** Reflected: IdAccountCompagnieAbilitate*/
   __Dati_Testo044: string;
-  /** Reflected: NoteFatturazione*/ 
+
+  /** Reflected: NoteFatturazione*/
   __Dati_Testo045: string;
-  /** Reflected: IdContoContabileCliente*/ 
+
+  /** Reflected: IdContoContabileCliente*/
   __Dati_Testo046: string;
-  /** Reflected: IdContoContabileFornitore*/ 
+
+  /** Reflected: IdContoContabileFornitore*/
   __Dati_Testo047: string;
-  /** Reflected: DataNascita*/ 
+
+  /** Reflected: DataNascita*/
   __Dati_Data005: Date;
-  /** Reflected: CittaNascita*/ 
+
+  /** Reflected: CittaNascita*/
   __Dati_Testo048: string;
-  /** Reflected: TxtCognome*/ 
+
+  /** Reflected: TxtCognome*/
   __Dati_Testo049: string;
-  /** Reflected: TxtNome*/ 
+
+  /** Reflected: TxtNome*/
   __Dati_Testo050: string;
-  /** Reflected: FlagFemmina*/ 
+
+  /** Reflected: FlagFemmina*/
   __Dati_Numero034: number;
-  /** Reflected: FlagMaschio*/ 
+
+  /** Reflected: FlagMaschio*/
   __Dati_Numero035: number;
-  /** Reflected: VScadenzeScadute*/ 
+
+  /** Reflected: VScadenzeScadute*/
   __Dati_Numero036: number;
-  /** Reflected: FlagEsportabileWeb*/ 
+
+  /** Reflected: FlagEsportabileWeb*/
   __Dati_Numero037: number;
-  /** Reflected: FlagDaEsportareWeb*/ 
+
+  /** Reflected: FlagDaEsportareWeb*/
   __Dati_Numero038: number;
-  /** Reflected: FlagOperatoreInterventi*/ 
+
+  /** Reflected: FlagOperatoreInterventi*/
   __Dati_Numero039: number;
-  /** Reflected: IdRegimeFiscale*/ 
+
+  /** Reflected: IdRegimeFiscale*/
   __Dati_Testo051: string;
-  /** Reflected: CodiceRegimeFiscale*/ 
+
+  /** Reflected: CodiceRegimeFiscale*/
   __Dati_Testo052: string;
-  /** Reflected: TxtRegimeFiscale*/ 
+
+  /** Reflected: TxtRegimeFiscale*/
   __Dati_Testo053: string;
-  /** Reflected: CodiceUnivocoSDI*/ 
+
+  /** Reflected: CodiceUnivocoSDI*/
   __Dati_Testo054: string;
-  /** Reflected: MailPEC*/ 
+
+  /** Reflected: MailPEC*/
   __Dati_Testo055: string;
-  /** Reflected: FlagPubblicaAmministrazione*/ 
+
+  /** Reflected: FlagPubblicaAmministrazione*/
   __Dati_Numero040: number;
-  /** Reflected: TipoTrasmissioneFattura*/ 
+
+  /** Reflected: TipoTrasmissioneFattura*/
   __Dati_Testo056: string;
-  /** Reflected: FlagDescrizioniLibere*/ 
+
+  /** Reflected: FlagDescrizioniLibere*/
   __Dati_Numero041: number;
-  /** Reflected: IdTipiRuoliNoVisualizzazione*/ 
+
+  /** Reflected: IdTipiRuoliNoVisualizzazione*/
   __Dati_Testo057: string;
-  /** Reflected: FlagAggiornaTotali*/ 
+
+  /** Reflected: FlagAggiornaTotali*/
   __Dati_Numero042: number;
-  /** Reflected: IdTipoDocContabileIN*/ 
+
+  /** Reflected: IdTipoDocContabileIN*/
   __Dati_Testo058: string;
-  /** Reflected: FlagSeparaDocumenti*/ 
+
+  /** Reflected: FlagSeparaDocumenti*/
   __Dati_Numero043: number;
-  /** Reflected: IdTipoDocContabileOUT*/ 
+
+  /** Reflected: IdTipoDocContabileOUT*/
   __Dati_Testo059: string;
-  /** Reflected: FlagPIVAVerificata*/ 
+
+  /** Reflected: FlagPIVAVerificata*/
   __Dati_Numero044: number;
-  /** Reflected: FlagAccorpaTrasporto*/ 
+
+  /** Reflected: FlagAccorpaTrasporto*/
   __Dati_Numero045: number;
-  /** Reflected: Zero*/ 
+
+  /** Reflected: Zero*/
   __Dati_Numero046: number;
-  /** Reflected: IdUtentiNoVisualizzazione*/ 
+
+  /** Reflected: IdUtentiNoVisualizzazione*/
   __Dati_Testo060: string;
-  /** Reflected: VFido*/ 
+
+  /** Reflected: VFido*/
   __Dati_Numero047: number;
-  /** Reflected: VFidoResiduo*/ 
+
+  /** Reflected: VFidoResiduo*/
   __Dati_Numero048: number;
-  /** Reflected: FlagFidoAttivo*/ 
+
+  /** Reflected: FlagFidoAttivo*/
   __Dati_Numero049: number;
-  /** Reflected: FlagFidoBloccato*/ 
+
+  /** Reflected: FlagFidoBloccato*/
   __Dati_Numero050: number;
-  /** Reflected: IdInstallazione*/ 
+
+  /** Reflected: IdInstallazione*/
   __Dati_Testo061: string;
-  /** Reflected: FlagCFVerificato*/ 
+
+  /** Reflected: FlagCFVerificato*/
   __Dati_Numero051: number;
-  /** Reflected: FlagNonSollecitareDocContabile*/ 
+
+  /** Reflected: FlagNonSollecitareDocContabile*/
   __Dati_Numero052: number;
-  /** Reflected: DataUltimoContatto*/ 
+
+  /** Reflected: DataUltimoContatto*/
   __Dati_Data006: Date;
-  /** Reflected: FlagAggiornaDaSedi*/ 
+
+  /** Reflected: FlagAggiornaDaSedi*/
   __Dati_Numero054: number;
-  /** Reflected: IdDocumentoPrincipaleAnagrafica*/ 
+
+  /** Reflected: IdDocumentoPrincipaleAnagrafica*/
   __Dati_Testo062: string;
-  /** Reflected: CodiceEsterno*/ 
+
+  /** Reflected: CodiceEsterno*/
   __Dati_Testo063: string;
-  /** Reflected: FlagClientePremium*/ 
+
+  /** Reflected: FlagClientePremium*/
   __Dati_Numero055: number;
-  /** Reflected: VincoliTipoListino_IdTipiListino*/ 
+
+  /** Reflected: VincoliTipoListino_IdTipiListino*/
   __Dati_Testo064: string;
-  /** Reflected: VincoliTipoListino_TxtTipiListino*/ 
+
+  /** Reflected: VincoliTipoListino_TxtTipiListino*/
   __Dati_Testo066: string;
-  /** Reflected: VincoliTipoListino_FlagAttivo*/ 
-  __Dati_Numero056: number
+
+  /** Reflected: VincoliTipoListino_FlagAttivo*/
+  __Dati_Numero056: number;
+
+  /** Reflected: Integrazione_DatiVariAC*/
+  __Dati_Testo067: string;
 }
