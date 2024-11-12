@@ -1347,7 +1347,4 @@ export interface IItems {
 
   /** Reflected: __Dati_Testo088*/
   Catalogo_Gamma: string;
-
-  /** Reflected: __Dati_Testo091*/
-  Integrazione_DatiVariAC: string;
 }
