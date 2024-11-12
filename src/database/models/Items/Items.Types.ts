@@ -61,9 +61,6 @@ export interface IItems {
   /** Reflected: __Dati_Testo008*/
   IdFamigliaItem: string;
 
-  /** Reflected: __Dati_Testo009*/
-  TxtTipoProdotto: string;
-
   /** Reflected: __Dati_Numero012*/
   FlagDistintaBase: number;
 
@@ -78,9 +75,6 @@ export interface IItems {
 
   /** Reflected: __Dati_Testo011*/
   IdDocumentoImgItem: string;
-
-  /** Reflected: __Dati_Testo012*/
-  LettereTxtItem: string;
 
   /** Reflected: __Dati_Numero015*/
   QtGiacenzaNonDisponibile_Maga: number;
@@ -1347,4 +1341,13 @@ export interface IItems {
 
   /** Reflected: __Dati_Testo088*/
   Catalogo_Gamma: string;
+
+  /** Reflected: __Dati_Testo089*/
+  TxtTipoProdotto: string;
+
+  /** Reflected: __Dati_Testo090*/
+  LettereTxtItem: string;
+
+  /** Reflected: __Dati_Testo091*/
+  Integrazione_DatiVariAC: string;
 }

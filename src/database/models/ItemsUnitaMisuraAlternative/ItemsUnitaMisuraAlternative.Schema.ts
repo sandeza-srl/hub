@@ -112,13 +112,6 @@ const ItemsUnitaMisuraAlternativeSchema = new mongoose.Schema<IItemsUnitaMisuraA
   timestamps: true
 });
 
-/**
- * Indexing
- */
-ItemsUnitaMisuraAlternativeSchema.index({
-  __Dati_Testo004: 1
-});
-
 /* --------
 * Module Exports
 * -------- */

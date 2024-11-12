@@ -1347,4 +1347,13 @@ export interface IItemsPrivate {
 
   /** Reflected: Catalogo_Gamma */
   __Dati_Testo088: string;
+
+  /** Reflected: TxtTipoProdotto*/
+  __Dati_Testo089: string;
+
+  /** Reflected: LettereTxtItem*/
+  __Dati_Testo090: string;
+
+  /** Reflected: Integrazione_DatiVariAC*/
+  __Dati_Testo091: string;
 }

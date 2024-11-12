@@ -187,13 +187,6 @@ const InformazioniItemsSchema = new mongoose.Schema<IInformazioniItemsPrivate>({
   timestamps: true
 });
 
-/**
- * Indexing
- */
-InformazioniItemsSchema.index({
-  __Dati_Testo001: 1
-});
-
 /* --------
 * Module Exports
 * -------- */

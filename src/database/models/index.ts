@@ -1,3 +1,9 @@
+/**
+ * Import Create Index
+ */
+import './createIndex';
+
+
 export {
   default as Aliquote,
   AliquoteSchema,

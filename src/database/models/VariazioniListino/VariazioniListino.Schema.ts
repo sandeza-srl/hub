@@ -293,16 +293,6 @@ const VariazioniListinoSchema = new mongoose.Schema<IVariazioniListinoPrivate>({
   timestamps: true
 });
 
-/**
- * Indexing
- */
-VariazioniListinoSchema.index({
-  __Dati_Testo001: 1
-});
-VariazioniListinoSchema.index({
-  __Dati_Testo004: 1
-});
-
 /* --------
 * Module Exports
 * -------- */

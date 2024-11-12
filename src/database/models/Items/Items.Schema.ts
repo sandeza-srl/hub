@@ -2278,34 +2278,24 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
     type : String,
     alias: 'Catalogo_Gamma'
 
+  },
+  __Dati_Testo089      : {
+    type : String,
+    alias: 'TxtTipoProdotto'
+
+  },
+  __Dati_Testo090      : {
+    type : String,
+    alias: 'LettereTxtItem'
+
+  },
+  __Dati_Testo091      : {
+    type : String,
+    alias: 'Integrazione_DatiVariAC'
+
   }
 }, {
   timestamps: true
-});
-
-/**
- * Indexing
- */
-ItemsSchema.index({
-  __Dati_Testo002: 1
-});
-ItemsSchema.index({
-  __Dati_Testo034: 1
-});
-ItemsSchema.index({
-  __Dati_Testo003: 1
-});
-ItemsSchema.index({
-  __Dati_Testo026: 1
-});
-ItemsSchema.index({
-  __Dati_Testo005: 1
-});
-ItemsSchema.index({
-  __Dati_Numero116: 1
-});
-ItemsSchema.index({
-  __Dati_Numero046: 1
 });
 
 /* --------
