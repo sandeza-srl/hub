@@ -379,12 +379,12 @@ export interface IAnagrafica {
   /** Reflected: __Dati_Testo064*/
   VincoliTipoListino_IdTipiListino: string;
 
-  /** Reflected: __Dati_Testo066*/
+  /** Reflected: __Dati_Testo065*/
   VincoliTipoListino_TxtTipiListino: string;
 
   /** Reflected: __Dati_Numero056*/
   VincoliTipoListino_FlagAttivo: number;
 
-  /** Reflected: __Dati_Testo067*/
+  /** Reflected: __Dati_Testo065*/
   Integrazione_DatiVariAC: string;
 }

@@ -380,11 +380,11 @@ export interface IAnagraficaPrivate {
   __Dati_Testo064: string;
 
   /** Reflected: VincoliTipoListino_TxtTipiListino*/
-  __Dati_Testo066: string;
+  __Dati_Testo065: string;
 
   /** Reflected: VincoliTipoListino_FlagAttivo*/
   __Dati_Numero056: number;
 
   /** Reflected: Integrazione_DatiVariAC*/
-  __Dati_Testo067: string;
+  __Dati_Testo066: string;
 }
