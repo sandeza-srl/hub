@@ -658,7 +658,7 @@ const AnagraficaSchema = new mongoose.Schema<IAnagraficaPrivate>({
     alias: 'VincoliTipoListino_IdTipiListino'
 
   },
-  __Dati_Testo065      : {
+  __Dati_Testo066      : {
     type : String,
     alias: 'VincoliTipoListino_TxtTipiListino'
 
@@ -669,7 +669,7 @@ const AnagraficaSchema = new mongoose.Schema<IAnagraficaPrivate>({
 
   },
 
-  __Dati_Testo066: {
+  __Dati_Testo067: {
     type : String,
     alias: 'Integrazione_DatiVariAC'
 
