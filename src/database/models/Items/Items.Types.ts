@@ -1347,4 +1347,7 @@ export interface IItems {
 
   /** Reflected: __Dati_Testo090*/
   LettereTxtItem: string;
+
+  /** Reflected: __Dati_Testo091*/
+  Integrazione_DatiVariAC: string;
 }

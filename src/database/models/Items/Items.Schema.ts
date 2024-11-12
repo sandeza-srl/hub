@@ -2288,6 +2288,11 @@ const ItemsSchema = new mongoose.Schema<IItemsPrivate>({
     type : String,
     alias: 'LettereTxtItem'
 
+  },
+  __Dati_Testo091      : {
+    type : String,
+    alias: 'Integrazione_DatiVariAC'
+
   }
 }, {
   timestamps: true

@@ -1353,4 +1353,7 @@ export interface IItemsPrivate {
 
   /** Reflected: LettereTxtItem*/
   __Dati_Testo090: string;
+
+  /** Reflected: Integrazione_DatiVariAC*/
+  __Dati_Testo091: string;
 }
