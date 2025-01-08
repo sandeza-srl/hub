@@ -103,6 +103,18 @@ export const DatabaseConnectionProvider: FactoryProvider = {
             socketTimeoutMS: 3000
           };
 
+        case 'gmf':
+          return {
+            uri            : `mongodb://139.162.156.104:27017/${db}`,
+            authSource     : 'admin',
+            auth           : {
+              username: 'sandeza',
+              password: 'S4nd3z4!'
+            },
+            maxPoolSize    : 25,
+            socketTimeoutMS: 3000
+          };
+
         default:
           throw new BadRequestException(
             'Could not find a valid database to connect for this request',
