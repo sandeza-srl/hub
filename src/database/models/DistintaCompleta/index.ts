@@ -8,8 +8,8 @@ import type { IDistintaCompleta } from './DistintaCompleta.Types';
 * Model Definition
 * -------- */
 const DistintaCompleta = mongoose.model<IDistintaCompleta>(
-  'DistintaCompleta',
-  DistintaCompletaSchema as any
+'DistintaCompleta',
+DistintaCompletaSchema as any
 ) as mongoose.Model<IDistintaCompleta>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DistintaCompleta;
 export { DistintaCompletaSchema };
 
 export type TDistintaCompletaModel = Omit<typeof DistintaCompleta, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDistintaCompleta>): any
+translateAliases(raw: Partial<IDistintaCompleta>): any
 };
 
 export type TDistintaCompletaDocument = 

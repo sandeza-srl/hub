@@ -8,8 +8,8 @@ import type { ITIpiProblemi } from './TIpiProblemi.Types';
 * Model Definition
 * -------- */
 const TIpiProblemi = mongoose.model<ITIpiProblemi>(
-  'TIpiProblemi',
-  TIpiProblemiSchema as any
+'TIpiProblemi',
+TIpiProblemiSchema as any
 ) as mongoose.Model<ITIpiProblemi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TIpiProblemi;
 export { TIpiProblemiSchema };
 
 export type TTIpiProblemiModel = Omit<typeof TIpiProblemi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITIpiProblemi>): any
+translateAliases(raw: Partial<ITIpiProblemi>): any
 };
 
 export type TTIpiProblemiDocument = 

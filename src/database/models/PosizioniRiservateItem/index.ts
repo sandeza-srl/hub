@@ -8,8 +8,8 @@ import type { IPosizioniRiservateItem } from './PosizioniRiservateItem.Types';
 * Model Definition
 * -------- */
 const PosizioniRiservateItem = mongoose.model<IPosizioniRiservateItem>(
-  'PosizioniRiservateItem',
-  PosizioniRiservateItemSchema as any
+'PosizioniRiservateItem',
+PosizioniRiservateItemSchema as any
 ) as mongoose.Model<IPosizioniRiservateItem>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PosizioniRiservateItem;
 export { PosizioniRiservateItemSchema };
 
 export type TPosizioniRiservateItemModel = Omit<typeof PosizioniRiservateItem, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPosizioniRiservateItem>): any
+translateAliases(raw: Partial<IPosizioniRiservateItem>): any
 };
 
 export type TPosizioniRiservateItemDocument = 

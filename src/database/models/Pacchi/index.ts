@@ -8,8 +8,8 @@ import type { IPacchi } from './Pacchi.Types';
 * Model Definition
 * -------- */
 const Pacchi = mongoose.model<IPacchi>(
-  'Pacchi',
-  PacchiSchema as any
+'Pacchi',
+PacchiSchema as any
 ) as mongoose.Model<IPacchi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Pacchi;
 export { PacchiSchema };
 
 export type TPacchiModel = Omit<typeof Pacchi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPacchi>): any
+translateAliases(raw: Partial<IPacchi>): any
 };
 
 export type TPacchiDocument = 

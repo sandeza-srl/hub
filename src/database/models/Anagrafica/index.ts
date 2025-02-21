@@ -8,8 +8,8 @@ import type { IAnagrafica } from './Anagrafica.Types';
 * Model Definition
 * -------- */
 const Anagrafica = mongoose.model<IAnagrafica>(
-  'Anagrafica',
-  AnagraficaSchema as any
+'Anagrafica',
+AnagraficaSchema as any
 ) as mongoose.Model<IAnagrafica>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Anagrafica;
 export { AnagraficaSchema };
 
 export type TAnagraficaModel = Omit<typeof Anagrafica, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAnagrafica>): any
+translateAliases(raw: Partial<IAnagrafica>): any
 };
 
 export type TAnagraficaDocument = 

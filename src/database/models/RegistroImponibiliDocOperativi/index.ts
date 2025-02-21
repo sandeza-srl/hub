@@ -8,8 +8,8 @@ import type { IRegistroImponibiliDocOperativi } from './RegistroImponibiliDocOpe
 * Model Definition
 * -------- */
 const RegistroImponibiliDocOperativi = mongoose.model<IRegistroImponibiliDocOperativi>(
-  'RegistroImponibiliDocOperativi',
-  RegistroImponibiliDocOperativiSchema as any
+'RegistroImponibiliDocOperativi',
+RegistroImponibiliDocOperativiSchema as any
 ) as mongoose.Model<IRegistroImponibiliDocOperativi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RegistroImponibiliDocOperativi;
 export { RegistroImponibiliDocOperativiSchema };
 
 export type TRegistroImponibiliDocOperativiModel = Omit<typeof RegistroImponibiliDocOperativi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRegistroImponibiliDocOperativi>): any
+translateAliases(raw: Partial<IRegistroImponibiliDocOperativi>): any
 };
 
 export type TRegistroImponibiliDocOperativiDocument = 

@@ -8,8 +8,8 @@ import type { IVociTipiZone } from './VociTipiZone.Types';
 * Model Definition
 * -------- */
 const VociTipiZone = mongoose.model<IVociTipiZone>(
-  'VociTipiZone',
-  VociTipiZoneSchema as any
+'VociTipiZone',
+VociTipiZoneSchema as any
 ) as mongoose.Model<IVociTipiZone>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociTipiZone;
 export { VociTipiZoneSchema };
 
 export type TVociTipiZoneModel = Omit<typeof VociTipiZone, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociTipiZone>): any
+translateAliases(raw: Partial<IVociTipiZone>): any
 };
 
 export type TVociTipiZoneDocument = 

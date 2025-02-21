@@ -8,8 +8,8 @@ import type { IIconeTipiDocOperativi } from './IconeTipiDocOperativi.Types';
 * Model Definition
 * -------- */
 const IconeTipiDocOperativi = mongoose.model<IIconeTipiDocOperativi>(
-  'IconeTipiDocOperativi',
-  IconeTipiDocOperativiSchema as any
+'IconeTipiDocOperativi',
+IconeTipiDocOperativiSchema as any
 ) as mongoose.Model<IIconeTipiDocOperativi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default IconeTipiDocOperativi;
 export { IconeTipiDocOperativiSchema };
 
 export type TIconeTipiDocOperativiModel = Omit<typeof IconeTipiDocOperativi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IIconeTipiDocOperativi>): any
+translateAliases(raw: Partial<IIconeTipiDocOperativi>): any
 };
 
 export type TIconeTipiDocOperativiDocument = 

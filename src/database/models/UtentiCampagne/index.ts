@@ -8,8 +8,8 @@ import type { IUtentiCampagne } from './UtentiCampagne.Types';
 * Model Definition
 * -------- */
 const UtentiCampagne = mongoose.model<IUtentiCampagne>(
-  'UtentiCampagne',
-  UtentiCampagneSchema as any
+'UtentiCampagne',
+UtentiCampagneSchema as any
 ) as mongoose.Model<IUtentiCampagne>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UtentiCampagne;
 export { UtentiCampagneSchema };
 
 export type TUtentiCampagneModel = Omit<typeof UtentiCampagne, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtentiCampagne>): any
+translateAliases(raw: Partial<IUtentiCampagne>): any
 };
 
 export type TUtentiCampagneDocument = 

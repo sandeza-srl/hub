@@ -8,8 +8,8 @@ import type { IDettagliDocOperativiAnagrafica } from './DettagliDocOperativiAnag
 * Model Definition
 * -------- */
 const DettagliDocOperativiAnagrafica = mongoose.model<IDettagliDocOperativiAnagrafica>(
-  'DettagliDocOperativiAnagrafica',
-  DettagliDocOperativiAnagraficaSchema as any
+'DettagliDocOperativiAnagrafica',
+DettagliDocOperativiAnagraficaSchema as any
 ) as mongoose.Model<IDettagliDocOperativiAnagrafica>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DettagliDocOperativiAnagrafica;
 export { DettagliDocOperativiAnagraficaSchema };
 
 export type TDettagliDocOperativiAnagraficaModel = Omit<typeof DettagliDocOperativiAnagrafica, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDettagliDocOperativiAnagrafica>): any
+translateAliases(raw: Partial<IDettagliDocOperativiAnagrafica>): any
 };
 
 export type TDettagliDocOperativiAnagraficaDocument = 

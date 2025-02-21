@@ -10,54 +10,54 @@ import type { ISottoMenuTestiPrivate } from './SottoMenuTesti.Types.Private';
 * -------- */
 const SottoMenuTestiSchema = new mongoose.Schema<ISottoMenuTestiPrivate>({
 
-  _id: {
-    type: String,
-    default: uuid.v4
-  },
-  __Dati_Numero001: {
-    type: Number,
-    alias: 'Uno',
+_id: {
+type: String,
+default: uuid.v4
+},
+__Dati_Numero001: {
+type: Number,
+alias: 'Uno',
 
-  },
-  __Dati_Numero002: {
-    type: Number,
-    alias: 'IdSottomenu',
+},
+__Dati_Numero002: {
+type: Number,
+alias: 'IdSottomenu',
 
-  },
-  __Dati_Testo001: {
-    type: String,
-    alias: 'IdLingua',
+},
+__Dati_Testo001: {
+type: String,
+alias: 'IdLingua',
 
-  },
-  __Dati_Testo002: {
-    type: String,
-    alias: 'TxtSottomenu',
+},
+__Dati_Testo002: {
+type: String,
+alias: 'TxtSottomenu',
 
-  },
-  __Dati_Numero003: {
-    type: Number,
-    alias: 'FlagLinguaPredefinita',
+},
+__Dati_Numero003: {
+type: Number,
+alias: 'FlagLinguaPredefinita',
 
-  },
-  __Dati_Data001: {
-    type: Date,
-    alias: 'DataUltimaModifica',
-    set: (value: any) => {
-      return DateConverter.convertDate(value);
-    }
-  },
-  __Dati_Numero004: {
-    type: Number,
-    alias: 'Zero',
+},
+__Dati_Data001: {
+type: Date,
+alias: 'DataUltimaModifica',
+set: (value: any) => {
+ return DateConverter.convertDate(value);
+}
+},
+__Dati_Numero004: {
+type: Number,
+alias: 'Zero',
 
-  },
-  __Dati_Testo003: {
-    type: String,
-    alias: 'IdInstallazione',
+},
+__Dati_Testo003: {
+type: String,
+alias: 'IdInstallazione',
 
-  }
+}
 }, {
-  timestamps: true
+timestamps: true
 });
 
 /* --------

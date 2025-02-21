@@ -8,8 +8,8 @@ import type { IVersioniProdotti } from './VersioniProdotti.Types';
 * Model Definition
 * -------- */
 const VersioniProdotti = mongoose.model<IVersioniProdotti>(
-  'VersioniProdotti',
-  VersioniProdottiSchema as any
+'VersioniProdotti',
+VersioniProdottiSchema as any
 ) as mongoose.Model<IVersioniProdotti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VersioniProdotti;
 export { VersioniProdottiSchema };
 
 export type TVersioniProdottiModel = Omit<typeof VersioniProdotti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVersioniProdotti>): any
+translateAliases(raw: Partial<IVersioniProdotti>): any
 };
 
 export type TVersioniProdottiDocument = 

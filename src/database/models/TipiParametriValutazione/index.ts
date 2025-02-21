@@ -8,8 +8,8 @@ import type { ITipiParametriValutazione } from './TipiParametriValutazione.Types
 * Model Definition
 * -------- */
 const TipiParametriValutazione = mongoose.model<ITipiParametriValutazione>(
-  'TipiParametriValutazione',
-  TipiParametriValutazioneSchema as any
+'TipiParametriValutazione',
+TipiParametriValutazioneSchema as any
 ) as mongoose.Model<ITipiParametriValutazione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiParametriValutazione;
 export { TipiParametriValutazioneSchema };
 
 export type TTipiParametriValutazioneModel = Omit<typeof TipiParametriValutazione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiParametriValutazione>): any
+translateAliases(raw: Partial<ITipiParametriValutazione>): any
 };
 
 export type TTipiParametriValutazioneDocument = 

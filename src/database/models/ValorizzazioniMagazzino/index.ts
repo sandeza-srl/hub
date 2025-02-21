@@ -8,8 +8,8 @@ import type { IValorizzazioniMagazzino } from './ValorizzazioniMagazzino.Types';
 * Model Definition
 * -------- */
 const ValorizzazioniMagazzino = mongoose.model<IValorizzazioniMagazzino>(
-  'ValorizzazioniMagazzino',
-  ValorizzazioniMagazzinoSchema as any
+'ValorizzazioniMagazzino',
+ValorizzazioniMagazzinoSchema as any
 ) as mongoose.Model<IValorizzazioniMagazzino>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ValorizzazioniMagazzino;
 export { ValorizzazioniMagazzinoSchema };
 
 export type TValorizzazioniMagazzinoModel = Omit<typeof ValorizzazioniMagazzino, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IValorizzazioniMagazzino>): any
+translateAliases(raw: Partial<IValorizzazioniMagazzino>): any
 };
 
 export type TValorizzazioniMagazzinoDocument = 

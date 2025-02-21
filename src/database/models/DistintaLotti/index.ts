@@ -8,8 +8,8 @@ import type { IDistintaLotti } from './DistintaLotti.Types';
 * Model Definition
 * -------- */
 const DistintaLotti = mongoose.model<IDistintaLotti>(
-  'DistintaLotti',
-  DistintaLottiSchema as any
+'DistintaLotti',
+DistintaLottiSchema as any
 ) as mongoose.Model<IDistintaLotti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DistintaLotti;
 export { DistintaLottiSchema };
 
 export type TDistintaLottiModel = Omit<typeof DistintaLotti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDistintaLotti>): any
+translateAliases(raw: Partial<IDistintaLotti>): any
 };
 
 export type TDistintaLottiDocument = 

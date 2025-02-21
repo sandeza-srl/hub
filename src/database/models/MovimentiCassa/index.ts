@@ -8,8 +8,8 @@ import type { IMovimentiCassa } from './MovimentiCassa.Types';
 * Model Definition
 * -------- */
 const MovimentiCassa = mongoose.model<IMovimentiCassa>(
-  'MovimentiCassa',
-  MovimentiCassaSchema as any
+'MovimentiCassa',
+MovimentiCassaSchema as any
 ) as mongoose.Model<IMovimentiCassa>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MovimentiCassa;
 export { MovimentiCassaSchema };
 
 export type TMovimentiCassaModel = Omit<typeof MovimentiCassa, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMovimentiCassa>): any
+translateAliases(raw: Partial<IMovimentiCassa>): any
 };
 
 export type TMovimentiCassaDocument = 

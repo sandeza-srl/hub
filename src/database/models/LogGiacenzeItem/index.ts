@@ -8,8 +8,8 @@ import type { ILogGiacenzeItem } from './LogGiacenzeItem.Types';
 * Model Definition
 * -------- */
 const LogGiacenzeItem = mongoose.model<ILogGiacenzeItem>(
-  'LogGiacenzeItem',
-  LogGiacenzeItemSchema as any
+'LogGiacenzeItem',
+LogGiacenzeItemSchema as any
 ) as mongoose.Model<ILogGiacenzeItem>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LogGiacenzeItem;
 export { LogGiacenzeItemSchema };
 
 export type TLogGiacenzeItemModel = Omit<typeof LogGiacenzeItem, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILogGiacenzeItem>): any
+translateAliases(raw: Partial<ILogGiacenzeItem>): any
 };
 
 export type TLogGiacenzeItemDocument = 

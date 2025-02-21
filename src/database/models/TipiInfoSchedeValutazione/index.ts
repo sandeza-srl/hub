@@ -8,8 +8,8 @@ import type { ITipiInfoSchedeValutazione } from './TipiInfoSchedeValutazione.Typ
 * Model Definition
 * -------- */
 const TipiInfoSchedeValutazione = mongoose.model<ITipiInfoSchedeValutazione>(
-  'TipiInfoSchedeValutazione',
-  TipiInfoSchedeValutazioneSchema as any
+'TipiInfoSchedeValutazione',
+TipiInfoSchedeValutazioneSchema as any
 ) as mongoose.Model<ITipiInfoSchedeValutazione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiInfoSchedeValutazione;
 export { TipiInfoSchedeValutazioneSchema };
 
 export type TTipiInfoSchedeValutazioneModel = Omit<typeof TipiInfoSchedeValutazione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiInfoSchedeValutazione>): any
+translateAliases(raw: Partial<ITipiInfoSchedeValutazione>): any
 };
 
 export type TTipiInfoSchedeValutazioneDocument = 

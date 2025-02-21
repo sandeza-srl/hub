@@ -8,8 +8,8 @@ import type { ISistemiEsterni } from './SistemiEsterni.Types';
 * Model Definition
 * -------- */
 const SistemiEsterni = mongoose.model<ISistemiEsterni>(
-  'SistemiEsterni',
-  SistemiEsterniSchema as any
+'SistemiEsterni',
+SistemiEsterniSchema as any
 ) as mongoose.Model<ISistemiEsterni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SistemiEsterni;
 export { SistemiEsterniSchema };
 
 export type TSistemiEsterniModel = Omit<typeof SistemiEsterni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISistemiEsterni>): any
+translateAliases(raw: Partial<ISistemiEsterni>): any
 };
 
 export type TSistemiEsterniDocument = 

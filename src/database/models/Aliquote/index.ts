@@ -8,8 +8,8 @@ import type { IAliquote } from './Aliquote.Types';
 * Model Definition
 * -------- */
 const Aliquote = mongoose.model<IAliquote>(
-  'Aliquote',
-  AliquoteSchema as any
+'Aliquote',
+AliquoteSchema as any
 ) as mongoose.Model<IAliquote>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Aliquote;
 export { AliquoteSchema };
 
 export type TAliquoteModel = Omit<typeof Aliquote, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAliquote>): any
+translateAliases(raw: Partial<IAliquote>): any
 };
 
 export type TAliquoteDocument = 

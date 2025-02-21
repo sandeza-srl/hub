@@ -8,8 +8,8 @@ import type { IComunicazioniProduzione } from './ComunicazioniProduzione.Types';
 * Model Definition
 * -------- */
 const ComunicazioniProduzione = mongoose.model<IComunicazioniProduzione>(
-  'ComunicazioniProduzione',
-  ComunicazioniProduzioneSchema as any
+'ComunicazioniProduzione',
+ComunicazioniProduzioneSchema as any
 ) as mongoose.Model<IComunicazioniProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ComunicazioniProduzione;
 export { ComunicazioniProduzioneSchema };
 
 export type TComunicazioniProduzioneModel = Omit<typeof ComunicazioniProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IComunicazioniProduzione>): any
+translateAliases(raw: Partial<IComunicazioniProduzione>): any
 };
 
 export type TComunicazioniProduzioneDocument = 

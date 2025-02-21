@@ -8,8 +8,8 @@ import type { IOperatoriAbilitatiOpzioneProd } from './OperatoriAbilitatiOpzione
 * Model Definition
 * -------- */
 const OperatoriAbilitatiOpzioneProd = mongoose.model<IOperatoriAbilitatiOpzioneProd>(
-  'OperatoriAbilitatiOpzioneProd',
-  OperatoriAbilitatiOpzioneProdSchema as any
+'OperatoriAbilitatiOpzioneProd',
+OperatoriAbilitatiOpzioneProdSchema as any
 ) as mongoose.Model<IOperatoriAbilitatiOpzioneProd>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriAbilitatiOpzioneProd;
 export { OperatoriAbilitatiOpzioneProdSchema };
 
 export type TOperatoriAbilitatiOpzioneProdModel = Omit<typeof OperatoriAbilitatiOpzioneProd, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriAbilitatiOpzioneProd>): any
+translateAliases(raw: Partial<IOperatoriAbilitatiOpzioneProd>): any
 };
 
 export type TOperatoriAbilitatiOpzioneProdDocument = 

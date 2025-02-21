@@ -8,8 +8,8 @@ import type { IRisorse } from './Risorse.Types';
 * Model Definition
 * -------- */
 const Risorse = mongoose.model<IRisorse>(
-  'Risorse',
-  RisorseSchema as any
+'Risorse',
+RisorseSchema as any
 ) as mongoose.Model<IRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Risorse;
 export { RisorseSchema };
 
 export type TRisorseModel = Omit<typeof Risorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRisorse>): any
+translateAliases(raw: Partial<IRisorse>): any
 };
 
 export type TRisorseDocument = 

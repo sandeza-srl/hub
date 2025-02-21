@@ -8,8 +8,8 @@ import type { ILogInvioRiba } from './LogInvioRiba.Types';
 * Model Definition
 * -------- */
 const LogInvioRiba = mongoose.model<ILogInvioRiba>(
-  'LogInvioRiba',
-  LogInvioRibaSchema as any
+'LogInvioRiba',
+LogInvioRibaSchema as any
 ) as mongoose.Model<ILogInvioRiba>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LogInvioRiba;
 export { LogInvioRibaSchema };
 
 export type TLogInvioRibaModel = Omit<typeof LogInvioRiba, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILogInvioRiba>): any
+translateAliases(raw: Partial<ILogInvioRiba>): any
 };
 
 export type TLogInvioRibaDocument = 

@@ -8,8 +8,8 @@ import type { IIndirizziCampagneMailing } from './IndirizziCampagneMailing.Types
 * Model Definition
 * -------- */
 const IndirizziCampagneMailing = mongoose.model<IIndirizziCampagneMailing>(
-  'IndirizziCampagneMailing',
-  IndirizziCampagneMailingSchema as any
+'IndirizziCampagneMailing',
+IndirizziCampagneMailingSchema as any
 ) as mongoose.Model<IIndirizziCampagneMailing>;
 
 /* --------
@@ -20,7 +20,7 @@ export default IndirizziCampagneMailing;
 export { IndirizziCampagneMailingSchema };
 
 export type TIndirizziCampagneMailingModel = Omit<typeof IndirizziCampagneMailing, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IIndirizziCampagneMailing>): any
+translateAliases(raw: Partial<IIndirizziCampagneMailing>): any
 };
 
 export type TIndirizziCampagneMailingDocument = 

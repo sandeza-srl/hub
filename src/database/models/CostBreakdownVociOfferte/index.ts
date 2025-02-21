@@ -8,8 +8,8 @@ import type { ICostBreakdownVociOfferte } from './CostBreakdownVociOfferte.Types
 * Model Definition
 * -------- */
 const CostBreakdownVociOfferte = mongoose.model<ICostBreakdownVociOfferte>(
-  'CostBreakdownVociOfferte',
-  CostBreakdownVociOfferteSchema as any
+'CostBreakdownVociOfferte',
+CostBreakdownVociOfferteSchema as any
 ) as mongoose.Model<ICostBreakdownVociOfferte>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CostBreakdownVociOfferte;
 export { CostBreakdownVociOfferteSchema };
 
 export type TCostBreakdownVociOfferteModel = Omit<typeof CostBreakdownVociOfferte, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICostBreakdownVociOfferte>): any
+translateAliases(raw: Partial<ICostBreakdownVociOfferte>): any
 };
 
 export type TCostBreakdownVociOfferteDocument = 

@@ -8,8 +8,8 @@ import type { IItemsAlternativi } from './ItemsAlternativi.Types';
 * Model Definition
 * -------- */
 const ItemsAlternativi = mongoose.model<IItemsAlternativi>(
-  'ItemsAlternativi',
-  ItemsAlternativiSchema as any
+'ItemsAlternativi',
+ItemsAlternativiSchema as any
 ) as mongoose.Model<IItemsAlternativi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ItemsAlternativi;
 export { ItemsAlternativiSchema };
 
 export type TItemsAlternativiModel = Omit<typeof ItemsAlternativi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IItemsAlternativi>): any
+translateAliases(raw: Partial<IItemsAlternativi>): any
 };
 
 export type TItemsAlternativiDocument = 

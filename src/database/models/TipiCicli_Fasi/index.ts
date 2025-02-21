@@ -8,8 +8,8 @@ import type { ITipiCicli_Fasi } from './TipiCicli_Fasi.Types';
 * Model Definition
 * -------- */
 const TipiCicli_Fasi = mongoose.model<ITipiCicli_Fasi>(
-  'TipiCicli_Fasi',
-  TipiCicli_FasiSchema as any
+'TipiCicli_Fasi',
+TipiCicli_FasiSchema as any
 ) as mongoose.Model<ITipiCicli_Fasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiCicli_Fasi;
 export { TipiCicli_FasiSchema };
 
 export type TTipiCicli_FasiModel = Omit<typeof TipiCicli_Fasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiCicli_Fasi>): any
+translateAliases(raw: Partial<ITipiCicli_Fasi>): any
 };
 
 export type TTipiCicli_FasiDocument = 

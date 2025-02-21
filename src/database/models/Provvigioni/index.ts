@@ -8,8 +8,8 @@ import type { IProvvigioni } from './Provvigioni.Types';
 * Model Definition
 * -------- */
 const Provvigioni = mongoose.model<IProvvigioni>(
-  'Provvigioni',
-  ProvvigioniSchema as any
+'Provvigioni',
+ProvvigioniSchema as any
 ) as mongoose.Model<IProvvigioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Provvigioni;
 export { ProvvigioniSchema };
 
 export type TProvvigioniModel = Omit<typeof Provvigioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IProvvigioni>): any
+translateAliases(raw: Partial<IProvvigioni>): any
 };
 
 export type TProvvigioniDocument = 

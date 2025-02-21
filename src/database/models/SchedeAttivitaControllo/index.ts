@@ -8,8 +8,8 @@ import type { ISchedeAttivitaControllo } from './SchedeAttivitaControllo.Types';
 * Model Definition
 * -------- */
 const SchedeAttivitaControllo = mongoose.model<ISchedeAttivitaControllo>(
-  'SchedeAttivitaControllo',
-  SchedeAttivitaControlloSchema as any
+'SchedeAttivitaControllo',
+SchedeAttivitaControlloSchema as any
 ) as mongoose.Model<ISchedeAttivitaControllo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SchedeAttivitaControllo;
 export { SchedeAttivitaControlloSchema };
 
 export type TSchedeAttivitaControlloModel = Omit<typeof SchedeAttivitaControllo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISchedeAttivitaControllo>): any
+translateAliases(raw: Partial<ISchedeAttivitaControllo>): any
 };
 
 export type TSchedeAttivitaControlloDocument = 

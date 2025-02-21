@@ -8,8 +8,8 @@ import type { IVociInterventi } from './VociInterventi.Types';
 * Model Definition
 * -------- */
 const VociInterventi = mongoose.model<IVociInterventi>(
-  'VociInterventi',
-  VociInterventiSchema as any
+'VociInterventi',
+VociInterventiSchema as any
 ) as mongoose.Model<IVociInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociInterventi;
 export { VociInterventiSchema };
 
 export type TVociInterventiModel = Omit<typeof VociInterventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociInterventi>): any
+translateAliases(raw: Partial<IVociInterventi>): any
 };
 
 export type TVociInterventiDocument = 

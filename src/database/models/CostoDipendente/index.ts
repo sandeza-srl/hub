@@ -8,8 +8,8 @@ import type { ICostoDipendente } from './CostoDipendente.Types';
 * Model Definition
 * -------- */
 const CostoDipendente = mongoose.model<ICostoDipendente>(
-  'CostoDipendente',
-  CostoDipendenteSchema as any
+'CostoDipendente',
+CostoDipendenteSchema as any
 ) as mongoose.Model<ICostoDipendente>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CostoDipendente;
 export { CostoDipendenteSchema };
 
 export type TCostoDipendenteModel = Omit<typeof CostoDipendente, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICostoDipendente>): any
+translateAliases(raw: Partial<ICostoDipendente>): any
 };
 
 export type TCostoDipendenteDocument = 

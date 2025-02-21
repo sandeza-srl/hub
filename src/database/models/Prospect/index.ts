@@ -8,8 +8,8 @@ import type { IProspect } from './Prospect.Types';
 * Model Definition
 * -------- */
 const Prospect = mongoose.model<IProspect>(
-  'Prospect',
-  ProspectSchema as any
+'Prospect',
+ProspectSchema as any
 ) as mongoose.Model<IProspect>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Prospect;
 export { ProspectSchema };
 
 export type TProspectModel = Omit<typeof Prospect, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IProspect>): any
+translateAliases(raw: Partial<IProspect>): any
 };
 
 export type TProspectDocument = 

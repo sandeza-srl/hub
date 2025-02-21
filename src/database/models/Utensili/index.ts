@@ -8,8 +8,8 @@ import type { IUtensili } from './Utensili.Types';
 * Model Definition
 * -------- */
 const Utensili = mongoose.model<IUtensili>(
-  'Utensili',
-  UtensiliSchema as any
+'Utensili',
+UtensiliSchema as any
 ) as mongoose.Model<IUtensili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Utensili;
 export { UtensiliSchema };
 
 export type TUtensiliModel = Omit<typeof Utensili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtensili>): any
+translateAliases(raw: Partial<IUtensili>): any
 };
 
 export type TUtensiliDocument = 

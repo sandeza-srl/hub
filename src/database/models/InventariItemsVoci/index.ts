@@ -8,8 +8,8 @@ import type { IInventariItemsVoci } from './InventariItemsVoci.Types';
 * Model Definition
 * -------- */
 const InventariItemsVoci = mongoose.model<IInventariItemsVoci>(
-  'InventariItemsVoci',
-  InventariItemsVociSchema as any
+'InventariItemsVoci',
+InventariItemsVociSchema as any
 ) as mongoose.Model<IInventariItemsVoci>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InventariItemsVoci;
 export { InventariItemsVociSchema };
 
 export type TInventariItemsVociModel = Omit<typeof InventariItemsVoci, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInventariItemsVoci>): any
+translateAliases(raw: Partial<IInventariItemsVoci>): any
 };
 
 export type TInventariItemsVociDocument = 

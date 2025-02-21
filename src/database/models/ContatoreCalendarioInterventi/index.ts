@@ -8,8 +8,8 @@ import type { IContatoreCalendarioInterventi } from './ContatoreCalendarioInterv
 * Model Definition
 * -------- */
 const ContatoreCalendarioInterventi = mongoose.model<IContatoreCalendarioInterventi>(
-  'ContatoreCalendarioInterventi',
-  ContatoreCalendarioInterventiSchema as any
+'ContatoreCalendarioInterventi',
+ContatoreCalendarioInterventiSchema as any
 ) as mongoose.Model<IContatoreCalendarioInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ContatoreCalendarioInterventi;
 export { ContatoreCalendarioInterventiSchema };
 
 export type TContatoreCalendarioInterventiModel = Omit<typeof ContatoreCalendarioInterventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IContatoreCalendarioInterventi>): any
+translateAliases(raw: Partial<IContatoreCalendarioInterventi>): any
 };
 
 export type TContatoreCalendarioInterventiDocument = 

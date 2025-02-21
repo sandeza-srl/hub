@@ -8,8 +8,8 @@ import type { ITraduzioniTipiProtocolli } from './TraduzioniTipiProtocolli.Types
 * Model Definition
 * -------- */
 const TraduzioniTipiProtocolli = mongoose.model<ITraduzioniTipiProtocolli>(
-  'TraduzioniTipiProtocolli',
-  TraduzioniTipiProtocolliSchema as any
+'TraduzioniTipiProtocolli',
+TraduzioniTipiProtocolliSchema as any
 ) as mongoose.Model<ITraduzioniTipiProtocolli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TraduzioniTipiProtocolli;
 export { TraduzioniTipiProtocolliSchema };
 
 export type TTraduzioniTipiProtocolliModel = Omit<typeof TraduzioniTipiProtocolli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITraduzioniTipiProtocolli>): any
+translateAliases(raw: Partial<ITraduzioniTipiProtocolli>): any
 };
 
 export type TTraduzioniTipiProtocolliDocument = 

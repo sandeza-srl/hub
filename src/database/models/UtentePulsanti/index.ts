@@ -8,8 +8,8 @@ import type { IUtentePulsanti } from './UtentePulsanti.Types';
 * Model Definition
 * -------- */
 const UtentePulsanti = mongoose.model<IUtentePulsanti>(
-  'UtentePulsanti',
-  UtentePulsantiSchema as any
+'UtentePulsanti',
+UtentePulsantiSchema as any
 ) as mongoose.Model<IUtentePulsanti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UtentePulsanti;
 export { UtentePulsantiSchema };
 
 export type TUtentePulsantiModel = Omit<typeof UtentePulsanti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtentePulsanti>): any
+translateAliases(raw: Partial<IUtentePulsanti>): any
 };
 
 export type TUtentePulsantiDocument = 

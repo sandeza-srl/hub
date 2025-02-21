@@ -8,8 +8,8 @@ import type { ICollegamentiTipiStepProcessi } from './CollegamentiTipiStepProces
 * Model Definition
 * -------- */
 const CollegamentiTipiStepProcessi = mongoose.model<ICollegamentiTipiStepProcessi>(
-  'CollegamentiTipiStepProcessi',
-  CollegamentiTipiStepProcessiSchema as any
+'CollegamentiTipiStepProcessi',
+CollegamentiTipiStepProcessiSchema as any
 ) as mongoose.Model<ICollegamentiTipiStepProcessi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CollegamentiTipiStepProcessi;
 export { CollegamentiTipiStepProcessiSchema };
 
 export type TCollegamentiTipiStepProcessiModel = Omit<typeof CollegamentiTipiStepProcessi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICollegamentiTipiStepProcessi>): any
+translateAliases(raw: Partial<ICollegamentiTipiStepProcessi>): any
 };
 
 export type TCollegamentiTipiStepProcessiDocument = 

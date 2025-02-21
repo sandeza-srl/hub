@@ -8,8 +8,8 @@ import type { IRegistrazioniOreStepProcesso } from './RegistrazioniOreStepProces
 * Model Definition
 * -------- */
 const RegistrazioniOreStepProcesso = mongoose.model<IRegistrazioniOreStepProcesso>(
-  'RegistrazioniOreStepProcesso',
-  RegistrazioniOreStepProcessoSchema as any
+'RegistrazioniOreStepProcesso',
+RegistrazioniOreStepProcessoSchema as any
 ) as mongoose.Model<IRegistrazioniOreStepProcesso>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RegistrazioniOreStepProcesso;
 export { RegistrazioniOreStepProcessoSchema };
 
 export type TRegistrazioniOreStepProcessoModel = Omit<typeof RegistrazioniOreStepProcesso, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRegistrazioniOreStepProcesso>): any
+translateAliases(raw: Partial<IRegistrazioniOreStepProcesso>): any
 };
 
 export type TRegistrazioniOreStepProcessoDocument = 

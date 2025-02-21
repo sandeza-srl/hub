@@ -8,8 +8,8 @@ import type { IFamiglieUtensili } from './FamiglieUtensili.Types';
 * Model Definition
 * -------- */
 const FamiglieUtensili = mongoose.model<IFamiglieUtensili>(
-  'FamiglieUtensili',
-  FamiglieUtensiliSchema as any
+'FamiglieUtensili',
+FamiglieUtensiliSchema as any
 ) as mongoose.Model<IFamiglieUtensili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FamiglieUtensili;
 export { FamiglieUtensiliSchema };
 
 export type TFamiglieUtensiliModel = Omit<typeof FamiglieUtensili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFamiglieUtensili>): any
+translateAliases(raw: Partial<IFamiglieUtensili>): any
 };
 
 export type TFamiglieUtensiliDocument = 

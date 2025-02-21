@@ -8,8 +8,8 @@ import type { IRichiesteHelp } from './RichiesteHelp.Types';
 * Model Definition
 * -------- */
 const RichiesteHelp = mongoose.model<IRichiesteHelp>(
-  'RichiesteHelp',
-  RichiesteHelpSchema as any
+'RichiesteHelp',
+RichiesteHelpSchema as any
 ) as mongoose.Model<IRichiesteHelp>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RichiesteHelp;
 export { RichiesteHelpSchema };
 
 export type TRichiesteHelpModel = Omit<typeof RichiesteHelp, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRichiesteHelp>): any
+translateAliases(raw: Partial<IRichiesteHelp>): any
 };
 
 export type TRichiesteHelpDocument = 

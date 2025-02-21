@@ -8,8 +8,8 @@ import type { IRevisioniOfferte } from './RevisioniOfferte.Types';
 * Model Definition
 * -------- */
 const RevisioniOfferte = mongoose.model<IRevisioniOfferte>(
-  'RevisioniOfferte',
-  RevisioniOfferteSchema as any
+'RevisioniOfferte',
+RevisioniOfferteSchema as any
 ) as mongoose.Model<IRevisioniOfferte>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RevisioniOfferte;
 export { RevisioniOfferteSchema };
 
 export type TRevisioniOfferteModel = Omit<typeof RevisioniOfferte, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRevisioniOfferte>): any
+translateAliases(raw: Partial<IRevisioniOfferte>): any
 };
 
 export type TRevisioniOfferteDocument = 

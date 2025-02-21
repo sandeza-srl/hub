@@ -8,8 +8,8 @@ import type { ITipiAttivitaStato } from './TipiAttivitaStato.Types';
 * Model Definition
 * -------- */
 const TipiAttivitaStato = mongoose.model<ITipiAttivitaStato>(
-  'TipiAttivitaStato',
-  TipiAttivitaStatoSchema as any
+'TipiAttivitaStato',
+TipiAttivitaStatoSchema as any
 ) as mongoose.Model<ITipiAttivitaStato>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiAttivitaStato;
 export { TipiAttivitaStatoSchema };
 
 export type TTipiAttivitaStatoModel = Omit<typeof TipiAttivitaStato, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiAttivitaStato>): any
+translateAliases(raw: Partial<ITipiAttivitaStato>): any
 };
 
 export type TTipiAttivitaStatoDocument = 

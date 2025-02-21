@@ -8,8 +8,8 @@ import type { IDescrizioneTipiEtichetteItems } from './DescrizioneTipiEtichetteI
 * Model Definition
 * -------- */
 const DescrizioneTipiEtichetteItems = mongoose.model<IDescrizioneTipiEtichetteItems>(
-  'DescrizioneTipiEtichetteItems',
-  DescrizioneTipiEtichetteItemsSchema as any
+'DescrizioneTipiEtichetteItems',
+DescrizioneTipiEtichetteItemsSchema as any
 ) as mongoose.Model<IDescrizioneTipiEtichetteItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DescrizioneTipiEtichetteItems;
 export { DescrizioneTipiEtichetteItemsSchema };
 
 export type TDescrizioneTipiEtichetteItemsModel = Omit<typeof DescrizioneTipiEtichetteItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDescrizioneTipiEtichetteItems>): any
+translateAliases(raw: Partial<IDescrizioneTipiEtichetteItems>): any
 };
 
 export type TDescrizioneTipiEtichetteItemsDocument = 

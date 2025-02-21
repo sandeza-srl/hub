@@ -8,8 +8,8 @@ import type { IClassiMerceologiche } from './ClassiMerceologiche.Types';
 * Model Definition
 * -------- */
 const ClassiMerceologiche = mongoose.model<IClassiMerceologiche>(
-  'ClassiMerceologiche',
-  ClassiMerceologicheSchema as any
+'ClassiMerceologiche',
+ClassiMerceologicheSchema as any
 ) as mongoose.Model<IClassiMerceologiche>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ClassiMerceologiche;
 export { ClassiMerceologicheSchema };
 
 export type TClassiMerceologicheModel = Omit<typeof ClassiMerceologiche, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IClassiMerceologiche>): any
+translateAliases(raw: Partial<IClassiMerceologiche>): any
 };
 
 export type TClassiMerceologicheDocument = 

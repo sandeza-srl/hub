@@ -8,8 +8,8 @@ import type { IVariazioniListino } from './VariazioniListino.Types';
 * Model Definition
 * -------- */
 const VariazioniListino = mongoose.model<IVariazioniListino>(
-  'VariazioniListino',
-  VariazioniListinoSchema as any
+'VariazioniListino',
+VariazioniListinoSchema as any
 ) as mongoose.Model<IVariazioniListino>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VariazioniListino;
 export { VariazioniListinoSchema };
 
 export type TVariazioniListinoModel = Omit<typeof VariazioniListino, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVariazioniListino>): any
+translateAliases(raw: Partial<IVariazioniListino>): any
 };
 
 export type TVariazioniListinoDocument = 

@@ -10,13 +10,13 @@ import type { IIntegrazioniPrivate } from './Integrazioni.Types.Private';
 * -------- */
 const IntegrazioniSchema = new mongoose.Schema<IIntegrazioniPrivate>({
 
-  _id: {
-    type: String,
-    default: uuid.v4
-  },
+_id: {
+type: String,
+default: uuid.v4
+},
 
 }, {
-  timestamps: true
+timestamps: true
 });
 
 /* --------

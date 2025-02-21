@@ -8,8 +8,8 @@ import type { ICodificheSocieta } from './CodificheSocieta.Types';
 * Model Definition
 * -------- */
 const CodificheSocieta = mongoose.model<ICodificheSocieta>(
-  'CodificheSocieta',
-  CodificheSocietaSchema as any
+'CodificheSocieta',
+CodificheSocietaSchema as any
 ) as mongoose.Model<ICodificheSocieta>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CodificheSocieta;
 export { CodificheSocietaSchema };
 
 export type TCodificheSocietaModel = Omit<typeof CodificheSocieta, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICodificheSocieta>): any
+translateAliases(raw: Partial<ICodificheSocieta>): any
 };
 
 export type TCodificheSocietaDocument = 

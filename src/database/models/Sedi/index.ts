@@ -8,8 +8,8 @@ import type { ISedi } from './Sedi.Types';
 * Model Definition
 * -------- */
 const Sedi = mongoose.model<ISedi>(
-  'Sedi',
-  SediSchema as any
+'Sedi',
+SediSchema as any
 ) as mongoose.Model<ISedi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Sedi;
 export { SediSchema };
 
 export type TSediModel = Omit<typeof Sedi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISedi>): any
+translateAliases(raw: Partial<ISedi>): any
 };
 
 export type TSediDocument = 

@@ -8,8 +8,8 @@ import type { IVociImpostazioneCosti } from './VociImpostazioneCosti.Types';
 * Model Definition
 * -------- */
 const VociImpostazioneCosti = mongoose.model<IVociImpostazioneCosti>(
-  'VociImpostazioneCosti',
-  VociImpostazioneCostiSchema as any
+'VociImpostazioneCosti',
+VociImpostazioneCostiSchema as any
 ) as mongoose.Model<IVociImpostazioneCosti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociImpostazioneCosti;
 export { VociImpostazioneCostiSchema };
 
 export type TVociImpostazioneCostiModel = Omit<typeof VociImpostazioneCosti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociImpostazioneCosti>): any
+translateAliases(raw: Partial<IVociImpostazioneCosti>): any
 };
 
 export type TVociImpostazioneCostiDocument = 

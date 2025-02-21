@@ -8,8 +8,8 @@ import type { ITipiTurno } from './TipiTurno.Types';
 * Model Definition
 * -------- */
 const TipiTurno = mongoose.model<ITipiTurno>(
-  'TipiTurno',
-  TipiTurnoSchema as any
+'TipiTurno',
+TipiTurnoSchema as any
 ) as mongoose.Model<ITipiTurno>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiTurno;
 export { TipiTurnoSchema };
 
 export type TTipiTurnoModel = Omit<typeof TipiTurno, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiTurno>): any
+translateAliases(raw: Partial<ITipiTurno>): any
 };
 
 export type TTipiTurnoDocument = 

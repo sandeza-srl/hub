@@ -8,8 +8,8 @@ import type { IInterventi } from './Interventi.Types';
 * Model Definition
 * -------- */
 const Interventi = mongoose.model<IInterventi>(
-  'Interventi',
-  InterventiSchema as any
+'Interventi',
+InterventiSchema as any
 ) as mongoose.Model<IInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Interventi;
 export { InterventiSchema };
 
 export type TInterventiModel = Omit<typeof Interventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInterventi>): any
+translateAliases(raw: Partial<IInterventi>): any
 };
 
 export type TInterventiDocument = 

@@ -8,8 +8,8 @@ import type { IGruppiLavoro } from './GruppiLavoro.Types';
 * Model Definition
 * -------- */
 const GruppiLavoro = mongoose.model<IGruppiLavoro>(
-  'GruppiLavoro',
-  GruppiLavoroSchema as any
+'GruppiLavoro',
+GruppiLavoroSchema as any
 ) as mongoose.Model<IGruppiLavoro>;
 
 /* --------
@@ -20,7 +20,7 @@ export default GruppiLavoro;
 export { GruppiLavoroSchema };
 
 export type TGruppiLavoroModel = Omit<typeof GruppiLavoro, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IGruppiLavoro>): any
+translateAliases(raw: Partial<IGruppiLavoro>): any
 };
 
 export type TGruppiLavoroDocument = 

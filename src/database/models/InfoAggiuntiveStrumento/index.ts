@@ -8,8 +8,8 @@ import type { IInfoAggiuntiveStrumento } from './InfoAggiuntiveStrumento.Types';
 * Model Definition
 * -------- */
 const InfoAggiuntiveStrumento = mongoose.model<IInfoAggiuntiveStrumento>(
-  'InfoAggiuntiveStrumento',
-  InfoAggiuntiveStrumentoSchema as any
+'InfoAggiuntiveStrumento',
+InfoAggiuntiveStrumentoSchema as any
 ) as mongoose.Model<IInfoAggiuntiveStrumento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InfoAggiuntiveStrumento;
 export { InfoAggiuntiveStrumentoSchema };
 
 export type TInfoAggiuntiveStrumentoModel = Omit<typeof InfoAggiuntiveStrumento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInfoAggiuntiveStrumento>): any
+translateAliases(raw: Partial<IInfoAggiuntiveStrumento>): any
 };
 
 export type TInfoAggiuntiveStrumentoDocument = 

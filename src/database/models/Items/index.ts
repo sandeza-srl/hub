@@ -8,8 +8,8 @@ import type { IItems } from './Items.Types';
 * Model Definition
 * -------- */
 const Items = mongoose.model<IItems>(
-  'Items',
-  ItemsSchema as any
+'Items',
+ItemsSchema as any
 ) as mongoose.Model<IItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Items;
 export { ItemsSchema };
 
 export type TItemsModel = Omit<typeof Items, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IItems>): any
+translateAliases(raw: Partial<IItems>): any
 };
 
 export type TItemsDocument = 

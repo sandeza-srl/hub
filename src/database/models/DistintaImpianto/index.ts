@@ -8,8 +8,8 @@ import type { IDistintaImpianto } from './DistintaImpianto.Types';
 * Model Definition
 * -------- */
 const DistintaImpianto = mongoose.model<IDistintaImpianto>(
-  'DistintaImpianto',
-  DistintaImpiantoSchema as any
+'DistintaImpianto',
+DistintaImpiantoSchema as any
 ) as mongoose.Model<IDistintaImpianto>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DistintaImpianto;
 export { DistintaImpiantoSchema };
 
 export type TDistintaImpiantoModel = Omit<typeof DistintaImpianto, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDistintaImpianto>): any
+translateAliases(raw: Partial<IDistintaImpianto>): any
 };
 
 export type TDistintaImpiantoDocument = 

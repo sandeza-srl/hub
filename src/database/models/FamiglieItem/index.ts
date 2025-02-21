@@ -8,8 +8,8 @@ import type { IFamiglieItem } from './FamiglieItem.Types';
 * Model Definition
 * -------- */
 const FamiglieItem = mongoose.model<IFamiglieItem>(
-  'FamiglieItem',
-  FamiglieItemSchema as any
+'FamiglieItem',
+FamiglieItemSchema as any
 ) as mongoose.Model<IFamiglieItem>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FamiglieItem;
 export { FamiglieItemSchema };
 
 export type TFamiglieItemModel = Omit<typeof FamiglieItem, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFamiglieItem>): any
+translateAliases(raw: Partial<IFamiglieItem>): any
 };
 
 export type TFamiglieItemDocument = 

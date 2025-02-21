@@ -8,8 +8,8 @@ import type { IP_VL_SlotVariazioniCalendario } from './P_VL_SlotVariazioniCalend
 * Model Definition
 * -------- */
 const P_VL_SlotVariazioniCalendario = mongoose.model<IP_VL_SlotVariazioniCalendario>(
-  'P_VL_SlotVariazioniCalendario',
-  P_VL_SlotVariazioniCalendarioSchema as any
+'P_VL_SlotVariazioniCalendario',
+P_VL_SlotVariazioniCalendarioSchema as any
 ) as mongoose.Model<IP_VL_SlotVariazioniCalendario>;
 
 /* --------
@@ -20,7 +20,7 @@ export default P_VL_SlotVariazioniCalendario;
 export { P_VL_SlotVariazioniCalendarioSchema };
 
 export type TP_VL_SlotVariazioniCalendarioModel = Omit<typeof P_VL_SlotVariazioniCalendario, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IP_VL_SlotVariazioniCalendario>): any
+translateAliases(raw: Partial<IP_VL_SlotVariazioniCalendario>): any
 };
 
 export type TP_VL_SlotVariazioniCalendarioDocument = 

@@ -8,8 +8,8 @@ import type { IP_CalendarioSlot } from './P_CalendarioSlot.Types';
 * Model Definition
 * -------- */
 const P_CalendarioSlot = mongoose.model<IP_CalendarioSlot>(
-  'P_CalendarioSlot',
-  P_CalendarioSlotSchema as any
+'P_CalendarioSlot',
+P_CalendarioSlotSchema as any
 ) as mongoose.Model<IP_CalendarioSlot>;
 
 /* --------
@@ -20,7 +20,7 @@ export default P_CalendarioSlot;
 export { P_CalendarioSlotSchema };
 
 export type TP_CalendarioSlotModel = Omit<typeof P_CalendarioSlot, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IP_CalendarioSlot>): any
+translateAliases(raw: Partial<IP_CalendarioSlot>): any
 };
 
 export type TP_CalendarioSlotDocument = 

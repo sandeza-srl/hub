@@ -8,8 +8,8 @@ import type { IContiStatoPatrimoniale } from './ContiStatoPatrimoniale.Types';
 * Model Definition
 * -------- */
 const ContiStatoPatrimoniale = mongoose.model<IContiStatoPatrimoniale>(
-  'ContiStatoPatrimoniale',
-  ContiStatoPatrimonialeSchema as any
+'ContiStatoPatrimoniale',
+ContiStatoPatrimonialeSchema as any
 ) as mongoose.Model<IContiStatoPatrimoniale>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ContiStatoPatrimoniale;
 export { ContiStatoPatrimonialeSchema };
 
 export type TContiStatoPatrimonialeModel = Omit<typeof ContiStatoPatrimoniale, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IContiStatoPatrimoniale>): any
+translateAliases(raw: Partial<IContiStatoPatrimoniale>): any
 };
 
 export type TContiStatoPatrimonialeDocument = 

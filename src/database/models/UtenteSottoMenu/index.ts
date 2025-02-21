@@ -8,8 +8,8 @@ import type { IUtenteSottoMenu } from './UtenteSottoMenu.Types';
 * Model Definition
 * -------- */
 const UtenteSottoMenu = mongoose.model<IUtenteSottoMenu>(
-  'UtenteSottoMenu',
-  UtenteSottoMenuSchema as any
+'UtenteSottoMenu',
+UtenteSottoMenuSchema as any
 ) as mongoose.Model<IUtenteSottoMenu>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UtenteSottoMenu;
 export { UtenteSottoMenuSchema };
 
 export type TUtenteSottoMenuModel = Omit<typeof UtenteSottoMenu, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtenteSottoMenu>): any
+translateAliases(raw: Partial<IUtenteSottoMenu>): any
 };
 
 export type TUtenteSottoMenuDocument = 

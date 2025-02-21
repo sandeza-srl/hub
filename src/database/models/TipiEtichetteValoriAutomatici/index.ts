@@ -8,8 +8,8 @@ import type { ITipiEtichetteValoriAutomatici } from './TipiEtichetteValoriAutoma
 * Model Definition
 * -------- */
 const TipiEtichetteValoriAutomatici = mongoose.model<ITipiEtichetteValoriAutomatici>(
-  'TipiEtichetteValoriAutomatici',
-  TipiEtichetteValoriAutomaticiSchema as any
+'TipiEtichetteValoriAutomatici',
+TipiEtichetteValoriAutomaticiSchema as any
 ) as mongoose.Model<ITipiEtichetteValoriAutomatici>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiEtichetteValoriAutomatici;
 export { TipiEtichetteValoriAutomaticiSchema };
 
 export type TTipiEtichetteValoriAutomaticiModel = Omit<typeof TipiEtichetteValoriAutomatici, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiEtichetteValoriAutomatici>): any
+translateAliases(raw: Partial<ITipiEtichetteValoriAutomatici>): any
 };
 
 export type TTipiEtichetteValoriAutomaticiDocument = 

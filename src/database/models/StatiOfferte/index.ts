@@ -8,8 +8,8 @@ import type { IStatiOfferte } from './StatiOfferte.Types';
 * Model Definition
 * -------- */
 const StatiOfferte = mongoose.model<IStatiOfferte>(
-  'StatiOfferte',
-  StatiOfferteSchema as any
+'StatiOfferte',
+StatiOfferteSchema as any
 ) as mongoose.Model<IStatiOfferte>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StatiOfferte;
 export { StatiOfferteSchema };
 
 export type TStatiOfferteModel = Omit<typeof StatiOfferte, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStatiOfferte>): any
+translateAliases(raw: Partial<IStatiOfferte>): any
 };
 
 export type TStatiOfferteDocument = 

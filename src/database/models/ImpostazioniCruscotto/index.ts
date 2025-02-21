@@ -8,8 +8,8 @@ import type { IImpostazioniCruscotto } from './ImpostazioniCruscotto.Types';
 * Model Definition
 * -------- */
 const ImpostazioniCruscotto = mongoose.model<IImpostazioniCruscotto>(
-  'ImpostazioniCruscotto',
-  ImpostazioniCruscottoSchema as any
+'ImpostazioniCruscotto',
+ImpostazioniCruscottoSchema as any
 ) as mongoose.Model<IImpostazioniCruscotto>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ImpostazioniCruscotto;
 export { ImpostazioniCruscottoSchema };
 
 export type TImpostazioniCruscottoModel = Omit<typeof ImpostazioniCruscotto, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IImpostazioniCruscotto>): any
+translateAliases(raw: Partial<IImpostazioniCruscotto>): any
 };
 
 export type TImpostazioniCruscottoDocument = 

@@ -8,8 +8,8 @@ import type { IUtenteSocieta } from './UtenteSocieta.Types';
 * Model Definition
 * -------- */
 const UtenteSocieta = mongoose.model<IUtenteSocieta>(
-  'UtenteSocieta',
-  UtenteSocietaSchema as any
+'UtenteSocieta',
+UtenteSocietaSchema as any
 ) as mongoose.Model<IUtenteSocieta>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UtenteSocieta;
 export { UtenteSocietaSchema };
 
 export type TUtenteSocietaModel = Omit<typeof UtenteSocieta, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtenteSocieta>): any
+translateAliases(raw: Partial<IUtenteSocieta>): any
 };
 
 export type TUtenteSocietaDocument = 

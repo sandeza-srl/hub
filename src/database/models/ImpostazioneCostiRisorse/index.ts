@@ -8,8 +8,8 @@ import type { IImpostazioneCostiRisorse } from './ImpostazioneCostiRisorse.Types
 * Model Definition
 * -------- */
 const ImpostazioneCostiRisorse = mongoose.model<IImpostazioneCostiRisorse>(
-  'ImpostazioneCostiRisorse',
-  ImpostazioneCostiRisorseSchema as any
+'ImpostazioneCostiRisorse',
+ImpostazioneCostiRisorseSchema as any
 ) as mongoose.Model<IImpostazioneCostiRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ImpostazioneCostiRisorse;
 export { ImpostazioneCostiRisorseSchema };
 
 export type TImpostazioneCostiRisorseModel = Omit<typeof ImpostazioneCostiRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IImpostazioneCostiRisorse>): any
+translateAliases(raw: Partial<IImpostazioneCostiRisorse>): any
 };
 
 export type TImpostazioneCostiRisorseDocument = 

@@ -8,8 +8,8 @@ import type { ITipologieAttivita } from './TipologieAttivita.Types';
 * Model Definition
 * -------- */
 const TipologieAttivita = mongoose.model<ITipologieAttivita>(
-  'TipologieAttivita',
-  TipologieAttivitaSchema as any
+'TipologieAttivita',
+TipologieAttivitaSchema as any
 ) as mongoose.Model<ITipologieAttivita>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipologieAttivita;
 export { TipologieAttivitaSchema };
 
 export type TTipologieAttivitaModel = Omit<typeof TipologieAttivita, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipologieAttivita>): any
+translateAliases(raw: Partial<ITipologieAttivita>): any
 };
 
 export type TTipologieAttivitaDocument = 

@@ -8,8 +8,8 @@ import type { ITipiCave } from './TipiCave.Types';
 * Model Definition
 * -------- */
 const TipiCave = mongoose.model<ITipiCave>(
-  'TipiCave',
-  TipiCaveSchema as any
+'TipiCave',
+TipiCaveSchema as any
 ) as mongoose.Model<ITipiCave>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiCave;
 export { TipiCaveSchema };
 
 export type TTipiCaveModel = Omit<typeof TipiCave, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiCave>): any
+translateAliases(raw: Partial<ITipiCave>): any
 };
 
 export type TTipiCaveDocument = 

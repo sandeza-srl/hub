@@ -8,8 +8,8 @@ import type { IInformazioniItems } from './InformazioniItems.Types';
 * Model Definition
 * -------- */
 const InformazioniItems = mongoose.model<IInformazioniItems>(
-  'InformazioniItems',
-  InformazioniItemsSchema as any
+'InformazioniItems',
+InformazioniItemsSchema as any
 ) as mongoose.Model<IInformazioniItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InformazioniItems;
 export { InformazioniItemsSchema };
 
 export type TInformazioniItemsModel = Omit<typeof InformazioniItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInformazioniItems>): any
+translateAliases(raw: Partial<IInformazioniItems>): any
 };
 
 export type TInformazioniItemsDocument = 

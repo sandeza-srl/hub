@@ -10,281 +10,286 @@ import type { ITipiInterventiPrivate } from './TipiInterventi.Types.Private';
 * -------- */
 const TipiInterventiSchema = new mongoose.Schema<ITipiInterventiPrivate>({
 
-  _id: {
-    type: String,
-    default: uuid.v4
-  },
-  __Dati_Testo001: {
-    type: String,
-    alias: 'IdAccountCompagnia',
+_id: {
+type: String,
+default: uuid.v4
+},
+__Dati_Testo001: {
+type: String,
+alias: 'IdAccountCompagnia',
 
-  },
-  __Dati_Testo002: {
-    type: String,
-    alias: 'IdTipoIntervento',
+},
+__Dati_Testo002: {
+type: String,
+alias: 'IdTipoIntervento',
 
-  },
-  __Dati_Testo003: {
-    type: String,
-    alias: 'TxtTipoIntervento',
+},
+__Dati_Testo003: {
+type: String,
+alias: 'TxtTipoIntervento',
 
-  },
-  __Dati_Numero001: {
-    type: Number,
-    alias: 'Uno',
+},
+__Dati_Numero001: {
+type: Number,
+alias: 'Uno',
 
-  },
-  __Dati_Testo004: {
-    type: String,
-    alias: 'IdTipoDocOperativo',
+},
+__Dati_Testo004: {
+type: String,
+alias: 'IdTipoDocOperativo',
 
-  },
-  __Dati_Testo005: {
-    type: String,
-    alias: 'TipoDocumento',
+},
+__Dati_Testo005: {
+type: String,
+alias: 'TipoDocumento',
 
-  },
-  __Dati_Testo006: {
-    type: String,
-    alias: 'SottoTipoDocumento',
+},
+__Dati_Testo006: {
+type: String,
+alias: 'SottoTipoDocumento',
 
-  },
-  __Dati_Numero002: {
-    type: Number,
-    alias: 'FlagDocOperativoUnico',
+},
+__Dati_Numero002: {
+type: Number,
+alias: 'FlagDocOperativoUnico',
 
-  },
-  __Dati_Numero003: {
-    type: Number,
-    alias: 'FlagDdtCreabile',
+},
+__Dati_Numero003: {
+type: Number,
+alias: 'FlagDdtCreabile',
 
-  },
-  __Dati_Numero004: {
-    type: Number,
-    alias: 'FlagPagamentoAbilitato',
+},
+__Dati_Numero004: {
+type: Number,
+alias: 'FlagPagamentoAbilitato',
 
-  },
-  __Dati_Testo007: {
-    type: String,
-    alias: 'IdTipoDocOperativoDdt',
+},
+__Dati_Testo007: {
+type: String,
+alias: 'IdTipoDocOperativoDdt',
 
-  },
-  __Dati_Testo008: {
-    type: String,
-    alias: 'NomeFormatoStampa',
+},
+__Dati_Testo008: {
+type: String,
+alias: 'NomeFormatoStampa',
 
-  },
-  __Dati_Testo009: {
-    type: String,
-    alias: 'IdTipoDocumento',
+},
+__Dati_Testo009: {
+type: String,
+alias: 'IdTipoDocumento',
 
-  },
-  __Dati_Testo010: {
-    type: String,
-    alias: 'IdSottoTipoDocumento',
+},
+__Dati_Testo010: {
+type: String,
+alias: 'IdSottoTipoDocumento',
 
-  },
-  __Dati_DataOra001: {
-    type: Date,
-    alias: 'DataOraCreazione',
-    set: (value: any) => {
-      return DateConverter.convertDateHour(value);
-    }
-  },
-  __Dati_DataOra002: {
-    type: Date,
-    alias: 'DataOraUltimaModifica',
-    set: (value: any) => {
-      return DateConverter.convertDateHour(value);
-    }
-  },
-  __Dati_Numero005: {
-    type: Number,
-    alias: 'Zero',
+},
+__Dati_DataOra001: {
+type: Date,
+alias: 'DataOraCreazione',
+set: (value: any) => {
+ return DateConverter.convertDateHour(value);
+}
+},
+__Dati_DataOra002: {
+type: Date,
+alias: 'DataOraUltimaModifica',
+set: (value: any) => {
+ return DateConverter.convertDateHour(value);
+}
+},
+__Dati_Numero005: {
+type: Number,
+alias: 'Zero',
 
-  },
-  __Dati_Testo011: {
-    type: String,
-    alias: 'IdCassaBanca',
+},
+__Dati_Testo011: {
+type: String,
+alias: 'IdCassaBanca',
 
-  },
-  __Dati_Numero006: {
-    type: Number,
-    alias: 'FlagErroriValori',
+},
+__Dati_Numero006: {
+type: Number,
+alias: 'FlagErroriValori',
 
-  },
-  __Dati_Numero007: {
-    type: Number,
-    alias: 'FlagErroriValoriTxt',
+},
+__Dati_Numero007: {
+type: Number,
+alias: 'FlagErroriValoriTxt',
 
-  },
-  __Dati_Numero008: {
-    type: Number,
-    alias: 'FlagEreditaScontoOrigine',
+},
+__Dati_Numero008: {
+type: Number,
+alias: 'FlagEreditaScontoOrigine',
 
-  },
-  __Dati_Numero009: {
-    type: Number,
-    alias: 'FlagFeedbackRichiesto',
+},
+__Dati_Numero009: {
+type: Number,
+alias: 'FlagFeedbackRichiesto',
 
-  },
-  __Dati_Testo012: {
-    type: String,
-    alias: 'ContenutoMailFeedback',
+},
+__Dati_Testo012: {
+type: String,
+alias: 'ContenutoMailFeedback',
 
-  },
-  __Dati_Testo013: {
-    type: String,
-    alias: 'MailServerNome',
+},
+__Dati_Testo013: {
+type: String,
+alias: 'MailServerNome',
 
-  },
-  __Dati_Testo014: {
-    type: String,
-    alias: 'MailServerIndirizzo',
+},
+__Dati_Testo014: {
+type: String,
+alias: 'MailServerIndirizzo',
 
-  },
-  __Dati_Testo015: {
-    type: String,
-    alias: 'MailServerSMTP',
+},
+__Dati_Testo015: {
+type: String,
+alias: 'MailServerSMTP',
 
-  },
-  __Dati_Testo016: {
-    type: String,
-    alias: 'MailServerPorta',
+},
+__Dati_Testo016: {
+type: String,
+alias: 'MailServerPorta',
 
-  },
-  __Dati_Testo017: {
-    type: String,
-    alias: 'MailServerUsername',
+},
+__Dati_Testo017: {
+type: String,
+alias: 'MailServerUsername',
 
-  },
-  __Dati_Testo018: {
-    type: String,
-    alias: 'MailServerPassword',
+},
+__Dati_Testo018: {
+type: String,
+alias: 'MailServerPassword',
 
-  },
-  __Dati_Testo019: {
-    type: String,
-    alias: 'IdTipoDocOperativoOrigineAutomatica',
+},
+__Dati_Testo019: {
+type: String,
+alias: 'IdTipoDocOperativoOrigineAutomatica',
 
-  },
-  __Dati_Numero010: {
-    type: Number,
-    alias: 'FlagChiusuraAutomatica',
+},
+__Dati_Numero010: {
+type: Number,
+alias: 'FlagChiusuraAutomatica',
 
-  },
-  __Dati_Testo020: {
-    type: String,
-    alias: 'IdAccountPagatore',
+},
+__Dati_Testo020: {
+type: String,
+alias: 'IdAccountPagatore',
 
-  },
-  __Dati_Testo021: {
-    type: String,
-    alias: 'IdInstallazione',
+},
+__Dati_Testo021: {
+type: String,
+alias: 'IdInstallazione',
 
-  },
-  __Dati_Testo022: {
-    type: String,
-    alias: 'IdSottoFamiglieAbilitate',
+},
+__Dati_Testo022: {
+type: String,
+alias: 'IdSottoFamiglieAbilitate',
 
-  },
-  __Dati_Testo023: {
-    type: String,
-    alias: 'IdFamiglieAbilitate',
+},
+__Dati_Testo023: {
+type: String,
+alias: 'IdFamiglieAbilitate',
 
-  },
-  __Dati_Numero011: {
-    type: Number,
-    alias: 'FlagMostraInfoAggiuntive',
+},
+__Dati_Numero011: {
+type: Number,
+alias: 'FlagMostraInfoAggiuntive',
 
-  },
-  __Dati_Testo024: {
-    type: String,
-    alias: 'FlagTipo_TipoLista',
+},
+__Dati_Testo024: {
+type: String,
+alias: 'FlagTipo_TipoLista',
 
-  },
-  __Dati_Testo025: {
-    type: String,
-    alias: 'IdClasseInterventi',
+},
+__Dati_Testo025: {
+type: String,
+alias: 'IdClasseInterventi',
 
-  },
-  __Dati_Testo026: {
-    type: String,
-    alias: 'GeneraCodice_AltroIdTipoInterventoPerCodice',
+},
+__Dati_Testo026: {
+type: String,
+alias: 'GeneraCodice_AltroIdTipoInterventoPerCodice',
 
-  },
-  __Dati_Numero012: {
-    type: Number,
-    alias: 'GeneraCodice_CifreProgressivo',
+},
+__Dati_Numero012: {
+type: Number,
+alias: 'GeneraCodice_CifreProgressivo',
 
-  },
-  __Dati_Numero013: {
-    type: Number,
-    alias: 'GeneraCodice_FlagTxtPeriodoContabileVisibile',
+},
+__Dati_Numero013: {
+type: Number,
+alias: 'GeneraCodice_FlagTxtPeriodoContabileVisibile',
 
-  },
-  __Dati_Numero014: {
-    type: Number,
-    alias: 'GeneraCodice_FlagUsaCodiceAltro',
+},
+__Dati_Numero014: {
+type: Number,
+alias: 'GeneraCodice_FlagUsaCodiceAltro',
 
-  },
-  __Dati_Testo027: {
-    type: String,
-    alias: 'GeneraCodice_IdPeriodoContabileTest',
+},
+__Dati_Testo027: {
+type: String,
+alias: 'GeneraCodice_IdPeriodoContabileTest',
 
-  },
-  __Dati_Testo028: {
-    type: String,
-    alias: 'GeneraCodice_IdTipoInterventoPerCodice',
+},
+__Dati_Testo028: {
+type: String,
+alias: 'GeneraCodice_IdTipoInterventoPerCodice',
 
-  },
-  __Dati_Numero015: {
-    type: Number,
-    alias: 'GeneraCodice_OrdineProgressivo',
+},
+__Dati_Numero015: {
+type: Number,
+alias: 'GeneraCodice_OrdineProgressivo',
 
-  },
-  __Dati_Numero016: {
-    type: Number,
-    alias: 'GeneraCodice_OrdineTesto',
+},
+__Dati_Numero016: {
+type: Number,
+alias: 'GeneraCodice_OrdineTesto',
 
-  },
-  __Dati_Numero017: {
-    type: Number,
-    alias: 'GeneraCodice_OrdineTxtPeriodoContabile',
+},
+__Dati_Numero017: {
+type: Number,
+alias: 'GeneraCodice_OrdineTxtPeriodoContabile',
 
-  },
-  __Dati_Numero018: {
-    type: Number,
-    alias: 'GeneraCodice_Progressivo',
+},
+__Dati_Numero018: {
+type: Number,
+alias: 'GeneraCodice_Progressivo',
 
-  },
-  __Dati_Testo029: {
-    type: String,
-    alias: 'GeneraCodice_ProssimoCodice',
+},
+__Dati_Testo029: {
+type: String,
+alias: 'GeneraCodice_ProssimoCodice',
 
-  },
-  __Dati_Testo030: {
-    type: String,
-    alias: 'GeneraCodice_Separatore',
+},
+__Dati_Testo030: {
+type: String,
+alias: 'GeneraCodice_Separatore',
 
-  },
-  __Dati_Testo031: {
-    type: String,
-    alias: 'GeneraCodice_Testo',
+},
+__Dati_Testo031: {
+type: String,
+alias: 'GeneraCodice_Testo',
 
-  },
-  __Dati_Testo032: {
-    type: String,
-    alias: 'GeneraCodice_TxtPeriodoContabileTest',
+},
+__Dati_Testo032: {
+type: String,
+alias: 'GeneraCodice_TxtPeriodoContabileTest',
 
-  },
-  __Dati_Numero019: {
-    type: Number,
-    alias: 'FlagRispettaProgressivo',
+},
+__Dati_Numero019: {
+type: Number,
+alias: 'FlagRispettaProgressivo',
 
-  }
+},
+__Dati_Testo033: {
+type: String,
+alias: 'Integrazione_DatiVariAC',
+
+}
 }, {
-  timestamps: true
+timestamps: true
 });
 
 /* --------

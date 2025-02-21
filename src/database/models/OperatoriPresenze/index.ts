@@ -8,8 +8,8 @@ import type { IOperatoriPresenze } from './OperatoriPresenze.Types';
 * Model Definition
 * -------- */
 const OperatoriPresenze = mongoose.model<IOperatoriPresenze>(
-  'OperatoriPresenze',
-  OperatoriPresenzeSchema as any
+'OperatoriPresenze',
+OperatoriPresenzeSchema as any
 ) as mongoose.Model<IOperatoriPresenze>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriPresenze;
 export { OperatoriPresenzeSchema };
 
 export type TOperatoriPresenzeModel = Omit<typeof OperatoriPresenze, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriPresenze>): any
+translateAliases(raw: Partial<IOperatoriPresenze>): any
 };
 
 export type TOperatoriPresenzeDocument = 

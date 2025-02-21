@@ -8,8 +8,8 @@ import type { IPresenze } from './Presenze.Types';
 * Model Definition
 * -------- */
 const Presenze = mongoose.model<IPresenze>(
-  'Presenze',
-  PresenzeSchema as any
+'Presenze',
+PresenzeSchema as any
 ) as mongoose.Model<IPresenze>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Presenze;
 export { PresenzeSchema };
 
 export type TPresenzeModel = Omit<typeof Presenze, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPresenze>): any
+translateAliases(raw: Partial<IPresenze>): any
 };
 
 export type TPresenzeDocument = 

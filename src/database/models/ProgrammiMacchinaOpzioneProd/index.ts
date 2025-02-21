@@ -8,8 +8,8 @@ import type { IProgrammiMacchinaOpzioneProd } from './ProgrammiMacchinaOpzionePr
 * Model Definition
 * -------- */
 const ProgrammiMacchinaOpzioneProd = mongoose.model<IProgrammiMacchinaOpzioneProd>(
-  'ProgrammiMacchinaOpzioneProd',
-  ProgrammiMacchinaOpzioneProdSchema as any
+'ProgrammiMacchinaOpzioneProd',
+ProgrammiMacchinaOpzioneProdSchema as any
 ) as mongoose.Model<IProgrammiMacchinaOpzioneProd>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ProgrammiMacchinaOpzioneProd;
 export { ProgrammiMacchinaOpzioneProdSchema };
 
 export type TProgrammiMacchinaOpzioneProdModel = Omit<typeof ProgrammiMacchinaOpzioneProd, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IProgrammiMacchinaOpzioneProd>): any
+translateAliases(raw: Partial<IProgrammiMacchinaOpzioneProd>): any
 };
 
 export type TProgrammiMacchinaOpzioneProdDocument = 

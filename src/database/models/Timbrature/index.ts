@@ -8,8 +8,8 @@ import type { ITimbrature } from './Timbrature.Types';
 * Model Definition
 * -------- */
 const Timbrature = mongoose.model<ITimbrature>(
-  'Timbrature',
-  TimbratureSchema as any
+'Timbrature',
+TimbratureSchema as any
 ) as mongoose.Model<ITimbrature>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Timbrature;
 export { TimbratureSchema };
 
 export type TTimbratureModel = Omit<typeof Timbrature, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITimbrature>): any
+translateAliases(raw: Partial<ITimbrature>): any
 };
 
 export type TTimbratureDocument = 

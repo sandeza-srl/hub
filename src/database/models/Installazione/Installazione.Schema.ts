@@ -10,17 +10,22 @@ import type { IInstallazionePrivate } from './Installazione.Types.Private';
 * -------- */
 const InstallazioneSchema = new mongoose.Schema<IInstallazionePrivate>({
 
-  _id: {
-    type: String,
-    default: uuid.v4
-  },
-  __Dati_Numero001: {
-    type: Number,
-    alias: 'FlagMongoDB',
+_id: {
+type: String,
+default: uuid.v4
+},
+__Dati_Numero001: {
+type: Number,
+alias: 'FlagMongoDB',
 
-  }
+},
+__Dati_Numero002: {
+type: Number,
+alias: 'Performance_ServerQueueManagerAttivo',
+
+}
 }, {
-  timestamps: true
+timestamps: true
 });
 
 /* --------

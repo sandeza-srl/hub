@@ -8,8 +8,8 @@ import type { IStoricoStatoUtensile } from './StoricoStatoUtensile.Types';
 * Model Definition
 * -------- */
 const StoricoStatoUtensile = mongoose.model<IStoricoStatoUtensile>(
-  'StoricoStatoUtensile',
-  StoricoStatoUtensileSchema as any
+'StoricoStatoUtensile',
+StoricoStatoUtensileSchema as any
 ) as mongoose.Model<IStoricoStatoUtensile>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StoricoStatoUtensile;
 export { StoricoStatoUtensileSchema };
 
 export type TStoricoStatoUtensileModel = Omit<typeof StoricoStatoUtensile, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStoricoStatoUtensile>): any
+translateAliases(raw: Partial<IStoricoStatoUtensile>): any
 };
 
 export type TStoricoStatoUtensileDocument = 

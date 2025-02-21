@@ -8,8 +8,8 @@ import type { IUnitaMisura } from './UnitaMisura.Types';
 * Model Definition
 * -------- */
 const UnitaMisura = mongoose.model<IUnitaMisura>(
-  'UnitaMisura',
-  UnitaMisuraSchema as any
+'UnitaMisura',
+UnitaMisuraSchema as any
 ) as mongoose.Model<IUnitaMisura>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UnitaMisura;
 export { UnitaMisuraSchema };
 
 export type TUnitaMisuraModel = Omit<typeof UnitaMisura, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUnitaMisura>): any
+translateAliases(raw: Partial<IUnitaMisura>): any
 };
 
 export type TUnitaMisuraDocument = 

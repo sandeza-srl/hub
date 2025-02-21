@@ -8,8 +8,8 @@ import type { INoteGiorni } from './NoteGiorni.Types';
 * Model Definition
 * -------- */
 const NoteGiorni = mongoose.model<INoteGiorni>(
-  'NoteGiorni',
-  NoteGiorniSchema as any
+'NoteGiorni',
+NoteGiorniSchema as any
 ) as mongoose.Model<INoteGiorni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default NoteGiorni;
 export { NoteGiorniSchema };
 
 export type TNoteGiorniModel = Omit<typeof NoteGiorni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<INoteGiorni>): any
+translateAliases(raw: Partial<INoteGiorni>): any
 };
 
 export type TNoteGiorniDocument = 

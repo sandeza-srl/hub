@@ -8,8 +8,8 @@ import type { IzzzItemsProduzione } from './zzzItemsProduzione.Types';
 * Model Definition
 * -------- */
 const zzzItemsProduzione = mongoose.model<IzzzItemsProduzione>(
-  'zzzItemsProduzione',
-  zzzItemsProduzioneSchema as any
+'zzzItemsProduzione',
+zzzItemsProduzioneSchema as any
 ) as mongoose.Model<IzzzItemsProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default zzzItemsProduzione;
 export { zzzItemsProduzioneSchema };
 
 export type TzzzItemsProduzioneModel = Omit<typeof zzzItemsProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IzzzItemsProduzione>): any
+translateAliases(raw: Partial<IzzzItemsProduzione>): any
 };
 
 export type TzzzItemsProduzioneDocument = 

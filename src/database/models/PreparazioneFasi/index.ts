@@ -8,8 +8,8 @@ import type { IPreparazioneFasi } from './PreparazioneFasi.Types';
 * Model Definition
 * -------- */
 const PreparazioneFasi = mongoose.model<IPreparazioneFasi>(
-  'PreparazioneFasi',
-  PreparazioneFasiSchema as any
+'PreparazioneFasi',
+PreparazioneFasiSchema as any
 ) as mongoose.Model<IPreparazioneFasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PreparazioneFasi;
 export { PreparazioneFasiSchema };
 
 export type TPreparazioneFasiModel = Omit<typeof PreparazioneFasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPreparazioneFasi>): any
+translateAliases(raw: Partial<IPreparazioneFasi>): any
 };
 
 export type TPreparazioneFasiDocument = 

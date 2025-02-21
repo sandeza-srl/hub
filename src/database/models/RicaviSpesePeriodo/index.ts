@@ -8,8 +8,8 @@ import type { IRicaviSpesePeriodo } from './RicaviSpesePeriodo.Types';
 * Model Definition
 * -------- */
 const RicaviSpesePeriodo = mongoose.model<IRicaviSpesePeriodo>(
-  'RicaviSpesePeriodo',
-  RicaviSpesePeriodoSchema as any
+'RicaviSpesePeriodo',
+RicaviSpesePeriodoSchema as any
 ) as mongoose.Model<IRicaviSpesePeriodo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RicaviSpesePeriodo;
 export { RicaviSpesePeriodoSchema };
 
 export type TRicaviSpesePeriodoModel = Omit<typeof RicaviSpesePeriodo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRicaviSpesePeriodo>): any
+translateAliases(raw: Partial<IRicaviSpesePeriodo>): any
 };
 
 export type TRicaviSpesePeriodoDocument = 

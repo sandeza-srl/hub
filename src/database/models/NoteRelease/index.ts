@@ -8,8 +8,8 @@ import type { INoteRelease } from './NoteRelease.Types';
 * Model Definition
 * -------- */
 const NoteRelease = mongoose.model<INoteRelease>(
-  'NoteRelease',
-  NoteReleaseSchema as any
+'NoteRelease',
+NoteReleaseSchema as any
 ) as mongoose.Model<INoteRelease>;
 
 /* --------
@@ -20,7 +20,7 @@ export default NoteRelease;
 export { NoteReleaseSchema };
 
 export type TNoteReleaseModel = Omit<typeof NoteRelease, 'traslateAliases'> & {
-  translateAliases(raw: Partial<INoteRelease>): any
+translateAliases(raw: Partial<INoteRelease>): any
 };
 
 export type TNoteReleaseDocument = 

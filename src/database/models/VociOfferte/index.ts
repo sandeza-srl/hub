@@ -8,8 +8,8 @@ import type { IVociOfferte } from './VociOfferte.Types';
 * Model Definition
 * -------- */
 const VociOfferte = mongoose.model<IVociOfferte>(
-  'VociOfferte',
-  VociOfferteSchema as any
+'VociOfferte',
+VociOfferteSchema as any
 ) as mongoose.Model<IVociOfferte>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociOfferte;
 export { VociOfferteSchema };
 
 export type TVociOfferteModel = Omit<typeof VociOfferte, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociOfferte>): any
+translateAliases(raw: Partial<IVociOfferte>): any
 };
 
 export type TVociOfferteDocument = 

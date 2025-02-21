@@ -8,8 +8,8 @@ import type { ICalTemp } from './CalTemp.Types';
 * Model Definition
 * -------- */
 const CalTemp = mongoose.model<ICalTemp>(
-  'CalTemp',
-  CalTempSchema as any
+'CalTemp',
+CalTempSchema as any
 ) as mongoose.Model<ICalTemp>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CalTemp;
 export { CalTempSchema };
 
 export type TCalTempModel = Omit<typeof CalTemp, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICalTemp>): any
+translateAliases(raw: Partial<ICalTemp>): any
 };
 
 export type TCalTempDocument = 

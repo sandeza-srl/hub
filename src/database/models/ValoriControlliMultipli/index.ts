@@ -8,8 +8,8 @@ import type { IValoriControlliMultipli } from './ValoriControlliMultipli.Types';
 * Model Definition
 * -------- */
 const ValoriControlliMultipli = mongoose.model<IValoriControlliMultipli>(
-  'ValoriControlliMultipli',
-  ValoriControlliMultipliSchema as any
+'ValoriControlliMultipli',
+ValoriControlliMultipliSchema as any
 ) as mongoose.Model<IValoriControlliMultipli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ValoriControlliMultipli;
 export { ValoriControlliMultipliSchema };
 
 export type TValoriControlliMultipliModel = Omit<typeof ValoriControlliMultipli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IValoriControlliMultipli>): any
+translateAliases(raw: Partial<IValoriControlliMultipli>): any
 };
 
 export type TValoriControlliMultipliDocument = 

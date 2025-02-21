@@ -8,8 +8,8 @@ import type { IMontaggioUtensiliFaseProduzione } from './MontaggioUtensiliFasePr
 * Model Definition
 * -------- */
 const MontaggioUtensiliFaseProduzione = mongoose.model<IMontaggioUtensiliFaseProduzione>(
-  'MontaggioUtensiliFaseProduzione',
-  MontaggioUtensiliFaseProduzioneSchema as any
+'MontaggioUtensiliFaseProduzione',
+MontaggioUtensiliFaseProduzioneSchema as any
 ) as mongoose.Model<IMontaggioUtensiliFaseProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MontaggioUtensiliFaseProduzione;
 export { MontaggioUtensiliFaseProduzioneSchema };
 
 export type TMontaggioUtensiliFaseProduzioneModel = Omit<typeof MontaggioUtensiliFaseProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMontaggioUtensiliFaseProduzione>): any
+translateAliases(raw: Partial<IMontaggioUtensiliFaseProduzione>): any
 };
 
 export type TMontaggioUtensiliFaseProduzioneDocument = 

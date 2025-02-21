@@ -8,8 +8,8 @@ import type { ITipiStatiStrumenti } from './TipiStatiStrumenti.Types';
 * Model Definition
 * -------- */
 const TipiStatiStrumenti = mongoose.model<ITipiStatiStrumenti>(
-  'TipiStatiStrumenti',
-  TipiStatiStrumentiSchema as any
+'TipiStatiStrumenti',
+TipiStatiStrumentiSchema as any
 ) as mongoose.Model<ITipiStatiStrumenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiStatiStrumenti;
 export { TipiStatiStrumentiSchema };
 
 export type TTipiStatiStrumentiModel = Omit<typeof TipiStatiStrumenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiStatiStrumenti>): any
+translateAliases(raw: Partial<ITipiStatiStrumenti>): any
 };
 
 export type TTipiStatiStrumentiDocument = 

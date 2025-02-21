@@ -8,8 +8,8 @@ import type { IMontaggioUtensiliAttrezzature } from './MontaggioUtensiliAttrezza
 * Model Definition
 * -------- */
 const MontaggioUtensiliAttrezzature = mongoose.model<IMontaggioUtensiliAttrezzature>(
-  'MontaggioUtensiliAttrezzature',
-  MontaggioUtensiliAttrezzatureSchema as any
+'MontaggioUtensiliAttrezzature',
+MontaggioUtensiliAttrezzatureSchema as any
 ) as mongoose.Model<IMontaggioUtensiliAttrezzature>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MontaggioUtensiliAttrezzature;
 export { MontaggioUtensiliAttrezzatureSchema };
 
 export type TMontaggioUtensiliAttrezzatureModel = Omit<typeof MontaggioUtensiliAttrezzature, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMontaggioUtensiliAttrezzature>): any
+translateAliases(raw: Partial<IMontaggioUtensiliAttrezzature>): any
 };
 
 export type TMontaggioUtensiliAttrezzatureDocument = 

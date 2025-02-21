@@ -8,8 +8,8 @@ import type { ITipiControlli } from './TipiControlli.Types';
 * Model Definition
 * -------- */
 const TipiControlli = mongoose.model<ITipiControlli>(
-  'TipiControlli',
-  TipiControlliSchema as any
+'TipiControlli',
+TipiControlliSchema as any
 ) as mongoose.Model<ITipiControlli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiControlli;
 export { TipiControlliSchema };
 
 export type TTipiControlliModel = Omit<typeof TipiControlli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiControlli>): any
+translateAliases(raw: Partial<ITipiControlli>): any
 };
 
 export type TTipiControlliDocument = 

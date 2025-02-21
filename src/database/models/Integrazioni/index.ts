@@ -8,8 +8,8 @@ import type { IIntegrazioni } from './Integrazioni.Types';
 * Model Definition
 * -------- */
 const Integrazioni = mongoose.model<IIntegrazioni>(
-  'Integrazioni',
-  IntegrazioniSchema as any
+'Integrazioni',
+IntegrazioniSchema as any
 ) as mongoose.Model<IIntegrazioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Integrazioni;
 export { IntegrazioniSchema };
 
 export type TIntegrazioniModel = Omit<typeof Integrazioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IIntegrazioni>): any
+translateAliases(raw: Partial<IIntegrazioni>): any
 };
 
 export type TIntegrazioniDocument = 

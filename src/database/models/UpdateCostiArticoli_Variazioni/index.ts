@@ -8,8 +8,8 @@ import type { IUpdateCostiArticoli_Variazioni } from './UpdateCostiArticoli_Vari
 * Model Definition
 * -------- */
 const UpdateCostiArticoli_Variazioni = mongoose.model<IUpdateCostiArticoli_Variazioni>(
-  'UpdateCostiArticoli_Variazioni',
-  UpdateCostiArticoli_VariazioniSchema as any
+'UpdateCostiArticoli_Variazioni',
+UpdateCostiArticoli_VariazioniSchema as any
 ) as mongoose.Model<IUpdateCostiArticoli_Variazioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UpdateCostiArticoli_Variazioni;
 export { UpdateCostiArticoli_VariazioniSchema };
 
 export type TUpdateCostiArticoli_VariazioniModel = Omit<typeof UpdateCostiArticoli_Variazioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUpdateCostiArticoli_Variazioni>): any
+translateAliases(raw: Partial<IUpdateCostiArticoli_Variazioni>): any
 };
 
 export type TUpdateCostiArticoli_VariazioniDocument = 

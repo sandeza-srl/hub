@@ -8,8 +8,8 @@ import type { IPulsantiOrigine } from './PulsantiOrigine.Types';
 * Model Definition
 * -------- */
 const PulsantiOrigine = mongoose.model<IPulsantiOrigine>(
-  'PulsantiOrigine',
-  PulsantiOrigineSchema as any
+'PulsantiOrigine',
+PulsantiOrigineSchema as any
 ) as mongoose.Model<IPulsantiOrigine>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PulsantiOrigine;
 export { PulsantiOrigineSchema };
 
 export type TPulsantiOrigineModel = Omit<typeof PulsantiOrigine, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPulsantiOrigine>): any
+translateAliases(raw: Partial<IPulsantiOrigine>): any
 };
 
 export type TPulsantiOrigineDocument = 

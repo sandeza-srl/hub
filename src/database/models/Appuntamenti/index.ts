@@ -8,8 +8,8 @@ import type { IAppuntamenti } from './Appuntamenti.Types';
 * Model Definition
 * -------- */
 const Appuntamenti = mongoose.model<IAppuntamenti>(
-  'Appuntamenti',
-  AppuntamentiSchema as any
+'Appuntamenti',
+AppuntamentiSchema as any
 ) as mongoose.Model<IAppuntamenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Appuntamenti;
 export { AppuntamentiSchema };
 
 export type TAppuntamentiModel = Omit<typeof Appuntamenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAppuntamenti>): any
+translateAliases(raw: Partial<IAppuntamenti>): any
 };
 
 export type TAppuntamentiDocument = 

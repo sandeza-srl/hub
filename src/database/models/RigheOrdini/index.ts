@@ -8,8 +8,8 @@ import type { IRigheOrdini } from './RigheOrdini.Types';
 * Model Definition
 * -------- */
 const RigheOrdini = mongoose.model<IRigheOrdini>(
-  'RigheOrdini',
-  RigheOrdiniSchema as any
+'RigheOrdini',
+RigheOrdiniSchema as any
 ) as mongoose.Model<IRigheOrdini>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RigheOrdini;
 export { RigheOrdiniSchema };
 
 export type TRigheOrdiniModel = Omit<typeof RigheOrdini, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRigheOrdini>): any
+translateAliases(raw: Partial<IRigheOrdini>): any
 };
 
 export type TRigheOrdiniDocument = 

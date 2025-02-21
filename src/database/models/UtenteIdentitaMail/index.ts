@@ -8,8 +8,8 @@ import type { IUtenteIdentitaMail } from './UtenteIdentitaMail.Types';
 * Model Definition
 * -------- */
 const UtenteIdentitaMail = mongoose.model<IUtenteIdentitaMail>(
-  'UtenteIdentitaMail',
-  UtenteIdentitaMailSchema as any
+'UtenteIdentitaMail',
+UtenteIdentitaMailSchema as any
 ) as mongoose.Model<IUtenteIdentitaMail>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UtenteIdentitaMail;
 export { UtenteIdentitaMailSchema };
 
 export type TUtenteIdentitaMailModel = Omit<typeof UtenteIdentitaMail, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtenteIdentitaMail>): any
+translateAliases(raw: Partial<IUtenteIdentitaMail>): any
 };
 
 export type TUtenteIdentitaMailDocument = 

@@ -8,8 +8,8 @@ import type { IDispositivi } from './Dispositivi.Types';
 * Model Definition
 * -------- */
 const Dispositivi = mongoose.model<IDispositivi>(
-  'Dispositivi',
-  DispositiviSchema as any
+'Dispositivi',
+DispositiviSchema as any
 ) as mongoose.Model<IDispositivi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Dispositivi;
 export { DispositiviSchema };
 
 export type TDispositiviModel = Omit<typeof Dispositivi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDispositivi>): any
+translateAliases(raw: Partial<IDispositivi>): any
 };
 
 export type TDispositiviDocument = 

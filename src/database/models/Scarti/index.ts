@@ -8,8 +8,8 @@ import type { IScarti } from './Scarti.Types';
 * Model Definition
 * -------- */
 const Scarti = mongoose.model<IScarti>(
-  'Scarti',
-  ScartiSchema as any
+'Scarti',
+ScartiSchema as any
 ) as mongoose.Model<IScarti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Scarti;
 export { ScartiSchema };
 
 export type TScartiModel = Omit<typeof Scarti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IScarti>): any
+translateAliases(raw: Partial<IScarti>): any
 };
 
 export type TScartiDocument = 

@@ -8,8 +8,8 @@ import type { IDescrizioniTipiInterventi } from './DescrizioniTipiInterventi.Typ
 * Model Definition
 * -------- */
 const DescrizioniTipiInterventi = mongoose.model<IDescrizioniTipiInterventi>(
-  'DescrizioniTipiInterventi',
-  DescrizioniTipiInterventiSchema as any
+'DescrizioniTipiInterventi',
+DescrizioniTipiInterventiSchema as any
 ) as mongoose.Model<IDescrizioniTipiInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DescrizioniTipiInterventi;
 export { DescrizioniTipiInterventiSchema };
 
 export type TDescrizioniTipiInterventiModel = Omit<typeof DescrizioniTipiInterventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDescrizioniTipiInterventi>): any
+translateAliases(raw: Partial<IDescrizioniTipiInterventi>): any
 };
 
 export type TDescrizioniTipiInterventiDocument = 

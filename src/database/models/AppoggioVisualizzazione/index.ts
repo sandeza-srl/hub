@@ -8,8 +8,8 @@ import type { IAppoggioVisualizzazione } from './AppoggioVisualizzazione.Types';
 * Model Definition
 * -------- */
 const AppoggioVisualizzazione = mongoose.model<IAppoggioVisualizzazione>(
-  'AppoggioVisualizzazione',
-  AppoggioVisualizzazioneSchema as any
+'AppoggioVisualizzazione',
+AppoggioVisualizzazioneSchema as any
 ) as mongoose.Model<IAppoggioVisualizzazione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AppoggioVisualizzazione;
 export { AppoggioVisualizzazioneSchema };
 
 export type TAppoggioVisualizzazioneModel = Omit<typeof AppoggioVisualizzazione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAppoggioVisualizzazione>): any
+translateAliases(raw: Partial<IAppoggioVisualizzazione>): any
 };
 
 export type TAppoggioVisualizzazioneDocument = 

@@ -8,8 +8,8 @@ import type { ITipiCriticita } from './TipiCriticita.Types';
 * Model Definition
 * -------- */
 const TipiCriticita = mongoose.model<ITipiCriticita>(
-  'TipiCriticita',
-  TipiCriticitaSchema as any
+'TipiCriticita',
+TipiCriticitaSchema as any
 ) as mongoose.Model<ITipiCriticita>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiCriticita;
 export { TipiCriticitaSchema };
 
 export type TTipiCriticitaModel = Omit<typeof TipiCriticita, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiCriticita>): any
+translateAliases(raw: Partial<ITipiCriticita>): any
 };
 
 export type TTipiCriticitaDocument = 

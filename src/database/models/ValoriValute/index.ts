@@ -8,8 +8,8 @@ import type { IValoriValute } from './ValoriValute.Types';
 * Model Definition
 * -------- */
 const ValoriValute = mongoose.model<IValoriValute>(
-  'ValoriValute',
-  ValoriValuteSchema as any
+'ValoriValute',
+ValoriValuteSchema as any
 ) as mongoose.Model<IValoriValute>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ValoriValute;
 export { ValoriValuteSchema };
 
 export type TValoriValuteModel = Omit<typeof ValoriValute, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IValoriValute>): any
+translateAliases(raw: Partial<IValoriValute>): any
 };
 
 export type TValoriValuteDocument = 

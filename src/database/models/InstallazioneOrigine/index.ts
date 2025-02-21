@@ -8,8 +8,8 @@ import type { IInstallazioneOrigine } from './InstallazioneOrigine.Types';
 * Model Definition
 * -------- */
 const InstallazioneOrigine = mongoose.model<IInstallazioneOrigine>(
-  'InstallazioneOrigine',
-  InstallazioneOrigineSchema as any
+'InstallazioneOrigine',
+InstallazioneOrigineSchema as any
 ) as mongoose.Model<IInstallazioneOrigine>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InstallazioneOrigine;
 export { InstallazioneOrigineSchema };
 
 export type TInstallazioneOrigineModel = Omit<typeof InstallazioneOrigine, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInstallazioneOrigine>): any
+translateAliases(raw: Partial<IInstallazioneOrigine>): any
 };
 
 export type TInstallazioneOrigineDocument = 

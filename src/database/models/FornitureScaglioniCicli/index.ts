@@ -8,8 +8,8 @@ import type { IFornitureScaglioniCicli } from './FornitureScaglioniCicli.Types';
 * Model Definition
 * -------- */
 const FornitureScaglioniCicli = mongoose.model<IFornitureScaglioniCicli>(
-  'FornitureScaglioniCicli',
-  FornitureScaglioniCicliSchema as any
+'FornitureScaglioniCicli',
+FornitureScaglioniCicliSchema as any
 ) as mongoose.Model<IFornitureScaglioniCicli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FornitureScaglioniCicli;
 export { FornitureScaglioniCicliSchema };
 
 export type TFornitureScaglioniCicliModel = Omit<typeof FornitureScaglioniCicli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFornitureScaglioniCicli>): any
+translateAliases(raw: Partial<IFornitureScaglioniCicli>): any
 };
 
 export type TFornitureScaglioniCicliDocument = 

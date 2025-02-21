@@ -8,8 +8,8 @@ import type { IDescrizioneRegoleScadenze } from './DescrizioneRegoleScadenze.Typ
 * Model Definition
 * -------- */
 const DescrizioneRegoleScadenze = mongoose.model<IDescrizioneRegoleScadenze>(
-  'DescrizioneRegoleScadenze',
-  DescrizioneRegoleScadenzeSchema as any
+'DescrizioneRegoleScadenze',
+DescrizioneRegoleScadenzeSchema as any
 ) as mongoose.Model<IDescrizioneRegoleScadenze>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DescrizioneRegoleScadenze;
 export { DescrizioneRegoleScadenzeSchema };
 
 export type TDescrizioneRegoleScadenzeModel = Omit<typeof DescrizioneRegoleScadenze, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDescrizioneRegoleScadenze>): any
+translateAliases(raw: Partial<IDescrizioneRegoleScadenze>): any
 };
 
 export type TDescrizioneRegoleScadenzeDocument = 

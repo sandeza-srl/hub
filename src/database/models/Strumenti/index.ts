@@ -8,8 +8,8 @@ import type { IStrumenti } from './Strumenti.Types';
 * Model Definition
 * -------- */
 const Strumenti = mongoose.model<IStrumenti>(
-  'Strumenti',
-  StrumentiSchema as any
+'Strumenti',
+StrumentiSchema as any
 ) as mongoose.Model<IStrumenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Strumenti;
 export { StrumentiSchema };
 
 export type TStrumentiModel = Omit<typeof Strumenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStrumenti>): any
+translateAliases(raw: Partial<IStrumenti>): any
 };
 
 export type TStrumentiDocument = 

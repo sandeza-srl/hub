@@ -8,8 +8,8 @@ import type { IScaglioniCicli } from './ScaglioniCicli.Types';
 * Model Definition
 * -------- */
 const ScaglioniCicli = mongoose.model<IScaglioniCicli>(
-  'ScaglioniCicli',
-  ScaglioniCicliSchema as any
+'ScaglioniCicli',
+ScaglioniCicliSchema as any
 ) as mongoose.Model<IScaglioniCicli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ScaglioniCicli;
 export { ScaglioniCicliSchema };
 
 export type TScaglioniCicliModel = Omit<typeof ScaglioniCicli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IScaglioniCicli>): any
+translateAliases(raw: Partial<IScaglioniCicli>): any
 };
 
 export type TScaglioniCicliDocument = 

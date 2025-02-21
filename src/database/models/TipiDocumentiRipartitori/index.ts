@@ -8,8 +8,8 @@ import type { ITipiDocumentiRipartitori } from './TipiDocumentiRipartitori.Types
 * Model Definition
 * -------- */
 const TipiDocumentiRipartitori = mongoose.model<ITipiDocumentiRipartitori>(
-  'TipiDocumentiRipartitori',
-  TipiDocumentiRipartitoriSchema as any
+'TipiDocumentiRipartitori',
+TipiDocumentiRipartitoriSchema as any
 ) as mongoose.Model<ITipiDocumentiRipartitori>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiDocumentiRipartitori;
 export { TipiDocumentiRipartitoriSchema };
 
 export type TTipiDocumentiRipartitoriModel = Omit<typeof TipiDocumentiRipartitori, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiDocumentiRipartitori>): any
+translateAliases(raw: Partial<ITipiDocumentiRipartitori>): any
 };
 
 export type TTipiDocumentiRipartitoriDocument = 

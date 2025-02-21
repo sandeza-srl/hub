@@ -8,8 +8,8 @@ import type { IMovimenti } from './Movimenti.Types';
 * Model Definition
 * -------- */
 const Movimenti = mongoose.model<IMovimenti>(
-  'Movimenti',
-  MovimentiSchema as any
+'Movimenti',
+MovimentiSchema as any
 ) as mongoose.Model<IMovimenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Movimenti;
 export { MovimentiSchema };
 
 export type TMovimentiModel = Omit<typeof Movimenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMovimenti>): any
+translateAliases(raw: Partial<IMovimenti>): any
 };
 
 export type TMovimentiDocument = 

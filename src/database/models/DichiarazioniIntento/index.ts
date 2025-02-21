@@ -8,8 +8,8 @@ import type { IDichiarazioniIntento } from './DichiarazioniIntento.Types';
 * Model Definition
 * -------- */
 const DichiarazioniIntento = mongoose.model<IDichiarazioniIntento>(
-  'DichiarazioniIntento',
-  DichiarazioniIntentoSchema as any
+'DichiarazioniIntento',
+DichiarazioniIntentoSchema as any
 ) as mongoose.Model<IDichiarazioniIntento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DichiarazioniIntento;
 export { DichiarazioniIntentoSchema };
 
 export type TDichiarazioniIntentoModel = Omit<typeof DichiarazioniIntento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDichiarazioniIntento>): any
+translateAliases(raw: Partial<IDichiarazioniIntento>): any
 };
 
 export type TDichiarazioniIntentoDocument = 

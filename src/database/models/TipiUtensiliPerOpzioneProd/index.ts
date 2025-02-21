@@ -8,8 +8,8 @@ import type { ITipiUtensiliPerOpzioneProd } from './TipiUtensiliPerOpzioneProd.T
 * Model Definition
 * -------- */
 const TipiUtensiliPerOpzioneProd = mongoose.model<ITipiUtensiliPerOpzioneProd>(
-  'TipiUtensiliPerOpzioneProd',
-  TipiUtensiliPerOpzioneProdSchema as any
+'TipiUtensiliPerOpzioneProd',
+TipiUtensiliPerOpzioneProdSchema as any
 ) as mongoose.Model<ITipiUtensiliPerOpzioneProd>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiUtensiliPerOpzioneProd;
 export { TipiUtensiliPerOpzioneProdSchema };
 
 export type TTipiUtensiliPerOpzioneProdModel = Omit<typeof TipiUtensiliPerOpzioneProd, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiUtensiliPerOpzioneProd>): any
+translateAliases(raw: Partial<ITipiUtensiliPerOpzioneProd>): any
 };
 
 export type TTipiUtensiliPerOpzioneProdDocument = 

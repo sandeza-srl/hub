@@ -8,8 +8,8 @@ import type { IPosizioni } from './Posizioni.Types';
 * Model Definition
 * -------- */
 const Posizioni = mongoose.model<IPosizioni>(
-  'Posizioni',
-  PosizioniSchema as any
+'Posizioni',
+PosizioniSchema as any
 ) as mongoose.Model<IPosizioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Posizioni;
 export { PosizioniSchema };
 
 export type TPosizioniModel = Omit<typeof Posizioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPosizioni>): any
+translateAliases(raw: Partial<IPosizioni>): any
 };
 
 export type TPosizioniDocument = 

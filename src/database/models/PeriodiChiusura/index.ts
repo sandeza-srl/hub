@@ -8,8 +8,8 @@ import type { IPeriodiChiusura } from './PeriodiChiusura.Types';
 * Model Definition
 * -------- */
 const PeriodiChiusura = mongoose.model<IPeriodiChiusura>(
-  'PeriodiChiusura',
-  PeriodiChiusuraSchema as any
+'PeriodiChiusura',
+PeriodiChiusuraSchema as any
 ) as mongoose.Model<IPeriodiChiusura>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PeriodiChiusura;
 export { PeriodiChiusuraSchema };
 
 export type TPeriodiChiusuraModel = Omit<typeof PeriodiChiusura, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPeriodiChiusura>): any
+translateAliases(raw: Partial<IPeriodiChiusura>): any
 };
 
 export type TPeriodiChiusuraDocument = 

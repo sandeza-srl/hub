@@ -8,8 +8,8 @@ import type { IImpostazioniValorizzazione } from './ImpostazioniValorizzazione.T
 * Model Definition
 * -------- */
 const ImpostazioniValorizzazione = mongoose.model<IImpostazioniValorizzazione>(
-  'ImpostazioniValorizzazione',
-  ImpostazioniValorizzazioneSchema as any
+'ImpostazioniValorizzazione',
+ImpostazioniValorizzazioneSchema as any
 ) as mongoose.Model<IImpostazioniValorizzazione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ImpostazioniValorizzazione;
 export { ImpostazioniValorizzazioneSchema };
 
 export type TImpostazioniValorizzazioneModel = Omit<typeof ImpostazioniValorizzazione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IImpostazioniValorizzazione>): any
+translateAliases(raw: Partial<IImpostazioniValorizzazione>): any
 };
 
 export type TImpostazioniValorizzazioneDocument = 

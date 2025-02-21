@@ -8,8 +8,8 @@ import type { ICodificheNaturaEsenzione } from './CodificheNaturaEsenzione.Types
 * Model Definition
 * -------- */
 const CodificheNaturaEsenzione = mongoose.model<ICodificheNaturaEsenzione>(
-  'CodificheNaturaEsenzione',
-  CodificheNaturaEsenzioneSchema as any
+'CodificheNaturaEsenzione',
+CodificheNaturaEsenzioneSchema as any
 ) as mongoose.Model<ICodificheNaturaEsenzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CodificheNaturaEsenzione;
 export { CodificheNaturaEsenzioneSchema };
 
 export type TCodificheNaturaEsenzioneModel = Omit<typeof CodificheNaturaEsenzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICodificheNaturaEsenzione>): any
+translateAliases(raw: Partial<ICodificheNaturaEsenzione>): any
 };
 
 export type TCodificheNaturaEsenzioneDocument = 

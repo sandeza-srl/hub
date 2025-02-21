@@ -8,8 +8,8 @@ import type { IInfoAggiuntiveDistintaImpianto } from './InfoAggiuntiveDistintaIm
 * Model Definition
 * -------- */
 const InfoAggiuntiveDistintaImpianto = mongoose.model<IInfoAggiuntiveDistintaImpianto>(
-  'InfoAggiuntiveDistintaImpianto',
-  InfoAggiuntiveDistintaImpiantoSchema as any
+'InfoAggiuntiveDistintaImpianto',
+InfoAggiuntiveDistintaImpiantoSchema as any
 ) as mongoose.Model<IInfoAggiuntiveDistintaImpianto>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InfoAggiuntiveDistintaImpianto;
 export { InfoAggiuntiveDistintaImpiantoSchema };
 
 export type TInfoAggiuntiveDistintaImpiantoModel = Omit<typeof InfoAggiuntiveDistintaImpianto, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInfoAggiuntiveDistintaImpianto>): any
+translateAliases(raw: Partial<IInfoAggiuntiveDistintaImpianto>): any
 };
 
 export type TInfoAggiuntiveDistintaImpiantoDocument = 

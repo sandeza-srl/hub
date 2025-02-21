@@ -8,8 +8,8 @@ import type { IDispositiviRaccoltaDati } from './DispositiviRaccoltaDati.Types';
 * Model Definition
 * -------- */
 const DispositiviRaccoltaDati = mongoose.model<IDispositiviRaccoltaDati>(
-  'DispositiviRaccoltaDati',
-  DispositiviRaccoltaDatiSchema as any
+'DispositiviRaccoltaDati',
+DispositiviRaccoltaDatiSchema as any
 ) as mongoose.Model<IDispositiviRaccoltaDati>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DispositiviRaccoltaDati;
 export { DispositiviRaccoltaDatiSchema };
 
 export type TDispositiviRaccoltaDatiModel = Omit<typeof DispositiviRaccoltaDati, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDispositiviRaccoltaDati>): any
+translateAliases(raw: Partial<IDispositiviRaccoltaDati>): any
 };
 
 export type TDispositiviRaccoltaDatiDocument = 

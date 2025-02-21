@@ -8,8 +8,8 @@ import type { ICalendarioStoricoRisorse } from './CalendarioStoricoRisorse.Types
 * Model Definition
 * -------- */
 const CalendarioStoricoRisorse = mongoose.model<ICalendarioStoricoRisorse>(
-  'CalendarioStoricoRisorse',
-  CalendarioStoricoRisorseSchema as any
+'CalendarioStoricoRisorse',
+CalendarioStoricoRisorseSchema as any
 ) as mongoose.Model<ICalendarioStoricoRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CalendarioStoricoRisorse;
 export { CalendarioStoricoRisorseSchema };
 
 export type TCalendarioStoricoRisorseModel = Omit<typeof CalendarioStoricoRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICalendarioStoricoRisorse>): any
+translateAliases(raw: Partial<ICalendarioStoricoRisorse>): any
 };
 
 export type TCalendarioStoricoRisorseDocument = 

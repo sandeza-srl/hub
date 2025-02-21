@@ -8,8 +8,8 @@ import type { ITracciabilitaItems } from './TracciabilitaItems.Types';
 * Model Definition
 * -------- */
 const TracciabilitaItems = mongoose.model<ITracciabilitaItems>(
-  'TracciabilitaItems',
-  TracciabilitaItemsSchema as any
+'TracciabilitaItems',
+TracciabilitaItemsSchema as any
 ) as mongoose.Model<ITracciabilitaItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TracciabilitaItems;
 export { TracciabilitaItemsSchema };
 
 export type TTracciabilitaItemsModel = Omit<typeof TracciabilitaItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITracciabilitaItems>): any
+translateAliases(raw: Partial<ITracciabilitaItems>): any
 };
 
 export type TTracciabilitaItemsDocument = 

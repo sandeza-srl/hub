@@ -8,8 +8,8 @@ import type { ICostBreakdownScaglione } from './CostBreakdownScaglione.Types';
 * Model Definition
 * -------- */
 const CostBreakdownScaglione = mongoose.model<ICostBreakdownScaglione>(
-  'CostBreakdownScaglione',
-  CostBreakdownScaglioneSchema as any
+'CostBreakdownScaglione',
+CostBreakdownScaglioneSchema as any
 ) as mongoose.Model<ICostBreakdownScaglione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CostBreakdownScaglione;
 export { CostBreakdownScaglioneSchema };
 
 export type TCostBreakdownScaglioneModel = Omit<typeof CostBreakdownScaglione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICostBreakdownScaglione>): any
+translateAliases(raw: Partial<ICostBreakdownScaglione>): any
 };
 
 export type TCostBreakdownScaglioneDocument = 

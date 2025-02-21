@@ -8,8 +8,8 @@ import type { ITipiZone } from './TipiZone.Types';
 * Model Definition
 * -------- */
 const TipiZone = mongoose.model<ITipiZone>(
-  'TipiZone',
-  TipiZoneSchema as any
+'TipiZone',
+TipiZoneSchema as any
 ) as mongoose.Model<ITipiZone>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiZone;
 export { TipiZoneSchema };
 
 export type TTipiZoneModel = Omit<typeof TipiZone, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiZone>): any
+translateAliases(raw: Partial<ITipiZone>): any
 };
 
 export type TTipiZoneDocument = 

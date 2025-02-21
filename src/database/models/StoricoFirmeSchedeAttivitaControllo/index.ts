@@ -8,8 +8,8 @@ import type { IStoricoFirmeSchedeAttivitaControllo } from './StoricoFirmeSchedeA
 * Model Definition
 * -------- */
 const StoricoFirmeSchedeAttivitaControllo = mongoose.model<IStoricoFirmeSchedeAttivitaControllo>(
-  'StoricoFirmeSchedeAttivitaControllo',
-  StoricoFirmeSchedeAttivitaControlloSchema as any
+'StoricoFirmeSchedeAttivitaControllo',
+StoricoFirmeSchedeAttivitaControlloSchema as any
 ) as mongoose.Model<IStoricoFirmeSchedeAttivitaControllo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StoricoFirmeSchedeAttivitaControllo;
 export { StoricoFirmeSchedeAttivitaControlloSchema };
 
 export type TStoricoFirmeSchedeAttivitaControlloModel = Omit<typeof StoricoFirmeSchedeAttivitaControllo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStoricoFirmeSchedeAttivitaControllo>): any
+translateAliases(raw: Partial<IStoricoFirmeSchedeAttivitaControllo>): any
 };
 
 export type TStoricoFirmeSchedeAttivitaControlloDocument = 

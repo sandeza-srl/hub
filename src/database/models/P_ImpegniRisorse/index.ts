@@ -8,8 +8,8 @@ import type { IP_ImpegniRisorse } from './P_ImpegniRisorse.Types';
 * Model Definition
 * -------- */
 const P_ImpegniRisorse = mongoose.model<IP_ImpegniRisorse>(
-  'P_ImpegniRisorse',
-  P_ImpegniRisorseSchema as any
+'P_ImpegniRisorse',
+P_ImpegniRisorseSchema as any
 ) as mongoose.Model<IP_ImpegniRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default P_ImpegniRisorse;
 export { P_ImpegniRisorseSchema };
 
 export type TP_ImpegniRisorseModel = Omit<typeof P_ImpegniRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IP_ImpegniRisorse>): any
+translateAliases(raw: Partial<IP_ImpegniRisorse>): any
 };
 
 export type TP_ImpegniRisorseDocument = 

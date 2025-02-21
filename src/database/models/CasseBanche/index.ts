@@ -8,8 +8,8 @@ import type { ICasseBanche } from './CasseBanche.Types';
 * Model Definition
 * -------- */
 const CasseBanche = mongoose.model<ICasseBanche>(
-  'CasseBanche',
-  CasseBancheSchema as any
+'CasseBanche',
+CasseBancheSchema as any
 ) as mongoose.Model<ICasseBanche>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CasseBanche;
 export { CasseBancheSchema };
 
 export type TCasseBancheModel = Omit<typeof CasseBanche, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICasseBanche>): any
+translateAliases(raw: Partial<ICasseBanche>): any
 };
 
 export type TCasseBancheDocument = 

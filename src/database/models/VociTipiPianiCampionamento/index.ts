@@ -8,8 +8,8 @@ import type { IVociTipiPianiCampionamento } from './VociTipiPianiCampionamento.T
 * Model Definition
 * -------- */
 const VociTipiPianiCampionamento = mongoose.model<IVociTipiPianiCampionamento>(
-  'VociTipiPianiCampionamento',
-  VociTipiPianiCampionamentoSchema as any
+'VociTipiPianiCampionamento',
+VociTipiPianiCampionamentoSchema as any
 ) as mongoose.Model<IVociTipiPianiCampionamento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociTipiPianiCampionamento;
 export { VociTipiPianiCampionamentoSchema };
 
 export type TVociTipiPianiCampionamentoModel = Omit<typeof VociTipiPianiCampionamento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociTipiPianiCampionamento>): any
+translateAliases(raw: Partial<IVociTipiPianiCampionamento>): any
 };
 
 export type TVociTipiPianiCampionamentoDocument = 

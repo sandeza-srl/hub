@@ -8,8 +8,8 @@ import type { ITipiInfoAggiuntive } from './TipiInfoAggiuntive.Types';
 * Model Definition
 * -------- */
 const TipiInfoAggiuntive = mongoose.model<ITipiInfoAggiuntive>(
-  'TipiInfoAggiuntive',
-  TipiInfoAggiuntiveSchema as any
+'TipiInfoAggiuntive',
+TipiInfoAggiuntiveSchema as any
 ) as mongoose.Model<ITipiInfoAggiuntive>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiInfoAggiuntive;
 export { TipiInfoAggiuntiveSchema };
 
 export type TTipiInfoAggiuntiveModel = Omit<typeof TipiInfoAggiuntive, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiInfoAggiuntive>): any
+translateAliases(raw: Partial<ITipiInfoAggiuntive>): any
 };
 
 export type TTipiInfoAggiuntiveDocument = 

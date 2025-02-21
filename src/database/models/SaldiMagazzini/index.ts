@@ -8,8 +8,8 @@ import type { ISaldiMagazzini } from './SaldiMagazzini.Types';
 * Model Definition
 * -------- */
 const SaldiMagazzini = mongoose.model<ISaldiMagazzini>(
-  'SaldiMagazzini',
-  SaldiMagazziniSchema as any
+'SaldiMagazzini',
+SaldiMagazziniSchema as any
 ) as mongoose.Model<ISaldiMagazzini>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SaldiMagazzini;
 export { SaldiMagazziniSchema };
 
 export type TSaldiMagazziniModel = Omit<typeof SaldiMagazzini, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISaldiMagazzini>): any
+translateAliases(raw: Partial<ISaldiMagazzini>): any
 };
 
 export type TSaldiMagazziniDocument = 

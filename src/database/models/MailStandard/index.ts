@@ -8,8 +8,8 @@ import type { IMailStandard } from './MailStandard.Types';
 * Model Definition
 * -------- */
 const MailStandard = mongoose.model<IMailStandard>(
-  'MailStandard',
-  MailStandardSchema as any
+'MailStandard',
+MailStandardSchema as any
 ) as mongoose.Model<IMailStandard>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MailStandard;
 export { MailStandardSchema };
 
 export type TMailStandardModel = Omit<typeof MailStandard, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMailStandard>): any
+translateAliases(raw: Partial<IMailStandard>): any
 };
 
 export type TMailStandardDocument = 

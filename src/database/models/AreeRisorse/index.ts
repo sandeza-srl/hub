@@ -8,8 +8,8 @@ import type { IAreeRisorse } from './AreeRisorse.Types';
 * Model Definition
 * -------- */
 const AreeRisorse = mongoose.model<IAreeRisorse>(
-  'AreeRisorse',
-  AreeRisorseSchema as any
+'AreeRisorse',
+AreeRisorseSchema as any
 ) as mongoose.Model<IAreeRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AreeRisorse;
 export { AreeRisorseSchema };
 
 export type TAreeRisorseModel = Omit<typeof AreeRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAreeRisorse>): any
+translateAliases(raw: Partial<IAreeRisorse>): any
 };
 
 export type TAreeRisorseDocument = 

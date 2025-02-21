@@ -8,8 +8,8 @@ import type { ITipiRicaviSpeseSottofamiglie } from './TipiRicaviSpeseSottofamigl
 * Model Definition
 * -------- */
 const TipiRicaviSpeseSottofamiglie = mongoose.model<ITipiRicaviSpeseSottofamiglie>(
-  'TipiRicaviSpeseSottofamiglie',
-  TipiRicaviSpeseSottofamiglieSchema as any
+'TipiRicaviSpeseSottofamiglie',
+TipiRicaviSpeseSottofamiglieSchema as any
 ) as mongoose.Model<ITipiRicaviSpeseSottofamiglie>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiRicaviSpeseSottofamiglie;
 export { TipiRicaviSpeseSottofamiglieSchema };
 
 export type TTipiRicaviSpeseSottofamiglieModel = Omit<typeof TipiRicaviSpeseSottofamiglie, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiRicaviSpeseSottofamiglie>): any
+translateAliases(raw: Partial<ITipiRicaviSpeseSottofamiglie>): any
 };
 
 export type TTipiRicaviSpeseSottofamiglieDocument = 

@@ -8,8 +8,8 @@ import type { IItemsUnitaMisuraAlternative } from './ItemsUnitaMisuraAlternative
 * Model Definition
 * -------- */
 const ItemsUnitaMisuraAlternative = mongoose.model<IItemsUnitaMisuraAlternative>(
-  'ItemsUnitaMisuraAlternative',
-  ItemsUnitaMisuraAlternativeSchema as any
+'ItemsUnitaMisuraAlternative',
+ItemsUnitaMisuraAlternativeSchema as any
 ) as mongoose.Model<IItemsUnitaMisuraAlternative>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ItemsUnitaMisuraAlternative;
 export { ItemsUnitaMisuraAlternativeSchema };
 
 export type TItemsUnitaMisuraAlternativeModel = Omit<typeof ItemsUnitaMisuraAlternative, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IItemsUnitaMisuraAlternative>): any
+translateAliases(raw: Partial<IItemsUnitaMisuraAlternative>): any
 };
 
 export type TItemsUnitaMisuraAlternativeDocument = 

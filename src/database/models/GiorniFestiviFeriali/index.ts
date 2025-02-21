@@ -8,8 +8,8 @@ import type { IGiorniFestiviFeriali } from './GiorniFestiviFeriali.Types';
 * Model Definition
 * -------- */
 const GiorniFestiviFeriali = mongoose.model<IGiorniFestiviFeriali>(
-  'GiorniFestiviFeriali',
-  GiorniFestiviFerialiSchema as any
+'GiorniFestiviFeriali',
+GiorniFestiviFerialiSchema as any
 ) as mongoose.Model<IGiorniFestiviFeriali>;
 
 /* --------
@@ -20,7 +20,7 @@ export default GiorniFestiviFeriali;
 export { GiorniFestiviFerialiSchema };
 
 export type TGiorniFestiviFerialiModel = Omit<typeof GiorniFestiviFeriali, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IGiorniFestiviFeriali>): any
+translateAliases(raw: Partial<IGiorniFestiviFeriali>): any
 };
 
 export type TGiorniFestiviFerialiDocument = 

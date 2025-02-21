@@ -8,8 +8,8 @@ import type { ITipiEtichetteLavorazioniTipiFasi } from './TipiEtichetteLavorazio
 * Model Definition
 * -------- */
 const TipiEtichetteLavorazioniTipiFasi = mongoose.model<ITipiEtichetteLavorazioniTipiFasi>(
-  'TipiEtichetteLavorazioniTipiFasi',
-  TipiEtichetteLavorazioniTipiFasiSchema as any
+'TipiEtichetteLavorazioniTipiFasi',
+TipiEtichetteLavorazioniTipiFasiSchema as any
 ) as mongoose.Model<ITipiEtichetteLavorazioniTipiFasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiEtichetteLavorazioniTipiFasi;
 export { TipiEtichetteLavorazioniTipiFasiSchema };
 
 export type TTipiEtichetteLavorazioniTipiFasiModel = Omit<typeof TipiEtichetteLavorazioniTipiFasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiEtichetteLavorazioniTipiFasi>): any
+translateAliases(raw: Partial<ITipiEtichetteLavorazioniTipiFasi>): any
 };
 
 export type TTipiEtichetteLavorazioniTipiFasiDocument = 

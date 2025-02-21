@@ -8,8 +8,8 @@ import type { ICodificheMetodiPagamento } from './CodificheMetodiPagamento.Types
 * Model Definition
 * -------- */
 const CodificheMetodiPagamento = mongoose.model<ICodificheMetodiPagamento>(
-  'CodificheMetodiPagamento',
-  CodificheMetodiPagamentoSchema as any
+'CodificheMetodiPagamento',
+CodificheMetodiPagamentoSchema as any
 ) as mongoose.Model<ICodificheMetodiPagamento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CodificheMetodiPagamento;
 export { CodificheMetodiPagamentoSchema };
 
 export type TCodificheMetodiPagamentoModel = Omit<typeof CodificheMetodiPagamento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICodificheMetodiPagamento>): any
+translateAliases(raw: Partial<ICodificheMetodiPagamento>): any
 };
 
 export type TCodificheMetodiPagamentoDocument = 

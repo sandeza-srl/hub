@@ -8,8 +8,8 @@ import type { ITipiContiStatoPatrimoniale } from './TipiContiStatoPatrimoniale.T
 * Model Definition
 * -------- */
 const TipiContiStatoPatrimoniale = mongoose.model<ITipiContiStatoPatrimoniale>(
-  'TipiContiStatoPatrimoniale',
-  TipiContiStatoPatrimonialeSchema as any
+'TipiContiStatoPatrimoniale',
+TipiContiStatoPatrimonialeSchema as any
 ) as mongoose.Model<ITipiContiStatoPatrimoniale>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiContiStatoPatrimoniale;
 export { TipiContiStatoPatrimonialeSchema };
 
 export type TTipiContiStatoPatrimonialeModel = Omit<typeof TipiContiStatoPatrimoniale, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiContiStatoPatrimoniale>): any
+translateAliases(raw: Partial<ITipiContiStatoPatrimoniale>): any
 };
 
 export type TTipiContiStatoPatrimonialeDocument = 

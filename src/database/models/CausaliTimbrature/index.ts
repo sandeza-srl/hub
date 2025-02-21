@@ -8,8 +8,8 @@ import type { ICausaliTimbrature } from './CausaliTimbrature.Types';
 * Model Definition
 * -------- */
 const CausaliTimbrature = mongoose.model<ICausaliTimbrature>(
-  'CausaliTimbrature',
-  CausaliTimbratureSchema as any
+'CausaliTimbrature',
+CausaliTimbratureSchema as any
 ) as mongoose.Model<ICausaliTimbrature>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CausaliTimbrature;
 export { CausaliTimbratureSchema };
 
 export type TCausaliTimbratureModel = Omit<typeof CausaliTimbrature, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICausaliTimbrature>): any
+translateAliases(raw: Partial<ICausaliTimbrature>): any
 };
 
 export type TCausaliTimbratureDocument = 

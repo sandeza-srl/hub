@@ -8,8 +8,8 @@ import type { IEstensioneFile } from './EstensioneFile.Types';
 * Model Definition
 * -------- */
 const EstensioneFile = mongoose.model<IEstensioneFile>(
-  'EstensioneFile',
-  EstensioneFileSchema as any
+'EstensioneFile',
+EstensioneFileSchema as any
 ) as mongoose.Model<IEstensioneFile>;
 
 /* --------
@@ -20,7 +20,7 @@ export default EstensioneFile;
 export { EstensioneFileSchema };
 
 export type TEstensioneFileModel = Omit<typeof EstensioneFile, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IEstensioneFile>): any
+translateAliases(raw: Partial<IEstensioneFile>): any
 };
 
 export type TEstensioneFileDocument = 

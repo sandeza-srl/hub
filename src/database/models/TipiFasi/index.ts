@@ -8,8 +8,8 @@ import type { ITipiFasi } from './TipiFasi.Types';
 * Model Definition
 * -------- */
 const TipiFasi = mongoose.model<ITipiFasi>(
-  'TipiFasi',
-  TipiFasiSchema as any
+'TipiFasi',
+TipiFasiSchema as any
 ) as mongoose.Model<ITipiFasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiFasi;
 export { TipiFasiSchema };
 
 export type TTipiFasiModel = Omit<typeof TipiFasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiFasi>): any
+translateAliases(raw: Partial<ITipiFasi>): any
 };
 
 export type TTipiFasiDocument = 

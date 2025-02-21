@@ -8,8 +8,8 @@ import type { IPauseTurno } from './PauseTurno.Types';
 * Model Definition
 * -------- */
 const PauseTurno = mongoose.model<IPauseTurno>(
-  'PauseTurno',
-  PauseTurnoSchema as any
+'PauseTurno',
+PauseTurnoSchema as any
 ) as mongoose.Model<IPauseTurno>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PauseTurno;
 export { PauseTurnoSchema };
 
 export type TPauseTurnoModel = Omit<typeof PauseTurno, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPauseTurno>): any
+translateAliases(raw: Partial<IPauseTurno>): any
 };
 
 export type TPauseTurnoDocument = 

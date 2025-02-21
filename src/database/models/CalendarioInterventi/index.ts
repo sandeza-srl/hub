@@ -8,8 +8,8 @@ import type { ICalendarioInterventi } from './CalendarioInterventi.Types';
 * Model Definition
 * -------- */
 const CalendarioInterventi = mongoose.model<ICalendarioInterventi>(
-  'CalendarioInterventi',
-  CalendarioInterventiSchema as any
+'CalendarioInterventi',
+CalendarioInterventiSchema as any
 ) as mongoose.Model<ICalendarioInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CalendarioInterventi;
 export { CalendarioInterventiSchema };
 
 export type TCalendarioInterventiModel = Omit<typeof CalendarioInterventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICalendarioInterventi>): any
+translateAliases(raw: Partial<ICalendarioInterventi>): any
 };
 
 export type TCalendarioInterventiDocument = 

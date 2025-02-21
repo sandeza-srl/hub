@@ -8,8 +8,8 @@ import type { IOpzioniProd } from './OpzioniProd.Types';
 * Model Definition
 * -------- */
 const OpzioniProd = mongoose.model<IOpzioniProd>(
-  'OpzioniProd',
-  OpzioniProdSchema as any
+'OpzioniProd',
+OpzioniProdSchema as any
 ) as mongoose.Model<IOpzioniProd>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OpzioniProd;
 export { OpzioniProdSchema };
 
 export type TOpzioniProdModel = Omit<typeof OpzioniProd, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOpzioniProd>): any
+translateAliases(raw: Partial<IOpzioniProd>): any
 };
 
 export type TOpzioniProdDocument = 

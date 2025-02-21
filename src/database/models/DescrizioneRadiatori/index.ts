@@ -8,8 +8,8 @@ import type { IDescrizioneRadiatori } from './DescrizioneRadiatori.Types';
 * Model Definition
 * -------- */
 const DescrizioneRadiatori = mongoose.model<IDescrizioneRadiatori>(
-  'DescrizioneRadiatori',
-  DescrizioneRadiatoriSchema as any
+'DescrizioneRadiatori',
+DescrizioneRadiatoriSchema as any
 ) as mongoose.Model<IDescrizioneRadiatori>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DescrizioneRadiatori;
 export { DescrizioneRadiatoriSchema };
 
 export type TDescrizioneRadiatoriModel = Omit<typeof DescrizioneRadiatori, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDescrizioneRadiatori>): any
+translateAliases(raw: Partial<IDescrizioneRadiatori>): any
 };
 
 export type TDescrizioneRadiatoriDocument = 
