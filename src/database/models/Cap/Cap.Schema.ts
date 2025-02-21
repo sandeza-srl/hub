@@ -10,62 +10,67 @@ import type { ICapPrivate } from './Cap.Types.Private';
 * -------- */
 const CapSchema = new mongoose.Schema<ICapPrivate>({
 
-  _id: {
-    type: String,
-    default: uuid.v4
-  },
-  __Dati_Numero001: {
-    type: Number,
-    alias: 'Uno',
+_id: {
+type: String,
+default: uuid.v4
+},
+__Dati_Numero001: {
+type: Number,
+alias: 'Uno',
 
-  },
-  __Dati_Testo001: {
-    type: String,
-    alias: 'Citta',
+},
+__Dati_Testo001: {
+type: String,
+alias: 'Citta',
 
-  },
-  __Dati_Testo002: {
-    type: String,
-    alias: 'Cap',
+},
+__Dati_Testo002: {
+type: String,
+alias: 'Cap',
 
-  },
-  __Dati_Testo003: {
-    type: String,
-    alias: 'IdNazione',
+},
+__Dati_Testo003: {
+type: String,
+alias: 'IdNazione',
 
-  },
-  __Dati_Testo004: {
-    type: String,
-    alias: 'Comune',
+},
+__Dati_Testo004: {
+type: String,
+alias: 'Comune',
 
-  },
-  __Dati_Testo005: {
-    type: String,
-    alias: 'TxtLiberoIndirizzo',
+},
+__Dati_Testo005: {
+type: String,
+alias: 'TxtLiberoIndirizzo',
 
-  },
-  __Dati_Numero002: {
-    type: Number,
-    alias: 'FlagMultiCap',
+},
+__Dati_Numero002: {
+type: Number,
+alias: 'FlagMultiCap',
 
-  },
-  __Dati_Numero003: {
-    type: Number,
-    alias: 'Zero',
+},
+__Dati_Numero003: {
+type: Number,
+alias: 'Zero',
 
-  },
-  __Dati_Testo006: {
-    type: String,
-    alias: 'IdInstallazione',
+},
+__Dati_Testo006: {
+type: String,
+alias: 'IdInstallazione',
 
-  },
-  __Dati_Testo007: {
-    type: String,
-    alias: 'IdCap',
+},
+__Dati_Testo007: {
+type: String,
+alias: 'IdCap',
 
-  }
+},
+__Dati_Testo008: {
+type: String,
+alias: 'Integrazione_DatiVariAC',
+
+}
 }, {
-  timestamps: true
+timestamps: true
 });
 
 /* --------

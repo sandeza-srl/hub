@@ -8,8 +8,8 @@ import type { IIncoterm } from './Incoterm.Types';
 * Model Definition
 * -------- */
 const Incoterm = mongoose.model<IIncoterm>(
-  'Incoterm',
-  IncotermSchema as any
+'Incoterm',
+IncotermSchema as any
 ) as mongoose.Model<IIncoterm>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Incoterm;
 export { IncotermSchema };
 
 export type TIncotermModel = Omit<typeof Incoterm, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IIncoterm>): any
+translateAliases(raw: Partial<IIncoterm>): any
 };
 
 export type TIncotermDocument = 

@@ -8,8 +8,8 @@ import type { IAnalisiCostoArticoli_Variabili } from './AnalisiCostoArticoli_Var
 * Model Definition
 * -------- */
 const AnalisiCostoArticoli_Variabili = mongoose.model<IAnalisiCostoArticoli_Variabili>(
-  'AnalisiCostoArticoli_Variabili',
-  AnalisiCostoArticoli_VariabiliSchema as any
+'AnalisiCostoArticoli_Variabili',
+AnalisiCostoArticoli_VariabiliSchema as any
 ) as mongoose.Model<IAnalisiCostoArticoli_Variabili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AnalisiCostoArticoli_Variabili;
 export { AnalisiCostoArticoli_VariabiliSchema };
 
 export type TAnalisiCostoArticoli_VariabiliModel = Omit<typeof AnalisiCostoArticoli_Variabili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAnalisiCostoArticoli_Variabili>): any
+translateAliases(raw: Partial<IAnalisiCostoArticoli_Variabili>): any
 };
 
 export type TAnalisiCostoArticoli_VariabiliDocument = 

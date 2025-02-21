@@ -8,8 +8,8 @@ import type { IVociDocOperativi } from './VociDocOperativi.Types';
 * Model Definition
 * -------- */
 const VociDocOperativi = mongoose.model<IVociDocOperativi>(
-  'VociDocOperativi',
-  VociDocOperativiSchema as any
+'VociDocOperativi',
+VociDocOperativiSchema as any
 ) as mongoose.Model<IVociDocOperativi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociDocOperativi;
 export { VociDocOperativiSchema };
 
 export type TVociDocOperativiModel = Omit<typeof VociDocOperativi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociDocOperativi>): any
+translateAliases(raw: Partial<IVociDocOperativi>): any
 };
 
 export type TVociDocOperativiDocument = 

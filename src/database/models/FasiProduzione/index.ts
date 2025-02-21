@@ -8,8 +8,8 @@ import type { IFasiProduzione } from './FasiProduzione.Types';
 * Model Definition
 * -------- */
 const FasiProduzione = mongoose.model<IFasiProduzione>(
-  'FasiProduzione',
-  FasiProduzioneSchema as any
+'FasiProduzione',
+FasiProduzioneSchema as any
 ) as mongoose.Model<IFasiProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FasiProduzione;
 export { FasiProduzioneSchema };
 
 export type TFasiProduzioneModel = Omit<typeof FasiProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFasiProduzione>): any
+translateAliases(raw: Partial<IFasiProduzione>): any
 };
 
 export type TFasiProduzioneDocument = 

@@ -8,8 +8,8 @@ import type { IPosizioniUtensiliAttrezzaturaRisorsa } from './PosizioniUtensiliA
 * Model Definition
 * -------- */
 const PosizioniUtensiliAttrezzaturaRisorsa = mongoose.model<IPosizioniUtensiliAttrezzaturaRisorsa>(
-  'PosizioniUtensiliAttrezzaturaRisorsa',
-  PosizioniUtensiliAttrezzaturaRisorsaSchema as any
+'PosizioniUtensiliAttrezzaturaRisorsa',
+PosizioniUtensiliAttrezzaturaRisorsaSchema as any
 ) as mongoose.Model<IPosizioniUtensiliAttrezzaturaRisorsa>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PosizioniUtensiliAttrezzaturaRisorsa;
 export { PosizioniUtensiliAttrezzaturaRisorsaSchema };
 
 export type TPosizioniUtensiliAttrezzaturaRisorsaModel = Omit<typeof PosizioniUtensiliAttrezzaturaRisorsa, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPosizioniUtensiliAttrezzaturaRisorsa>): any
+translateAliases(raw: Partial<IPosizioniUtensiliAttrezzaturaRisorsa>): any
 };
 
 export type TPosizioniUtensiliAttrezzaturaRisorsaDocument = 

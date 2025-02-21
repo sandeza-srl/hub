@@ -8,8 +8,8 @@ import type { IStatiItems } from './StatiItems.Types';
 * Model Definition
 * -------- */
 const StatiItems = mongoose.model<IStatiItems>(
-  'StatiItems',
-  StatiItemsSchema as any
+'StatiItems',
+StatiItemsSchema as any
 ) as mongoose.Model<IStatiItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StatiItems;
 export { StatiItemsSchema };
 
 export type TStatiItemsModel = Omit<typeof StatiItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStatiItems>): any
+translateAliases(raw: Partial<IStatiItems>): any
 };
 
 export type TStatiItemsDocument = 

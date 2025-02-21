@@ -8,8 +8,8 @@ import type { IRevisioniCodificheClientiItems } from './RevisioniCodificheClient
 * Model Definition
 * -------- */
 const RevisioniCodificheClientiItems = mongoose.model<IRevisioniCodificheClientiItems>(
-  'RevisioniCodificheClientiItems',
-  RevisioniCodificheClientiItemsSchema as any
+'RevisioniCodificheClientiItems',
+RevisioniCodificheClientiItemsSchema as any
 ) as mongoose.Model<IRevisioniCodificheClientiItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RevisioniCodificheClientiItems;
 export { RevisioniCodificheClientiItemsSchema };
 
 export type TRevisioniCodificheClientiItemsModel = Omit<typeof RevisioniCodificheClientiItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRevisioniCodificheClientiItems>): any
+translateAliases(raw: Partial<IRevisioniCodificheClientiItems>): any
 };
 
 export type TRevisioniCodificheClientiItemsDocument = 

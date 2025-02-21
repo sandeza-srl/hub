@@ -8,8 +8,8 @@ import type { ITipiMagazzini } from './TipiMagazzini.Types';
 * Model Definition
 * -------- */
 const TipiMagazzini = mongoose.model<ITipiMagazzini>(
-  'TipiMagazzini',
-  TipiMagazziniSchema as any
+'TipiMagazzini',
+TipiMagazziniSchema as any
 ) as mongoose.Model<ITipiMagazzini>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiMagazzini;
 export { TipiMagazziniSchema };
 
 export type TTipiMagazziniModel = Omit<typeof TipiMagazzini, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiMagazzini>): any
+translateAliases(raw: Partial<ITipiMagazzini>): any
 };
 
 export type TTipiMagazziniDocument = 

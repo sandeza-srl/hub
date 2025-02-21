@@ -8,8 +8,8 @@ import type { ITipoPotenziale } from './TipoPotenziale.Types';
 * Model Definition
 * -------- */
 const TipoPotenziale = mongoose.model<ITipoPotenziale>(
-  'TipoPotenziale',
-  TipoPotenzialeSchema as any
+'TipoPotenziale',
+TipoPotenzialeSchema as any
 ) as mongoose.Model<ITipoPotenziale>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipoPotenziale;
 export { TipoPotenzialeSchema };
 
 export type TTipoPotenzialeModel = Omit<typeof TipoPotenziale, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipoPotenziale>): any
+translateAliases(raw: Partial<ITipoPotenziale>): any
 };
 
 export type TTipoPotenzialeDocument = 

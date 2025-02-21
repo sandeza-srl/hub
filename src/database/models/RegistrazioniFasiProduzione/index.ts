@@ -8,8 +8,8 @@ import type { IRegistrazioniFasiProduzione } from './RegistrazioniFasiProduzione
 * Model Definition
 * -------- */
 const RegistrazioniFasiProduzione = mongoose.model<IRegistrazioniFasiProduzione>(
-  'RegistrazioniFasiProduzione',
-  RegistrazioniFasiProduzioneSchema as any
+'RegistrazioniFasiProduzione',
+RegistrazioniFasiProduzioneSchema as any
 ) as mongoose.Model<IRegistrazioniFasiProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RegistrazioniFasiProduzione;
 export { RegistrazioniFasiProduzioneSchema };
 
 export type TRegistrazioniFasiProduzioneModel = Omit<typeof RegistrazioniFasiProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRegistrazioniFasiProduzione>): any
+translateAliases(raw: Partial<IRegistrazioniFasiProduzione>): any
 };
 
 export type TRegistrazioniFasiProduzioneDocument = 

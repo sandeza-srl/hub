@@ -8,8 +8,8 @@ import type { IVociDocContabili } from './VociDocContabili.Types';
 * Model Definition
 * -------- */
 const VociDocContabili = mongoose.model<IVociDocContabili>(
-  'VociDocContabili',
-  VociDocContabiliSchema as any
+'VociDocContabili',
+VociDocContabiliSchema as any
 ) as mongoose.Model<IVociDocContabili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociDocContabili;
 export { VociDocContabiliSchema };
 
 export type TVociDocContabiliModel = Omit<typeof VociDocContabili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociDocContabili>): any
+translateAliases(raw: Partial<IVociDocContabili>): any
 };
 
 export type TVociDocContabiliDocument = 

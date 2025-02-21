@@ -8,8 +8,8 @@ import type { IOperatoriDipendenti } from './OperatoriDipendenti.Types';
 * Model Definition
 * -------- */
 const OperatoriDipendenti = mongoose.model<IOperatoriDipendenti>(
-  'OperatoriDipendenti',
-  OperatoriDipendentiSchema as any
+'OperatoriDipendenti',
+OperatoriDipendentiSchema as any
 ) as mongoose.Model<IOperatoriDipendenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriDipendenti;
 export { OperatoriDipendentiSchema };
 
 export type TOperatoriDipendentiModel = Omit<typeof OperatoriDipendenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriDipendenti>): any
+translateAliases(raw: Partial<IOperatoriDipendenti>): any
 };
 
 export type TOperatoriDipendentiDocument = 

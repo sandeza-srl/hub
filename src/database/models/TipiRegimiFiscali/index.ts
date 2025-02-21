@@ -8,8 +8,8 @@ import type { ITipiRegimiFiscali } from './TipiRegimiFiscali.Types';
 * Model Definition
 * -------- */
 const TipiRegimiFiscali = mongoose.model<ITipiRegimiFiscali>(
-  'TipiRegimiFiscali',
-  TipiRegimiFiscaliSchema as any
+'TipiRegimiFiscali',
+TipiRegimiFiscaliSchema as any
 ) as mongoose.Model<ITipiRegimiFiscali>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiRegimiFiscali;
 export { TipiRegimiFiscaliSchema };
 
 export type TTipiRegimiFiscaliModel = Omit<typeof TipiRegimiFiscali, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiRegimiFiscali>): any
+translateAliases(raw: Partial<ITipiRegimiFiscali>): any
 };
 
 export type TTipiRegimiFiscaliDocument = 

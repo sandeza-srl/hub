@@ -8,8 +8,8 @@ import type { ITipiPrimoContatto } from './TipiPrimoContatto.Types';
 * Model Definition
 * -------- */
 const TipiPrimoContatto = mongoose.model<ITipiPrimoContatto>(
-  'TipiPrimoContatto',
-  TipiPrimoContattoSchema as any
+'TipiPrimoContatto',
+TipiPrimoContattoSchema as any
 ) as mongoose.Model<ITipiPrimoContatto>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiPrimoContatto;
 export { TipiPrimoContattoSchema };
 
 export type TTipiPrimoContattoModel = Omit<typeof TipiPrimoContatto, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiPrimoContatto>): any
+translateAliases(raw: Partial<ITipiPrimoContatto>): any
 };
 
 export type TTipiPrimoContattoDocument = 

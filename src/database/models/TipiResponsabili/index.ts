@@ -8,8 +8,8 @@ import type { ITipiResponsabili } from './TipiResponsabili.Types';
 * Model Definition
 * -------- */
 const TipiResponsabili = mongoose.model<ITipiResponsabili>(
-  'TipiResponsabili',
-  TipiResponsabiliSchema as any
+'TipiResponsabili',
+TipiResponsabiliSchema as any
 ) as mongoose.Model<ITipiResponsabili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiResponsabili;
 export { TipiResponsabiliSchema };
 
 export type TTipiResponsabiliModel = Omit<typeof TipiResponsabili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiResponsabili>): any
+translateAliases(raw: Partial<ITipiResponsabili>): any
 };
 
 export type TTipiResponsabiliDocument = 

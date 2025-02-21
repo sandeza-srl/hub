@@ -8,8 +8,8 @@ import type { IDistintaPrimoLivello } from './DistintaPrimoLivello.Types';
 * Model Definition
 * -------- */
 const DistintaPrimoLivello = mongoose.model<IDistintaPrimoLivello>(
-  'DistintaPrimoLivello',
-  DistintaPrimoLivelloSchema as any
+'DistintaPrimoLivello',
+DistintaPrimoLivelloSchema as any
 ) as mongoose.Model<IDistintaPrimoLivello>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DistintaPrimoLivello;
 export { DistintaPrimoLivelloSchema };
 
 export type TDistintaPrimoLivelloModel = Omit<typeof DistintaPrimoLivello, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDistintaPrimoLivello>): any
+translateAliases(raw: Partial<IDistintaPrimoLivello>): any
 };
 
 export type TDistintaPrimoLivelloDocument = 

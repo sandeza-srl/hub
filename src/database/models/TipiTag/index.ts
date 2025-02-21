@@ -8,8 +8,8 @@ import type { ITipiTag } from './TipiTag.Types';
 * Model Definition
 * -------- */
 const TipiTag = mongoose.model<ITipiTag>(
-  'TipiTag',
-  TipiTagSchema as any
+'TipiTag',
+TipiTagSchema as any
 ) as mongoose.Model<ITipiTag>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiTag;
 export { TipiTagSchema };
 
 export type TTipiTagModel = Omit<typeof TipiTag, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiTag>): any
+translateAliases(raw: Partial<ITipiTag>): any
 };
 
 export type TTipiTagDocument = 

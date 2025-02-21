@@ -8,8 +8,8 @@ import type { IDescrizioniInconterm } from './DescrizioniInconterm.Types';
 * Model Definition
 * -------- */
 const DescrizioniInconterm = mongoose.model<IDescrizioniInconterm>(
-  'DescrizioniInconterm',
-  DescrizioniIncontermSchema as any
+'DescrizioniInconterm',
+DescrizioniIncontermSchema as any
 ) as mongoose.Model<IDescrizioniInconterm>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DescrizioniInconterm;
 export { DescrizioniIncontermSchema };
 
 export type TDescrizioniIncontermModel = Omit<typeof DescrizioniInconterm, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDescrizioniInconterm>): any
+translateAliases(raw: Partial<IDescrizioniInconterm>): any
 };
 
 export type TDescrizioniIncontermDocument = 

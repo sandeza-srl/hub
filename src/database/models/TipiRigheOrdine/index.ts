@@ -8,8 +8,8 @@ import type { ITipiRigheOrdine } from './TipiRigheOrdine.Types';
 * Model Definition
 * -------- */
 const TipiRigheOrdine = mongoose.model<ITipiRigheOrdine>(
-  'TipiRigheOrdine',
-  TipiRigheOrdineSchema as any
+'TipiRigheOrdine',
+TipiRigheOrdineSchema as any
 ) as mongoose.Model<ITipiRigheOrdine>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiRigheOrdine;
 export { TipiRigheOrdineSchema };
 
 export type TTipiRigheOrdineModel = Omit<typeof TipiRigheOrdine, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiRigheOrdine>): any
+translateAliases(raw: Partial<ITipiRigheOrdine>): any
 };
 
 export type TTipiRigheOrdineDocument = 

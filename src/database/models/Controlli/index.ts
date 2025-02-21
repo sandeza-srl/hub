@@ -8,8 +8,8 @@ import type { IControlli } from './Controlli.Types';
 * Model Definition
 * -------- */
 const Controlli = mongoose.model<IControlli>(
-  'Controlli',
-  ControlliSchema as any
+'Controlli',
+ControlliSchema as any
 ) as mongoose.Model<IControlli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Controlli;
 export { ControlliSchema };
 
 export type TControlliModel = Omit<typeof Controlli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IControlli>): any
+translateAliases(raw: Partial<IControlli>): any
 };
 
 export type TControlliDocument = 

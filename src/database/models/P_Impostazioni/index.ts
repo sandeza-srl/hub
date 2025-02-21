@@ -8,8 +8,8 @@ import type { IP_Impostazioni } from './P_Impostazioni.Types';
 * Model Definition
 * -------- */
 const P_Impostazioni = mongoose.model<IP_Impostazioni>(
-  'P_Impostazioni',
-  P_ImpostazioniSchema as any
+'P_Impostazioni',
+P_ImpostazioniSchema as any
 ) as mongoose.Model<IP_Impostazioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default P_Impostazioni;
 export { P_ImpostazioniSchema };
 
 export type TP_ImpostazioniModel = Omit<typeof P_Impostazioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IP_Impostazioni>): any
+translateAliases(raw: Partial<IP_Impostazioni>): any
 };
 
 export type TP_ImpostazioniDocument = 

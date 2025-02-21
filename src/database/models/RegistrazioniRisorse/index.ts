@@ -8,8 +8,8 @@ import type { IRegistrazioniRisorse } from './RegistrazioniRisorse.Types';
 * Model Definition
 * -------- */
 const RegistrazioniRisorse = mongoose.model<IRegistrazioniRisorse>(
-  'RegistrazioniRisorse',
-  RegistrazioniRisorseSchema as any
+'RegistrazioniRisorse',
+RegistrazioniRisorseSchema as any
 ) as mongoose.Model<IRegistrazioniRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RegistrazioniRisorse;
 export { RegistrazioniRisorseSchema };
 
 export type TRegistrazioniRisorseModel = Omit<typeof RegistrazioniRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRegistrazioniRisorse>): any
+translateAliases(raw: Partial<IRegistrazioniRisorse>): any
 };
 
 export type TRegistrazioniRisorseDocument = 

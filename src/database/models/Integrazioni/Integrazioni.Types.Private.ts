@@ -1,4 +1,4 @@
 export interface IIntegrazioniPrivate {
-  _id: string;
+_id: string;
 
 }

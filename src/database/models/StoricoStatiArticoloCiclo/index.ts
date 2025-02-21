@@ -8,8 +8,8 @@ import type { IStoricoStatiArticoloCiclo } from './StoricoStatiArticoloCiclo.Typ
 * Model Definition
 * -------- */
 const StoricoStatiArticoloCiclo = mongoose.model<IStoricoStatiArticoloCiclo>(
-  'StoricoStatiArticoloCiclo',
-  StoricoStatiArticoloCicloSchema as any
+'StoricoStatiArticoloCiclo',
+StoricoStatiArticoloCicloSchema as any
 ) as mongoose.Model<IStoricoStatiArticoloCiclo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StoricoStatiArticoloCiclo;
 export { StoricoStatiArticoloCicloSchema };
 
 export type TStoricoStatiArticoloCicloModel = Omit<typeof StoricoStatiArticoloCiclo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStoricoStatiArticoloCiclo>): any
+translateAliases(raw: Partial<IStoricoStatiArticoloCiclo>): any
 };
 
 export type TStoricoStatiArticoloCicloDocument = 

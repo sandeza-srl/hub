@@ -8,8 +8,8 @@ import type { IVociTipiElementiCostoGenerali } from './VociTipiElementiCostoGene
 * Model Definition
 * -------- */
 const VociTipiElementiCostoGenerali = mongoose.model<IVociTipiElementiCostoGenerali>(
-  'VociTipiElementiCostoGenerali',
-  VociTipiElementiCostoGeneraliSchema as any
+'VociTipiElementiCostoGenerali',
+VociTipiElementiCostoGeneraliSchema as any
 ) as mongoose.Model<IVociTipiElementiCostoGenerali>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociTipiElementiCostoGenerali;
 export { VociTipiElementiCostoGeneraliSchema };
 
 export type TVociTipiElementiCostoGeneraliModel = Omit<typeof VociTipiElementiCostoGenerali, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociTipiElementiCostoGenerali>): any
+translateAliases(raw: Partial<IVociTipiElementiCostoGenerali>): any
 };
 
 export type TVociTipiElementiCostoGeneraliDocument = 

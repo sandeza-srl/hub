@@ -8,8 +8,8 @@ import type { IReparti } from './Reparti.Types';
 * Model Definition
 * -------- */
 const Reparti = mongoose.model<IReparti>(
-  'Reparti',
-  RepartiSchema as any
+'Reparti',
+RepartiSchema as any
 ) as mongoose.Model<IReparti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Reparti;
 export { RepartiSchema };
 
 export type TRepartiModel = Omit<typeof Reparti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IReparti>): any
+translateAliases(raw: Partial<IReparti>): any
 };
 
 export type TRepartiDocument = 

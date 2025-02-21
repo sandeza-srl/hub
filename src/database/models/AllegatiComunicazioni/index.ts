@@ -8,8 +8,8 @@ import type { IAllegatiComunicazioni } from './AllegatiComunicazioni.Types';
 * Model Definition
 * -------- */
 const AllegatiComunicazioni = mongoose.model<IAllegatiComunicazioni>(
-  'AllegatiComunicazioni',
-  AllegatiComunicazioniSchema as any
+'AllegatiComunicazioni',
+AllegatiComunicazioniSchema as any
 ) as mongoose.Model<IAllegatiComunicazioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AllegatiComunicazioni;
 export { AllegatiComunicazioniSchema };
 
 export type TAllegatiComunicazioniModel = Omit<typeof AllegatiComunicazioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAllegatiComunicazioni>): any
+translateAliases(raw: Partial<IAllegatiComunicazioni>): any
 };
 
 export type TAllegatiComunicazioniDocument = 

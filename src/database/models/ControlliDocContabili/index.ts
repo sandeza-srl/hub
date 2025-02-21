@@ -8,8 +8,8 @@ import type { IControlliDocContabili } from './ControlliDocContabili.Types';
 * Model Definition
 * -------- */
 const ControlliDocContabili = mongoose.model<IControlliDocContabili>(
-  'ControlliDocContabili',
-  ControlliDocContabiliSchema as any
+'ControlliDocContabili',
+ControlliDocContabiliSchema as any
 ) as mongoose.Model<IControlliDocContabili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ControlliDocContabili;
 export { ControlliDocContabiliSchema };
 
 export type TControlliDocContabiliModel = Omit<typeof ControlliDocContabili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IControlliDocContabili>): any
+translateAliases(raw: Partial<IControlliDocContabili>): any
 };
 
 export type TControlliDocContabiliDocument = 

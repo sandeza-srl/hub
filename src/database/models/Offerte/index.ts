@@ -8,8 +8,8 @@ import type { IOfferte } from './Offerte.Types';
 * Model Definition
 * -------- */
 const Offerte = mongoose.model<IOfferte>(
-  'Offerte',
-  OfferteSchema as any
+'Offerte',
+OfferteSchema as any
 ) as mongoose.Model<IOfferte>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Offerte;
 export { OfferteSchema };
 
 export type TOfferteModel = Omit<typeof Offerte, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOfferte>): any
+translateAliases(raw: Partial<IOfferte>): any
 };
 
 export type TOfferteDocument = 

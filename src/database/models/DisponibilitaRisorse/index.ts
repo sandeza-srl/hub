@@ -8,8 +8,8 @@ import type { IDisponibilitaRisorse } from './DisponibilitaRisorse.Types';
 * Model Definition
 * -------- */
 const DisponibilitaRisorse = mongoose.model<IDisponibilitaRisorse>(
-  'DisponibilitaRisorse',
-  DisponibilitaRisorseSchema as any
+'DisponibilitaRisorse',
+DisponibilitaRisorseSchema as any
 ) as mongoose.Model<IDisponibilitaRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DisponibilitaRisorse;
 export { DisponibilitaRisorseSchema };
 
 export type TDisponibilitaRisorseModel = Omit<typeof DisponibilitaRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDisponibilitaRisorse>): any
+translateAliases(raw: Partial<IDisponibilitaRisorse>): any
 };
 
 export type TDisponibilitaRisorseDocument = 

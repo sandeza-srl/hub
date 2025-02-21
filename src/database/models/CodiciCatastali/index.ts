@@ -8,8 +8,8 @@ import type { ICodiciCatastali } from './CodiciCatastali.Types';
 * Model Definition
 * -------- */
 const CodiciCatastali = mongoose.model<ICodiciCatastali>(
-  'CodiciCatastali',
-  CodiciCatastaliSchema as any
+'CodiciCatastali',
+CodiciCatastaliSchema as any
 ) as mongoose.Model<ICodiciCatastali>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CodiciCatastali;
 export { CodiciCatastaliSchema };
 
 export type TCodiciCatastaliModel = Omit<typeof CodiciCatastali, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICodiciCatastali>): any
+translateAliases(raw: Partial<ICodiciCatastali>): any
 };
 
 export type TCodiciCatastaliDocument = 

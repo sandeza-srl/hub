@@ -8,8 +8,8 @@ import type { IStazioniRaccoltaDati } from './StazioniRaccoltaDati.Types';
 * Model Definition
 * -------- */
 const StazioniRaccoltaDati = mongoose.model<IStazioniRaccoltaDati>(
-  'StazioniRaccoltaDati',
-  StazioniRaccoltaDatiSchema as any
+'StazioniRaccoltaDati',
+StazioniRaccoltaDatiSchema as any
 ) as mongoose.Model<IStazioniRaccoltaDati>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StazioniRaccoltaDati;
 export { StazioniRaccoltaDatiSchema };
 
 export type TStazioniRaccoltaDatiModel = Omit<typeof StazioniRaccoltaDati, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStazioniRaccoltaDati>): any
+translateAliases(raw: Partial<IStazioniRaccoltaDati>): any
 };
 
 export type TStazioniRaccoltaDatiDocument = 

@@ -8,8 +8,8 @@ import type { IVociSistemiEsterni } from './VociSistemiEsterni.Types';
 * Model Definition
 * -------- */
 const VociSistemiEsterni = mongoose.model<IVociSistemiEsterni>(
-  'VociSistemiEsterni',
-  VociSistemiEsterniSchema as any
+'VociSistemiEsterni',
+VociSistemiEsterniSchema as any
 ) as mongoose.Model<IVociSistemiEsterni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociSistemiEsterni;
 export { VociSistemiEsterniSchema };
 
 export type TVociSistemiEsterniModel = Omit<typeof VociSistemiEsterni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociSistemiEsterni>): any
+translateAliases(raw: Partial<IVociSistemiEsterni>): any
 };
 
 export type TVociSistemiEsterniDocument = 

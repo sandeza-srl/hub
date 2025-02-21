@@ -8,8 +8,8 @@ import type { IUtenti } from './Utenti.Types';
 * Model Definition
 * -------- */
 const Utenti = mongoose.model<IUtenti>(
-  'Utenti',
-  UtentiSchema as any
+'Utenti',
+UtentiSchema as any
 ) as mongoose.Model<IUtenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Utenti;
 export { UtentiSchema };
 
 export type TUtentiModel = Omit<typeof Utenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUtenti>): any
+translateAliases(raw: Partial<IUtenti>): any
 };
 
 export type TUtentiDocument = 

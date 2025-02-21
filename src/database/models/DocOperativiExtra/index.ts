@@ -8,8 +8,8 @@ import type { IDocOperativiExtra } from './DocOperativiExtra.Types';
 * Model Definition
 * -------- */
 const DocOperativiExtra = mongoose.model<IDocOperativiExtra>(
-  'DocOperativiExtra',
-  DocOperativiExtraSchema as any
+'DocOperativiExtra',
+DocOperativiExtraSchema as any
 ) as mongoose.Model<IDocOperativiExtra>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DocOperativiExtra;
 export { DocOperativiExtraSchema };
 
 export type TDocOperativiExtraModel = Omit<typeof DocOperativiExtra, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDocOperativiExtra>): any
+translateAliases(raw: Partial<IDocOperativiExtra>): any
 };
 
 export type TDocOperativiExtraDocument = 

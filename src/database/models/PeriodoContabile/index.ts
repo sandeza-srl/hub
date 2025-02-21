@@ -8,8 +8,8 @@ import type { IPeriodoContabile } from './PeriodoContabile.Types';
 * Model Definition
 * -------- */
 const PeriodoContabile = mongoose.model<IPeriodoContabile>(
-  'PeriodoContabile',
-  PeriodoContabileSchema as any
+'PeriodoContabile',
+PeriodoContabileSchema as any
 ) as mongoose.Model<IPeriodoContabile>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PeriodoContabile;
 export { PeriodoContabileSchema };
 
 export type TPeriodoContabileModel = Omit<typeof PeriodoContabile, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPeriodoContabile>): any
+translateAliases(raw: Partial<IPeriodoContabile>): any
 };
 
 export type TPeriodoContabileDocument = 

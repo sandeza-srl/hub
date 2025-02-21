@@ -8,8 +8,8 @@ import type { IRichiesteInterventi } from './RichiesteInterventi.Types';
 * Model Definition
 * -------- */
 const RichiesteInterventi = mongoose.model<IRichiesteInterventi>(
-  'RichiesteInterventi',
-  RichiesteInterventiSchema as any
+'RichiesteInterventi',
+RichiesteInterventiSchema as any
 ) as mongoose.Model<IRichiesteInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RichiesteInterventi;
 export { RichiesteInterventiSchema };
 
 export type TRichiesteInterventiModel = Omit<typeof RichiesteInterventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRichiesteInterventi>): any
+translateAliases(raw: Partial<IRichiesteInterventi>): any
 };
 
 export type TRichiesteInterventiDocument = 

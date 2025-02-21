@@ -8,8 +8,8 @@ import type { IRegoleRipetizioni } from './RegoleRipetizioni.Types';
 * Model Definition
 * -------- */
 const RegoleRipetizioni = mongoose.model<IRegoleRipetizioni>(
-  'RegoleRipetizioni',
-  RegoleRipetizioniSchema as any
+'RegoleRipetizioni',
+RegoleRipetizioniSchema as any
 ) as mongoose.Model<IRegoleRipetizioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RegoleRipetizioni;
 export { RegoleRipetizioniSchema };
 
 export type TRegoleRipetizioniModel = Omit<typeof RegoleRipetizioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRegoleRipetizioni>): any
+translateAliases(raw: Partial<IRegoleRipetizioni>): any
 };
 
 export type TRegoleRipetizioniDocument = 

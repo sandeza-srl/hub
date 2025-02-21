@@ -8,8 +8,8 @@ import type { IConversioniMisure } from './ConversioniMisure.Types';
 * Model Definition
 * -------- */
 const ConversioniMisure = mongoose.model<IConversioniMisure>(
-  'ConversioniMisure',
-  ConversioniMisureSchema as any
+'ConversioniMisure',
+ConversioniMisureSchema as any
 ) as mongoose.Model<IConversioniMisure>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ConversioniMisure;
 export { ConversioniMisureSchema };
 
 export type TConversioniMisureModel = Omit<typeof ConversioniMisure, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IConversioniMisure>): any
+translateAliases(raw: Partial<IConversioniMisure>): any
 };
 
 export type TConversioniMisureDocument = 

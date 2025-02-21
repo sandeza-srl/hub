@@ -8,8 +8,8 @@ import type { ICapitoliRevisioni } from './CapitoliRevisioni.Types';
 * Model Definition
 * -------- */
 const CapitoliRevisioni = mongoose.model<ICapitoliRevisioni>(
-  'CapitoliRevisioni',
-  CapitoliRevisioniSchema as any
+'CapitoliRevisioni',
+CapitoliRevisioniSchema as any
 ) as mongoose.Model<ICapitoliRevisioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CapitoliRevisioni;
 export { CapitoliRevisioniSchema };
 
 export type TCapitoliRevisioniModel = Omit<typeof CapitoliRevisioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICapitoliRevisioni>): any
+translateAliases(raw: Partial<ICapitoliRevisioni>): any
 };
 
 export type TCapitoliRevisioniDocument = 

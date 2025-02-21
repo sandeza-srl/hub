@@ -8,8 +8,8 @@ import type { IFasi } from './Fasi.Types';
 * Model Definition
 * -------- */
 const Fasi = mongoose.model<IFasi>(
-  'Fasi',
-  FasiSchema as any
+'Fasi',
+FasiSchema as any
 ) as mongoose.Model<IFasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Fasi;
 export { FasiSchema };
 
 export type TFasiModel = Omit<typeof Fasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFasi>): any
+translateAliases(raw: Partial<IFasi>): any
 };
 
 export type TFasiDocument = 

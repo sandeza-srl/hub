@@ -8,8 +8,8 @@ import type { ISottoTipiDocumenti } from './SottoTipiDocumenti.Types';
 * Model Definition
 * -------- */
 const SottoTipiDocumenti = mongoose.model<ISottoTipiDocumenti>(
-  'SottoTipiDocumenti',
-  SottoTipiDocumentiSchema as any
+'SottoTipiDocumenti',
+SottoTipiDocumentiSchema as any
 ) as mongoose.Model<ISottoTipiDocumenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SottoTipiDocumenti;
 export { SottoTipiDocumentiSchema };
 
 export type TSottoTipiDocumentiModel = Omit<typeof SottoTipiDocumenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISottoTipiDocumenti>): any
+translateAliases(raw: Partial<ISottoTipiDocumenti>): any
 };
 
 export type TSottoTipiDocumentiDocument = 

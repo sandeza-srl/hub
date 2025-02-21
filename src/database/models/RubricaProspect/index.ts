@@ -8,8 +8,8 @@ import type { IRubricaProspect } from './RubricaProspect.Types';
 * Model Definition
 * -------- */
 const RubricaProspect = mongoose.model<IRubricaProspect>(
-  'RubricaProspect',
-  RubricaProspectSchema as any
+'RubricaProspect',
+RubricaProspectSchema as any
 ) as mongoose.Model<IRubricaProspect>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RubricaProspect;
 export { RubricaProspectSchema };
 
 export type TRubricaProspectModel = Omit<typeof RubricaProspect, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRubricaProspect>): any
+translateAliases(raw: Partial<IRubricaProspect>): any
 };
 
 export type TRubricaProspectDocument = 

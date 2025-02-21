@@ -8,8 +8,8 @@ import type { ITipiListino } from './TipiListino.Types';
 * Model Definition
 * -------- */
 const TipiListino = mongoose.model<ITipiListino>(
-  'TipiListino',
-  TipiListinoSchema as any
+'TipiListino',
+TipiListinoSchema as any
 ) as mongoose.Model<ITipiListino>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiListino;
 export { TipiListinoSchema };
 
 export type TTipiListinoModel = Omit<typeof TipiListino, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiListino>): any
+translateAliases(raw: Partial<ITipiListino>): any
 };
 
 export type TTipiListinoDocument = 

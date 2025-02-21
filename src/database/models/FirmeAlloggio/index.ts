@@ -8,8 +8,8 @@ import type { IFirmeAlloggio } from './FirmeAlloggio.Types';
 * Model Definition
 * -------- */
 const FirmeAlloggio = mongoose.model<IFirmeAlloggio>(
-  'FirmeAlloggio',
-  FirmeAlloggioSchema as any
+'FirmeAlloggio',
+FirmeAlloggioSchema as any
 ) as mongoose.Model<IFirmeAlloggio>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FirmeAlloggio;
 export { FirmeAlloggioSchema };
 
 export type TFirmeAlloggioModel = Omit<typeof FirmeAlloggio, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFirmeAlloggio>): any
+translateAliases(raw: Partial<IFirmeAlloggio>): any
 };
 
 export type TFirmeAlloggioDocument = 

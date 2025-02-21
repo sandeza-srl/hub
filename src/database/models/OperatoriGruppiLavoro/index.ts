@@ -8,8 +8,8 @@ import type { IOperatoriGruppiLavoro } from './OperatoriGruppiLavoro.Types';
 * Model Definition
 * -------- */
 const OperatoriGruppiLavoro = mongoose.model<IOperatoriGruppiLavoro>(
-  'OperatoriGruppiLavoro',
-  OperatoriGruppiLavoroSchema as any
+'OperatoriGruppiLavoro',
+OperatoriGruppiLavoroSchema as any
 ) as mongoose.Model<IOperatoriGruppiLavoro>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriGruppiLavoro;
 export { OperatoriGruppiLavoroSchema };
 
 export type TOperatoriGruppiLavoroModel = Omit<typeof OperatoriGruppiLavoro, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriGruppiLavoro>): any
+translateAliases(raw: Partial<IOperatoriGruppiLavoro>): any
 };
 
 export type TOperatoriGruppiLavoroDocument = 

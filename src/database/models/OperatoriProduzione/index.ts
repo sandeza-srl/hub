@@ -8,8 +8,8 @@ import type { IOperatoriProduzione } from './OperatoriProduzione.Types';
 * Model Definition
 * -------- */
 const OperatoriProduzione = mongoose.model<IOperatoriProduzione>(
-  'OperatoriProduzione',
-  OperatoriProduzioneSchema as any
+'OperatoriProduzione',
+OperatoriProduzioneSchema as any
 ) as mongoose.Model<IOperatoriProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriProduzione;
 export { OperatoriProduzioneSchema };
 
 export type TOperatoriProduzioneModel = Omit<typeof OperatoriProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriProduzione>): any
+translateAliases(raw: Partial<IOperatoriProduzione>): any
 };
 
 export type TOperatoriProduzioneDocument = 

@@ -8,8 +8,8 @@ import type { IComunicazioniAnagrafica } from './ComunicazioniAnagrafica.Types';
 * Model Definition
 * -------- */
 const ComunicazioniAnagrafica = mongoose.model<IComunicazioniAnagrafica>(
-  'ComunicazioniAnagrafica',
-  ComunicazioniAnagraficaSchema as any
+'ComunicazioniAnagrafica',
+ComunicazioniAnagraficaSchema as any
 ) as mongoose.Model<IComunicazioniAnagrafica>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ComunicazioniAnagrafica;
 export { ComunicazioniAnagraficaSchema };
 
 export type TComunicazioniAnagraficaModel = Omit<typeof ComunicazioniAnagrafica, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IComunicazioniAnagrafica>): any
+translateAliases(raw: Partial<IComunicazioniAnagrafica>): any
 };
 
 export type TComunicazioniAnagraficaDocument = 

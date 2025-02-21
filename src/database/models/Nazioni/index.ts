@@ -8,8 +8,8 @@ import type { INazioni } from './Nazioni.Types';
 * Model Definition
 * -------- */
 const Nazioni = mongoose.model<INazioni>(
-  'Nazioni',
-  NazioniSchema as any
+'Nazioni',
+NazioniSchema as any
 ) as mongoose.Model<INazioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Nazioni;
 export { NazioniSchema };
 
 export type TNazioniModel = Omit<typeof Nazioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<INazioni>): any
+translateAliases(raw: Partial<INazioni>): any
 };
 
 export type TNazioniDocument = 

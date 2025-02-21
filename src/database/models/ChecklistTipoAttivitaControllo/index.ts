@@ -8,8 +8,8 @@ import type { IChecklistTipoAttivitaControllo } from './ChecklistTipoAttivitaCon
 * Model Definition
 * -------- */
 const ChecklistTipoAttivitaControllo = mongoose.model<IChecklistTipoAttivitaControllo>(
-  'ChecklistTipoAttivitaControllo',
-  ChecklistTipoAttivitaControlloSchema as any
+'ChecklistTipoAttivitaControllo',
+ChecklistTipoAttivitaControlloSchema as any
 ) as mongoose.Model<IChecklistTipoAttivitaControllo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ChecklistTipoAttivitaControllo;
 export { ChecklistTipoAttivitaControlloSchema };
 
 export type TChecklistTipoAttivitaControlloModel = Omit<typeof ChecklistTipoAttivitaControllo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IChecklistTipoAttivitaControllo>): any
+translateAliases(raw: Partial<IChecklistTipoAttivitaControllo>): any
 };
 
 export type TChecklistTipoAttivitaControlloDocument = 

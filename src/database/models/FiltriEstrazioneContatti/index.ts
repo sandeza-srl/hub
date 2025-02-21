@@ -8,8 +8,8 @@ import type { IFiltriEstrazioneContatti } from './FiltriEstrazioneContatti.Types
 * Model Definition
 * -------- */
 const FiltriEstrazioneContatti = mongoose.model<IFiltriEstrazioneContatti>(
-  'FiltriEstrazioneContatti',
-  FiltriEstrazioneContattiSchema as any
+'FiltriEstrazioneContatti',
+FiltriEstrazioneContattiSchema as any
 ) as mongoose.Model<IFiltriEstrazioneContatti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FiltriEstrazioneContatti;
 export { FiltriEstrazioneContattiSchema };
 
 export type TFiltriEstrazioneContattiModel = Omit<typeof FiltriEstrazioneContatti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFiltriEstrazioneContatti>): any
+translateAliases(raw: Partial<IFiltriEstrazioneContatti>): any
 };
 
 export type TFiltriEstrazioneContattiDocument = 

@@ -8,8 +8,8 @@ import type { INumeriSerieLottoProduzione } from './NumeriSerieLottoProduzione.T
 * Model Definition
 * -------- */
 const NumeriSerieLottoProduzione = mongoose.model<INumeriSerieLottoProduzione>(
-  'NumeriSerieLottoProduzione',
-  NumeriSerieLottoProduzioneSchema as any
+'NumeriSerieLottoProduzione',
+NumeriSerieLottoProduzioneSchema as any
 ) as mongoose.Model<INumeriSerieLottoProduzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default NumeriSerieLottoProduzione;
 export { NumeriSerieLottoProduzioneSchema };
 
 export type TNumeriSerieLottoProduzioneModel = Omit<typeof NumeriSerieLottoProduzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<INumeriSerieLottoProduzione>): any
+translateAliases(raw: Partial<INumeriSerieLottoProduzione>): any
 };
 
 export type TNumeriSerieLottoProduzioneDocument = 

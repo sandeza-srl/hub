@@ -8,8 +8,8 @@ import type { IItemsPerFasi } from './ItemsPerFasi.Types';
 * Model Definition
 * -------- */
 const ItemsPerFasi = mongoose.model<IItemsPerFasi>(
-  'ItemsPerFasi',
-  ItemsPerFasiSchema as any
+'ItemsPerFasi',
+ItemsPerFasiSchema as any
 ) as mongoose.Model<IItemsPerFasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ItemsPerFasi;
 export { ItemsPerFasiSchema };
 
 export type TItemsPerFasiModel = Omit<typeof ItemsPerFasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IItemsPerFasi>): any
+translateAliases(raw: Partial<IItemsPerFasi>): any
 };
 
 export type TItemsPerFasiDocument = 

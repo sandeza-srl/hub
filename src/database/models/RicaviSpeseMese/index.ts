@@ -8,8 +8,8 @@ import type { IRicaviSpeseMese } from './RicaviSpeseMese.Types';
 * Model Definition
 * -------- */
 const RicaviSpeseMese = mongoose.model<IRicaviSpeseMese>(
-  'RicaviSpeseMese',
-  RicaviSpeseMeseSchema as any
+'RicaviSpeseMese',
+RicaviSpeseMeseSchema as any
 ) as mongoose.Model<IRicaviSpeseMese>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RicaviSpeseMese;
 export { RicaviSpeseMeseSchema };
 
 export type TRicaviSpeseMeseModel = Omit<typeof RicaviSpeseMese, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRicaviSpeseMese>): any
+translateAliases(raw: Partial<IRicaviSpeseMese>): any
 };
 
 export type TRicaviSpeseMeseDocument = 

@@ -8,8 +8,8 @@ import type { IVociPerVerificaFabbisogni } from './VociPerVerificaFabbisogni.Typ
 * Model Definition
 * -------- */
 const VociPerVerificaFabbisogni = mongoose.model<IVociPerVerificaFabbisogni>(
-  'VociPerVerificaFabbisogni',
-  VociPerVerificaFabbisogniSchema as any
+'VociPerVerificaFabbisogni',
+VociPerVerificaFabbisogniSchema as any
 ) as mongoose.Model<IVociPerVerificaFabbisogni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociPerVerificaFabbisogni;
 export { VociPerVerificaFabbisogniSchema };
 
 export type TVociPerVerificaFabbisogniModel = Omit<typeof VociPerVerificaFabbisogni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociPerVerificaFabbisogni>): any
+translateAliases(raw: Partial<IVociPerVerificaFabbisogni>): any
 };
 
 export type TVociPerVerificaFabbisogniDocument = 

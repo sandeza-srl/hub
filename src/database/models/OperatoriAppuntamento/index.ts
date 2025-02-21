@@ -8,8 +8,8 @@ import type { IOperatoriAppuntamento } from './OperatoriAppuntamento.Types';
 * Model Definition
 * -------- */
 const OperatoriAppuntamento = mongoose.model<IOperatoriAppuntamento>(
-  'OperatoriAppuntamento',
-  OperatoriAppuntamentoSchema as any
+'OperatoriAppuntamento',
+OperatoriAppuntamentoSchema as any
 ) as mongoose.Model<IOperatoriAppuntamento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriAppuntamento;
 export { OperatoriAppuntamentoSchema };
 
 export type TOperatoriAppuntamentoModel = Omit<typeof OperatoriAppuntamento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriAppuntamento>): any
+translateAliases(raw: Partial<IOperatoriAppuntamento>): any
 };
 
 export type TOperatoriAppuntamentoDocument = 

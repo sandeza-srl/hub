@@ -8,8 +8,8 @@ import type { ITipiProcessi } from './TipiProcessi.Types';
 * Model Definition
 * -------- */
 const TipiProcessi = mongoose.model<ITipiProcessi>(
-  'TipiProcessi',
-  TipiProcessiSchema as any
+'TipiProcessi',
+TipiProcessiSchema as any
 ) as mongoose.Model<ITipiProcessi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiProcessi;
 export { TipiProcessiSchema };
 
 export type TTipiProcessiModel = Omit<typeof TipiProcessi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiProcessi>): any
+translateAliases(raw: Partial<ITipiProcessi>): any
 };
 
 export type TTipiProcessiDocument = 

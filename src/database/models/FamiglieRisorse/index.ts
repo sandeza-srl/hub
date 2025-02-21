@@ -8,8 +8,8 @@ import type { IFamiglieRisorse } from './FamiglieRisorse.Types';
 * Model Definition
 * -------- */
 const FamiglieRisorse = mongoose.model<IFamiglieRisorse>(
-  'FamiglieRisorse',
-  FamiglieRisorseSchema as any
+'FamiglieRisorse',
+FamiglieRisorseSchema as any
 ) as mongoose.Model<IFamiglieRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FamiglieRisorse;
 export { FamiglieRisorseSchema };
 
 export type TFamiglieRisorseModel = Omit<typeof FamiglieRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFamiglieRisorse>): any
+translateAliases(raw: Partial<IFamiglieRisorse>): any
 };
 
 export type TFamiglieRisorseDocument = 

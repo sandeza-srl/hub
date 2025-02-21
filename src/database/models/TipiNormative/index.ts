@@ -8,8 +8,8 @@ import type { ITipiNormative } from './TipiNormative.Types';
 * Model Definition
 * -------- */
 const TipiNormative = mongoose.model<ITipiNormative>(
-  'TipiNormative',
-  TipiNormativeSchema as any
+'TipiNormative',
+TipiNormativeSchema as any
 ) as mongoose.Model<ITipiNormative>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiNormative;
 export { TipiNormativeSchema };
 
 export type TTipiNormativeModel = Omit<typeof TipiNormative, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiNormative>): any
+translateAliases(raw: Partial<ITipiNormative>): any
 };
 
 export type TTipiNormativeDocument = 

@@ -8,8 +8,8 @@ import type { IItemsPerVerificaFabbisogni } from './ItemsPerVerificaFabbisogni.T
 * Model Definition
 * -------- */
 const ItemsPerVerificaFabbisogni = mongoose.model<IItemsPerVerificaFabbisogni>(
-  'ItemsPerVerificaFabbisogni',
-  ItemsPerVerificaFabbisogniSchema as any
+'ItemsPerVerificaFabbisogni',
+ItemsPerVerificaFabbisogniSchema as any
 ) as mongoose.Model<IItemsPerVerificaFabbisogni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ItemsPerVerificaFabbisogni;
 export { ItemsPerVerificaFabbisogniSchema };
 
 export type TItemsPerVerificaFabbisogniModel = Omit<typeof ItemsPerVerificaFabbisogni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IItemsPerVerificaFabbisogni>): any
+translateAliases(raw: Partial<IItemsPerVerificaFabbisogni>): any
 };
 
 export type TItemsPerVerificaFabbisogniDocument = 

@@ -8,8 +8,8 @@ import type { IScadenzeDocContabili } from './ScadenzeDocContabili.Types';
 * Model Definition
 * -------- */
 const ScadenzeDocContabili = mongoose.model<IScadenzeDocContabili>(
-  'ScadenzeDocContabili',
-  ScadenzeDocContabiliSchema as any
+'ScadenzeDocContabili',
+ScadenzeDocContabiliSchema as any
 ) as mongoose.Model<IScadenzeDocContabili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ScadenzeDocContabili;
 export { ScadenzeDocContabiliSchema };
 
 export type TScadenzeDocContabiliModel = Omit<typeof ScadenzeDocContabili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IScadenzeDocContabili>): any
+translateAliases(raw: Partial<IScadenzeDocContabili>): any
 };
 
 export type TScadenzeDocContabiliDocument = 

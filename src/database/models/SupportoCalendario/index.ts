@@ -8,8 +8,8 @@ import type { ISupportoCalendario } from './SupportoCalendario.Types';
 * Model Definition
 * -------- */
 const SupportoCalendario = mongoose.model<ISupportoCalendario>(
-  'SupportoCalendario',
-  SupportoCalendarioSchema as any
+'SupportoCalendario',
+SupportoCalendarioSchema as any
 ) as mongoose.Model<ISupportoCalendario>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SupportoCalendario;
 export { SupportoCalendarioSchema };
 
 export type TSupportoCalendarioModel = Omit<typeof SupportoCalendario, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISupportoCalendario>): any
+translateAliases(raw: Partial<ISupportoCalendario>): any
 };
 
 export type TSupportoCalendarioDocument = 

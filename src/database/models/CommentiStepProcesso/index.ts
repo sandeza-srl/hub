@@ -8,8 +8,8 @@ import type { ICommentiStepProcesso } from './CommentiStepProcesso.Types';
 * Model Definition
 * -------- */
 const CommentiStepProcesso = mongoose.model<ICommentiStepProcesso>(
-  'CommentiStepProcesso',
-  CommentiStepProcessoSchema as any
+'CommentiStepProcesso',
+CommentiStepProcessoSchema as any
 ) as mongoose.Model<ICommentiStepProcesso>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CommentiStepProcesso;
 export { CommentiStepProcessoSchema };
 
 export type TCommentiStepProcessoModel = Omit<typeof CommentiStepProcesso, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICommentiStepProcesso>): any
+translateAliases(raw: Partial<ICommentiStepProcesso>): any
 };
 
 export type TCommentiStepProcessoDocument = 

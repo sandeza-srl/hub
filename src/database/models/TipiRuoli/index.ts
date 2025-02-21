@@ -8,8 +8,8 @@ import type { ITipiRuoli } from './TipiRuoli.Types';
 * Model Definition
 * -------- */
 const TipiRuoli = mongoose.model<ITipiRuoli>(
-  'TipiRuoli',
-  TipiRuoliSchema as any
+'TipiRuoli',
+TipiRuoliSchema as any
 ) as mongoose.Model<ITipiRuoli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiRuoli;
 export { TipiRuoliSchema };
 
 export type TTipiRuoliModel = Omit<typeof TipiRuoli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiRuoli>): any
+translateAliases(raw: Partial<ITipiRuoli>): any
 };
 
 export type TTipiRuoliDocument = 

@@ -8,8 +8,8 @@ import type { IFornitureItems } from './FornitureItems.Types';
 * Model Definition
 * -------- */
 const FornitureItems = mongoose.model<IFornitureItems>(
-  'FornitureItems',
-  FornitureItemsSchema as any
+'FornitureItems',
+FornitureItemsSchema as any
 ) as mongoose.Model<IFornitureItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FornitureItems;
 export { FornitureItemsSchema };
 
 export type TFornitureItemsModel = Omit<typeof FornitureItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFornitureItems>): any
+translateAliases(raw: Partial<IFornitureItems>): any
 };
 
 export type TFornitureItemsDocument = 

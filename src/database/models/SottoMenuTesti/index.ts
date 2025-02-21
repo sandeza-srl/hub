@@ -8,8 +8,8 @@ import type { ISottoMenuTesti } from './SottoMenuTesti.Types';
 * Model Definition
 * -------- */
 const SottoMenuTesti = mongoose.model<ISottoMenuTesti>(
-  'SottoMenuTesti',
-  SottoMenuTestiSchema as any
+'SottoMenuTesti',
+SottoMenuTestiSchema as any
 ) as mongoose.Model<ISottoMenuTesti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SottoMenuTesti;
 export { SottoMenuTestiSchema };
 
 export type TSottoMenuTestiModel = Omit<typeof SottoMenuTesti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISottoMenuTesti>): any
+translateAliases(raw: Partial<ISottoMenuTesti>): any
 };
 
 export type TSottoMenuTestiDocument = 

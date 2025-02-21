@@ -8,8 +8,8 @@ import type { ITipiFermi } from './TipiFermi.Types';
 * Model Definition
 * -------- */
 const TipiFermi = mongoose.model<ITipiFermi>(
-  'TipiFermi',
-  TipiFermiSchema as any
+'TipiFermi',
+TipiFermiSchema as any
 ) as mongoose.Model<ITipiFermi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiFermi;
 export { TipiFermiSchema };
 
 export type TTipiFermiModel = Omit<typeof TipiFermi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiFermi>): any
+translateAliases(raw: Partial<ITipiFermi>): any
 };
 
 export type TTipiFermiDocument = 

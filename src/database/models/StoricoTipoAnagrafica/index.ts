@@ -8,8 +8,8 @@ import type { IStoricoTipoAnagrafica } from './StoricoTipoAnagrafica.Types';
 * Model Definition
 * -------- */
 const StoricoTipoAnagrafica = mongoose.model<IStoricoTipoAnagrafica>(
-  'StoricoTipoAnagrafica',
-  StoricoTipoAnagraficaSchema as any
+'StoricoTipoAnagrafica',
+StoricoTipoAnagraficaSchema as any
 ) as mongoose.Model<IStoricoTipoAnagrafica>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StoricoTipoAnagrafica;
 export { StoricoTipoAnagraficaSchema };
 
 export type TStoricoTipoAnagraficaModel = Omit<typeof StoricoTipoAnagrafica, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStoricoTipoAnagrafica>): any
+translateAliases(raw: Partial<IStoricoTipoAnagrafica>): any
 };
 
 export type TStoricoTipoAnagraficaDocument = 

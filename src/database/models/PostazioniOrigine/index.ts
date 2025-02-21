@@ -8,8 +8,8 @@ import type { IPostazioniOrigine } from './PostazioniOrigine.Types';
 * Model Definition
 * -------- */
 const PostazioniOrigine = mongoose.model<IPostazioniOrigine>(
-  'PostazioniOrigine',
-  PostazioniOrigineSchema as any
+'PostazioniOrigine',
+PostazioniOrigineSchema as any
 ) as mongoose.Model<IPostazioniOrigine>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PostazioniOrigine;
 export { PostazioniOrigineSchema };
 
 export type TPostazioniOrigineModel = Omit<typeof PostazioniOrigine, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPostazioniOrigine>): any
+translateAliases(raw: Partial<IPostazioniOrigine>): any
 };
 
 export type TPostazioniOrigineDocument = 

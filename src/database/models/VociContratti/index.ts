@@ -8,8 +8,8 @@ import type { IVociContratti } from './VociContratti.Types';
 * Model Definition
 * -------- */
 const VociContratti = mongoose.model<IVociContratti>(
-  'VociContratti',
-  VociContrattiSchema as any
+'VociContratti',
+VociContrattiSchema as any
 ) as mongoose.Model<IVociContratti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociContratti;
 export { VociContrattiSchema };
 
 export type TVociContrattiModel = Omit<typeof VociContratti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociContratti>): any
+translateAliases(raw: Partial<IVociContratti>): any
 };
 
 export type TVociContrattiDocument = 

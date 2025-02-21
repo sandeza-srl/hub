@@ -8,8 +8,8 @@ import type { IOperatoriInterventi } from './OperatoriInterventi.Types';
 * Model Definition
 * -------- */
 const OperatoriInterventi = mongoose.model<IOperatoriInterventi>(
-  'OperatoriInterventi',
-  OperatoriInterventiSchema as any
+'OperatoriInterventi',
+OperatoriInterventiSchema as any
 ) as mongoose.Model<IOperatoriInterventi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriInterventi;
 export { OperatoriInterventiSchema };
 
 export type TOperatoriInterventiModel = Omit<typeof OperatoriInterventi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriInterventi>): any
+translateAliases(raw: Partial<IOperatoriInterventi>): any
 };
 
 export type TOperatoriInterventiDocument = 

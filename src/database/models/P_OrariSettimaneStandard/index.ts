@@ -8,8 +8,8 @@ import type { IP_OrariSettimaneStandard } from './P_OrariSettimaneStandard.Types
 * Model Definition
 * -------- */
 const P_OrariSettimaneStandard = mongoose.model<IP_OrariSettimaneStandard>(
-  'P_OrariSettimaneStandard',
-  P_OrariSettimaneStandardSchema as any
+'P_OrariSettimaneStandard',
+P_OrariSettimaneStandardSchema as any
 ) as mongoose.Model<IP_OrariSettimaneStandard>;
 
 /* --------
@@ -20,7 +20,7 @@ export default P_OrariSettimaneStandard;
 export { P_OrariSettimaneStandardSchema };
 
 export type TP_OrariSettimaneStandardModel = Omit<typeof P_OrariSettimaneStandard, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IP_OrariSettimaneStandard>): any
+translateAliases(raw: Partial<IP_OrariSettimaneStandard>): any
 };
 
 export type TP_OrariSettimaneStandardDocument = 

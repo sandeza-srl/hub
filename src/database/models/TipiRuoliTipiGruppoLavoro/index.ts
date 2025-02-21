@@ -8,8 +8,8 @@ import type { ITipiRuoliTipiGruppoLavoro } from './TipiRuoliTipiGruppoLavoro.Typ
 * Model Definition
 * -------- */
 const TipiRuoliTipiGruppoLavoro = mongoose.model<ITipiRuoliTipiGruppoLavoro>(
-  'TipiRuoliTipiGruppoLavoro',
-  TipiRuoliTipiGruppoLavoroSchema as any
+'TipiRuoliTipiGruppoLavoro',
+TipiRuoliTipiGruppoLavoroSchema as any
 ) as mongoose.Model<ITipiRuoliTipiGruppoLavoro>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiRuoliTipiGruppoLavoro;
 export { TipiRuoliTipiGruppoLavoroSchema };
 
 export type TTipiRuoliTipiGruppoLavoroModel = Omit<typeof TipiRuoliTipiGruppoLavoro, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiRuoliTipiGruppoLavoro>): any
+translateAliases(raw: Partial<ITipiRuoliTipiGruppoLavoro>): any
 };
 
 export type TTipiRuoliTipiGruppoLavoroDocument = 

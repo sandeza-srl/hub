@@ -8,8 +8,8 @@ import type { IProcedure } from './Procedure.Types';
 * Model Definition
 * -------- */
 const Procedure = mongoose.model<IProcedure>(
-  'Procedure',
-  ProcedureSchema as any
+'Procedure',
+ProcedureSchema as any
 ) as mongoose.Model<IProcedure>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Procedure;
 export { ProcedureSchema };
 
 export type TProcedureModel = Omit<typeof Procedure, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IProcedure>): any
+translateAliases(raw: Partial<IProcedure>): any
 };
 
 export type TProcedureDocument = 

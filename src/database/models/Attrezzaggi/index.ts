@@ -8,8 +8,8 @@ import type { IAttrezzaggi } from './Attrezzaggi.Types';
 * Model Definition
 * -------- */
 const Attrezzaggi = mongoose.model<IAttrezzaggi>(
-  'Attrezzaggi',
-  AttrezzaggiSchema as any
+'Attrezzaggi',
+AttrezzaggiSchema as any
 ) as mongoose.Model<IAttrezzaggi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Attrezzaggi;
 export { AttrezzaggiSchema };
 
 export type TAttrezzaggiModel = Omit<typeof Attrezzaggi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAttrezzaggi>): any
+translateAliases(raw: Partial<IAttrezzaggi>): any
 };
 
 export type TAttrezzaggiDocument = 

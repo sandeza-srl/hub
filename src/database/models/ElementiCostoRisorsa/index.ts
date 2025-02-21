@@ -8,8 +8,8 @@ import type { IElementiCostoRisorsa } from './ElementiCostoRisorsa.Types';
 * Model Definition
 * -------- */
 const ElementiCostoRisorsa = mongoose.model<IElementiCostoRisorsa>(
-  'ElementiCostoRisorsa',
-  ElementiCostoRisorsaSchema as any
+'ElementiCostoRisorsa',
+ElementiCostoRisorsaSchema as any
 ) as mongoose.Model<IElementiCostoRisorsa>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ElementiCostoRisorsa;
 export { ElementiCostoRisorsaSchema };
 
 export type TElementiCostoRisorsaModel = Omit<typeof ElementiCostoRisorsa, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IElementiCostoRisorsa>): any
+translateAliases(raw: Partial<IElementiCostoRisorsa>): any
 };
 
 export type TElementiCostoRisorsaDocument = 

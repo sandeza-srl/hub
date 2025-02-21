@@ -8,8 +8,8 @@ import type { ISottoMenuOrigine } from './SottoMenuOrigine.Types';
 * Model Definition
 * -------- */
 const SottoMenuOrigine = mongoose.model<ISottoMenuOrigine>(
-  'SottoMenuOrigine',
-  SottoMenuOrigineSchema as any
+'SottoMenuOrigine',
+SottoMenuOrigineSchema as any
 ) as mongoose.Model<ISottoMenuOrigine>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SottoMenuOrigine;
 export { SottoMenuOrigineSchema };
 
 export type TSottoMenuOrigineModel = Omit<typeof SottoMenuOrigine, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISottoMenuOrigine>): any
+translateAliases(raw: Partial<ISottoMenuOrigine>): any
 };
 
 export type TSottoMenuOrigineDocument = 

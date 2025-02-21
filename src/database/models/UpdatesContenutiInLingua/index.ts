@@ -8,8 +8,8 @@ import type { IUpdatesContenutiInLingua } from './UpdatesContenutiInLingua.Types
 * Model Definition
 * -------- */
 const UpdatesContenutiInLingua = mongoose.model<IUpdatesContenutiInLingua>(
-  'UpdatesContenutiInLingua',
-  UpdatesContenutiInLinguaSchema as any
+'UpdatesContenutiInLingua',
+UpdatesContenutiInLinguaSchema as any
 ) as mongoose.Model<IUpdatesContenutiInLingua>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UpdatesContenutiInLingua;
 export { UpdatesContenutiInLinguaSchema };
 
 export type TUpdatesContenutiInLinguaModel = Omit<typeof UpdatesContenutiInLingua, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUpdatesContenutiInLingua>): any
+translateAliases(raw: Partial<IUpdatesContenutiInLingua>): any
 };
 
 export type TUpdatesContenutiInLinguaDocument = 

@@ -8,8 +8,8 @@ import type { IPotenzialeAnagrafica } from './PotenzialeAnagrafica.Types';
 * Model Definition
 * -------- */
 const PotenzialeAnagrafica = mongoose.model<IPotenzialeAnagrafica>(
-  'PotenzialeAnagrafica',
-  PotenzialeAnagraficaSchema as any
+'PotenzialeAnagrafica',
+PotenzialeAnagraficaSchema as any
 ) as mongoose.Model<IPotenzialeAnagrafica>;
 
 /* --------
@@ -20,7 +20,7 @@ export default PotenzialeAnagrafica;
 export { PotenzialeAnagraficaSchema };
 
 export type TPotenzialeAnagraficaModel = Omit<typeof PotenzialeAnagrafica, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IPotenzialeAnagrafica>): any
+translateAliases(raw: Partial<IPotenzialeAnagrafica>): any
 };
 
 export type TPotenzialeAnagraficaDocument = 

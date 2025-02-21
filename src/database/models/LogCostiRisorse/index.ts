@@ -8,8 +8,8 @@ import type { ILogCostiRisorse } from './LogCostiRisorse.Types';
 * Model Definition
 * -------- */
 const LogCostiRisorse = mongoose.model<ILogCostiRisorse>(
-  'LogCostiRisorse',
-  LogCostiRisorseSchema as any
+'LogCostiRisorse',
+LogCostiRisorseSchema as any
 ) as mongoose.Model<ILogCostiRisorse>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LogCostiRisorse;
 export { LogCostiRisorseSchema };
 
 export type TLogCostiRisorseModel = Omit<typeof LogCostiRisorse, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILogCostiRisorse>): any
+translateAliases(raw: Partial<ILogCostiRisorse>): any
 };
 
 export type TLogCostiRisorseDocument = 

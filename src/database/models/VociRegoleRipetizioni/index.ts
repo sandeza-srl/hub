@@ -8,8 +8,8 @@ import type { IVociRegoleRipetizioni } from './VociRegoleRipetizioni.Types';
 * Model Definition
 * -------- */
 const VociRegoleRipetizioni = mongoose.model<IVociRegoleRipetizioni>(
-  'VociRegoleRipetizioni',
-  VociRegoleRipetizioniSchema as any
+'VociRegoleRipetizioni',
+VociRegoleRipetizioniSchema as any
 ) as mongoose.Model<IVociRegoleRipetizioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default VociRegoleRipetizioni;
 export { VociRegoleRipetizioniSchema };
 
 export type TVociRegoleRipetizioniModel = Omit<typeof VociRegoleRipetizioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IVociRegoleRipetizioni>): any
+translateAliases(raw: Partial<IVociRegoleRipetizioni>): any
 };
 
 export type TVociRegoleRipetizioniDocument = 

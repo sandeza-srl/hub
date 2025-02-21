@@ -1,37 +1,41 @@
 export interface IValoriTipiEtichetteLavorazioni {
-  _id: string;
-  /** Reflected: __Dati_DataOra001*/ 
-  DataOraCreazione: Date;
-  /** Reflected: __Dati_DataOra002*/ 
-  DataOraUltimaModifica: Date;
-  /** Reflected: __Dati_Testo001*/ 
-  IdAccountCompagnia: string;
-  /** Reflected: __Dati_Testo002*/ 
-  IdDescrizioneTipoEtichetta: string;
-  /** Reflected: __Dati_Testo003*/ 
-  IdTipoEtichettaLavorazioni: string;
-  /** Reflected: __Dati_Numero001*/ 
-  Uno: number;
-  /** Reflected: __Dati_Numero002*/ 
-  Zero: number;
-  /** Reflected: __Dati_Testo004*/ 
-  IdValoreTipoEtichetta: string;
-  /** Reflected: __Dati_Numero003*/ 
-  ValoreNumerico: number;
-  /** Reflected: __Dati_Testo005*/ 
-  ValoreTesto: string;
-  /** Reflected: __Dati_Data001*/ 
-  ValoreData: Date;
-  /** Reflected: __Dati_DataOra003*/ 
-  ValoreDataOra: Date;
-  /** Reflected: __Dati_Testo006*/ 
-  Lingua: string;
-  /** Reflected: __Dati_Testo007*/ 
-  IdInstallazione: string;
-  /** Reflected: __Dati_Testo008*/ 
-  IdUtente: string;
-  /** Reflected: __Dati_Testo009*/ 
-  TxtUtente: string;
-  /** Reflected: __Dati_Testo010*/ 
-  IdRicorrenzaRecord: string
+_id: string;
+/** Reflected: __Dati_DataOra001*/ 
+DataOraCreazione: Date;
+/** Reflected: __Dati_DataOra002*/ 
+DataOraUltimaModifica: Date;
+/** Reflected: __Dati_Testo001*/ 
+IdAccountCompagnia: string;
+/** Reflected: __Dati_Testo002*/ 
+IdDescrizioneTipoEtichetta: string;
+/** Reflected: __Dati_Testo003*/ 
+IdTipoEtichettaLavorazioni: string;
+/** Reflected: __Dati_Numero001*/ 
+Uno: number;
+/** Reflected: __Dati_Numero002*/ 
+Zero: number;
+/** Reflected: __Dati_Testo004*/ 
+IdValoreTipoEtichetta: string;
+/** Reflected: __Dati_Numero003*/ 
+ValoreNumerico: number;
+/** Reflected: __Dati_Testo005*/ 
+ValoreTesto: string;
+/** Reflected: __Dati_Data001*/ 
+ValoreData: Date;
+/** Reflected: __Dati_DataOra003*/ 
+ValoreDataOra: Date;
+/** Reflected: __Dati_Testo006*/ 
+Lingua: string;
+/** Reflected: __Dati_Testo007*/ 
+IdInstallazione: string;
+/** Reflected: __Dati_Testo008*/ 
+IdUtente: string;
+/** Reflected: __Dati_Testo009*/ 
+TxtUtente: string;
+/** Reflected: __Dati_Testo010*/ 
+IdRicorrenzaRecord: string;
+/** Reflected: __Dati_Testo011*/ 
+CodiceLista: string;
+/** Reflected: __Dati_Testo012*/ 
+Integrazione_DatiVariAC: string
 }

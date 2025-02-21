@@ -8,8 +8,8 @@ import type { IFirme } from './Firme.Types';
 * Model Definition
 * -------- */
 const Firme = mongoose.model<IFirme>(
-  'Firme',
-  FirmeSchema as any
+'Firme',
+FirmeSchema as any
 ) as mongoose.Model<IFirme>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Firme;
 export { FirmeSchema };
 
 export type TFirmeModel = Omit<typeof Firme, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFirme>): any
+translateAliases(raw: Partial<IFirme>): any
 };
 
 export type TFirmeDocument = 

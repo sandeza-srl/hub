@@ -8,8 +8,8 @@ import type { IMailTipiDocOperativi } from './MailTipiDocOperativi.Types';
 * Model Definition
 * -------- */
 const MailTipiDocOperativi = mongoose.model<IMailTipiDocOperativi>(
-  'MailTipiDocOperativi',
-  MailTipiDocOperativiSchema as any
+'MailTipiDocOperativi',
+MailTipiDocOperativiSchema as any
 ) as mongoose.Model<IMailTipiDocOperativi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MailTipiDocOperativi;
 export { MailTipiDocOperativiSchema };
 
 export type TMailTipiDocOperativiModel = Omit<typeof MailTipiDocOperativi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMailTipiDocOperativi>): any
+translateAliases(raw: Partial<IMailTipiDocOperativi>): any
 };
 
 export type TMailTipiDocOperativiDocument = 

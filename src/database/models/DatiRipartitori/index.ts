@@ -8,8 +8,8 @@ import type { IDatiRipartitori } from './DatiRipartitori.Types';
 * Model Definition
 * -------- */
 const DatiRipartitori = mongoose.model<IDatiRipartitori>(
-  'DatiRipartitori',
-  DatiRipartitoriSchema as any
+'DatiRipartitori',
+DatiRipartitoriSchema as any
 ) as mongoose.Model<IDatiRipartitori>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DatiRipartitori;
 export { DatiRipartitoriSchema };
 
 export type TDatiRipartitoriModel = Omit<typeof DatiRipartitori, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDatiRipartitori>): any
+translateAliases(raw: Partial<IDatiRipartitori>): any
 };
 
 export type TDatiRipartitoriDocument = 

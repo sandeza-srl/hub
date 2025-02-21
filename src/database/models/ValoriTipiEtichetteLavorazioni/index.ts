@@ -8,8 +8,8 @@ import type { IValoriTipiEtichetteLavorazioni } from './ValoriTipiEtichetteLavor
 * Model Definition
 * -------- */
 const ValoriTipiEtichetteLavorazioni = mongoose.model<IValoriTipiEtichetteLavorazioni>(
-  'ValoriTipiEtichetteLavorazioni',
-  ValoriTipiEtichetteLavorazioniSchema as any
+'ValoriTipiEtichetteLavorazioni',
+ValoriTipiEtichetteLavorazioniSchema as any
 ) as mongoose.Model<IValoriTipiEtichetteLavorazioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ValoriTipiEtichetteLavorazioni;
 export { ValoriTipiEtichetteLavorazioniSchema };
 
 export type TValoriTipiEtichetteLavorazioniModel = Omit<typeof ValoriTipiEtichetteLavorazioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IValoriTipiEtichetteLavorazioni>): any
+translateAliases(raw: Partial<IValoriTipiEtichetteLavorazioni>): any
 };
 
 export type TValoriTipiEtichetteLavorazioniDocument = 

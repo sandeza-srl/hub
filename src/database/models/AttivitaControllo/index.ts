@@ -8,8 +8,8 @@ import type { IAttivitaControllo } from './AttivitaControllo.Types';
 * Model Definition
 * -------- */
 const AttivitaControllo = mongoose.model<IAttivitaControllo>(
-  'AttivitaControllo',
-  AttivitaControlloSchema as any
+'AttivitaControllo',
+AttivitaControlloSchema as any
 ) as mongoose.Model<IAttivitaControllo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AttivitaControllo;
 export { AttivitaControlloSchema };
 
 export type TAttivitaControlloModel = Omit<typeof AttivitaControllo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAttivitaControllo>): any
+translateAliases(raw: Partial<IAttivitaControllo>): any
 };
 
 export type TAttivitaControlloDocument = 

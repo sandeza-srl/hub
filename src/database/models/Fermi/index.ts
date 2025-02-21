@@ -8,8 +8,8 @@ import type { IFermi } from './Fermi.Types';
 * Model Definition
 * -------- */
 const Fermi = mongoose.model<IFermi>(
-  'Fermi',
-  FermiSchema as any
+'Fermi',
+FermiSchema as any
 ) as mongoose.Model<IFermi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Fermi;
 export { FermiSchema };
 
 export type TFermiModel = Omit<typeof Fermi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFermi>): any
+translateAliases(raw: Partial<IFermi>): any
 };
 
 export type TFermiDocument = 

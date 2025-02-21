@@ -8,8 +8,8 @@ import type { IEccezioniRegoleScadenze } from './EccezioniRegoleScadenze.Types';
 * Model Definition
 * -------- */
 const EccezioniRegoleScadenze = mongoose.model<IEccezioniRegoleScadenze>(
-  'EccezioniRegoleScadenze',
-  EccezioniRegoleScadenzeSchema as any
+'EccezioniRegoleScadenze',
+EccezioniRegoleScadenzeSchema as any
 ) as mongoose.Model<IEccezioniRegoleScadenze>;
 
 /* --------
@@ -20,7 +20,7 @@ export default EccezioniRegoleScadenze;
 export { EccezioniRegoleScadenzeSchema };
 
 export type TEccezioniRegoleScadenzeModel = Omit<typeof EccezioniRegoleScadenze, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IEccezioniRegoleScadenze>): any
+translateAliases(raw: Partial<IEccezioniRegoleScadenze>): any
 };
 
 export type TEccezioniRegoleScadenzeDocument = 

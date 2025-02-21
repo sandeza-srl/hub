@@ -8,8 +8,8 @@ import type { IAccessiWeb } from './AccessiWeb.Types';
 * Model Definition
 * -------- */
 const AccessiWeb = mongoose.model<IAccessiWeb>(
-  'AccessiWeb',
-  AccessiWebSchema as any
+'AccessiWeb',
+AccessiWebSchema as any
 ) as mongoose.Model<IAccessiWeb>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AccessiWeb;
 export { AccessiWebSchema };
 
 export type TAccessiWebModel = Omit<typeof AccessiWeb, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAccessiWeb>): any
+translateAliases(raw: Partial<IAccessiWeb>): any
 };
 
 export type TAccessiWebDocument = 

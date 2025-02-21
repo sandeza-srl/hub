@@ -8,8 +8,8 @@ import type { ICicli } from './Cicli.Types';
 * Model Definition
 * -------- */
 const Cicli = mongoose.model<ICicli>(
-  'Cicli',
-  CicliSchema as any
+'Cicli',
+CicliSchema as any
 ) as mongoose.Model<ICicli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Cicli;
 export { CicliSchema };
 
 export type TCicliModel = Omit<typeof Cicli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICicli>): any
+translateAliases(raw: Partial<ICicli>): any
 };
 
 export type TCicliDocument = 

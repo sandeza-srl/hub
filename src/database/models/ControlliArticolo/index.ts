@@ -8,8 +8,8 @@ import type { IControlliArticolo } from './ControlliArticolo.Types';
 * Model Definition
 * -------- */
 const ControlliArticolo = mongoose.model<IControlliArticolo>(
-  'ControlliArticolo',
-  ControlliArticoloSchema as any
+'ControlliArticolo',
+ControlliArticoloSchema as any
 ) as mongoose.Model<IControlliArticolo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ControlliArticolo;
 export { ControlliArticoloSchema };
 
 export type TControlliArticoloModel = Omit<typeof ControlliArticolo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IControlliArticolo>): any
+translateAliases(raw: Partial<IControlliArticolo>): any
 };
 
 export type TControlliArticoloDocument = 

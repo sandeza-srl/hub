@@ -8,8 +8,8 @@ import type { IContenutiInLingua } from './ContenutiInLingua.Types';
 * Model Definition
 * -------- */
 const ContenutiInLingua = mongoose.model<IContenutiInLingua>(
-  'ContenutiInLingua',
-  ContenutiInLinguaSchema as any
+'ContenutiInLingua',
+ContenutiInLinguaSchema as any
 ) as mongoose.Model<IContenutiInLingua>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ContenutiInLingua;
 export { ContenutiInLinguaSchema };
 
 export type TContenutiInLinguaModel = Omit<typeof ContenutiInLingua, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IContenutiInLingua>): any
+translateAliases(raw: Partial<IContenutiInLingua>): any
 };
 
 export type TContenutiInLinguaDocument = 

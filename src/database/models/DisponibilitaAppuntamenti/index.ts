@@ -8,8 +8,8 @@ import type { IDisponibilitaAppuntamenti } from './DisponibilitaAppuntamenti.Typ
 * Model Definition
 * -------- */
 const DisponibilitaAppuntamenti = mongoose.model<IDisponibilitaAppuntamenti>(
-  'DisponibilitaAppuntamenti',
-  DisponibilitaAppuntamentiSchema as any
+'DisponibilitaAppuntamenti',
+DisponibilitaAppuntamentiSchema as any
 ) as mongoose.Model<IDisponibilitaAppuntamenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default DisponibilitaAppuntamenti;
 export { DisponibilitaAppuntamentiSchema };
 
 export type TDisponibilitaAppuntamentiModel = Omit<typeof DisponibilitaAppuntamenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IDisponibilitaAppuntamenti>): any
+translateAliases(raw: Partial<IDisponibilitaAppuntamenti>): any
 };
 
 export type TDisponibilitaAppuntamentiDocument = 

@@ -8,8 +8,8 @@ import type { IViaggi } from './Viaggi.Types';
 * Model Definition
 * -------- */
 const Viaggi = mongoose.model<IViaggi>(
-  'Viaggi',
-  ViaggiSchema as any
+'Viaggi',
+ViaggiSchema as any
 ) as mongoose.Model<IViaggi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Viaggi;
 export { ViaggiSchema };
 
 export type TViaggiModel = Omit<typeof Viaggi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IViaggi>): any
+translateAliases(raw: Partial<IViaggi>): any
 };
 
 export type TViaggiDocument = 

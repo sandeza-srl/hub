@@ -8,8 +8,8 @@ import type { IValoriTipiEtichetteRegistries } from './ValoriTipiEtichetteRegist
 * Model Definition
 * -------- */
 const ValoriTipiEtichetteRegistries = mongoose.model<IValoriTipiEtichetteRegistries>(
-  'ValoriTipiEtichetteRegistries',
-  ValoriTipiEtichetteRegistriesSchema as any
+'ValoriTipiEtichetteRegistries',
+ValoriTipiEtichetteRegistriesSchema as any
 ) as mongoose.Model<IValoriTipiEtichetteRegistries>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ValoriTipiEtichetteRegistries;
 export { ValoriTipiEtichetteRegistriesSchema };
 
 export type TValoriTipiEtichetteRegistriesModel = Omit<typeof ValoriTipiEtichetteRegistries, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IValoriTipiEtichetteRegistries>): any
+translateAliases(raw: Partial<IValoriTipiEtichetteRegistries>): any
 };
 
 export type TValoriTipiEtichetteRegistriesDocument = 

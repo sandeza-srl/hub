@@ -8,8 +8,8 @@ import type { ISelezioniItems } from './SelezioniItems.Types';
 * Model Definition
 * -------- */
 const SelezioniItems = mongoose.model<ISelezioniItems>(
-  'SelezioniItems',
-  SelezioniItemsSchema as any
+'SelezioniItems',
+SelezioniItemsSchema as any
 ) as mongoose.Model<ISelezioniItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default SelezioniItems;
 export { SelezioniItemsSchema };
 
 export type TSelezioniItemsModel = Omit<typeof SelezioniItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ISelezioniItems>): any
+translateAliases(raw: Partial<ISelezioniItems>): any
 };
 
 export type TSelezioniItemsDocument = 

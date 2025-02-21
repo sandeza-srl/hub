@@ -8,8 +8,8 @@ import type { IIntegrazioniOrigine } from './IntegrazioniOrigine.Types';
 * Model Definition
 * -------- */
 const IntegrazioniOrigine = mongoose.model<IIntegrazioniOrigine>(
-  'IntegrazioniOrigine',
-  IntegrazioniOrigineSchema as any
+'IntegrazioniOrigine',
+IntegrazioniOrigineSchema as any
 ) as mongoose.Model<IIntegrazioniOrigine>;
 
 /* --------
@@ -20,7 +20,7 @@ export default IntegrazioniOrigine;
 export { IntegrazioniOrigineSchema };
 
 export type TIntegrazioniOrigineModel = Omit<typeof IntegrazioniOrigine, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IIntegrazioniOrigine>): any
+translateAliases(raw: Partial<IIntegrazioniOrigine>): any
 };
 
 export type TIntegrazioniOrigineDocument = 

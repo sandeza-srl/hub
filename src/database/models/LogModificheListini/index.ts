@@ -8,8 +8,8 @@ import type { ILogModificheListini } from './LogModificheListini.Types';
 * Model Definition
 * -------- */
 const LogModificheListini = mongoose.model<ILogModificheListini>(
-  'LogModificheListini',
-  LogModificheListiniSchema as any
+'LogModificheListini',
+LogModificheListiniSchema as any
 ) as mongoose.Model<ILogModificheListini>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LogModificheListini;
 export { LogModificheListiniSchema };
 
 export type TLogModificheListiniModel = Omit<typeof LogModificheListini, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILogModificheListini>): any
+translateAliases(raw: Partial<ILogModificheListini>): any
 };
 
 export type TLogModificheListiniDocument = 

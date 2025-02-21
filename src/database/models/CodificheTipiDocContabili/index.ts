@@ -8,8 +8,8 @@ import type { ICodificheTipiDocContabili } from './CodificheTipiDocContabili.Typ
 * Model Definition
 * -------- */
 const CodificheTipiDocContabili = mongoose.model<ICodificheTipiDocContabili>(
-  'CodificheTipiDocContabili',
-  CodificheTipiDocContabiliSchema as any
+'CodificheTipiDocContabili',
+CodificheTipiDocContabiliSchema as any
 ) as mongoose.Model<ICodificheTipiDocContabili>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CodificheTipiDocContabili;
 export { CodificheTipiDocContabiliSchema };
 
 export type TCodificheTipiDocContabiliModel = Omit<typeof CodificheTipiDocContabili, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICodificheTipiDocContabili>): any
+translateAliases(raw: Partial<ICodificheTipiDocContabili>): any
 };
 
 export type TCodificheTipiDocContabiliDocument = 

@@ -8,8 +8,8 @@ import type { IFamiglieStrumenti } from './FamiglieStrumenti.Types';
 * Model Definition
 * -------- */
 const FamiglieStrumenti = mongoose.model<IFamiglieStrumenti>(
-  'FamiglieStrumenti',
-  FamiglieStrumentiSchema as any
+'FamiglieStrumenti',
+FamiglieStrumentiSchema as any
 ) as mongoose.Model<IFamiglieStrumenti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FamiglieStrumenti;
 export { FamiglieStrumentiSchema };
 
 export type TFamiglieStrumentiModel = Omit<typeof FamiglieStrumenti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFamiglieStrumenti>): any
+translateAliases(raw: Partial<IFamiglieStrumenti>): any
 };
 
 export type TFamiglieStrumentiDocument = 

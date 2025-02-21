@@ -8,8 +8,8 @@ import type { IP_VariazioniCalendario } from './P_VariazioniCalendario.Types';
 * Model Definition
 * -------- */
 const P_VariazioniCalendario = mongoose.model<IP_VariazioniCalendario>(
-  'P_VariazioniCalendario',
-  P_VariazioniCalendarioSchema as any
+'P_VariazioniCalendario',
+P_VariazioniCalendarioSchema as any
 ) as mongoose.Model<IP_VariazioniCalendario>;
 
 /* --------
@@ -20,7 +20,7 @@ export default P_VariazioniCalendario;
 export { P_VariazioniCalendarioSchema };
 
 export type TP_VariazioniCalendarioModel = Omit<typeof P_VariazioniCalendario, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IP_VariazioniCalendario>): any
+translateAliases(raw: Partial<IP_VariazioniCalendario>): any
 };
 
 export type TP_VariazioniCalendarioDocument = 

@@ -8,8 +8,8 @@ import type { ILuoghiItem } from './LuoghiItem.Types';
 * Model Definition
 * -------- */
 const LuoghiItem = mongoose.model<ILuoghiItem>(
-  'LuoghiItem',
-  LuoghiItemSchema as any
+'LuoghiItem',
+LuoghiItemSchema as any
 ) as mongoose.Model<ILuoghiItem>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LuoghiItem;
 export { LuoghiItemSchema };
 
 export type TLuoghiItemModel = Omit<typeof LuoghiItem, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILuoghiItem>): any
+translateAliases(raw: Partial<ILuoghiItem>): any
 };
 
 export type TLuoghiItemDocument = 

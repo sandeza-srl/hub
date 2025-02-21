@@ -8,8 +8,8 @@ import type { IMagazziniGestiti } from './MagazziniGestiti.Types';
 * Model Definition
 * -------- */
 const MagazziniGestiti = mongoose.model<IMagazziniGestiti>(
-  'MagazziniGestiti',
-  MagazziniGestitiSchema as any
+'MagazziniGestiti',
+MagazziniGestitiSchema as any
 ) as mongoose.Model<IMagazziniGestiti>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MagazziniGestiti;
 export { MagazziniGestitiSchema };
 
 export type TMagazziniGestitiModel = Omit<typeof MagazziniGestiti, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMagazziniGestiti>): any
+translateAliases(raw: Partial<IMagazziniGestiti>): any
 };
 
 export type TMagazziniGestitiDocument = 

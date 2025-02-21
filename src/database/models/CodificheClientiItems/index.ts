@@ -8,8 +8,8 @@ import type { ICodificheClientiItems } from './CodificheClientiItems.Types';
 * Model Definition
 * -------- */
 const CodificheClientiItems = mongoose.model<ICodificheClientiItems>(
-  'CodificheClientiItems',
-  CodificheClientiItemsSchema as any
+'CodificheClientiItems',
+CodificheClientiItemsSchema as any
 ) as mongoose.Model<ICodificheClientiItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default CodificheClientiItems;
 export { CodificheClientiItemsSchema };
 
 export type TCodificheClientiItemsModel = Omit<typeof CodificheClientiItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICodificheClientiItems>): any
+translateAliases(raw: Partial<ICodificheClientiItems>): any
 };
 
 export type TCodificheClientiItemsDocument = 

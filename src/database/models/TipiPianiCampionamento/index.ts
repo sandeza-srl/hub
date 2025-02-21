@@ -8,8 +8,8 @@ import type { ITipiPianiCampionamento } from './TipiPianiCampionamento.Types';
 * Model Definition
 * -------- */
 const TipiPianiCampionamento = mongoose.model<ITipiPianiCampionamento>(
-  'TipiPianiCampionamento',
-  TipiPianiCampionamentoSchema as any
+'TipiPianiCampionamento',
+TipiPianiCampionamentoSchema as any
 ) as mongoose.Model<ITipiPianiCampionamento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiPianiCampionamento;
 export { TipiPianiCampionamentoSchema };
 
 export type TTipiPianiCampionamentoModel = Omit<typeof TipiPianiCampionamento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiPianiCampionamento>): any
+translateAliases(raw: Partial<ITipiPianiCampionamento>): any
 };
 
 export type TTipiPianiCampionamentoDocument = 

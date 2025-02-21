@@ -8,8 +8,8 @@ import type { IImpostazioniEtichette } from './ImpostazioniEtichette.Types';
 * Model Definition
 * -------- */
 const ImpostazioniEtichette = mongoose.model<IImpostazioniEtichette>(
-  'ImpostazioniEtichette',
-  ImpostazioniEtichetteSchema as any
+'ImpostazioniEtichette',
+ImpostazioniEtichetteSchema as any
 ) as mongoose.Model<IImpostazioniEtichette>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ImpostazioniEtichette;
 export { ImpostazioniEtichetteSchema };
 
 export type TImpostazioniEtichetteModel = Omit<typeof ImpostazioniEtichette, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IImpostazioniEtichette>): any
+translateAliases(raw: Partial<IImpostazioniEtichette>): any
 };
 
 export type TImpostazioniEtichetteDocument = 

@@ -8,8 +8,8 @@ import type { IMezzi } from './Mezzi.Types';
 * Model Definition
 * -------- */
 const Mezzi = mongoose.model<IMezzi>(
-  'Mezzi',
-  MezziSchema as any
+'Mezzi',
+MezziSchema as any
 ) as mongoose.Model<IMezzi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Mezzi;
 export { MezziSchema };
 
 export type TMezziModel = Omit<typeof Mezzi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMezzi>): any
+translateAliases(raw: Partial<IMezzi>): any
 };
 
 export type TMezziDocument = 

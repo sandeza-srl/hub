@@ -8,8 +8,8 @@ import type { ICap } from './Cap.Types';
 * Model Definition
 * -------- */
 const Cap = mongoose.model<ICap>(
-  'Cap',
-  CapSchema as any
+'Cap',
+CapSchema as any
 ) as mongoose.Model<ICap>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Cap;
 export { CapSchema };
 
 export type TCapModel = Omit<typeof Cap, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ICap>): any
+translateAliases(raw: Partial<ICap>): any
 };
 
 export type TCapDocument = 

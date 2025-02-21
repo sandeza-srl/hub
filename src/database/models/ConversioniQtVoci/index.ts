@@ -8,8 +8,8 @@ import type { IConversioniQtVoci } from './ConversioniQtVoci.Types';
 * Model Definition
 * -------- */
 const ConversioniQtVoci = mongoose.model<IConversioniQtVoci>(
-  'ConversioniQtVoci',
-  ConversioniQtVociSchema as any
+'ConversioniQtVoci',
+ConversioniQtVociSchema as any
 ) as mongoose.Model<IConversioniQtVoci>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ConversioniQtVoci;
 export { ConversioniQtVociSchema };
 
 export type TConversioniQtVociModel = Omit<typeof ConversioniQtVoci, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IConversioniQtVoci>): any
+translateAliases(raw: Partial<IConversioniQtVoci>): any
 };
 
 export type TConversioniQtVociDocument = 

@@ -8,8 +8,8 @@ import type { IInstallazione } from './Installazione.Types';
 * Model Definition
 * -------- */
 const Installazione = mongoose.model<IInstallazione>(
-  'Installazione',
-  InstallazioneSchema as any
+'Installazione',
+InstallazioneSchema as any
 ) as mongoose.Model<IInstallazione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Installazione;
 export { InstallazioneSchema };
 
 export type TInstallazioneModel = Omit<typeof Installazione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInstallazione>): any
+translateAliases(raw: Partial<IInstallazione>): any
 };
 
 export type TInstallazioneDocument = 

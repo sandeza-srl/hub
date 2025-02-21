@@ -8,8 +8,8 @@ import type { IRevisioniArticoloCiclo } from './RevisioniArticoloCiclo.Types';
 * Model Definition
 * -------- */
 const RevisioniArticoloCiclo = mongoose.model<IRevisioniArticoloCiclo>(
-  'RevisioniArticoloCiclo',
-  RevisioniArticoloCicloSchema as any
+'RevisioniArticoloCiclo',
+RevisioniArticoloCicloSchema as any
 ) as mongoose.Model<IRevisioniArticoloCiclo>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RevisioniArticoloCiclo;
 export { RevisioniArticoloCicloSchema };
 
 export type TRevisioniArticoloCicloModel = Omit<typeof RevisioniArticoloCiclo, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRevisioniArticoloCiclo>): any
+translateAliases(raw: Partial<IRevisioniArticoloCiclo>): any
 };
 
 export type TRevisioniArticoloCicloDocument = 

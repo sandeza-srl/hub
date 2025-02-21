@@ -8,8 +8,8 @@ import type { IProtocolli } from './Protocolli.Types';
 * Model Definition
 * -------- */
 const Protocolli = mongoose.model<IProtocolli>(
-  'Protocolli',
-  ProtocolliSchema as any
+'Protocolli',
+ProtocolliSchema as any
 ) as mongoose.Model<IProtocolli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Protocolli;
 export { ProtocolliSchema };
 
 export type TProtocolliModel = Omit<typeof Protocolli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IProtocolli>): any
+translateAliases(raw: Partial<IProtocolli>): any
 };
 
 export type TProtocolliDocument = 

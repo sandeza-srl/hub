@@ -8,8 +8,8 @@ import type { IMagazziniFisici } from './MagazziniFisici.Types';
 * Model Definition
 * -------- */
 const MagazziniFisici = mongoose.model<IMagazziniFisici>(
-  'MagazziniFisici',
-  MagazziniFisiciSchema as any
+'MagazziniFisici',
+MagazziniFisiciSchema as any
 ) as mongoose.Model<IMagazziniFisici>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MagazziniFisici;
 export { MagazziniFisiciSchema };
 
 export type TMagazziniFisiciModel = Omit<typeof MagazziniFisici, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMagazziniFisici>): any
+translateAliases(raw: Partial<IMagazziniFisici>): any
 };
 
 export type TMagazziniFisiciDocument = 

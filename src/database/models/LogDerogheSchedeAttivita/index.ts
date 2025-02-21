@@ -8,8 +8,8 @@ import type { ILogDerogheSchedeAttivita } from './LogDerogheSchedeAttivita.Types
 * Model Definition
 * -------- */
 const LogDerogheSchedeAttivita = mongoose.model<ILogDerogheSchedeAttivita>(
-  'LogDerogheSchedeAttivita',
-  LogDerogheSchedeAttivitaSchema as any
+'LogDerogheSchedeAttivita',
+LogDerogheSchedeAttivitaSchema as any
 ) as mongoose.Model<ILogDerogheSchedeAttivita>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LogDerogheSchedeAttivita;
 export { LogDerogheSchedeAttivitaSchema };
 
 export type TLogDerogheSchedeAttivitaModel = Omit<typeof LogDerogheSchedeAttivita, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILogDerogheSchedeAttivita>): any
+translateAliases(raw: Partial<ILogDerogheSchedeAttivita>): any
 };
 
 export type TLogDerogheSchedeAttivitaDocument = 

@@ -8,8 +8,8 @@ import type { ITipiMercati } from './TipiMercati.Types';
 * Model Definition
 * -------- */
 const TipiMercati = mongoose.model<ITipiMercati>(
-  'TipiMercati',
-  TipiMercatiSchema as any
+'TipiMercati',
+TipiMercatiSchema as any
 ) as mongoose.Model<ITipiMercati>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiMercati;
 export { TipiMercatiSchema };
 
 export type TTipiMercatiModel = Omit<typeof TipiMercati, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiMercati>): any
+translateAliases(raw: Partial<ITipiMercati>): any
 };
 
 export type TTipiMercatiDocument = 

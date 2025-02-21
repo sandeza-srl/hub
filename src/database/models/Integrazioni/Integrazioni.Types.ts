@@ -1,4 +1,4 @@
 export interface IIntegrazioni {
-  _id: string;
+_id: string;
 
 }

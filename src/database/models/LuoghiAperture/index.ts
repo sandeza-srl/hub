@@ -8,8 +8,8 @@ import type { ILuoghiAperture } from './LuoghiAperture.Types';
 * Model Definition
 * -------- */
 const LuoghiAperture = mongoose.model<ILuoghiAperture>(
-  'LuoghiAperture',
-  LuoghiApertureSchema as any
+'LuoghiAperture',
+LuoghiApertureSchema as any
 ) as mongoose.Model<ILuoghiAperture>;
 
 /* --------
@@ -20,7 +20,7 @@ export default LuoghiAperture;
 export { LuoghiApertureSchema };
 
 export type TLuoghiApertureModel = Omit<typeof LuoghiAperture, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ILuoghiAperture>): any
+translateAliases(raw: Partial<ILuoghiAperture>): any
 };
 
 export type TLuoghiApertureDocument = 

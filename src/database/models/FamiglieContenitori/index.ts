@@ -8,8 +8,8 @@ import type { IFamiglieContenitori } from './FamiglieContenitori.Types';
 * Model Definition
 * -------- */
 const FamiglieContenitori = mongoose.model<IFamiglieContenitori>(
-  'FamiglieContenitori',
-  FamiglieContenitoriSchema as any
+'FamiglieContenitori',
+FamiglieContenitoriSchema as any
 ) as mongoose.Model<IFamiglieContenitori>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FamiglieContenitori;
 export { FamiglieContenitoriSchema };
 
 export type TFamiglieContenitoriModel = Omit<typeof FamiglieContenitori, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFamiglieContenitori>): any
+translateAliases(raw: Partial<IFamiglieContenitori>): any
 };
 
 export type TFamiglieContenitoriDocument = 

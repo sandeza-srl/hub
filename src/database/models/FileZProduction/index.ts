@@ -8,8 +8,8 @@ import type { IFileZProduction } from './FileZProduction.Types';
 * Model Definition
 * -------- */
 const FileZProduction = mongoose.model<IFileZProduction>(
-  'FileZProduction',
-  FileZProductionSchema as any
+'FileZProduction',
+FileZProductionSchema as any
 ) as mongoose.Model<IFileZProduction>;
 
 /* --------
@@ -20,7 +20,7 @@ export default FileZProduction;
 export { FileZProductionSchema };
 
 export type TFileZProductionModel = Omit<typeof FileZProduction, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFileZProduction>): any
+translateAliases(raw: Partial<IFileZProduction>): any
 };
 
 export type TFileZProductionDocument = 

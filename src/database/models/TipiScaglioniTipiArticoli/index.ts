@@ -8,8 +8,8 @@ import type { ITipiScaglioniTipiArticoli } from './TipiScaglioniTipiArticoli.Typ
 * Model Definition
 * -------- */
 const TipiScaglioniTipiArticoli = mongoose.model<ITipiScaglioniTipiArticoli>(
-  'TipiScaglioniTipiArticoli',
-  TipiScaglioniTipiArticoliSchema as any
+'TipiScaglioniTipiArticoli',
+TipiScaglioniTipiArticoliSchema as any
 ) as mongoose.Model<ITipiScaglioniTipiArticoli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipiScaglioniTipiArticoli;
 export { TipiScaglioniTipiArticoliSchema };
 
 export type TTipiScaglioniTipiArticoliModel = Omit<typeof TipiScaglioniTipiArticoli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipiScaglioniTipiArticoli>): any
+translateAliases(raw: Partial<ITipiScaglioniTipiArticoli>): any
 };
 
 export type TTipiScaglioniTipiArticoliDocument = 

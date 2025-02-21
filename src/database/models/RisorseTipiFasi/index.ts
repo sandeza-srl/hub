@@ -8,8 +8,8 @@ import type { IRisorseTipiFasi } from './RisorseTipiFasi.Types';
 * Model Definition
 * -------- */
 const RisorseTipiFasi = mongoose.model<IRisorseTipiFasi>(
-  'RisorseTipiFasi',
-  RisorseTipiFasiSchema as any
+'RisorseTipiFasi',
+RisorseTipiFasiSchema as any
 ) as mongoose.Model<IRisorseTipiFasi>;
 
 /* --------
@@ -20,7 +20,7 @@ export default RisorseTipiFasi;
 export { RisorseTipiFasiSchema };
 
 export type TRisorseTipiFasiModel = Omit<typeof RisorseTipiFasi, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IRisorseTipiFasi>): any
+translateAliases(raw: Partial<IRisorseTipiFasi>): any
 };
 
 export type TRisorseTipiFasiDocument = 

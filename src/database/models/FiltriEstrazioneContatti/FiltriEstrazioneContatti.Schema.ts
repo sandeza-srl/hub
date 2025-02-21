@@ -10,47 +10,52 @@ import type { IFiltriEstrazioneContattiPrivate } from './FiltriEstrazioneContatt
 * -------- */
 const FiltriEstrazioneContattiSchema = new mongoose.Schema<IFiltriEstrazioneContattiPrivate>({
 
-  _id: {
-    type: String,
-    default: uuid.v4
-  },
-  __Dati_Testo001: {
-    type: String,
-    alias: 'IdAccountCompagnia',
+_id: {
+type: String,
+default: uuid.v4
+},
+__Dati_Testo001: {
+type: String,
+alias: 'IdAccountCompagnia',
 
-  },
-  __Dati_Testo002: {
-    type: String,
-    alias: 'IdEstrazioneContatti',
+},
+__Dati_Testo002: {
+type: String,
+alias: 'IdEstrazioneContatti',
 
-  },
-  __Dati_Numero001: {
-    type: Number,
-    alias: 'Uno',
+},
+__Dati_Numero001: {
+type: Number,
+alias: 'Uno',
 
-  },
-  __Dati_Numero002: {
-    type: Number,
-    alias: 'Zero',
+},
+__Dati_Numero002: {
+type: Number,
+alias: 'Zero',
 
-  },
-  __Dati_Testo003: {
-    type: String,
-    alias: 'IdFiltroEstrazione',
+},
+__Dati_Testo003: {
+type: String,
+alias: 'IdFiltroEstrazione',
 
-  },
-  __Dati_Testo004: {
-    type: String,
-    alias: 'NomeFiltro',
+},
+__Dati_Testo004: {
+type: String,
+alias: 'NomeFiltro',
 
-  },
-  __Dati_Testo005: {
-    type: String,
-    alias: 'IdInstallazione',
+},
+__Dati_Testo005: {
+type: String,
+alias: 'IdInstallazione',
 
-  }
+},
+__Dati_Testo006: {
+type: String,
+alias: 'Integrazione_DatiVariAC',
+
+}
 }, {
-  timestamps: true
+timestamps: true
 });
 
 /* --------

@@ -8,8 +8,8 @@ import type { IOperatoriTipiRuoli } from './OperatoriTipiRuoli.Types';
 * Model Definition
 * -------- */
 const OperatoriTipiRuoli = mongoose.model<IOperatoriTipiRuoli>(
-  'OperatoriTipiRuoli',
-  OperatoriTipiRuoliSchema as any
+'OperatoriTipiRuoli',
+OperatoriTipiRuoliSchema as any
 ) as mongoose.Model<IOperatoriTipiRuoli>;
 
 /* --------
@@ -20,7 +20,7 @@ export default OperatoriTipiRuoli;
 export { OperatoriTipiRuoliSchema };
 
 export type TOperatoriTipiRuoliModel = Omit<typeof OperatoriTipiRuoli, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IOperatoriTipiRuoli>): any
+translateAliases(raw: Partial<IOperatoriTipiRuoli>): any
 };
 
 export type TOperatoriTipiRuoliDocument = 

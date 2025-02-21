@@ -8,8 +8,8 @@ import type { IStatiPosizioni } from './StatiPosizioni.Types';
 * Model Definition
 * -------- */
 const StatiPosizioni = mongoose.model<IStatiPosizioni>(
-  'StatiPosizioni',
-  StatiPosizioniSchema as any
+'StatiPosizioni',
+StatiPosizioniSchema as any
 ) as mongoose.Model<IStatiPosizioni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default StatiPosizioni;
 export { StatiPosizioniSchema };
 
 export type TStatiPosizioniModel = Omit<typeof StatiPosizioni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IStatiPosizioni>): any
+translateAliases(raw: Partial<IStatiPosizioni>): any
 };
 
 export type TStatiPosizioniDocument = 

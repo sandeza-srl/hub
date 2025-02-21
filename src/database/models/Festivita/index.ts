@@ -8,8 +8,8 @@ import type { IFestivita } from './Festivita.Types';
 * Model Definition
 * -------- */
 const Festivita = mongoose.model<IFestivita>(
-  'Festivita',
-  FestivitaSchema as any
+'Festivita',
+FestivitaSchema as any
 ) as mongoose.Model<IFestivita>;
 
 /* --------
@@ -20,7 +20,7 @@ export default Festivita;
 export { FestivitaSchema };
 
 export type TFestivitaModel = Omit<typeof Festivita, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IFestivita>): any
+translateAliases(raw: Partial<IFestivita>): any
 };
 
 export type TFestivitaDocument = 

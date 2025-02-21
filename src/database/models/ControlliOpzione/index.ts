@@ -8,8 +8,8 @@ import type { IControlliOpzione } from './ControlliOpzione.Types';
 * Model Definition
 * -------- */
 const ControlliOpzione = mongoose.model<IControlliOpzione>(
-  'ControlliOpzione',
-  ControlliOpzioneSchema as any
+'ControlliOpzione',
+ControlliOpzioneSchema as any
 ) as mongoose.Model<IControlliOpzione>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ControlliOpzione;
 export { ControlliOpzioneSchema };
 
 export type TControlliOpzioneModel = Omit<typeof ControlliOpzione, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IControlliOpzione>): any
+translateAliases(raw: Partial<IControlliOpzione>): any
 };
 
 export type TControlliOpzioneDocument = 

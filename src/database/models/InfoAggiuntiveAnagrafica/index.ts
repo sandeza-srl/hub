@@ -8,8 +8,8 @@ import type { IInfoAggiuntiveAnagrafica } from './InfoAggiuntiveAnagrafica.Types
 * Model Definition
 * -------- */
 const InfoAggiuntiveAnagrafica = mongoose.model<IInfoAggiuntiveAnagrafica>(
-  'InfoAggiuntiveAnagrafica',
-  InfoAggiuntiveAnagraficaSchema as any
+'InfoAggiuntiveAnagrafica',
+InfoAggiuntiveAnagraficaSchema as any
 ) as mongoose.Model<IInfoAggiuntiveAnagrafica>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InfoAggiuntiveAnagrafica;
 export { InfoAggiuntiveAnagraficaSchema };
 
 export type TInfoAggiuntiveAnagraficaModel = Omit<typeof InfoAggiuntiveAnagrafica, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInfoAggiuntiveAnagrafica>): any
+translateAliases(raw: Partial<IInfoAggiuntiveAnagrafica>): any
 };
 
 export type TInfoAggiuntiveAnagraficaDocument = 

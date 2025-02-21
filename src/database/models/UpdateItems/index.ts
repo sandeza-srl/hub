@@ -8,8 +8,8 @@ import type { IUpdateItems } from './UpdateItems.Types';
 * Model Definition
 * -------- */
 const UpdateItems = mongoose.model<IUpdateItems>(
-  'UpdateItems',
-  UpdateItemsSchema as any
+'UpdateItems',
+UpdateItemsSchema as any
 ) as mongoose.Model<IUpdateItems>;
 
 /* --------
@@ -20,7 +20,7 @@ export default UpdateItems;
 export { UpdateItemsSchema };
 
 export type TUpdateItemsModel = Omit<typeof UpdateItems, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IUpdateItems>): any
+translateAliases(raw: Partial<IUpdateItems>): any
 };
 
 export type TUpdateItemsDocument = 

@@ -8,8 +8,8 @@ import type { ITipologieDestinatariMail } from './TipologieDestinatariMail.Types
 * Model Definition
 * -------- */
 const TipologieDestinatariMail = mongoose.model<ITipologieDestinatariMail>(
-  'TipologieDestinatariMail',
-  TipologieDestinatariMailSchema as any
+'TipologieDestinatariMail',
+TipologieDestinatariMailSchema as any
 ) as mongoose.Model<ITipologieDestinatariMail>;
 
 /* --------
@@ -20,7 +20,7 @@ export default TipologieDestinatariMail;
 export { TipologieDestinatariMailSchema };
 
 export type TTipologieDestinatariMailModel = Omit<typeof TipologieDestinatariMail, 'traslateAliases'> & {
-  translateAliases(raw: Partial<ITipologieDestinatariMail>): any
+translateAliases(raw: Partial<ITipologieDestinatariMail>): any
 };
 
 export type TTipologieDestinatariMailDocument = 

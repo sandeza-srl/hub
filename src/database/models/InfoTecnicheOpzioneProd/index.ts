@@ -8,8 +8,8 @@ import type { IInfoTecnicheOpzioneProd } from './InfoTecnicheOpzioneProd.Types';
 * Model Definition
 * -------- */
 const InfoTecnicheOpzioneProd = mongoose.model<IInfoTecnicheOpzioneProd>(
-  'InfoTecnicheOpzioneProd',
-  InfoTecnicheOpzioneProdSchema as any
+'InfoTecnicheOpzioneProd',
+InfoTecnicheOpzioneProdSchema as any
 ) as mongoose.Model<IInfoTecnicheOpzioneProd>;
 
 /* --------
@@ -20,7 +20,7 @@ export default InfoTecnicheOpzioneProd;
 export { InfoTecnicheOpzioneProdSchema };
 
 export type TInfoTecnicheOpzioneProdModel = Omit<typeof InfoTecnicheOpzioneProd, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IInfoTecnicheOpzioneProd>): any
+translateAliases(raw: Partial<IInfoTecnicheOpzioneProd>): any
 };
 
 export type TInfoTecnicheOpzioneProdDocument = 

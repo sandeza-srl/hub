@@ -8,8 +8,8 @@ import type { IMetodiPagamento } from './MetodiPagamento.Types';
 * Model Definition
 * -------- */
 const MetodiPagamento = mongoose.model<IMetodiPagamento>(
-  'MetodiPagamento',
-  MetodiPagamentoSchema as any
+'MetodiPagamento',
+MetodiPagamentoSchema as any
 ) as mongoose.Model<IMetodiPagamento>;
 
 /* --------
@@ -20,7 +20,7 @@ export default MetodiPagamento;
 export { MetodiPagamentoSchema };
 
 export type TMetodiPagamentoModel = Omit<typeof MetodiPagamento, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IMetodiPagamento>): any
+translateAliases(raw: Partial<IMetodiPagamento>): any
 };
 
 export type TMetodiPagamentoDocument = 

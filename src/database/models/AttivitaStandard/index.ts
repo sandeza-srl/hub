@@ -8,8 +8,8 @@ import type { IAttivitaStandard } from './AttivitaStandard.Types';
 * Model Definition
 * -------- */
 const AttivitaStandard = mongoose.model<IAttivitaStandard>(
-  'AttivitaStandard',
-  AttivitaStandardSchema as any
+'AttivitaStandard',
+AttivitaStandardSchema as any
 ) as mongoose.Model<IAttivitaStandard>;
 
 /* --------
@@ -20,7 +20,7 @@ export default AttivitaStandard;
 export { AttivitaStandardSchema };
 
 export type TAttivitaStandardModel = Omit<typeof AttivitaStandard, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IAttivitaStandard>): any
+translateAliases(raw: Partial<IAttivitaStandard>): any
 };
 
 export type TAttivitaStandardDocument = 

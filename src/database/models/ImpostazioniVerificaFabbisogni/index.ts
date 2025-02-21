@@ -8,8 +8,8 @@ import type { IImpostazioniVerificaFabbisogni } from './ImpostazioniVerificaFabb
 * Model Definition
 * -------- */
 const ImpostazioniVerificaFabbisogni = mongoose.model<IImpostazioniVerificaFabbisogni>(
-  'ImpostazioniVerificaFabbisogni',
-  ImpostazioniVerificaFabbisogniSchema as any
+'ImpostazioniVerificaFabbisogni',
+ImpostazioniVerificaFabbisogniSchema as any
 ) as mongoose.Model<IImpostazioniVerificaFabbisogni>;
 
 /* --------
@@ -20,7 +20,7 @@ export default ImpostazioniVerificaFabbisogni;
 export { ImpostazioniVerificaFabbisogniSchema };
 
 export type TImpostazioniVerificaFabbisogniModel = Omit<typeof ImpostazioniVerificaFabbisogni, 'traslateAliases'> & {
-  translateAliases(raw: Partial<IImpostazioniVerificaFabbisogni>): any
+translateAliases(raw: Partial<IImpostazioniVerificaFabbisogni>): any
 };
 
 export type TImpostazioniVerificaFabbisogniDocument = 
